@@ -1,1 +1,1 @@
-### Website for booking a hotel.
+# Website for booking a hotel
