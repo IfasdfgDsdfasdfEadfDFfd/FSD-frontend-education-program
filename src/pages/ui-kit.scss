@@ -1,0 +1,27 @@
+.tool-box__container {
+  padding: 125px 130px;
+  display: flex;
+}
+
+.tool-box__column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+
+.tool-box__row {
+  min-height: 70px;
+  margin-bottom: 20px;
+}
+
+.tool-box__label {
+  font-size: 19px;
+  padding: 10px 0px 0px;
+}
+
+.color-example {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
