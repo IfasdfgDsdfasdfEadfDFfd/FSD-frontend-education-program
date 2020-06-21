@@ -2,10 +2,24 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const glob = require('glob');
 
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
 const DIST_DIR = path.resolve(path.join(process.cwd(), 'dist'));
+
+
+const getAllTemplates = folder => {
+  const SEARCH_DIR = path.join(SRC_DIR, folder);
+
+  return glob.sync(`${SEARCH_DIR}/**/*.pug`).map(filepath => {
+    return new HtmlWebpackPlugin({
+      template: filepath,
+      filename: `${path.parse(filepath).name}.html`,
+    });
+  });
+};
 
 
 module.exports = {
@@ -13,18 +27,21 @@ module.exports = {
   output: {
     path: DIST_DIR,
     filename: 'build.js',
-    publicPath: '/',
   },
 
+  // don't foget about dots...
   resolve: {
     extensions: ['.ts', '.js', '.scss', '.pug', '.html', '.css'],
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(SRC_DIR, 'index.pug'),
-    })
+      filename: 'index.html',
+    }),
+    ...getAllTemplates('components'),
   ],
 
   module: {
