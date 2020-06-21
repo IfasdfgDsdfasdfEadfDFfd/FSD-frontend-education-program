@@ -1,1 +1,8 @@
 $green-color: #6FCF97;
+$purple-color: #BC9CFF;
+$dark-shade: #1F2041;
+$dark-shade-100: change-color($dark-shade, $alpha: 1);
+$dark-shade-75: change-color($dark-shade, $alpha: 0.75);
+$dark-shade-50: change-color($dark-shade, $alpha: 0.50);
+$dark-shade-25: change-color($dark-shade, $alpha: 0.25);
+$dark-shade-5: change-color($dark-shade, $alpha: 0.05);
