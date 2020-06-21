@@ -42,6 +42,7 @@ module.exports = {
       filename: 'index.html',
     }),
     ...getAllTemplates('components'),
+    ...getAllTemplates('pages'),
   ],
 
   module: {
@@ -61,6 +62,10 @@ module.exports = {
       {
         test: /\.ts$/,
         use: ['awesome-typescript-loader'],
+      },
+      {
+        test: /\.(woff|woff2|ttf|)$/,
+        use: ['file-loader'],
       },
     ],
   },
