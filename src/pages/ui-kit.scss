@@ -1,27 +1,33 @@
-.tool-box__container {
-  padding: 125px 130px;
-  display: flex;
+.toolbox__container {
+  margin: 145px auto;
+  max-width: 1440px;
+  background-color: #ffffff;
 }
 
-.tool-box__column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 20px;
+.toolbox__colors-type {
+  display: grid;
+  margin: 0px 135px;
+  grid-template: repeat(7, 1fr) / 100px 200px 33% 80px 2fr;
+  row-gap: 20px;
 }
 
-.tool-box__row {
-  min-height: 70px;
-  margin-bottom: 20px;
-}
-
-.tool-box__label {
+.toolbox__label {
   font-size: 19px;
-  padding: 10px 0px 0px;
+  line-height: 29px;
+  align-self: center;
+  grid-column: 2;
 }
 
 .color-example {
+  justify-self: center;
+  align-self: center;
   width: 70px;
   height: 70px;
   border-radius: 6px;
+  grid-column: 1;
+}
+
+.color-desc {
+  display: flex;
+  padding-left: 25px;
 }
