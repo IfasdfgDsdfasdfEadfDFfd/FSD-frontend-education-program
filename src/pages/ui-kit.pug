@@ -5,9 +5,8 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title UI-KIT
   body
+    //- Colors & Type
     .toolbox__container
-
-      //- Colors & Type
       .toolbox__colors-type
 
         .color-example.bgc_dark-shade-100
@@ -84,3 +83,32 @@ html(lang="en")
             .toolbox__label.quicksand.text_uppercase
               | #6fcf97
 
+    //- Form Elements
+    .toolbox__container
+      .toolbox__form-elements
+
+        //- 1st column
+        .toolbox__form-elemnts__items-group
+
+          .toolbox__form-elements__item
+            .toolbox__form-elements__item__label
+              | text field
+              span
+                | default
+            input(type="email", placeholder="Email").text-field
+
+          .toolbox__form-elements__item
+            .toolbox__form-elements__item__label
+              | text field
+              span
+                | hover / focus
+            input(type="email", placeholder="Email" value="This is pretty awesome").text-field.text-field_focused
+
+          .toolbox__form-elements__item
+            .toolbox__form-elements__item__label
+              | dropdown
+              span
+                | default
+            select
+              option(value="" disabled selected)
+                | Сколько гостей

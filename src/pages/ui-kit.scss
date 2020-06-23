@@ -11,6 +11,7 @@
   row-gap: 20px;
 }
 
+
 .toolbox__label {
   font-size: 19px;
   line-height: 29px;
@@ -52,4 +53,37 @@
   position: absolute;
   right: 422px;
   color: $dark-shade-25;
+}
+
+.toolbox__form-elements {
+  display: grid;
+  margin: 0px 140px;
+  padding-top: 130px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 50px 100px;
+}
+
+.toolbox__form-elemnts__items-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.toolbox__form-elements__item {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px 0px 7px;
+}
+
+.toolbox__form-elements__item__label {
+  text-transform: uppercase;
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  line-height: 25px;
+  color: $dark-shade-100;
+}
+
+.toolbox__form-elements__item__label span {
+  font-family: 'Montserrat';
+  color: $dark-shade-50;
+  float: right;
 }
