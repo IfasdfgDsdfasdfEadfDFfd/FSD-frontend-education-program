@@ -7,7 +7,7 @@
 .toolbox__colors-type {
   display: grid;
   margin: 0px 135px;
-  grid-template: repeat(7, 1fr) / 100px 200px 33% 80px 2fr;
+  grid-template: repeat(7, 1fr) / 100px 200px 400px auto;
   row-gap: 20px;
 }
 
@@ -15,7 +15,7 @@
   font-size: 19px;
   line-height: 29px;
   align-self: center;
-  grid-column: 2;
+  color: $dark-shade-100;
 }
 
 .color-example {
@@ -29,5 +29,27 @@
 
 .color-desc {
   display: flex;
+  grid-column: 2;
   padding-left: 25px;
+}
+
+.text-type {
+  grid-column: 4;
+}
+
+.text-type__preview {
+  position: relative;
+  padding-left: 78px;
+  padding-right: 50px;
+}
+
+.text-type__preview p {
+  padding-right: 40px;
+}
+
+.text-type__label {
+  font-size: inherit;
+  position: absolute;
+  right: 422px;
+  color: $dark-shade-25;
 }
