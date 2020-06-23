@@ -1,19 +1,54 @@
 @import './consts.scss';
 
 
+h1 {
+  font-family: 'Quicksand-bold';
+  font-size: 24px;
+  line-height: 30px;
+  color: $dark-shade-100;
+}
+
+h2 {
+  font-family: 'Quicksand-bold';
+  font-size: 19px;
+  line-height: 24px;
+  color: $dark-shade-100;
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-shade-100;
+  margin-top: 28px;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+}
+
 .text_dark-shade-100 {
   color: $dark-shade-100;
 }
 
-.text {
+.quicksand {
   font-family: 'Quicksand';
+}
+
+.montserrat {
+  font-family: 'Montserrat';
 }
 
 .text_uppercase {
   text-transform: uppercase;
 }
 
-.text_bold {
+.quicksand_bold{
   font-family: 'Quicksand-Bold';
 }
 
