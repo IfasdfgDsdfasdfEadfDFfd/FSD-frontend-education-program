@@ -1,0 +1,13 @@
+mixin text-field(attrs)
+  input&attributes(attrs).text-field
+
+mixin masked-text-field(mask, example, placeholder, attrs)
+  - attrs['data-mask'] = mask
+  - attrs['data-example'] = example
+  - attrs['data-placeholder'] = placeholder
+  - attrs.class = "text-field_masked"
+  +text-field(attrs)
+
+mixin focused-text-field(attrs)
+  - attrs.class = "text-field_focused"
+  +text-field(attrs)
