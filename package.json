@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENVIRONMENT=development webpack",
     "dev": "NODE_ENVIRONMENT=development webpack-dev-server",
-    "test": "jest --watch",
+    "test": "jest --watch --runInBand",
     "coverage": "jest --coverage"
   },
   "repository": {
