@@ -67,16 +67,18 @@ html(lang="en")
             span= state ? state : 'default'
           block
 
+      include ../components/text-field/text-field.pug
+
       .toolbox__form-elements
 
         //- 1st column
         .toolbox__form-elemnts__items-group
           +item('text field')
-            input(type="email", placeholder="Email").text-field
+            +text-field({type: 'email', placeholder: 'Email'})
 
           .toolbox__form-elements__item
             +item('text field', 'hover / focus')
-              input(type="email", placeholder="Email" value="This is pretty awesome").text-field.text-field_focused
+              +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
 
           .toolbox__form-elements__item
             +item('dropdown')
@@ -86,4 +88,9 @@ html(lang="en")
 
           .toolbox__form-elements__item
             +item('mask text field')
-              input(type="text" placeholder="ДД.ММ.ГГГГ").text-field.text-field_masked
+              +masked-text-field(
+                '(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(19|20)\\d\\d',
+                "01012000",
+                '__.__.____',
+                {placeholder: 'ДД.ММ.ГГГГ'}
+              )
