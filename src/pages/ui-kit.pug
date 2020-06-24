@@ -5,83 +5,59 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title UI-KIT
   body
+
+    mixin color-desc(color_name, color_value)
+      .color-desc
+        .toolbox__label.quicksand_bold.text_capitalize= color_name
+          .toolbox__label.quicksand.text_uppercase
+            | ##{color_value}
+
+    mixin text-type(tag_name)
+      .text-type
+        .text-type__preview
+            - var text_transform = tag_name == 'body' ? 'text_capitalize' : 'text_uppercase'
+            span.text-type__label.montserrat(class=text_transform)= tag_name
+            case tag_name
+              when 'h1': h1: block
+              when 'h2': h2: block
+              when 'h3': h3: block
+              default: p: block
+
+
+
     //- Colors & Type
     .toolbox__container
       .toolbox__colors-type
 
         .color-example.bgc_dark-shade-100
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Dark Shade 100%
-            .toolbox__label.quicksand.text_uppercase
-              | #1f2041
-        .text-type
-          .text-type__preview
-            h1
-              span.text-type__label.montserrat.text_uppercase
-                | h1
-              | This one is the sub-section or widget title
+        +color-desc('dark shade 100%', '1f2041')
+        +text-type('h1')
+          | This one is the sub-section or widget title
 
         .color-example.bgc_dark-shade-75
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Dark Shade 75%
-            .toolbox__label.quicksand.text_uppercase
-              | #1f2041
-        .text-type
-          .text-type__preview
-            h2
-              span.text-type__label.montserrat.text_uppercase
-                | h2
-              | Next one is the item title inside widgets
+        +color-desc('dark shade 75%', '1f2041')
+        +text-type('h2')
+          | Next one is the item title inside widgets
 
         .color-example.bgc_dark-shade-50
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Dark Shade 50%
-            .toolbox__label.quicksand.text_uppercase
-              | #1f2041
-        .text-type
-          .text-type__preview
-            h3
-              span.text-type__label.montserrat.text_uppercase
-                | h3
-              | This is a label or CTA text
+        +color-desc('dark shade 50%', '1f2041')
+        +text-type('h3')
+          | This is a label or CTA text
 
         .color-example.bgc_dark-shade-25
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Dark Shade 25%
-            .toolbox__label.quicksand.text_uppercase
-              | #1f2041
-        .text-type
-          .text-type__preview
-            span.text-type__label.montserrat
-              | Body
-            p
-              | This is the body text which is used for most of the design,
-              | like paragraphs, lists, etc.
+        +color-desc('dark shade 25%', '1f2041')
+        +text-type('body')
+          | This is the body text which is used for most of the design,
+          | like paragraphs, lists, etc.
 
         .color-example.bgc_dark-shade-5
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Dark Shade 5%
-            .toolbox__label.quicksand.text_uppercase
-              | #1f2041
+        +color-desc('dark shade 5%', '1f2041')
 
         .color-example.bgc_purple-color
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Purple
-            .toolbox__label.quicksand.text_uppercase
-              | #bc9cff
+        +color-desc('purple', 'bc9cff')
 
         .color-example.bgc_green-color
-        .color-desc
-          .toolbox__label.quicksand_bold
-            | Green
-            .toolbox__label.quicksand.text_uppercase
-              | #6fcf97
+        +color-desc('green', '6fcf97')
 
     //- Form Elements
     .toolbox__container
@@ -112,3 +88,10 @@ html(lang="en")
             select
               option(value="" disabled selected)
                 | Сколько гостей
+
+          .toolbox__form-elements__item
+            .toolbox__form-elements__item__label
+              | masked text field
+              span
+                | default
+            input(type="text" placeholder="ДД.ММ.ГГГГ").text-field
