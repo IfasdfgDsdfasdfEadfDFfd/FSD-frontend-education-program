@@ -6,27 +6,26 @@ html(lang="en")
     title UI-KIT
   body
 
-    mixin color-desc(color_name, color_value)
-      .color-desc
-        .toolbox__label.quicksand_bold.text_capitalize= color_name
-          .toolbox__label.quicksand.text_uppercase
-            | ##{color_value}
-
-    mixin text-type(tag_name)
-      .text-type
-        .text-type__preview
-            - var text_transform = tag_name == 'body' ? 'text_capitalize' : 'text_uppercase'
-            span.text-type__label.montserrat(class=text_transform)= tag_name
-            case tag_name
-              when 'h1': h1: block
-              when 'h2': h2: block
-              when 'h3': h3: block
-              default: p: block
-
-
-
     //- Colors & Type
     .toolbox__container
+
+      mixin color-desc(color_name, color_value)
+        .color-desc
+          .toolbox__label.quicksand_bold.text_capitalize= color_name
+            .toolbox__label.quicksand.text_uppercase
+              | ##{color_value}
+
+      mixin text-type(tag_name)
+        .text-type
+          .text-type__preview
+              - var text_transform = tag_name == 'body' ? 'text_capitalize' : 'text_uppercase'
+              span.text-type__label.montserrat(class=text_transform)= tag_name
+              case tag_name
+                when 'h1': h1: block
+                when 'h2': h2: block
+                when 'h3': h3: block
+                default: p: block
+
       .toolbox__colors-type
 
         .color-example.bgc_dark-shade-100
@@ -61,37 +60,30 @@ html(lang="en")
 
     //- Form Elements
     .toolbox__container
+
+      mixin item(label, state)
+        .toolbox__form-elements__item
+          .toolbox__form-elements__item__label= label
+            span= state ? state : 'default'
+          block
+
       .toolbox__form-elements
 
         //- 1st column
         .toolbox__form-elemnts__items-group
-
-          .toolbox__form-elements__item
-            .toolbox__form-elements__item__label
-              | text field
-              span
-                | default
+          +item('text field')
             input(type="email", placeholder="Email").text-field
 
           .toolbox__form-elements__item
-            .toolbox__form-elements__item__label
-              | text field
-              span
-                | hover / focus
-            input(type="email", placeholder="Email" value="This is pretty awesome").text-field.text-field_focused
+            +item('text field', 'hover / focus')
+              input(type="email", placeholder="Email" value="This is pretty awesome").text-field.text-field_focused
 
           .toolbox__form-elements__item
-            .toolbox__form-elements__item__label
-              | dropdown
-              span
-                | default
+            +item('dropdown')
             select
               option(value="" disabled selected)
                 | Сколько гостей
 
           .toolbox__form-elements__item
-            .toolbox__form-elements__item__label
-              | masked text field
-              span
-                | default
-            input(type="text" placeholder="ДД.ММ.ГГГГ").text-field
+            +item('mask text field')
+              input(type="text" placeholder="ДД.ММ.ГГГГ").text-field.text-field_masked
