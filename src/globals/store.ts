@@ -1,7 +1,7 @@
 export type Listener = (value: any) => void;
 
 export type Action = {
-  name: string,
+  name: (string|number),
   value?: any,
 };
 
