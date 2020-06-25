@@ -2,19 +2,20 @@
   border: 1px solid $dark-shade-25;
   box-sizing: border-box;
   border-radius: 4px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   background-color: #ffffff;
-  padding: 11px 15px;
+  padding: 12px 13px;
   font-size: 14px;
   line-height: 18px;
-  color: $dark-shade-25
+  color: $dark-shade-25;
 }
 
 .text-field_focused,
 .text-field:hover,
 .text-field:focus {
   border: 1px solid $dark-shade-50;
-  color: $dark-shade-75
+  color: $dark-shade-75;
 }
 
-.text-field_masked {}
+.text-field_masked {
+}
