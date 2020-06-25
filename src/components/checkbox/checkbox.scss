@@ -1,0 +1,45 @@
+.checkbox-wrapper {
+  margin: 10px 0px -3px 0px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid $dark-shade-25;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #ffffff;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  margin-right: 10px;
+  background-size: 0px;
+  transition:
+    border .4s ease-in,
+    background-size .2s ease-in;
+  background-image: url("./images/check_mark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox:checked {
+  transition:
+    border .4s ease-in,
+    background-size .2s ease-in;
+  border: 1px solid $purple-color;
+  background-image: url("./images/check_mark.svg");
+  background-size: 12px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkbox-label {
+  max-width: 200px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 23px;
+}
