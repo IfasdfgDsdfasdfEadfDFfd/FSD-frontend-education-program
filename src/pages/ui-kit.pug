@@ -79,6 +79,7 @@ html(lang="en")
       include ../components/checkbox/checkbox.pug
       include ../components/radio-button/radio-button.pug
       include ../components/toggle/toggle.pug
+      include ../components/like-button/like-button.pug
 
       .toolbox__form-elements
 
@@ -122,6 +123,10 @@ html(lang="en")
               | Получать спецпредложения
             +toggle('special-offers-toggle_2', 'recieve-special-offers')
               | Получать спецпредложения
+
+          +item('like button', ' ')
+            +like-button('like-1')
+            +like-button('like-2')
 
         //- 3rd column 1st row
         .toolbox__form-elemnts__items-group.column_3.row_1
