@@ -4,6 +4,11 @@
   background-color: #ffffff;
 }
 
+.inline-items {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .column_1 {
   grid-column: 1;
 }
