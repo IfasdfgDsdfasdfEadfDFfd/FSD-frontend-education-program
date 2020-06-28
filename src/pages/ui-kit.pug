@@ -71,6 +71,7 @@ html(lang="en")
       include ../components/dropdown/dropdown.pug
       include ../components/checkbox/checkbox.pug
       include ../components/radio-button/radio-button.pug
+      include ../components/toggle/toggle.pug
 
       .toolbox__form-elements
 
@@ -105,6 +106,12 @@ html(lang="en")
 
           +item('radio buttons', ' ')
             +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
+
+          +item('toggle', ' ')
+            +toggle('special-offers-toggle_1', 'recieve-special-offers')
+              | Получать спецпредложения
+            +toggle('special-offers-toggle_2', 'recieve-special-offers')
+              | Получать спецпредложения
 
         //- 3rd column
         .toolbox__form-elemnts__items-group
