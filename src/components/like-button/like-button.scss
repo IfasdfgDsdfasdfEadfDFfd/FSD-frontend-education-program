@@ -9,4 +9,11 @@
   width: 40px;
   height: 20px;
   border-radius: 10px;
+  display: flex;
+}
+
+.like-button::before {
+  justify-self: flex-start;
+  font-family: 'Material-Icon';
+  content: 'favorite_border';
 }
