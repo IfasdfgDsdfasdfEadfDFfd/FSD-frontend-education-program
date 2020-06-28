@@ -16,14 +16,14 @@ export type Store = {
 
 export const createStore = (initState: any, reducer: Reducer): Store => {
   let listeners: Array<Listener> = [];
-  let _state: Array<any> = [];
+  let _state = initState;
 
   const setNextState = (nextState: any) => {
     _state = nextState;
   };
 
   const getState = () => {
-    return [..._state];
+    return _state;
   };
 
   const dispatch = (action: Action) => {
@@ -37,9 +37,5 @@ export const createStore = (initState: any, reducer: Reducer): Store => {
     return () => listeners.splice(index, 1);
   }
 
-  dispatch({
-    name: '@COLD_START',
-    value: [initState],
-  });
   return { subscribe, dispatch, getState };
 };
