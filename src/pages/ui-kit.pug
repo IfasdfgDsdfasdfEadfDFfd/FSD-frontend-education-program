@@ -70,6 +70,7 @@ html(lang="en")
       include ../components/text-field/text-field.pug
       include ../components/dropdown/dropdown.pug
       include ../components/checkbox/checkbox.pug
+      include ../components/radio-button/radio-button.pug
 
       .toolbox__form-elements
 
@@ -101,6 +102,9 @@ html(lang="en")
               | Можно с питомцами
             +checkbox('allow-guests', '')
               | Можно пригласить гостей (до 10 человек)
+
+          +item('radio buttons', ' ')
+            +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
 
         //- 3rd column
         .toolbox__form-elemnts__items-group

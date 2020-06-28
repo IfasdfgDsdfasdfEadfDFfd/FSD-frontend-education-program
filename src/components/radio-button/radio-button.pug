@@ -1,0 +1,7 @@
+mixin radio-buttons-group(name, values)
+  .radio-buttons-group
+    each value in values
+      -var id = value + '-id'
+        .radio-button
+          input(type="radio", value=value, name=name, id=id).radio-button__element
+          label(for=id).radio-button__label= value
