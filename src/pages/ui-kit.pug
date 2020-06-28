@@ -72,11 +72,11 @@ html(lang="en")
       include ../components/checkbox/checkbox.pug
       include ../components/radio-button/radio-button.pug
       include ../components/toggle/toggle.pug
+      include ../components/like-button/like-button.pug
 
       .toolbox__form-elements
 
-        //- 1st column
-        .toolbox__form-elemnts__items-group
+        .toolbox__form-elemnts__items-group.column_1.row_1
           +item('text field')
             +text-field({type: 'email', placeholder: 'Email'})
 
@@ -94,8 +94,12 @@ html(lang="en")
               {placeholder: 'ДД.ММ.ГГГГ'}
             )
 
-        //- 2nd column
-        .toolbox__form-elemnts__items-group
+          +item('date dropdown', ' ')
+          +item('date dropdown', ' ')
+          +item('filter date dropdown', ' ')
+          +item('subscription text field', ' ')
+
+        .toolbox__form-elemnts__items-group.column_2.row_1
           +item('checkbox buttons', ' ')
             +checkbox('allow-smoking', '')
               | Можно курить
@@ -113,7 +117,14 @@ html(lang="en")
             +toggle('special-offers-toggle_2', 'recieve-special-offers')
               | Получать спецпредложения
 
-        //- 3rd column
-        .toolbox__form-elemnts__items-group
+          +item('like button', ' ')
+            +like-button('like_1', true)
+            +like-button('like_2')
+
+        //- 3rd column 1st row
+        .toolbox__form-elemnts__items-group.column_3.row_1
           +item('range slider')
             +text-field({type: 'email', placeholder: 'Email'})
+
+          +item('buttons', ' ')
+          +item('pagination', ' ')
