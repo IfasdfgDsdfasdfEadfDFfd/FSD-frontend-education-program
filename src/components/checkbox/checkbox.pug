@@ -1,0 +1,6 @@
+mixin checkbox(name, value)
+  - var id = name + '-id'
+  .checkbox-wrapper
+    input(type="checkbox", id=id, name=name, value=value).checkbox
+    label(for=id).checkbox-label
+      block

@@ -1,0 +1,6 @@
+mixin toggle(name, value, text)
+  .toggle
+    -var id = name + '-id'
+    input(type="checkbox", name=name, id=id).toggle__element
+    label(for=id).toggle__label
+      block
