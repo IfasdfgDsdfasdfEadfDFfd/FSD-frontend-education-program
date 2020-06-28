@@ -1,10 +1,10 @@
-.checkbox-wrapper {
+.checkbox {
   margin: 10px 0px -3px 0px;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.checkbox {
+.checkbox__element {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -26,7 +26,8 @@
   background-position: center;
 }
 
-.checkbox:checked {
+.checkbox_checked,
+.checkbox__element:checked {
   transition:
     border .4s ease-in,
     background-size .2s ease-in;
@@ -37,7 +38,7 @@
   background-repeat: no-repeat;
 }
 
-.checkbox-label {
+.checkbox__label {
   max-width: 200px;
   font-family: 'Montserrat';
   font-size: 14px;
