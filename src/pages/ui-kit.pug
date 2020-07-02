@@ -80,6 +80,7 @@ html(lang="en")
       include ../components/radio-button/radio-button.pug
       include ../components/toggle/toggle.pug
       include ../components/like-button/like-button.pug
+      include ../components/rate-button/rate-button.pug
 
       .toolbox__form-elements
 
@@ -129,10 +130,14 @@ html(lang="en")
               +like-button('like-1')
               +like-button('like-2')
 
+          +item('rate button', ' ')
+            .inline-items
+              +rate-button(4)
+              +rate-button(5)
+
         //- 3rd column 1st row
         .toolbox__form-elemnts__items-group.column_3.row_1
           +item('range slider')
-            +text-field({type: 'email', placeholder: 'Email'})
 
           +item('buttons', ' ')
           +item('pagination', ' ')
