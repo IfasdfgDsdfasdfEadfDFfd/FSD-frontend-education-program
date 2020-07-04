@@ -71,7 +71,7 @@ html(lang="en")
       mixin item(label, state)
         .toolbox__form-elements__item
           .toolbox__form-elements__item__label= label
-            span= state ? state : 'default'
+            span= state ? state : ''
           block
 
       include ../components/text-field/text-field.pug
@@ -102,35 +102,35 @@ html(lang="en")
               {placeholder: 'ДД.ММ.ГГГГ'}
             )
 
-          +item('date dropdown', ' ')
-          +item('date dropdown', ' ')
-          +item('filter date dropdown', ' ')
-          +item('subscription text field', ' ')
+          +item('date dropdown')
+          +item('date dropdown')
+          +item('filter date dropdown')
+          +item('subscription text field')
 
         .toolbox__form-elemnts__items-group.column_2.row_1
-          +item('checkbox buttons', ' ')
-            +checkbox('allow-smoking', '')
+          +item('checkbox buttons')
+            +checkbox('allow-smoking')
               | Можно курить
-            +checkbox('allow-pets', '')
+            +checkbox('allow-pets')
               | Можно с питомцами
-            +checkbox('allow-guests', '')
+            +checkbox('allow-guests')
               | Можно пригласить гостей (до 10 человек)
 
-          +item('radio buttons', ' ')
+          +item('radio buttons')
             +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
 
-          +item('toggle', ' ')
+          +item('toggle')
             +toggle('special-offers-toggle_1', 'recieve-special-offers')
               | Получать спецпредложения
             +toggle('special-offers-toggle_2', 'recieve-special-offers')
               | Получать спецпредложения
 
-          +item('like button', ' ')
+          +item('like button')
             .inline-items
               +like-button('like-1')
               +like-button('like-2')
 
-          +item('rate button', ' ')
+          +item('rate button')
             .inline-items
               +rate-button(4)
               +rate-button(5)
@@ -139,5 +139,5 @@ html(lang="en")
         .toolbox__form-elemnts__items-group.column_3.row_1
           +item('range slider')
 
-          +item('buttons', ' ')
-          +item('pagination', ' ')
+          +item('buttons')
+          +item('pagination')
