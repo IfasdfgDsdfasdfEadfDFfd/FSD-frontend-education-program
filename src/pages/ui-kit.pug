@@ -82,6 +82,7 @@ html(lang="en")
       include ../components/like-button/like-button.pug
       include ../components/rate-button/rate-button.pug
       include ../components/range-slider/range-slider.pug
+      include ../components/buttons/button.pug
 
       .toolbox__form-elements
 
@@ -142,4 +143,8 @@ html(lang="en")
             +range-slider()
 
           +item('buttons')
+            .inline-items
+              +button('click me')
+              +button('click me', true)
+
           +item('pagination')

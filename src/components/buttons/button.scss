@@ -1,0 +1,14 @@
+.button {
+  background-image: $from-purple-to-blue-gradient;
+  border: none;
+  border-radius: 22px;
+  padding: 15px 20px;
+  color: white;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.button_hover,
+.button:hover {
+  opacity: .5;
+}
