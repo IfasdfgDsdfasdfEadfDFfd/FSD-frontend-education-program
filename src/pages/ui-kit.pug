@@ -81,6 +81,7 @@ html(lang="en")
       include ../components/toggle/toggle.pug
       include ../components/like-button/like-button.pug
       include ../components/rate-button/rate-button.pug
+      include ../components/range-slider/range-slider.pug
 
       .toolbox__form-elements
 
@@ -138,6 +139,7 @@ html(lang="en")
         //- 3rd column 1st row
         .toolbox__form-elemnts__items-group.column_3.row_1
           +item('range slider')
+            +range-slider()
 
           +item('buttons')
           +item('pagination')
