@@ -8,3 +8,4 @@ $dark-shade-50: change-color($dark-shade, $alpha: 0.50);
 $dark-shade-25: change-color($dark-shade, $alpha: 0.25);
 $dark-shade-5: change-color($dark-shade, $alpha: 0.05);
 $from-purple-to-blue-gradient: linear-gradient(180deg, $purple-color 0%, $blue-color 100%);
+$from-green-to-blue-gradient: linear-gradient(180deg, $green-color 0%, $blue-color 100%);
