@@ -7,6 +7,11 @@
 .inline-items {
   display: flex;
   flex-flow: row nowrap;
+
+  &>* {
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
 }
 
 .column_1 {
