@@ -83,6 +83,7 @@ html(lang="en")
       include ../components/rate-button/rate-button.pug
       include ../components/range-slider/range-slider.pug
       include ../components/buttons/button.pug
+      include ../components/buttons/button_border.pug
 
       .toolbox__form-elements
 
@@ -146,5 +147,8 @@ html(lang="en")
             .inline-items
               +button('click me')
               +button('click me', true)
+            .inline-items
+              +button_border('click me')
+              +button_border('click me', true)
 
           +item('pagination')
