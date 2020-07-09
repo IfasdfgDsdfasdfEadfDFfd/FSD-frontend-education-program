@@ -97,8 +97,8 @@
   flex-flow: column nowrap;
 }
 
-.toolbox__form-elemnts__items-group:nth-child(2) {
-  margin-left: 27px;
+.toolbox__form-elemnts__items-group:nth-child(2) > * {
+  padding-left: 27px;
 }
 
 .toolbox__form-elemnts__items-group:nth-child(2) .toolbox__form-elements__item {
