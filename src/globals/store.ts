@@ -1,3 +1,5 @@
+import { Serializable } from "child_process";
+
 export type Listener = (value: any) => void;
 
 export type Action = {
@@ -6,6 +8,7 @@ export type Action = {
 };
 
 export type StateModifier = (initState: any) => any;
+export type Middleware = (args: {action: any, state: any}) => {action: Action, state: any};
 
 export type Reducer = (action: Action, state: any) => any;
 
@@ -16,7 +19,12 @@ export type Store = {
 };
 
 
-export const createStore = (initState: any, reducer: Reducer, mods: StateModifier[] = []): Store => {
+export const createStore = (
+  initState: any,
+  reducer: Reducer,
+  mods: StateModifier[] = [],
+  middlewares: Middleware[] = [],
+): Store => {
   let listeners: Array<Listener> = [];
   let _state = mods?.reduce((state, mod) => mod(state), initState);
 
@@ -29,7 +37,8 @@ export const createStore = (initState: any, reducer: Reducer, mods: StateModifie
   };
 
   const dispatch = (action: Action) => {
-    setNextState(reducer(action, getState()));
+    const result = middlewares.reduce((args, mid) => mid(args), {action, state: getState()});
+    setNextState(reducer(result.action, result.state));
     listeners.forEach(listener => listener(getState()));
   }
 
@@ -55,4 +64,13 @@ export const saveToLocalStoragePlugin = (
   });
 
   return data;
+};
+
+export const saveToLocalStorageMiddlewareFabric = (storageName: string, dataToSave: Serializable): Middleware => {
+  return ({action, state}) => {
+
+    window.localStorage.setItem(storageName, JSON.stringify(dataToSave));
+
+    return {action, state};
+  };
 };
