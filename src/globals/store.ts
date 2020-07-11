@@ -1,5 +1,3 @@
-import { Serializable } from "child_process";
-
 export type Listener = (value: any) => void;
 
 export type Action = {
@@ -23,7 +21,7 @@ export const createStore = (
   initState: any,
   reducer: Reducer,
   mods: StateModifier[] = [],
-  middlewares: Middleware[] = [],
+  middlewares: {pre?: Middleware[], post?: Middleware[]} = {},
 ): Store => {
   let listeners: Array<Listener> = [];
   let _state = mods?.reduce((state, mod) => mod(state), initState);
@@ -37,8 +35,9 @@ export const createStore = (
   };
 
   const dispatch = (action: Action) => {
-    const result = middlewares.reduce((args, mid) => mid(args), {action, state: getState()});
-    setNextState(reducer(result.action, result.state));
+    const result = middlewares.pre?.reduce((args, mid) => mid(args), {action, state: getState()});
+    setNextState(reducer(result?.action || action, result?.state || getState()));
+    middlewares.post?.reduce((args, mid) => mid(args), {action: result?.action || action, state: result?.state || getState()});
     listeners.forEach(listener => listener(getState()));
   }
 
@@ -68,9 +67,7 @@ export const saveToLocalStoragePlugin = (
 
 export const saveToLocalStorageMiddlewareFabric = (storageName: string): Middleware => {
   return ({action, state}) => {
-
     window.localStorage.setItem(storageName, JSON.stringify(state));
-
     return {action, state};
   };
 };
