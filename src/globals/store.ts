@@ -5,6 +5,8 @@ export type Action = {
   value?: any,
 };
 
+export type StateModifier = (initState: any) => any;
+
 export type Reducer = (action: Action, state: any) => any;
 
 export type Store = {
@@ -14,9 +16,9 @@ export type Store = {
 };
 
 
-export const createStore = (initState: any, reducer: Reducer): Store => {
+export const createStore = (initState: any, reducer: Reducer, mods: StateModifier[] = []): Store => {
   let listeners: Array<Listener> = [];
-  let _state = initState;
+  let _state = mods?.reduce((state, mod) => mod(state), initState);
 
   const setNextState = (nextState: any) => {
     _state = nextState;
@@ -38,4 +40,19 @@ export const createStore = (initState: any, reducer: Reducer): Store => {
   }
 
   return { subscribe, dispatch, getState };
+};
+
+
+export const saveToLocalStoragePlugin = (
+  storageName: string,
+  elements: Array<Element>,
+  defaultValue: any = ''
+): StateModifier => (initState) => {
+  const data = JSON.parse(window.localStorage.getItem(storageName) || JSON.stringify(initState));
+
+  elements.forEach((elem) => {
+    data[elem.id] = data[elem.id] || defaultValue;
+  });
+
+  return data;
 };
