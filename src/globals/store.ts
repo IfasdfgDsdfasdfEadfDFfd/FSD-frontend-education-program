@@ -66,10 +66,10 @@ export const saveToLocalStoragePlugin = (
   return data;
 };
 
-export const saveToLocalStorageMiddlewareFabric = (storageName: string, dataToSave: Serializable): Middleware => {
+export const saveToLocalStorageMiddlewareFabric = (storageName: string): Middleware => {
   return ({action, state}) => {
 
-    window.localStorage.setItem(storageName, JSON.stringify(dataToSave));
+    window.localStorage.setItem(storageName, JSON.stringify(state));
 
     return {action, state};
   };
