@@ -1,8 +1,11 @@
+$slider-thumb-radius: 16px;
+$slider-range-thickness: 6px;
+
 .range-slider {
   position: relative;
   border: 1px solid $dark-shade-25;
   border-radius: 3px;
-  max-width: 266px;
+  max-width: 265px;
   margin-top: 5px;
 }
 
@@ -20,8 +23,8 @@
   pointer-events: all;
   -moz-appearance: none;
   -webkit-appearance: none;
-  width: 12px;
-  height: 12px;
+  width: $slider-thumb-radius;
+  height: $slider-thumb-radius;
   background-color: red;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -37,7 +40,7 @@
 .slider__track {
   position: absolute;
   width: 100%;
-  height: 6px;
+  height: $slider-range-thickness;
   background-color: #fff;
   border-radius: 5px;
   z-index: 1;
@@ -45,21 +48,18 @@
 
 .slider__range {
   position: absolute;
-  height: 6px;
-  left: 25%;
-  right: 25%;
+  height: $slider-range-thickness;
   background-image: $from-green-to-blue-gradient;
-  border-radius: 3px;
   z-index: 2;
 }
 
 .slider__thumb {
   position: absolute;
-  width: 12px;
-  height: 12px;
+  width: $slider-thumb-radius;
+  height: $slider-thumb-radius;
   border-radius: 50%;
   border: 2px solid #fff;
   background-image: $from-green-to-blue-gradient;
   z-index: 3;
-  top: -50%;
+  top: -$slider-thumb-radius / 2 + $slider-range-thickness / 2;
 }
