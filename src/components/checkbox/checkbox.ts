@@ -1,4 +1,4 @@
-import { createStore, Action, saveToLocalStoragePlugin } from '../../globals/store';
+import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../globals/store';
 
 
 const checkboxes = Array(...document.getElementsByClassName('checkbox__element') as unknown as Array<Element>);
@@ -10,16 +10,19 @@ enum actions {
 
 // controller
 const checkboxStorageName = 'checkbox-data';
-const store = createStore({}, (action: Action, state: any) => {
-  switch (action.name) {
-    case actions.TOGGLE:
-      state[action.value] = !state[action.value];
-      window.localStorage.setItem(checkboxStorageName, JSON.stringify(state));
-      return state;
-    default:
-      return state;
-  };
-}, [saveToLocalStoragePlugin(checkboxStorageName, checkboxes, false)]);
+const store = createStore({},
+  (action: Action, state: any) => {
+    switch (action.name) {
+      case actions.TOGGLE:
+        state[action.value] = !state[action.value];
+        return state;
+      default:
+        return state;
+    };
+  },
+  [saveToLocalStoragePlugin(checkboxStorageName, checkboxes, false)],
+  {post: [saveToLocalStorageMiddlewareFabric(checkboxStorageName)]},
+);
 
 // view
 checkboxes.forEach(checkbox => {
@@ -40,6 +43,7 @@ checkboxes.forEach(checkbox => {
   });
 
   checkbox.addEventListener('click', (event: any) => {
+    console.log(window.localStorage.getItem(checkboxStorageName));
     store.dispatch({ name: actions.TOGGLE, value: event.target.id });
   });
 });
