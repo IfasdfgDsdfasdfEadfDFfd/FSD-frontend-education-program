@@ -105,6 +105,14 @@
   margin: 8px 0px 25px;
 }
 
+.toolbox__form-elemnts__items-group:nth-child(3) .toolbox__form-elements__item {
+  margin-bottom: 30px;
+
+  &>.toolbox__form-elements__item__label {
+    margin-bottom: 12px;
+  }
+}
+
 .toolbox__form-elements__item {
   display: flex;
   flex-flow: column nowrap;
