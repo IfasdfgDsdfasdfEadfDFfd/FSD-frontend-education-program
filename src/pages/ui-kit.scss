@@ -111,6 +111,10 @@
   &>.toolbox__form-elements__item__label {
     margin-bottom: 12px;
   }
+
+  &>.toolbox__form-elements__item__label:first-child {
+    max-width: 265px;
+  }
 }
 
 .toolbox__form-elements__item {
