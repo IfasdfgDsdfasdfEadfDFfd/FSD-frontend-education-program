@@ -1,0 +1,24 @@
+.button-pay {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-image: $from-purple-to-blue-gradient;
+  min-width: 100%;
+  border: none;
+  border-radius: 22px;
+  padding: 15px 20px;
+  font-size: 12px;
+  line-height: 15px;
+
+  &::after {
+    position: absolute;
+    right: 10px;
+    content: 'arrow_forward';
+    text-transform: none;
+    font-family: 'Material-Icons';
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
