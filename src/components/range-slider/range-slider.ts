@@ -36,7 +36,12 @@ const store = createStore({},
 
 sliders.forEach(slider => {
   store.subscribe(state => {
+    const display = document.getElementById(`display-for-${slider.id}`) as HTMLElement;
+
     const {min, max, left, right} = state[slider.id];
+
+    display.innerHTML = `${left}&#8381;-${right}&#8381;`;
+
     const leftThumb = slider.querySelector('.slider__thumb_left') as HTMLElement;
     const rightThumb = slider.querySelector('.slider__thumb_right') as HTMLElement;
     const range = slider.querySelector('.slider__range') as HTMLElement;
