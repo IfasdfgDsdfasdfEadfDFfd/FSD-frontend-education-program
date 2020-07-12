@@ -1,7 +1,8 @@
-mixin range-slider()
-  .range-slider
-    input(type="range", min="0", max="100", step="1", value="25").range-slider__element.range-slider__element-left
-    input(type="range", min="0", max="100", step="1", value="75").range-slider__element.range-slider__element-right
+mixin range-slider(name, opts)
+  - var id = name + '-id'
+  .range-slider(id=id)
+    input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.left).range-slider__element.range-slider__element-left
+    input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.right).range-slider__element.range-slider__element-right
 
     .slider
       .slider__track

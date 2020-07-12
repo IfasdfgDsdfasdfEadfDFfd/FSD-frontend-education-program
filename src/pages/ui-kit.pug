@@ -138,10 +138,15 @@ html(lang="en")
               +rate-button(4)
               +rate-button(5)
 
-        //- 3rd column 1st row
         .toolbox__form-elemnts__items-group.column_3.row_1
           +item('range slider')
-            +range-slider()
+            +range-slider('cost-range-slider', {
+              min: 0,
+              max: 15000,
+              step: 100,
+              left: 5000,
+              right: 10000,
+            })
 
           +item('buttons')
             .inline-items
