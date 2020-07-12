@@ -43,7 +43,6 @@ checkboxes.forEach(checkbox => {
   });
 
   checkbox.addEventListener('click', (event: any) => {
-    console.log(window.localStorage.getItem(checkboxStorageName));
     store.dispatch({ name: actions.TOGGLE, value: event.target.id });
   });
 });
