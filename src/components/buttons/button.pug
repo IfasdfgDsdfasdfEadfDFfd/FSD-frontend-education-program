@@ -1,3 +1,2 @@
-mixin button(text, hover=false)
-  - var hover_class = hover ? 'button_hover' : ''
-  button(class=hover_class).button.montserrat_bold.text_uppercase= text
+mixin button(text, disabled=false)
+  button(disabled=disabled).button.montserrat_bold.text_uppercase= text
