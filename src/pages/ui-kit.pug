@@ -68,10 +68,10 @@ html(lang="en")
     //- Form Elements
     .toolbox__container
 
-      mixin item(label, state)
+      mixin item(label, state, cls)
         .toolbox__form-elements__item
           .toolbox__form-elements__item__label= label
-            span= state ? state : ''
+            span(class=cls)= state ? state : ''
           block
 
       include ../components/text-field/text-field.pug
