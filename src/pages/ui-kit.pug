@@ -84,6 +84,7 @@ html(lang="en")
       include ../components/range-slider/range-slider.pug
       include ../components/buttons/button.pug
       include ../components/buttons/button_border.pug
+      include ../components/buttons/button_flat.pug
 
       .toolbox__form-elements
 
@@ -155,5 +156,8 @@ html(lang="en")
             .inline-items
               +button_border('click me')
               +button_border('click me', true)
+            .inline-items
+              +button_flat('click me')
+              +button_flat('click me', true)
 
           +item('pagination')
