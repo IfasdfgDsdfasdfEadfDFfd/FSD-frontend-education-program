@@ -1,0 +1,39 @@
+.pagination {
+  display: flex;
+  flex-flow: column;
+}
+
+.pagination__button {
+  border: none;
+  color: $dark-shade-50;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.pagination__button_active {
+  background-image: $from-purple-to-blue-gradient;
+  font-family: 'Montserrat-Bold';
+  color: #fff;
+}
+
+.pagination__button_next {
+  background-image: $from-green-to-blue-gradient;
+  font-family: 'Material-Icons';
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.pagination__range {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 5px;
+}
+
+.pagination__footer {
+  padding-left: 5px;
+}

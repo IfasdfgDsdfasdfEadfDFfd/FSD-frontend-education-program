@@ -1,0 +1,12 @@
+.button-flat {
+  font-size: 12px;
+  line-height: 15px;
+  color: $purple-color;
+  background-color: #fff;
+  border: none;
+
+  &[disabled] {
+    color: $dark-shade-50;
+  }
+}
+

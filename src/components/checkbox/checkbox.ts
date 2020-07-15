@@ -1,30 +1,30 @@
-import { createStore, Action } from '../../globals/store';
+import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../globals/store';
 
 
 const checkboxes = Array(...document.getElementsByClassName('checkbox__element') as unknown as Array<Element>);
-
-const data = JSON.parse(window.localStorage.getItem('checkbox-data') || '{}');
-
-checkboxes.forEach((checkbox) => {
-  data[checkbox.id] = data[checkbox.id] || false;
-});
 
 
 enum actions {
   TOGGLE,
 };
 
-const store = createStore(data, (action: Action, state: any) => {
-  switch (action.name) {
-    case actions.TOGGLE:
-      state[action.value] = !state[action.value];
-      window.localStorage.setItem('checkbox-data', JSON.stringify(state));
-      return state;
-    default:
-      return state;
-  };
-});
+// controller
+const checkboxStorageName = 'checkbox-data';
+const store = createStore({},
+  (action: Action, state: any) => {
+    switch (action.name) {
+      case actions.TOGGLE:
+        state[action.value] = !state[action.value];
+        return state;
+      default:
+        return state;
+    };
+  },
+  [saveToLocalStoragePlugin(checkboxStorageName, checkboxes, false)],
+  {post: [saveToLocalStorageMiddlewareFabric(checkboxStorageName)]},
+);
 
+// view
 checkboxes.forEach(checkbox => {
   store.subscribe((state: any) => {
     const isChecked = state[checkbox.id];

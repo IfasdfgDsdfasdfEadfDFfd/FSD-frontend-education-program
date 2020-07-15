@@ -1,0 +1,33 @@
+$border-width: 2px;
+
+.button-border {
+  position: relative;
+  z-index: 0;
+  padding: $border-width;
+}
+
+.button-border__element {
+  padding: 15px - $border-width 20px - $border-width;
+  color: $purple-color;
+  background-color: #fff;
+  border: none;
+  border-radius: 22px;
+  width: 100%;
+  height: 100%;
+
+  font-size: 12px;
+  line-height: 15px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: $from-purple-to-blue-gradient;
+  }
+
+  &[disabled]:before {
+    opacity: .5;
+  }
+}

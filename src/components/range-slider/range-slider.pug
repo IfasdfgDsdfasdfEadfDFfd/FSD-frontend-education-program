@@ -1,0 +1,11 @@
+mixin range-slider(name, opts)
+  - var id = name + '-id'
+  .range-slider(id=id)
+    input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.left).range-slider__element.range-slider__element-left
+    input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.right).range-slider__element.range-slider__element-right
+
+    .slider
+      .slider__track
+      .slider__range
+      .slider__thumb.slider__thumb_left
+      .slider__thumb.slider__thumb_right

@@ -68,10 +68,10 @@ html(lang="en")
     //- Form Elements
     .toolbox__container
 
-      mixin item(label, state)
+      mixin item(label, state, attrs)
         .toolbox__form-elements__item
           .toolbox__form-elements__item__label= label
-            span= state ? state : 'default'
+            span&attributes(attrs)= state ? state : ''
           block
 
       include ../components/text-field/text-field.pug
@@ -81,6 +81,12 @@ html(lang="en")
       include ../components/toggle/toggle.pug
       include ../components/like-button/like-button.pug
       include ../components/rate-button/rate-button.pug
+      include ../components/range-slider/range-slider.pug
+      include ../components/buttons/button.pug
+      include ../components/buttons/button_border.pug
+      include ../components/buttons/button_flat.pug
+      include ../components/buttons/button_pay.pug
+      include ../components/pagination/pagination.pug
 
       .toolbox__form-elements
 
@@ -102,42 +108,60 @@ html(lang="en")
               {placeholder: 'ДД.ММ.ГГГГ'}
             )
 
-          +item('date dropdown', ' ')
-          +item('date dropdown', ' ')
-          +item('filter date dropdown', ' ')
-          +item('subscription text field', ' ')
+          +item('date dropdown')
+          +item('date dropdown')
+          +item('filter date dropdown')
+          +item('subscription text field')
 
         .toolbox__form-elemnts__items-group.column_2.row_1
-          +item('checkbox buttons', ' ')
-            +checkbox('allow-smoking', '')
+          +item('checkbox buttons')
+            +checkbox('allow-smoking')
               | Можно курить
-            +checkbox('allow-pets', '')
+            +checkbox('allow-pets')
               | Можно с питомцами
-            +checkbox('allow-guests', '')
+            +checkbox('allow-guests')
               | Можно пригласить гостей (до 10 человек)
 
-          +item('radio buttons', ' ')
+          +item('radio buttons')
             +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
 
-          +item('toggle', ' ')
+          +item('toggle')
             +toggle('special-offers-toggle_1', 'recieve-special-offers')
               | Получать спецпредложения
             +toggle('special-offers-toggle_2', 'recieve-special-offers')
               | Получать спецпредложения
 
-          +item('like button', ' ')
+          +item('like button')
             .inline-items
               +like-button('like-1')
               +like-button('like-2')
 
-          +item('rate button', ' ')
+          +item('rate button')
             .inline-items
               +rate-button(4)
               +rate-button(5)
 
-        //- 3rd column 1st row
         .toolbox__form-elemnts__items-group.column_3.row_1
-          +item('range slider')
+          +item('range slider', '', {id: 'display-for-cost-range-slider-id'})
+            +range-slider('cost-range-slider', {
+              min: 0,
+              max: 15000,
+              step: 100,
+              left: 5000,
+              right: 10000,
+            })
 
-          +item('buttons', ' ')
-          +item('pagination', ' ')
+          +item('buttons')
+            .inline-items
+              +button('click me')
+              +button('click me', true)
+            .inline-items
+              +button_border('click me')
+              +button_border('click me', true)
+            .inline-items
+              +button_flat('click me')
+              +button_flat('click me', true)
+            +button_pay('Перейти к оплате')
+
+          +item('pagination')
+            +pagination('1 - 12 из 100+ вариантов аренды')
