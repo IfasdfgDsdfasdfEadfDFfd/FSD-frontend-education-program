@@ -87,6 +87,7 @@ html(lang="en")
       include ../components/buttons/button_flat.pug
       include ../components/buttons/button_pay.pug
       include ../components/pagination/pagination.pug
+      include ../components/date-dropdown/date-dropdown.pug
 
       .toolbox__form-elements
 
@@ -108,8 +109,11 @@ html(lang="en")
               {placeholder: 'ДД.ММ.ГГГГ'}
             )
 
-          +item('date dropdown')
-          +item('date dropdown')
+          .inline-items
+            +item('date dropdown')
+              +date-dropdown('ДД.ММ.ГГГГ')
+            +item('date dropdown')
+              +date-dropdown('19.08.2019')
           +item('filter date dropdown')
           +item('subscription text field')
 
@@ -132,12 +136,12 @@ html(lang="en")
               | Получать спецпредложения
 
           +item('like button')
-            .inline-items
+            .inline-componets
               +like-button('like-1')
               +like-button('like-2')
 
           +item('rate button')
-            .inline-items
+            .inline-componets
               +rate-button(4)
               +rate-button(5)
 
@@ -152,13 +156,13 @@ html(lang="en")
             })
 
           +item('buttons')
-            .inline-items
+            .inline-componets
               +button('click me')
               +button('click me', true)
-            .inline-items
+            .inline-componets
               +button_border('click me')
               +button_border('click me', true)
-            .inline-items
+            .inline-componets
               +button_flat('click me')
               +button_flat('click me', true)
             +button_pay('Перейти к оплате')
