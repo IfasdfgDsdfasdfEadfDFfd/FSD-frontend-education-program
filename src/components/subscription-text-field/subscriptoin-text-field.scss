@@ -1,0 +1,33 @@
+.subscription-text-field {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 266px;
+}
+
+.subscription-text-field__input{
+  background-color: #fff;
+  padding: 12px 44px 8px 15px;
+  color: $dark-shade-25;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: 'Montserrat';
+
+  &:hover,
+  &:focus {
+    border: 1px solid $dark-shade-50;
+    color: $dark-shade-75;
+    transition: all .2s ease-in;
+  }
+}
+.subscription-text-field__push-button {
+  background-color: transparent;
+  border:none;
+  font-size: 24px;
+  margin-left: -42px;
+  color: $purple-color;
+  line-height: 24px;
+  font-family: 'Material-Icons';
+}

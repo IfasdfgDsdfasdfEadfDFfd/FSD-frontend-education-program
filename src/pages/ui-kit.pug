@@ -89,6 +89,7 @@ html(lang="en")
       include ../components/pagination/pagination.pug
       include ../components/date-dropdown/date-dropdown.pug
       include ../components/filter-date-dropdown/filter-date-dropdown.pug
+      include ../components/subscription-text-field/subscription-text-field.pug
 
       .toolbox__form-elements
 
@@ -119,6 +120,7 @@ html(lang="en")
             +filter-date-dropdown('19 авг - 23 авг')
 
           +item('subscription text field')
+            +subscription-text-field()
 
         .toolbox__form-elemnts__items-group.column_2.row_1
           +item('checkbox buttons')
