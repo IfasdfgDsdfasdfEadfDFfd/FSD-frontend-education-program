@@ -1,0 +1,7 @@
+mixin counter(text, initial_count=0)
+  .counter
+    span.counter__text.montserrat_bold.text_uppercase= text
+    .counter__right
+      button.counter__btn.counter__minus.montserrat= '-'
+      span.counter__count.montserrat_bold.text_uppercase= initial_count
+      button.counter__btn.counter__plus.montserrat= '+'
