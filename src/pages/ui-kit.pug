@@ -92,6 +92,7 @@ html(lang="en")
       include ../components/subscription-text-field/subscription-text-field.pug
       include ../components/counter/counter.pug
       include ../components/dropdown-counter/dropdown-counter.pug
+      include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
 
       .toolbox__form-elements
 
@@ -182,3 +183,81 @@ html(lang="en")
             +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
           +item('dropdown', 'expanded')
             +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
+          +item()
+            +expandable-checkbox-list('expandable checkbox list', [
+              {
+                text: 'Завтрак',
+                name: 'breakfast',
+                value: 'has-breakfast',
+                checked: false,
+              },
+              {
+                text: 'Письменный стол',
+                name: 'desk',
+                value: 'has-desk',
+                checked: true,
+              },
+              {
+                text: 'стул для кормления',
+                name: 'feeding-chair',
+                value: 'has-feeding-chair',
+                checked: true,
+              },
+              {
+                text: 'кроватка',
+                name: 'crib',
+                value: 'has-crib',
+                checked: true,
+              },
+              {
+                text: 'телевизор',
+                name: 'tv',
+                value: 'has-tv',
+                checked: false,
+              },
+              {
+                text: 'шампунь',
+                name: 'shampoo',
+                value: 'has-shampoo',
+                checked: false,
+              },
+            ], true)
+          +item()
+            +expandable-checkbox-list('expandable checkbox list', [
+              {
+                text: 'Завтрак',
+                name: 'breakfast',
+                value: 'has-breakfast',
+                checked: false,
+              },
+              {
+                text: 'Письменный стол',
+                name: 'desk',
+                value: 'has-desk',
+                checked: true,
+              },
+              {
+                text: 'стул для кормления',
+                name: 'feeding-chair',
+                value: 'has-feeding-chair',
+                checked: true,
+              },
+              {
+                text: 'кроватка',
+                name: 'crib',
+                value: 'has-crib',
+                checked: true,
+              },
+              {
+                text: 'телевизор',
+                name: 'tv',
+                value: 'has-tv',
+                checked: false,
+              },
+              {
+                text: 'шампунь',
+                name: 'shampoo',
+                value: 'has-shampoo',
+                checked: false,
+              },
+            ], false)
