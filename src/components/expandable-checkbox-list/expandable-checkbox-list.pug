@@ -1,0 +1,12 @@
+include ../checkbox/checkbox.pug
+
+
+mixin expandable-checkbox-list(title, checkboxes, closed)
+  - var closed_class = closed ? 'expandable-checkbox-list_closed' : ''
+  div(class=closed_class).expandable-checkbox-list
+    button.expandable-checkbox-list__btn.montserrat_bold.text_uppercase= title
+    ul
+      each checkbox in checkboxes
+        li.expandable-checkbox-list__item
+          +checkbox(checkbox.name, checkbox.value, checkbox.checked)
+            | #{checkbox.text}
