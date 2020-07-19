@@ -126,11 +126,11 @@ html(lang="en")
 
         .toolbox__form-elemnts__items-group.column_2.row_1
           +item('checkbox buttons')
-            +checkbox('allow-smoking')
+            +checkbox('allow-smoking', 'allow-smoking', false)
               | Можно курить
-            +checkbox('allow-pets')
+            +checkbox('allow-pets', 'allow-pets', true)
               | Можно с питомцами
-            +checkbox('allow-guests')
+            +checkbox('allow-guests', 'allow-guests', true)
               | Можно пригласить гостей (до 10 человек)
 
           +item('radio buttons')

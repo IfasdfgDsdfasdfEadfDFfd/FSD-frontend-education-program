@@ -4,13 +4,17 @@ import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddle
 const checkboxes = Array(...document.getElementsByClassName('checkbox__element') as unknown as Array<Element>);
 
 
+const initState = checkboxes.reduce((state, checkbox) => {
+  return {...state, [checkbox.id]: checkbox.hasAttribute('checked') || false};
+}, {});
+
 enum actions {
   TOGGLE,
 };
 
 // controller
 const checkboxStorageName = 'checkbox-data';
-const store = createStore({},
+const store = createStore(initState,
   (action: Action, state: any) => {
     switch (action.name) {
       case actions.TOGGLE:

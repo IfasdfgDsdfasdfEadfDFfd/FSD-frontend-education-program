@@ -1,6 +1,6 @@
-mixin checkbox(name, value)
+mixin checkbox(name, value, checked=false)
   - var id = name + '-id'
   .checkbox
-    input(type="checkbox", id=id, name=name, value=value).checkbox__element
+    input(type="checkbox", id=id, name=name, value=value, checked=checked).checkbox__element
     label(for=id).checkbox__label
       block
