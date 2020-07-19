@@ -1,0 +1,10 @@
+include ../counter/counter.pug
+
+mixin dropdown-counter(placeholder, counters, closed=false)
+  - var closed_class = closed ? 'dropdown-counter_closed' : ''
+  div(class=closed_class).dropdown-counter
+    button.dropdown-counter__btn= placeholder
+    ul.dropdown-counter__list
+      each counter in counters
+        li.dropdown-counter__list__item
+          +counter(counter)

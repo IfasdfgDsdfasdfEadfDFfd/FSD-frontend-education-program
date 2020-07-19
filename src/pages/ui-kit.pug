@@ -91,6 +91,7 @@ html(lang="en")
       include ../components/filter-date-dropdown/filter-date-dropdown.pug
       include ../components/subscription-text-field/subscription-text-field.pug
       include ../components/counter/counter.pug
+      include ../components/dropdown-counter/dropdown-counter.pug
 
       .toolbox__form-elements
 
@@ -178,4 +179,6 @@ html(lang="en")
 
         .toolbox__form-elemnts__items-group.column_1.row_2
           +item('dropdown', 'default')
+            +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
           +item('dropdown', 'expanded')
+            +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
