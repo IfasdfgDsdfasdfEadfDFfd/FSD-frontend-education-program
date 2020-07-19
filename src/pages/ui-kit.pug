@@ -183,6 +183,14 @@ html(lang="en")
             +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
           +item('dropdown', 'expanded')
             +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
+
+        .toolbox__form-elemnts__items-group.column_2.row_2
+          +item('dropdown')
+
+        .toolbox__form-elemnts__items-group.column_3.row_2
+          +item('dropdown')
+
+        .toolbox__form-elemnts__items-group.column_1.row_3
           +item()
             +expandable-checkbox-list('expandable checkbox list', [
               {
@@ -261,3 +269,15 @@ html(lang="en")
                 checked: false,
               },
             ], false)
+
+        .toolbox__form-elemnts__items-group.column_2.row_3
+          +item('rich checkbox buttons')
+
+        .toolbox__form-elemnts__items-group.column_3.row_3
+          +item('bullet list')
+
+        .toolbox__form-elemnts__items-group.column_1.row_4
+          +item('')
+
+        .toolbox__form-elemnts__items-group.from_column_2_to_column_3.row_4
+          +item('')

@@ -31,6 +31,11 @@
   grid-column: 3;
 }
 
+.from_column_2_to_column_3 {
+  grid-column-start: 2;
+  grid-column-end: span 2;
+}
+
 .row_1 {
   grid-row: 1;
 }
@@ -39,6 +44,10 @@
 }
 .row_3 {
   grid-row: 3;
+}
+
+.row_4 {
+  grid-row: 4;
 }
 
 .toolbox__colors-type {
@@ -95,7 +104,7 @@
   display: grid;
   margin: 0px 140px;
   padding-top: 130px;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: 2fr 1fr 1fr 1fr / repeat(3, 1fr);
   gap: 65px 100px;
 }
 
@@ -104,7 +113,7 @@
   flex-flow: column nowrap;
 }
 
-.toolbox__form-elemnts__items-group:nth-child(2) > * {
+.toolbox__form-elemnts__items-group.column_2 > * {
   padding-left: 27px;
 }
 
