@@ -93,6 +93,7 @@ html(lang="en")
       include ../components/counter/counter.pug
       include ../components/dropdown-counter/dropdown-counter.pug
       include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
+      include ../components/rich-checkbox/rich-checkbox.pug
 
       .toolbox__form-elements
 
@@ -272,6 +273,13 @@ html(lang="en")
 
         .toolbox__form-elemnts__items-group.column_2.row_3
           +item('rich checkbox buttons')
+            +rich-checkbox('Широкий коридор', 'wide-corridor')
+              | Ширина коридоров в номере
+              br
+              | не менее 91 см.
+
+            +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
+              | На 1 этаже вас стретит специалист и проводит до номера
 
         .toolbox__form-elemnts__items-group.column_3.row_3
           +item('bullet list')

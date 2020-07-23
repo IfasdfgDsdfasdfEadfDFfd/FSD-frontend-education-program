@@ -1,0 +1,7 @@
+include ../checkbox/checkbox.pug
+
+mixin rich-checkbox(text, name, checked=false)
+  .rich-checkbox
+    +checkbox(name, name, checked)= text
+    span.montserrat.rich-checkbox__desc
+      block
