@@ -94,6 +94,7 @@ html(lang="en")
       include ../components/dropdown-counter/dropdown-counter.pug
       include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
       include ../components/rich-checkbox/rich-checkbox.pug
+      include ../components/bullet-list/bullet-list.pug
 
       .toolbox__form-elements
 
@@ -283,6 +284,11 @@ html(lang="en")
 
         .toolbox__form-elemnts__items-group.column_3.row_3
           +item('bullet list')
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00'
+            ])
 
         .toolbox__form-elemnts__items-group.column_1.row_4
           +item('')
