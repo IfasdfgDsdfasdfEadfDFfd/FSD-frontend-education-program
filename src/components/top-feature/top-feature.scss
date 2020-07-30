@@ -1,0 +1,31 @@
+.top-feature {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px 0px;
+  border-bottom: 1px solid $dark-shade-5;
+}
+
+.top-feature__icon {
+  font-family: 'Material-Icons';
+  font-size: 48px;
+  line-height: 41px;
+  background-image: $from-purple-to-blue-gradient;
+  background-clip: text;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  align-self: center;
+}
+
+.top-feature__title {
+  font-family: 'Montserrat-Bold';
+}
+
+.top-feature__body {
+  margin-left: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 14px;
+  line-height: 24px;
+}

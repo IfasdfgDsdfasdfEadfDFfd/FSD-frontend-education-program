@@ -95,6 +95,7 @@ html(lang="en")
       include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
       include ../components/rich-checkbox/rich-checkbox.pug
       include ../components/bullet-list/bullet-list.pug
+      include ../components/top-feature/top-feature.pug
 
       .toolbox__form-elements
 
@@ -292,6 +293,8 @@ html(lang="en")
 
         .toolbox__form-elemnts__items-group.column_1.row_4
           +item('')
+            +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+            +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
 
         .toolbox__form-elemnts__items-group.from_column_2_to_column_3.row_4
           +item('')
