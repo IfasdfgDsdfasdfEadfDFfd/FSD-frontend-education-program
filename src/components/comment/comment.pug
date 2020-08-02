@@ -1,0 +1,13 @@
+include ../like-button/like-button.pug
+
+mixin comment(username, date)
+  .comment
+    .comment__header
+      .comment__header-avatar
+      .comment__header-title
+        .comment__header-username= username
+        .comment__header-date= date
+    .comment__body
+      +like-button('like-3')
+      .comment__body-text
+        block
