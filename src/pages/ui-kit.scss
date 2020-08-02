@@ -9,6 +9,7 @@
   flex-flow: row nowrap;
 
   &>* {
+    margin-top: 5px;
     margin-right: 20px;
     margin-bottom: 30px;
   }
@@ -33,7 +34,7 @@
 
 .from_column_2_to_column_3 {
   grid-column-start: 2;
-  grid-column-end: span 2;
+  grid-column-end: 4;
 }
 
 .row_1 {
