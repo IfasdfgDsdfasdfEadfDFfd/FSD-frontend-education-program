@@ -84,10 +84,6 @@
   grid-row: 3;
 }
 
-.row_4 {
-  grid-row: 4;
-}
-
 .toolbox__colors-type {
   display: grid;
   margin: 0px 135px;
@@ -173,6 +169,11 @@
 
 .toolbox__form-elemnts__items-group.column_1.row_2 > .toolbox__form-elements__item {
   max-width: 266px;
+}
+
+.toolbox__form-elemnts__items-group.column_1.row_2 {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .toolbox__form-elements__item {

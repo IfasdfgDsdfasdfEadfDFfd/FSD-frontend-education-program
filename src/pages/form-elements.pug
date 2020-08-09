@@ -123,16 +123,10 @@ block body
       .toolbox__form-elemnts__items-group.column_1.row_2
         +item('dropdown', 'default')
           +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
+
         +item('dropdown', 'expanded')
           +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
 
-      .toolbox__form-elemnts__items-group.column_2.row_2
-        +item('dropdown')
-
-      .toolbox__form-elemnts__items-group.column_3.row_2
-        +item('dropdown')
-
-      .toolbox__form-elemnts__items-group.column_1.row_3
         +item()
           +expandable-checkbox-list('expandable checkbox list', [
             {
@@ -172,6 +166,7 @@ block body
               checked: false,
             },
           ], true)
+
         +item()
           +expandable-checkbox-list('expandable checkbox list', [
             {
@@ -212,7 +207,10 @@ block body
             },
           ], false)
 
-      .toolbox__form-elemnts__items-group.column_2.row_3
+
+      .toolbox__form-elemnts__items-group.column_2.row_2
+        +item('dropdown')
+
         +item('rich checkbox buttons')
           +rich-checkbox('Широкий коридор', 'wide-corridor')
             | Ширина коридоров в номере
@@ -222,7 +220,9 @@ block body
           +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
             | На 1 этаже вас стретит специалист и проводит до номера
 
-      .toolbox__form-elemnts__items-group.column_3.row_3
+      .toolbox__form-elemnts__items-group.column_3.row_2
+        +item('dropdown')
+
         +item('bullet list')
           +bullet-list([
             'Нельзя с питомцами',
@@ -230,12 +230,12 @@ block body
             'Время прибытия — после 13:00, а выезд до 12:00'
           ])
 
-      .toolbox__form-elemnts__items-group.column_1.row_4
+      .toolbox__form-elemnts__items-group.column_1.row_3
         +item('')
           +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
           +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
 
-      .toolbox__form-elemnts__items-group.from_column_2_to_column_3.row_4
+      .toolbox__form-elemnts__items-group.from_column_2_to_column_3.row_3
         +comment('Мурад Сарафанов', '5 дней назад')
           | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
           br
