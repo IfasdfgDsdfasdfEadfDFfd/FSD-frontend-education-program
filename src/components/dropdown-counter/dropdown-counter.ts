@@ -1,7 +1,5 @@
 const dropdowns = Array(...document.getElementsByClassName('dropdown-counter') as unknown as Array<HTMLElement>);
 
-console.log(dropdowns)
-
 dropdowns.forEach(dropdown => {
   const button = dropdown.querySelector('.dropdown-counter__btn');
 
