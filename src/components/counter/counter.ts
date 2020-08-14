@@ -1,8 +1,12 @@
-import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../globals/store';
+import {
+  createStore,
+  Action,
+  saveToLocalStoragePlugin,
+  saveToLocalStorageMiddlewareFabric
+} from '../../globals/store';
 
 
 const counters = Array(...document.getElementsByClassName('counter') as unknown as Array<Element>);
-
 
 const initState = counters.reduce((state, counter) => {
   return {...state, [counter.id]: parseInt((counter.querySelector('.counter__count')?.textContent || '0'))}
@@ -11,11 +15,13 @@ const initState = counters.reduce((state, counter) => {
 enum actions {
   INC,
   DEC,
+  RESET,
 };
+
 
 // controller
 const counterStorageName = 'counter-data';
-const store = createStore(initState,
+export const store = createStore(initState,
   (action: Action, state: any) => {
     let newCount: Number, nextCount: Number;
     switch (action.name) {
@@ -29,6 +35,9 @@ const store = createStore(initState,
         newCount = state[action.value] - 1;
         nextCount = (newCount < 0) ? 0 : newCount;
         return {...state, [action.value]: nextCount}
+
+      case actions.RESET:
+        return {...state, [action.value]: 0};
 
       default:
         return state;
@@ -60,14 +69,15 @@ counters.forEach(counter => {
   store.subscribe((state: any) => {
     const countElement = counter.querySelector('.counter__count') as Element;
     const newCount = state[counter.id];
+
     if (Number(countElement.textContent) !== newCount) {
       countElement.textContent = String(newCount);
+    }
 
-      if (newCount === 0) {
-        minusButton?.setAttribute('disabled', 'true');
-      } else {
-        minusButton?.removeAttribute('disabled');
-      }
+    if (newCount === 0) {
+      minusButton?.setAttribute('disabled', 'true');
+    } else {
+      minusButton?.removeAttribute('disabled');
     }
   });
 

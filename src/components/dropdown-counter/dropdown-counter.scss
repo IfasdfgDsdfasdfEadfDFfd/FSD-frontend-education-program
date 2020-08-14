@@ -63,10 +63,11 @@
 
 .dropdown-counter__buttons-cancel {
   color: $dark-shade-50;
+  visibility: hidden;
 }
 
-:not(.dropdown-counter_dirty) .dropdown-counter__buttons-cancel {
-  visibility: hidden;
+.dropdown-counter_dirty .dropdown-counter__buttons-cancel {
+  visibility: visible;
 }
 
 .dropdown-counter__buttons-apply {
