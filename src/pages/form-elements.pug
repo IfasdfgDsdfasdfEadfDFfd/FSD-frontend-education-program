@@ -46,7 +46,7 @@ block body
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
 
         +item('dropdown')
-          +dropdown('Сколько гостей', ['взрослые', 'дети', 'младенцы'])
+          +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
 
         +item('masked text field')
           +masked-text-field(
@@ -122,10 +122,10 @@ block body
 
       .toolbox__form-elemnts__items-group.column_1.row_2
         +item('dropdown', 'default')
-          +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
+          +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
 
         +item('dropdown', 'expanded')
-          +dropdown-counter('параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
+          +dropdown-counter('room-properties-1-2', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false)
 
         +item()
           +expandable-checkbox-list('expandable checkbox list', [
@@ -210,6 +210,7 @@ block body
 
       .toolbox__form-elemnts__items-group.column_2.row_2
         +item('dropdown')
+          +dropdown-counter('guests-counter-2', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
 
         +item('rich checkbox buttons')
           +rich-checkbox('Широкий коридор', 'wide-corridor')
@@ -222,6 +223,7 @@ block body
 
       .toolbox__form-elemnts__items-group.column_3.row_2
         +item('dropdown')
+          +dropdown-counter('guests-counter-3', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
 
         +item('bullet list')
           +bullet-list([

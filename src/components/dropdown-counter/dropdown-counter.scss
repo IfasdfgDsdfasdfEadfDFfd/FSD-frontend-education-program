@@ -46,3 +46,29 @@
   margin-bottom: 7px;
 }
 
+.dropdown-counter__buttons {
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    border: none;
+    background-color: #fff;
+    font-family: 'Montserrat-Bold';
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.dropdown-counter__buttons-cancel {
+  color: $dark-shade-50;
+}
+
+:not(.dropdown-counter_dirty) .dropdown-counter__buttons-cancel {
+  visibility: hidden;
+}
+
+.dropdown-counter__buttons-apply {
+  color: $purple-color;
+}

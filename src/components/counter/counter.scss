@@ -13,8 +13,10 @@
 
 .counter__count {
   font-size: 12px;
+  width: 10px;
   line-height: 15px;
   margin: 0px 10px;
+  color: $dark-shade-100;
 }
 
 .counter__text {
@@ -24,17 +26,20 @@
 }
 
 .counter__btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 1px 0px 0px 1px;
   background-color: #fff;
   border: 1px solid $dark-shade-25;
+  color: $dark-shade-25;
   width: 30px;
   height: 30px;
   font-size: 18px;
   border-radius: 50%;
-  color: $dark-shade-25;
   transition: all .2s ease-in;
+
+  & .counter__minus:disabled {
+    border-color: $dark-shade-5;
+    color: $dark-shade-5;
+  }
 }
 
 .counter__btn:focus,

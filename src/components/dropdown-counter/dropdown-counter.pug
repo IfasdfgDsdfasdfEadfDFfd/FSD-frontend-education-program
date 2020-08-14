@@ -1,10 +1,17 @@
 include ../counter/counter.pug
 
-mixin dropdown-counter(placeholder, counters, closed=false)
+mixin dropdown-counter(id, placeholder, counters, closed=false, need_to_be_applied=false)
   - var closed_class = closed ? 'dropdown-counter_closed' : ''
   div(class=closed_class).dropdown-counter
     button.dropdown-counter__btn= placeholder
     ul.dropdown-counter__list
-      each counter in counters
+      each counter, index in counters
         li.dropdown-counter__list__item
-          +counter(counter)
+          - var _id = id + '-' + index
+          +counter(_id, counter)
+      if need_to_be_applied
+        .dropdown-counter__buttons
+          button.dropdown-counter__buttons-cancel
+            | отмена
+          button.dropdown-counter__buttons-apply
+            | применить

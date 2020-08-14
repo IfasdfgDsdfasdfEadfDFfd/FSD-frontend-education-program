@@ -1,5 +1,5 @@
-mixin counter(text, initial_count=0)
-  .counter
+mixin counter(id, text, initial_count=0)
+  .counter(id=id)
     span.counter__text.montserrat_bold.text_uppercase= text
     .counter__right
       button.counter__btn.counter__minus.montserrat= '-'
