@@ -3,6 +3,7 @@ $border-width: 2px;
 .button-border {
   position: relative;
   z-index: 0;
+  min-width: 100px;
   padding: $border-width;
 }
 
@@ -15,6 +16,9 @@ $border-width: 2px;
   width: 100%;
   height: 100%;
 
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
   font-size: 12px;
   line-height: 15px;
 
