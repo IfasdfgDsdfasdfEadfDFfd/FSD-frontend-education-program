@@ -1,0 +1,15 @@
+include ../../text-field/text-field.pug
+include ../../buttons/button_pay.pug
+include ../../buttons/button_border.pug
+
+mixin login-card()
+  form.card.login-form
+    h1
+      | Войти
+    +text-field({type: 'email', placeholder: 'Email'})
+    +text-field({type: 'password', placeholder: 'Пароль'})
+    +button_pay('войти')
+    span
+      | Уже есть аккаунт на Toxin
+      +button_border('создать')
+

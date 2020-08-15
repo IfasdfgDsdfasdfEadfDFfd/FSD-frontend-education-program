@@ -38,6 +38,7 @@
 
 .toolbox__container {
   max-width: 1440px;
+  margin: auto;
   background-color: #ffffff;
 }
 
@@ -195,5 +196,8 @@
 }
 
 .toolbox__cards {
+  display: flex;
+  flex-flow: column wrap;
   margin: 150px 140px;
+  max-height: 1350px;
 }
