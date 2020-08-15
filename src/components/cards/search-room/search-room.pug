@@ -1,8 +1,17 @@
 include ../../date-dropdown/date-dropdown.pug
+include ../../dropdown-counter/dropdown-counter.pug
+include ../../buttons/button_pay.pug
 
 mixin search-room-card()
-  .card
-    h1
-      | Найдем номер под 
+  .card.search-room
+    h1.search-room__title
+      | Найдем номер под
       br
       | ваши пожелания
+
+    .search-room__date-picker
+      +date-dropdown('ДД.ММ.ГГГГ')
+      +date-dropdown('ДД.ММ.ГГГГ')
+
+    +dropdown-counter('guest-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+    +button_pay('Подобрать номер')

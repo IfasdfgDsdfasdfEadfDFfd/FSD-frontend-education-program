@@ -1,5 +1,8 @@
+@import './search-room/search-room.scss';
+
 .card {
   display: flex;
+  flex-flow: column nowrap;
   max-width: 380px;
   background-color: #fff;
   border-radius: 4px;
