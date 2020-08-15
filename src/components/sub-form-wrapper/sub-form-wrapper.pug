@@ -1,0 +1,9 @@
+mixin sub-form-wrapper(need_to_be_applied=true)
+  .sub-form-wrapper
+    block
+    if need_to_be_applied
+      .sub-form-wrapper__buttons
+        button.sub-form-wrapper__buttons-cancel
+          | отмена
+        button.sub-form-wrapper__buttons-apply
+          | применить
