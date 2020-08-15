@@ -1,0 +1,13 @@
+extends ../globals/common.pug
+
+block title
+  | Cards
+
+
+
+block body
+  include ../components/cards/search-room/search-room.pug
+
+  .toolbox__container
+    .toolbox__cards
+      +search-room-card()

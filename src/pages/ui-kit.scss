@@ -36,7 +36,6 @@
 }
 
 .toolbox__container {
-  margin: 145px auto;
   max-width: 1440px;
   background-color: #ffffff;
 }
@@ -86,7 +85,7 @@
 
 .toolbox__colors-type {
   display: grid;
-  margin: 0px 135px;
+  margin: 145px 135px;
   grid-template: repeat(7, 1fr) / 100px 200px 400px auto;
   row-gap: 20px;
 }
@@ -136,7 +135,7 @@
 
 .toolbox__form-elements {
   display: grid;
-  margin: 0px 140px;
+  margin: 145px 140px;
   padding-top: 130px;
   grid-template: 630px 1fr 200px / repeat(3, 1fr);
   gap: 65px 100px;
@@ -191,4 +190,8 @@
   font-family: "Montserrat";
   color: $dark-shade-50;
   float: right;
+}
+
+.toolbox__cards {
+  margin: 150px 140px;
 }
