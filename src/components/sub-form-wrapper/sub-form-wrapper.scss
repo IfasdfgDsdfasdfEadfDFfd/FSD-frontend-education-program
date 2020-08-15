@@ -1,0 +1,28 @@
+.sub-form-wrapper__buttons {
+  display: flex;
+  justify-content: space-between;
+
+  & > * {
+    border: none;
+    background-color: #fff;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.sub-form-wrapper__buttons-cancel {
+  color: $dark-shade-50;
+  visibility: hidden;
+}
+
+.sub-form-wrapper_dirty .sub-form-wrapper__buttons-cancel {
+  visibility: visible;
+}
+
+.sub-form-wrapper__buttons-apply {
+  color: $purple-color;
+}
