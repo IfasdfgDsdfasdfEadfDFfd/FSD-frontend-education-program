@@ -1,0 +1,14 @@
+include ../sub-form-wrapper/sub-form-wrapper.pug
+
+mixin calendar(month, year)
+  .calendar
+    +sub-form-wrapper()
+      .calendar__year-month-picker
+        button.backward= 'arrow_back'
+        h2.calendar__year-month
+          | #{month} #{year}
+        button.forward= 'arrow_forward'
+      table.calendar__table
+        tr.calendar__table-heading
+          each day in ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+            th= day
