@@ -1,0 +1,22 @@
+.account-registration {
+  & > h1 {
+    margin-bottom: 15px;
+  }
+  & > h3 {
+    margin-top: 20px;
+  }
+
+  & > .text-field {
+    margin: 5px 0px;
+  }
+
+  & > .button-pay {
+    margin: 20px 0px 30px;
+  }
+
+  & > span {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}

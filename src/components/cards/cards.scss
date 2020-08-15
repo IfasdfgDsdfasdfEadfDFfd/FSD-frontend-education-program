@@ -1,8 +1,10 @@
 @import './search-room/search-room.scss';
+@import './account-registration/account-registration.scss';
 
 .card {
   display: flex;
   flex-flow: column nowrap;
+  margin-bottom: 40px;
   max-width: 380px;
   background-color: #fff;
   border-radius: 4px;
