@@ -2,27 +2,28 @@
 
 
 h1 {
-  font-family: 'Quicksand-bold', 'Open Sans';
+  font-family: 'Quicksand';
+  font-weight: bold;
+  color: $dark-shade-100;
   font-size: 24px;
   line-height: 30px;
-  color: $dark-shade-100;
 }
 
 h2 {
-  font-family: 'Quicksand-bold', 'Open Sans';
+  font-family: 'Quicksand';
+  font-weight: bold;
+  color: $dark-shade-100;
   font-size: 19px;
   line-height: 24px;
-  color: $dark-shade-100;
 }
 
 h3 {
   font-family: 'Montserrat';
   font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
   text-transform: uppercase;
   color: $dark-shade-100;
-  margin-top: 28px;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 body {
@@ -42,18 +43,6 @@ body {
 
 .montserrat {
   font-family: 'Montserrat';
-}
-
-.text_uppercase {
-  text-transform: uppercase;
-}
-
-.text_capitalize {
-  text-transform: capitalize;
-}
-
-.quicksand_bold{
-  font-family: 'Quicksand-Bold';
 }
 
 .bgc_dark-shade-100 {
