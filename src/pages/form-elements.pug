@@ -23,7 +23,7 @@ block body
     include ../components/buttons/button.pug
     include ../components/buttons/button_border.pug
     include ../components/buttons/button_flat.pug
-    include ../components/buttons/button_pay.pug
+    include ../components/buttons/action-button.pug
     include ../components/pagination/pagination.pug
     include ../components/date-dropdown/date-dropdown.pug
     include ../components/filter-date-dropdown/filter-date-dropdown.pug
@@ -115,7 +115,7 @@ block body
           .inline-componets
             +button_flat('click me')
             +button_flat('click me', true)
-          +button_pay('Перейти к оплате')
+          +action-button('Перейти к оплате')
 
         +item('pagination')
           +pagination('1 - 12 из 100+ вариантов аренды')

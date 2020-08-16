@@ -1,7 +1,7 @@
 include ../../text-field/text-field.pug
 include ../../radio-button/radio-button.pug
 include ../../toggle/toggle.pug
-include ../../buttons/button_pay.pug
+include ../../buttons/action-button.pug
 include ../../buttons/button_border.pug
 
 mixin account-registration-card()
@@ -25,7 +25,7 @@ mixin account-registration-card()
     +text-field({type: 'password', placeholder: 'Пароль'})
     +toggle('special-offers-toggle', 'recieve-special-offers')
       | Получать спецпредложения
-    +button_pay('Перейти к оплате')
+    +action-button('Перейти к оплате')
     span
       | Уже есть аккаунт на Toxin
       +button_border('войти')

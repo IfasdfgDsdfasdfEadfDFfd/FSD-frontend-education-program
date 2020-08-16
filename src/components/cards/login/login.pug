@@ -1,5 +1,5 @@
 include ../../text-field/text-field.pug
-include ../../buttons/button_pay.pug
+include ../../buttons/action-button.pug
 include ../../buttons/button_border.pug
 
 mixin login-card()
@@ -8,7 +8,7 @@ mixin login-card()
       | Войти
     +text-field({type: 'email', placeholder: 'Email'})
     +text-field({type: 'password', placeholder: 'Пароль'})
-    +button_pay('войти')
+    +action-button('войти')
     span
       | Нет аккаунта на Toxin?
       +button_border('создать')

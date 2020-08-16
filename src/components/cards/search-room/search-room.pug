@@ -1,6 +1,6 @@
 include ../../date-dropdown/date-dropdown.pug
 include ../../dropdown-counter/dropdown-counter.pug
-include ../../buttons/button_pay.pug
+include ../../buttons/action-button.pug
 
 mixin search-room-card()
   .card.search-room
@@ -14,4 +14,4 @@ mixin search-room-card()
       +date-dropdown('ДД.ММ.ГГГГ')
 
     +dropdown-counter('guest-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
-    +button_pay('Подобрать номер')
+    +action-button('Подобрать номер')
