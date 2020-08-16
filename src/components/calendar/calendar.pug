@@ -9,6 +9,6 @@ mixin calendar(month, year)
           | #{month} #{year}
         button.forward= 'arrow_forward'
       table.calendar__table
-        tr.calendar__table-heading
+        tr.calendar__table-row.calendar__table-row_heading
           each day in ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
             th= day
