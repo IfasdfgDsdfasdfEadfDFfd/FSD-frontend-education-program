@@ -1,0 +1,14 @@
+extends ../globals/common.pug
+
+block title
+  | Landing Page
+
+block body
+  include ../components/header/header.pug
+  include ../components/footer/footer.pug
+  include ../components/cards/login/login.pug
+
+  +header()
+  main.login-page
+    +login-card()
+  +footer-desktop()
