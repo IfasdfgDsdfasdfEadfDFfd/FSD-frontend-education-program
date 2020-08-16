@@ -1,6 +1,5 @@
 @import './consts.scss';
 
-
 h1 {
   font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -31,6 +30,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: $dark-shade-75;
+  background-color: #F4F4F6;
 }
 
 .container {
