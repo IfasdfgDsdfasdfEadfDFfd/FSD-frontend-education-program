@@ -1,0 +1,15 @@
+.landing {
+  height: 1000px;
+
+  position: relative;
+  background-image: url("./images/bg_landing.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  & > .search-room {
+    position: absolute;
+    top: 70px;
+    left: 160px;
+  }
+}
