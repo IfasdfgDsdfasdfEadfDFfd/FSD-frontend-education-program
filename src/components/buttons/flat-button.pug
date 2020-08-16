@@ -1,2 +1,4 @@
+include ./button.pug
+
 mixin flat-button(text, disabled=false)
-  button(disabled=disabled).button-flat.montserrat_bold.text_uppercase= text
+  +button(text, disabled, {class: 'button_flat'})

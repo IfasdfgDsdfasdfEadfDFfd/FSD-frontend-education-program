@@ -21,8 +21,8 @@ block body
     include ../components/rate-button/rate-button.pug
     include ../components/range-slider/range-slider.pug
     include ../components/buttons/button.pug
-    include ../components/buttons/button_border.pug
-    include ../components/buttons/button_flat.pug
+    include ../components/buttons/border-button.pug
+    include ../components/buttons/flat-button.pug
     include ../components/buttons/action-button.pug
     include ../components/pagination/pagination.pug
     include ../components/date-dropdown/date-dropdown.pug
@@ -110,11 +110,11 @@ block body
             +button('click me')
             +button('click me', true)
           .inline-componets
-            +button_border('click me')
-            +button_border('click me', true)
+            +border-button('click me')
+            +border-button('click me', true)
           .inline-componets
-            +button_flat('click me')
-            +button_flat('click me', true)
+            +flat-button('click me')
+            +flat-button('click me', true)
           +action-button('Перейти к оплате')
 
         +item('pagination')

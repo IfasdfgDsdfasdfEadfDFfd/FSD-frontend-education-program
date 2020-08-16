@@ -2,7 +2,7 @@ include ../../text-field/text-field.pug
 include ../../radio-button/radio-button.pug
 include ../../toggle/toggle.pug
 include ../../buttons/action-button.pug
-include ../../buttons/button_border.pug
+include ../../buttons/border-button.pug
 
 mixin account-registration-card()
   form.card.account-registration
@@ -28,4 +28,4 @@ mixin account-registration-card()
     +action-button('Перейти к оплате')
     span
       | Уже есть аккаунт на Toxin
-      +button_border('войти')
+      +border-button('войти')
