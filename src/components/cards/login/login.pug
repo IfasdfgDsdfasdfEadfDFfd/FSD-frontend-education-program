@@ -3,7 +3,7 @@ include ../../buttons/action-button.pug
 include ../../buttons/border-button.pug
 
 mixin login-card()
-  form.card.login-form
+  .card.login-form
     h1
       | Войти
     +text-field({type: 'email', placeholder: 'Email'})
@@ -11,5 +11,5 @@ mixin login-card()
     +action-button('войти')
     span
       | Нет аккаунта на Toxin?
-      +border-button('создать')
-
+      a(href="./registration.html")
+        +border-button('создать')

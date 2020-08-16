@@ -5,7 +5,7 @@ include ../../buttons/action-button.pug
 include ../../buttons/border-button.pug
 
 mixin account-registration-card()
-  form.card.account-registration
+  .card.account-registration
     h1
       | Регистрация аккаунта
     +text-field({type: 'text', placeholder: 'Имя'})
@@ -28,4 +28,5 @@ mixin account-registration-card()
     +action-button('Перейти к оплате')
     span
       | Уже есть аккаунт на Toxin
-      +border-button('войти')
+      a(href="./login.html")
+        +border-button('войти')
