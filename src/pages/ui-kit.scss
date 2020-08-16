@@ -198,6 +198,17 @@
 .toolbox__cards {
   display: flex;
   flex-flow: column wrap;
-  margin: 150px 140px;
+  padding: 150px 140px 0px;
+  margin: auto;
   max-height: 1350px;
+  background-color: #F4F4F6;
+}
+
+.toolbox__headers-footers {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #F4F4F6;
+  padding: 140px 0px;
+  gap: 40px;
 }

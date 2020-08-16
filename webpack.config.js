@@ -64,7 +64,7 @@ module.exports = {
         use: ['awesome-typescript-loader'],
       },
       {
-        test: /\.(png|svg|woff|woff2|ttf|)$/,
+        test: /\.(png|svg|eot|woff|woff2|ttf|)$/,
         use: ['file-loader'],
       },
     ],

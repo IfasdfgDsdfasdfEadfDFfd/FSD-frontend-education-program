@@ -1,0 +1,23 @@
+include ../buttons/button.pug
+include ../buttons/border-button.pug
+include ../logo/logo.pug
+include ../menu/menu.pug
+include ../user/user.pug
+
+mixin header(isSigned=false)
+  header.header.container
+    +logo()
+    .header__right
+      +menu([
+        {text: 'о нас', primary: true},
+        {text: 'услуги', children: []},
+        {text: 'вакансии'},
+        {text: 'новости'},
+        {text: 'соглашения', children: []},
+      ])
+      if isSigned
+        +user('Юлий Цезарь')
+      else
+        .header__buttons
+          +border-button('войти')
+          +button('зарегистрироваться')

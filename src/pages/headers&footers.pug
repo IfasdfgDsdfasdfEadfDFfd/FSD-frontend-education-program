@@ -1,0 +1,14 @@
+extends ../globals/common.pug
+
+block title
+  | Headers & Footers
+
+block body
+  include ../components/header/header.pug
+  include ../components/footer/footer.pug
+
+  .toolbox__headers-footers
+    +header()
+    +header(true)
+    +footer-desktop()
+    +footer-mobile()

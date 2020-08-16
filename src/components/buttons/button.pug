@@ -1,2 +1,2 @@
-mixin button(text, disabled=false)
-  button(disabled=disabled).button= text
+mixin button(text, disabled=false, attrs={})
+  button(disabled=disabled)&attributes(attrs).button= text

@@ -11,10 +11,9 @@ block body
   include ../components/cards/login/login.pug
   include ../components/calendar/calendar.pug
 
-  .toolbox__container
-    .toolbox__cards
-      +search-room-card()
-      +account-registration-card()
-      +login-card()
-      +calendar('Август 2019')
+  .toolbox__cards
+    +search-room-card()
+    +account-registration-card()
+    +login-card()
+    +calendar('Август 2019')
 

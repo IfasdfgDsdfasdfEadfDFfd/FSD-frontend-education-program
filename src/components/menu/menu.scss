@@ -1,0 +1,32 @@
+.menu__list {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.menu__item {
+  margin-right: 20px;
+}
+
+.menu__item__text::first-letter {
+  text-transform: uppercase;
+}
+
+.menu__item_bold {
+  font-weight: bold;
+}
+
+.menu__item_expandable {
+  position: relative;
+  padding-right: 25px;
+
+  &::before {
+    content: 'expand_more';
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    font-family: 'Material-Icons';
+    font-size: 24px;
+    line-height: 20px;
+    color: $dark-shade-50;
+  }
+}
