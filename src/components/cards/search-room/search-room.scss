@@ -1,13 +1,5 @@
 .search-room {
-  & > .search-room__date-picker {
-    margin: 20px 0px;
+  & .action-button {
+    margin-top: 10px;
   }
-  & > .action-button {
-    margin-top: 30px;
-  }
-}
-
-.search-room__date-picker {
-  display: flex;
-  justify-content: space-between;
 }

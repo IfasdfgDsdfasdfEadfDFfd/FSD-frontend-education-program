@@ -1,18 +1,11 @@
 .login-form {
-  & > h1 {
-    margin-bottom: 15px;
-  }
+  & .action-button {
+    margin-bottom: 10px;
+  };
+}
 
-  & > .text-field {
-    margin: 5px 0px;
-  }
-
-  & > .action-button {
-    margin: 15px 0px 30px;
-  }
-  & > span {
-    display: inline-flex;
-    align-items: baseline;
-    justify-content: space-between;
-  }
+.login-form__block {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
 }

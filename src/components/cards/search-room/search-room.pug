@@ -8,10 +8,9 @@ mixin search-room-card()
       | Найдем номер под
       br
       | ваши пожелания
-
-    .search-room__date-picker
-      +date-dropdown('ДД.ММ.ГГГГ')
-      +date-dropdown('ДД.ММ.ГГГГ')
-
-    +dropdown-counter('guest-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+    +date-dropdown(
+      {label: 'прибытие', placeholder: '19.08.2019'},
+      {label: 'выезд', placeholder: '23.08.2019'}
+    )
+    +dropdown-counter('guest-counter', 'Гости', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
     +action-button('Подобрать номер')
