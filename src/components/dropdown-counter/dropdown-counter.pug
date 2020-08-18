@@ -1,8 +1,10 @@
 include ../counter/counter.pug
 
-mixin dropdown-counter(id, placeholder, counters, closed=false, need_to_be_applied=false)
+mixin dropdown-counter(id, label, placeholder, counters, closed=false, need_to_be_applied=false)
   - var closed_class = closed ? 'dropdown-counter_closed' : ''
   div(class=closed_class, id=id).dropdown-counter
+    h3
+      | #{label}
     button.dropdown-counter__btn= placeholder
     ul.dropdown-counter__list
       each counter, index in counters

@@ -1,2 +1,10 @@
-mixin date-dropdown(placeholder)
-  button.date-dropdown= placeholder
+mixin date-dropdown(left, right)
+  .date-dropdown
+    .date-dropdown__left
+      h3
+        | #{left.label}
+      button.date-dropdown__element= left.placeholder
+    .date-dropdown__right
+      h3
+        | #{right.label}
+      button.date-dropdown__element= right.placeholder
