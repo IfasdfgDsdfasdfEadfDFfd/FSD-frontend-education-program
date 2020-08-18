@@ -1,24 +1,13 @@
 extends ../globals/common.pug
+include ../globals/link-list.pug
 
 block title
   | UI-KIT
 
 block body
-  ul.ui-kit__link-button-list
-    li
-      a(href="./colors&type.html")
-        button.ui-kit__link-button
-          | Colors & Type
-    li
-      a(href="./form-elements.html")
-        button.ui-kit__link-button
-          | Form Elements
-    li
-      a(href="./cards.html")
-        button.ui-kit__link-button
-          | Cards
-
-    li
-      a(href="./headers&footers.html")
-        button.ui-kit__link-button
-          | Headers & Footers
+  +link-list([
+    {href: "./colors&type.html", text: "Colors & Type"},
+    {href: "./form-elemenets.html", text: "Form Elements"},
+    {href: "./cards.html", text: "Cards"},
+    {href: "./headers&footers.html", text: "Headers & Footers"}
+  ])

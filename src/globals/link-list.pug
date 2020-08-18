@@ -1,0 +1,7 @@
+mixin link-list(links)
+  ul.link-button-list
+    each link in links
+      li
+        a(href=link.href)
+          button.link-button
+            | #{link.text}

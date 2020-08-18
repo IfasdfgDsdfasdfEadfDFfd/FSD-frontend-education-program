@@ -41,3 +41,42 @@
 @import './components/footer/footer.scss';
 @import './components/social-buttons/social-buttons.scss';
 @import './components/room-item/room-item.scss';
+
+
+.link-button-list {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+  margin-top: 60px;
+  align-items: center;
+}
+
+.link-button {
+  border: none;
+  margin: 9px auto;
+  padding: 20px 25px;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 3px 1px $dark-shade-50;
+  transition: all ease-in .2s;
+  border-radius: 4px;
+
+  background: linear-gradient(90deg, $blue-color 0%, $green-color 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+
+  &:hover,
+  &:focus {
+    transition: all ease-in .2s;
+    box-shadow: 1px 1px 8px 1px $dark-shade-75;
+  }
+
+}

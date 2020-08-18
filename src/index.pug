@@ -1,15 +1,13 @@
 extends ./globals/common.pug
+include ./globals/link-list.pug
 
 block title
   | Booking hotel website
 
 block body
-
-  a(href="./landing.html")
-    | landing
-
-  a(href="./login.html")
-    | login
-
-  a(href="./registration.html")
-    | registration
+  +link-list([
+    {href: './login.html', text: 'Login'},
+    {href: './registration.html', text: 'Registration'},
+    {href: './landing.html', text: 'Landing'},
+    {href: './search-room.html', text: 'Search Room'},
+  ])
