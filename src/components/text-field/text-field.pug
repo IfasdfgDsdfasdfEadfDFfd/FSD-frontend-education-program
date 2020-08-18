@@ -1,4 +1,7 @@
 mixin text-field(attrs)
+  if attrs.label
+    h3
+      label(for=attrs.id)= attrs.label
   input&attributes(attrs).text-field
 
 mixin masked-text-field(mask, example, placeholder, attrs)

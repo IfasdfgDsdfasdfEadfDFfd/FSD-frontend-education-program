@@ -1,6 +1,7 @@
 .text-field {
   border: 1px solid $dark-shade-25;
   box-sizing: border-box;
+  width: 100%;
   border-radius: 4px;
   font-family: "Montserrat";
   background-color: #ffffff;
@@ -15,7 +16,4 @@
 .text-field:focus {
   border: 1px solid $dark-shade-50;
   color: $dark-shade-75;
-}
-
-.text-field_masked {
 }
