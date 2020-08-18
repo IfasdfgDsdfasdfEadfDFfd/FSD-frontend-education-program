@@ -2,31 +2,29 @@ include ../../text-field/text-field.pug
 include ../../radio-button/radio-button.pug
 include ../../toggle/toggle.pug
 include ../../buttons/action-button.pug
-include ../../buttons/border-button.pug
+include ../link-footer-button.pug
 
 mixin account-registration-card()
   .card.account-registration
     h1
       | Регистрация аккаунта
-    +text-field({type: 'text', placeholder: 'Имя'})
-    +text-field({type: 'text', placeholder: 'Фамилия'})
-    +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
-    h3
-      label(for="birthday-field")= 'Дата рождения'
-    +masked-text-field(
-      '(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(19|20)\\d\\d',
-      '01012000',
-      '__.__.____',
-      {placeholder: 'ДД.ММ.ГГГГ', id: 'birthday-field'}
-    )
-    h3
-      | Данные для входа в сервис
-    +text-field({type: 'email', placeholder: 'Email'})
-    +text-field({type: 'password', placeholder: 'Пароль'})
-    +toggle('special-offers-toggle', 'recieve-special-offers')
-      | Получать спецпредложения
+    .account-registration__item
+      +text-field({type: 'text', placeholder: 'Имя'})
+      +text-field({type: 'text', placeholder: 'Фамилия'})
+      +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
+    .account-registration__item
+      h3
+        label(for="birthday-field")= 'Дата рождения'
+      +masked-text-field(
+        '(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(19|20)\\d\\d',
+        '01012000',
+        '__.__.____',
+        {placeholder: 'ДД.ММ.ГГГГ', id: 'birthday-field'}
+      )
+    .account-registration__item
+      +text-field({label: 'данные для входа в сервис', type: 'email', placeholder: 'Email'})
+      +text-field({type: 'password', placeholder: 'Пароль'})
+      +toggle('special-offers-toggle', 'recieve-special-offers')
+        | Получать спецпредложения
     +action-button('Перейти к оплате')
-    span
-      | Уже есть аккаунт на Toxin
-      a(href="./login.html")
-        +border-button('войти')
+    +link-footer-button('Уже есть аккаунт на Toxin', './login.html', 'войти')
