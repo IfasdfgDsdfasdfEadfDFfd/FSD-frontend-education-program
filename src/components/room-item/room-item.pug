@@ -1,0 +1,34 @@
+include ../rate-button/rate-button.pug
+
+
+mixin room-desc(number, cost, luxury=false)
+  .room-item__desc-item
+    .room-item__number
+      span
+        | № #{number}
+      if luxury
+        span
+          | люкс
+    .room-item__cost
+      strong
+        | #{cost}₽
+      | в сутки
+
+mixin room-item(props)
+  .room-item
+    img(src=props.bgi)
+    .image-slider
+      .image-slider__filled
+      .image-slider__empty
+      .image-slider__empty
+      .image-slider__empty
+    .room-item__desc
+      +room-desc(props.number, props.cost, props.luxury)
+      hr
+      .room-item__desc-item
+        +rate-button(props.stars)
+        - var text = 'отзывов'
+        .room-item__review
+          strong
+            | #{props.review}
+          | #{text}

@@ -11,3 +11,5 @@ import './components/calendar/calendar';
 
 import './index.scss';
 
+import './images/room_888.png';
+import './images/room_840.png';

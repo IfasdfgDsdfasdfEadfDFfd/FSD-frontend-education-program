@@ -10,10 +10,29 @@ block body
   include ../components/cards/account-registration/account-registration.pug
   include ../components/cards/login/login.pug
   include ../components/calendar/calendar.pug
+  include ../components/room-item/room-item.pug
 
   .toolbox__cards
-    +search-room-card()
-    +account-registration-card()
-    +login-card()
-    +calendar('Август 2019')
-
+    .toolbox__cards__column
+      +search-room-card()
+      +account-registration-card()
+    .toolbox__cards__column
+      +login-card()
+    .toolbox__cards__column
+      +calendar('Август 2019')
+      +room-item({
+        bgi: 'room_888.png',
+        number: '888',
+        luxury: true,
+        cost: '9 990',
+        stars: 5,
+        review: 145
+      })
+      +room-item({
+        bgi: 'room_840.png',
+        number: '840',
+        luxury: false,
+        cost: '9 900',
+        stars: 4,
+        review: 65,
+      })
