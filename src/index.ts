@@ -13,3 +13,14 @@ import './index.scss';
 
 import './images/room_888.png';
 import './images/room_840.png';
+import './images/room_980.png';
+import './images/room_856.png';
+import './images/room_740.png';
+import './images/room_740.png';
+import './images/room_982.png';
+import './images/room_678.png';
+import './images/room_450.png';
+import './images/room_350.png';
+import './images/room_666.png';
+import './images/room_444.png';
+import './images/room_352.png';

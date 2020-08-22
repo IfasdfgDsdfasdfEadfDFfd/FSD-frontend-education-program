@@ -45,8 +45,8 @@ block body
         +item('text field', 'hover / focus')
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
 
-        +item('dropdown')
-          +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+        +item('')
+          +dropdown-counter('guests-counter-1', 'dropdown', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
 
         +item('masked text field')
           +masked-text-field(
@@ -96,8 +96,8 @@ block body
             +rate-button(5)
 
       .toolbox__form-elemnts__items-group.column_3.row_1
-        +item('range slider', '', {id: 'display-for-cost-range-slider-id'})
-          +range-slider('cost-range-slider', {
+        +item('')
+          +range-slider('range slider', 'cost-range-slider', {
             min: 0,
             max: 15000,
             step: 100,

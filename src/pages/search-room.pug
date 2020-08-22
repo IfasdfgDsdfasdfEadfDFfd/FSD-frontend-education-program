@@ -1,4 +1,3 @@
-
 extends ../globals/common.pug
 
 block title
@@ -7,6 +6,111 @@ block title
 block body
   include ../components/header/header.pug
   include ../components/footer/footer.pug
+  include ../components/pagination/pagination.pug
+  include ../components/room-item/room-item.pug
+  include ../components/filter-date-dropdown/filter-date-dropdown.pug
+  include ../components/dropdown-counter/dropdown-counter.pug
+  include ../components/range-slider/range-slider.pug
+  include ../components/checkbox/checkbox.pug
+  include ../components/rich-checkbox/rich-checkbox.pug
+  include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
 
   +header()
+  .search-room-body
+    aside
+      div
+        h3
+          | даты пребывания в отеле
+        +filter-date-dropdown('19 авг - 23 авг')
+      +dropdown-counter('guests-counter-1', 'Гости', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+
+      +range-slider('диапозон цены', 'cost-range-slider', {
+        min: 0,
+        max: 15000,
+        step: 100,
+        left: 5000,
+        right: 10000,
+      })
+        | Стоимость за сутки пребывания в номере
+
+      div
+        h3
+          | checkbox buttons
+        +checkbox('allow-smoking', 'allow-smoking', false)
+          | Можно курить
+        +checkbox('allow-pets', 'allow-pets', true)
+          | Можно с питомцами
+        +checkbox('allow-guests', 'allow-guests', true)
+          | Можно пригласить гостей (до 10 человек)
+
+      div
+        h3
+          | доступность
+        +rich-checkbox('Широкий коридор', 'wide-corridor')
+          | Ширина коридоров в номере
+          br
+          | не менее 91 см.
+        +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
+          | На 1 этаже вас стретит специалист и проводит до номера
+
+      +dropdown-counter('room-properties-1-1', 'удобства номера', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
+
+      +expandable-checkbox-list('дополнительные удобства', [
+        {
+          text: 'Завтрак',
+          name: 'breakfast',
+          value: 'has-breakfast',
+          checked: false,
+        },
+        {
+          text: 'Письменный стол',
+          name: 'desk',
+          value: 'has-desk',
+          checked: true,
+        },
+        {
+          text: 'стул для кормления',
+          name: 'feeding-chair',
+          value: 'has-feeding-chair',
+          checked: true,
+        },
+        {
+          text: 'кроватка',
+          name: 'crib',
+          value: 'has-crib',
+          checked: true,
+        },
+        {
+          text: 'телевизор',
+          name: 'tv',
+          value: 'has-tv',
+          checked: false,
+        },
+        {
+          text: 'шампунь',
+          name: 'shampoo',
+          value: 'has-shampoo',
+          checked: false,
+        },
+      ], true)
+    main
+      h1
+        | Номера, которые мы для вас подобрали
+      .search-room-body__catalog
+        - var props1 = {bgi: "room_888.png", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145}
+        - var props2 = {bgi: "room_840.png", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65}
+        - var props3 = {bgi: "room_980.png", number: "980", luxury: true, cost: "8 500", stars: 3, review: 35}
+        - var props4 = {bgi: "room_856.png", number: "856", luxury: false, cost: "7 300", stars: 5, review: 19}
+        - var props5 = {bgi: "room_740.png", number: "740", luxury: false, cost: "6 000", stars: 4, review: 44}
+        - var props6 = {bgi: "room_982.png", number: "982", luxury: false, cost: "5 800", stars: 3, review: 56}
+        - var props7 = {bgi: "room_678.png", number: "678", luxury: false, cost: "5 500", stars: 5, review: 45}
+        - var props8 = {bgi: "room_450.png", number: "450", luxury: false, cost: "5 300", stars: 4, review: 39}
+        - var props9 = {bgi: "room_350.png", number: "350", luxury: false, cost: "5 000", stars: 3, review: 77}
+        - var props10 = {bgi: "room_666.png", number: "666", luxury: false, cost: "5 000", stars: 5, review: 25}
+        - var props11 = {bgi: "room_444.png", number: "444", luxury: false, cost: "5 000", stars: 3, review: 15}
+        - var props12 = {bgi: "room_352.png", number: "352", luxury: false, cost: "5 000", stars: 3, review: 55}
+        each props in [props1, props2, props3, props4, props5, props6, props7, props8, props9, props10, props11, props12]
+          +room-item(props)
+      +pagination('1 - 12 из 100+ вариантов аренды')
+  hr
   +footer-desktop()

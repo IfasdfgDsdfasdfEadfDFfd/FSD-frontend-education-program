@@ -1,9 +1,9 @@
 include ../like-button/like-button.pug
 
-mixin comment(username, date)
+mixin comment(avatar_path, username, date)
   .comment
     .comment__header
-      .comment__header-avatar
+      image(src=avatar_path)
       .comment__header-title
         .comment__header-username= username
         .comment__header-date= date

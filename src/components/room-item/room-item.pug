@@ -5,7 +5,9 @@ mixin room-desc(number, cost, luxury=false)
   .room-item__desc-item
     .room-item__number
       span
-        | № #{number}
+        | №
+        span
+          | #{number}
       if luxury
         span
           | люкс

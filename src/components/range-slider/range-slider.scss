@@ -5,8 +5,20 @@ $slider-range-thickness: 6px;
   position: relative;
   border: 1px solid $dark-shade-25;
   border-radius: 3px;
-  max-width: 265px;
-  margin-top: 5px;
+  margin: 20px 0px 15px;
+}
+
+.range-slider__container {
+  max-width: 266px;
+  color: $dark-shade-50;
+  font-size: 12px;
+}
+
+.range-slider__title {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .range-slider__element {

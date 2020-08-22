@@ -25,6 +25,12 @@ h3 {
   line-height: 15px;
 }
 
+hr {
+  border: none;
+  border-bottom: 1px solid $dark-shade-25;
+  margin: 0px;
+}
+
 body {
   font-family: 'Montserrat';
   font-size: 14px;

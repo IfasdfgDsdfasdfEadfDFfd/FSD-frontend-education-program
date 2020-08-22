@@ -1,0 +1,40 @@
+.search-room-body {
+  background-color: #fff;
+  display: flex;
+  padding: 100px 140px 70px;
+  gap: 60px;
+  justify-content: space-between;
+
+  & h3 {
+    margin-bottom: 5px;
+  }
+
+  & h1 {
+    margin-bottom: 20px;
+  }
+
+  & main {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  & aside {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 30px;
+
+    & .dropdown-counter {
+      margin-top: -10px;
+    }
+  }
+
+  & .pagination {
+    margin: 40px auto 0px;
+  }
+}
+
+.search-room-body__catalog {
+  display: grid;
+  grid-template: repeat(3, min-content) / repeat(3, min-content);
+  gap: 20.5px 12px;
+}
