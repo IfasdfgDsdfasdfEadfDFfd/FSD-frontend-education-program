@@ -1,0 +1,67 @@
+extends ../globals/common.pug
+
+block title
+  | Room Details
+
+block body
+  include ../components/header/header.pug
+  include ../components/footer/footer.pug
+  include ../components/cards/book-a-room/book-a-room.pug
+  include ../components/top-feature/top-feature.pug
+  include ../components/comment/comment.pug
+  include ../components/bullet-list/bullet-list.pug
+
+  +header()
+  main.room-details__body
+    .room-details__body__photos
+      div.room-details__body__photos_big
+      div.room-details__body__photos_lower
+      div.room-details__body__photos_lower
+    .room-details__body__desc
+      .room-details__body__desc__left
+        .room-details__body__desc_row
+          div
+            h2
+              | Сведения о номере
+            +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглащающие стены')
+            +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
+            +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
+          h2
+            | Впечатления от номера
+        .room-details__body__desc_row
+          h2
+            | Отзывы посетителей номера
+          span
+            | 2 отзыва
+        +comment('comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад')
+          | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
+          br
+          | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
+          br
+          | не жаловался из соседей.
+        +comment('comment_avatar_2.png', 'Мурад Сарафанов', 'Неделю назад')
+          | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
+          br
+          | каждый день новое блюдо и десерт как комплимент
+        .room-details__body__desc_row
+          div
+            h2
+              | Правила
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00 ',
+            ])
+          div
+            h2
+              | Отмена
+            | Бесплатная отмена в течение 48 ч. После
+            br
+            | этого при отмене не позднее чем за 5 дн. до
+            br
+            | прибытия вы получите полный возврат за
+            br
+            | вычетом сбора за услуги
+      .room-details__body__desc__right
+        +book-a-room()
+  +footer-desktop()

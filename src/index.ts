@@ -24,3 +24,10 @@ import './images/room_350.png';
 import './images/room_666.png';
 import './images/room_444.png';
 import './images/room_352.png';
+
+import './images/comment_avatar_1.png';
+import './images/comment_avatar_2.png';
+
+import './images/room_888_big.png';
+import './images/room_888_details_1.png';
+import './images/room_888_details_2.png';

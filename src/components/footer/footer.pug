@@ -7,6 +7,7 @@ mixin copyright()
     | Copyright &#169; Toxin отель. Все права защищены.
 
 mixin footer-desktop()
+  hr
   footer.footer
     .footer-desktop.container
       .footer-desktop__column
@@ -54,6 +55,7 @@ mixin footer-desktop()
         br
         | предложения и новости сервиса
         +subscription-text-field()
+    hr
     .footer.footer-desktop__bottom.container
       +copyright()
       +social-buttons()
