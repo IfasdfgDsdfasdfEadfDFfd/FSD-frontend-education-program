@@ -9,6 +9,10 @@
   line-height: 24px;
 }
 
+.comment__header-avatar {
+  border-radius: 50%;
+}
+
 .comment__header-title {
   display: flex;
   flex-flow: column nowrap;
