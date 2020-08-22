@@ -1,4 +1,5 @@
 .dropdown-counter {
+  position: relative;
   & h3 {
     margin-bottom: 5px;
   }
@@ -37,6 +38,14 @@
 }
 
 .dropdown-counter__list {
+  position: absolute;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: #fff;
+  z-index: 1;
+  width: 100%;
   border: 1px solid $dark-shade-50;
   border-top: none;
   border-radius: 0px 0px 4px 4px;
