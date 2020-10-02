@@ -16,6 +16,7 @@ const getAllTemplates = folder => {
   return glob.sync(`${SEARCH_DIR}/**/*.pug`).map(filepath => {
     return new HtmlWebpackPlugin({
       template: filepath,
+      favicon: path.join(SRC_DIR, 'logo.svg'),
       filename: `${path.parse(filepath).name}.html`,
     });
   });
