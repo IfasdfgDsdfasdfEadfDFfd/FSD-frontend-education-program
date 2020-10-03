@@ -29,11 +29,19 @@ block body
           div
             h2
               | Впечатления от номера
-            ul.color-bullet-list
-              li Великолепно
-              li Хорошо
-              li Удовлетворительно
-              li Разочарован
+            div.room-impressions
+              .statictic-ring
+                .room-impressions__magnificent-ring
+                .room-impressions__good-ring
+                .room-impressions__nice-ring
+                .room-impressions__center-ring
+                  span= "260"
+                  | голосов
+              ul.color-bullet-list
+                li Великолепно
+                li Хорошо
+                li Удовлетворительно
+                li Разочарован
         .room-details__body__desc_row
           h2
             | Отзывы посетителей номера

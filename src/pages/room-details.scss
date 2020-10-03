@@ -1,3 +1,5 @@
+@import '../globals/consts.scss';
+
 .room-details__body {
   background-color: #fff;
   display: flex;
@@ -51,6 +53,91 @@
   flex-flow: row nowrap;
 }
 
+.room-impressions {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.statictic-ring {
+  position: relative;
+  background-color: transparent;
+
+  width: 120px;
+  height: 120px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-impressions__center-ring {
+  position: relative;
+  background-color: #fff;
+
+  color: $purple-color;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  width: 96%;
+  height: 96%;
+
+
+  &>span {
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Quicksand';
+  }
+}
+
+.room-impressions__magnificent-ring {
+  left: 0;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+
+  border-right: 2px solid #fff;
+  border-radius: 120px 0% 0% 120px;
+
+  background-image: linear-gradient(#ffe39c 0%, #ffba9c 100%);
+}
+
+.room-impressions__good-ring {
+  top: 60px;
+  left: 60px;
+  position: absolute;
+ 
+  width: 60px;
+  height: 60px;
+
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  border-radius: 0% 0% 100% 0%;
+
+  background-image: linear-gradient(#6FCF97 0%, #66D2EA 100%);
+}
+
+.room-impressions__nice-ring {
+  top: 0;
+  left: 60px;
+  position: absolute;
+
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-radius: 0% 100% 0% 0%;
+
+  width: 60px;
+  height: 60px;
+
+
+  background-image: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
+}
+
 .color-bullet-list {
   position: relative;
   list-style-type: none;
@@ -58,7 +145,6 @@
   max-width: 260px;
   display: flex;
   flex-flow: column nowrap;
-  gap: 5px;
 
   &>li::before {
     content: '';
@@ -71,18 +157,18 @@
   }
 
   &>li:nth-child(1)::before {
-    background-image: linear-gradient(#ffe39c 100%, #ffba9c 100%);
+    background-image: linear-gradient(#ffe39c 0%, #ffba9c 100%);
   }
 
   &>li:nth-child(2)::before {
-    background-image: linear-gradient(#6FCF97 100%, #66D2EA 100%);
+    background-image: linear-gradient(#6FCF97 0%, #66D2EA 100%);
   }
 
   &>li:nth-child(3)::before {
-    background-image: linear-gradient(#BC9CFF 100%, #8BA4F9 100%);
+    background-image: linear-gradient(#BC9CFF 0%, #8BA4F9 100%);
   }
 
   &>li:nth-child(4)::before {
-    background-image: linear-gradient(#909090 100%, #3D4975 100%);
+    background-image: linear-gradient(#909090 0%, #3D4975 100%);
   }
 }
