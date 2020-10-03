@@ -11,4 +11,26 @@ mixin book-a-room()
       {label: 'выезд', placeholder: '23.08.2019'}
     )
     +dropdown-counter('guest-counter', 'Гости', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+    .bill
+      .bill__row
+        .bill__row__desc
+          .bill__row__text
+            | 9 900₽ x 4 суток
+        .bill__row__count= '39 960₽'
+      .bill__row
+        .bill__row__desc
+          .bill__row__text
+            | Сбор за услуги: скидка 2 179₽
+          .bill__row__info
+        .bill__row__count= '0₽'
+      .bill__row
+        .bill__row__desc
+          .bill__row__text
+            | Сбор за дополнительные услуги
+          .bill__row__info
+        .bill__row__count= '300₽'
+      .bill__row.bill__row-result
+        | Итого
+        .bill__row-result__dashed-line
+        .bill__row__count= '38 081₽'
     +action-button('забронировать')

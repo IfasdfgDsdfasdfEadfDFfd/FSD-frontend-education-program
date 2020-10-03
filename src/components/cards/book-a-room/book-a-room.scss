@@ -1,0 +1,59 @@
+@import '../../../globals/consts.scss';
+
+.bill {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+
+  & .bill__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 14px;
+    line-height: 18px;
+
+    & .bill__row__desc {
+      display: flex;
+
+      gap: 5px;
+
+      & .bill__row__text {
+        max-width: 215px;
+      }
+
+      & .bill__row__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border: 1px solid $dark-shade-25;
+        border-radius: 50%;
+        color: $dark-shade-25;
+
+        font-size: 12px;
+
+        width: 20px;
+        height: 20px;
+
+        &::after {
+          content: 'i';
+        }
+      }
+    }
+  }
+
+  & .bill__row-result {
+    margin-top: 20px;
+    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: $dark-shade-100;
+
+    & .bill__row-result__dashed-line {
+      width: 55%;
+      align-self: flex-end;
+      border-bottom: 1px dotted $dark-shade-25;
+    }
+  }
+}
