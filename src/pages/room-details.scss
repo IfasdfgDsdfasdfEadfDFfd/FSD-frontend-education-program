@@ -50,3 +50,39 @@
   gap: 80px;
   flex-flow: row nowrap;
 }
+
+.color-bullet-list {
+  position: relative;
+  list-style-type: none;
+  padding-left: 20px;
+  max-width: 260px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
+
+  &>li::before {
+    content: '';
+    border-radius: 50%;
+    margin-top: 6px;
+    position: absolute;
+    left: 0;
+    width: 10px;
+    height: 10px;
+  }
+
+  &>li:nth-child(1)::before {
+    background-image: linear-gradient(#ffe39c 100%, #ffba9c 100%);
+  }
+
+  &>li:nth-child(2)::before {
+    background-image: linear-gradient(#6FCF97 100%, #66D2EA 100%);
+  }
+
+  &>li:nth-child(3)::before {
+    background-image: linear-gradient(#BC9CFF 100%, #8BA4F9 100%);
+  }
+
+  &>li:nth-child(4)::before {
+    background-image: linear-gradient(#909090 100%, #3D4975 100%);
+  }
+}
