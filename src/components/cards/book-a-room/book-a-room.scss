@@ -15,8 +15,8 @@
 
     & .bill__row__desc {
       display: flex;
-
-      gap: 5px;
+      justify-content: space-between;
+      min-width: 240px;
 
       & .bill__row__text {
         max-width: 215px;
