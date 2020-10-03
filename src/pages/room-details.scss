@@ -8,12 +8,10 @@
   }
 }
 
-
 .room-details__body__photos {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   min-height: 485px;
-  margin-top: 70px;
 
   & .room-details__body__photos_big {
     background-image: url("./images/room_888_big.png");
