@@ -8,7 +8,7 @@ block body
   include ../components/footer/footer.pug
   include ../components/cards/search-room/search-room.pug
 
-  +header()
+  +header(false, true)
   main.landing
     +search-room-card()
   +footer-desktop()

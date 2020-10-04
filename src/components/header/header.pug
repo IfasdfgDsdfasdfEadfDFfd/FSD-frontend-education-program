@@ -4,8 +4,9 @@ include ../logo/logo.pug
 include ../menu/menu.pug
 include ../user/user.pug
 
-mixin header(isSigned=false)
-  header.header.container
+mixin header(isSigned=false, attached=false)
+  - var header_id = attached ? 'header-id' : ''
+  header(id=header_id).header.container
     +logo()
     .header__right
       +menu([

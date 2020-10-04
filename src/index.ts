@@ -8,6 +8,7 @@ import './components/radio-button/radio-button';
 import './components/toggle/toggle';
 import './components/counter/counter';
 import './components/calendar/calendar';
+import './components/header/header';
 
 import './index.scss';
 
