@@ -106,16 +106,17 @@ block body
           })
 
         +item('buttons')
-          .inline-componets
-            +button('click me')
-            +button('click me', true)
-          .inline-componets
-            +border-button('click me')
-            +border-button('click me', true)
-          .inline-componets
-            +flat-button('click me')
-            +flat-button('click me', true)
-          +action-button('Перейти к оплате')
+          .buttons-group
+            .inline-componets
+              +button('click me')
+              +button('click me', true)
+            .inline-componets
+              +border-button('click me')
+              +border-button('click me', true)
+            .inline-componets
+              +flat-button('click me')
+              +flat-button('click me', true)
+            +action-button('Перейти к оплате')
 
         +item('pagination')
           +pagination('1 - 12 из 100+ вариантов аренды')
