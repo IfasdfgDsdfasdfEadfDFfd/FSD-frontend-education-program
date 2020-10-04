@@ -1,7 +1,6 @@
 .toolbox__container {
   max-width: 1440px;
-  margin: auto;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .inline-componets {
@@ -95,6 +94,14 @@
   position: absolute;
   right: 422px;
   color: $dark-shade-25;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 .toolbox__form-elements {

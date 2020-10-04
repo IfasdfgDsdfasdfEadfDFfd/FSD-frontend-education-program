@@ -15,7 +15,7 @@ block body
     mixin text-type(tag_name)
       .text-type
         .text-type__preview
-            - var text_transform = tag_name == 'body' ? 'text_capitalize' : 'text_uppercase'
+            - var text_transform = tag_name == 'body' ? 'text-capitalize' : 'text-uppercase'
             case tag_name
               when 'h1': h1
                 span.text-type__label.montserrat(class=text_transform)= tag_name
