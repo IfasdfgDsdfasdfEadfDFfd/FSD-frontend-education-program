@@ -4,7 +4,6 @@ $header-height: 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   height: $header-height;
   background-color: #fff;
@@ -17,7 +16,13 @@ $header-height: 70px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+
+  padding: 18px 0px;
+
+  & menu {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__buttons {
