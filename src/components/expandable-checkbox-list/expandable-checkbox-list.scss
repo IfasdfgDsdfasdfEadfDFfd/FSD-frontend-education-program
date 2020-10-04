@@ -29,9 +29,6 @@
     transition: all .4s ease-in;
   }
 }
-.expandable-checkbox-list {
-  margin-top: 25px;
-}
 
 .expandable-checkbox-list:not(.expandable-checkbox-list_closed)>.expandable-checkbox-list__btn::after {
   transform: rotate(-180deg);
