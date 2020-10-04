@@ -54,7 +54,6 @@ $slider-range-thickness: 6px;
   position: relative;
   height: 6px;
   width: 100%;
-  z-index: 1;
 }
 
 .slider__track {
@@ -63,14 +62,12 @@ $slider-range-thickness: 6px;
   height: $slider-range-thickness;
   background-color: #fff;
   border-radius: 5px;
-  z-index: 1;
 }
 
 .slider__range {
   position: absolute;
   height: $slider-range-thickness;
   background-image: $from-green-to-blue-gradient;
-  z-index: 2;
 }
 
 .slider__thumb {
@@ -80,6 +77,5 @@ $slider-range-thickness: 6px;
   border-radius: 50%;
   border: 2px solid #fff;
   background-image: $from-green-to-blue-gradient;
-  z-index: 3;
   top: -$slider-thumb-radius / 2 + $slider-range-thickness / 2;
 }
