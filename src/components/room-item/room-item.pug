@@ -3,13 +3,12 @@ include ../rate-button/rate-button.pug
 
 mixin room-desc(number, cost, luxury=false)
   .room-item__desc-item
-    .room-item__number
-      span
-        | №
-        span
-          | #{number}
+    .room-item__name
+      | №
+      .room-item__number
+        | #{number}
       if luxury
-        span
+        .room-item__luxury
           | люкс
     .room-item__cost
       strong
