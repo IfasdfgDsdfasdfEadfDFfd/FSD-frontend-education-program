@@ -1,0 +1,77 @@
+.colors-type {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.colors-type__colors {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.colors-type__colors__item {
+  display: flex;
+  gap: 40px;
+}
+
+.colors-type__text-types {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 50px;
+}
+
+.colors-type__text-types__item {
+  position: relative;
+  padding-left: 30px;
+
+  & span {
+    position: absolute;
+    right: 100%;
+    top: 0px;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: $dark-shade-25;
+  }
+}
+
+.color-desc {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  font-size: 18px;
+}
+
+.color-example {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+}
+
+.color-example--dark-shade-100 {
+  background-color: $dark-shade-100;
+}
+
+.color-example--dark-shade-75 {
+  background-color: $dark-shade-75;
+}
+
+.color-example--dark-shade-50 {
+  background-color: $dark-shade-50;
+}
+
+.color-example--dark-shade-25 {
+  background-color: $dark-shade-25;
+}
+
+.color-example--dark-shade-5 {
+  background-color: $dark-shade-5;
+}
+
+.color-example--purple {
+  background-color: $purple-color;
+}
+
+.color-example--green {
+  background-color: $green-color;
+}

@@ -4,7 +4,66 @@ block title
   | UI-KIT
 
 block body
-  include ../../components/buttons/border-button.pug
-  include ../../components/header/header.pug
-
-  +border-button('awesome')
+  .container.toolbox
+    .colors-type
+      .colors-type__colors
+        .colors-type__colors__item
+          .color-example.color-example--dark-shade-100
+          .color-desc
+            h2= 'Dark Shader 100%'
+            | #1F2041
+        .colors-type__colors__item
+          .color-example.color-example--dark-shade-75
+          .color-desc
+            h2= 'Dark Shader 75%'
+            | #1F2041
+        .colors-type__colors__item
+          .color-example.color-example--dark-shade-50
+          .color-desc
+            h2= 'Dark Shader 50%'
+            | #1F2041
+        .colors-type__colors__item
+          .color-example.color-example--dark-shade-25
+          .color-desc
+            h2= 'Dark Shader 25%'
+            | #1F2041
+        .colors-type__colors__item
+          .color-example.color-example--dark-shade-5
+          .color-desc
+            h2= 'Dark Shader 5%'
+            | #1F2041
+        .colors-type__colors__item
+          .color-example.color-example--purple
+          .color-desc
+            h2= 'Purple'
+            | #BC9CFF
+        .colors-type__colors__item
+          .color-example.color-example--green
+          .color-desc
+            h2= 'Green'
+            | #6FCF87
+      .colors-type__text-types
+        .colors-type__text-types__item
+          h1
+            | This one is the sub-section or
+            br
+            | widget title
+            span= 'H1'
+        .colors-type__text-types__item
+          h2
+            | Next one is the item title inside
+            br
+            | widgets
+            span= 'H2'
+        .colors-type__text-types__item
+          h3
+            | This is a label or cta text
+            span= 'H3'
+        .colors-type__text-types__item
+          | This is the body text which is used for most
+          br
+          | of the design, like paragraphs, lists, etc.
+          span= 'Body'
+    .form-elements
+    .cards
+    .headers-footers
