@@ -1,84 +1,89 @@
-@import './globals/reset.scss';
-@import './globals/common.scss';
-@import './globals/consts.scss';
+@import './reset.scss';
+@import './consts.scss';
 @import './fonts/fonts.scss';
-@import './pages/ui-kit.scss';
-@import './pages/landing.scss';
-@import './pages/login.scss';
-@import './pages/registration.scss';
-@import './pages/search-room.scss';
-@import './pages/room-details.scss';
 
-// components
-@import './components/text-field/text-field.scss';
-@import './components/dropdown/dropdown.scss';
-@import './components/checkbox/checkbox.scss';
-@import './components/radio-button/radio-button.scss';
-@import './components/toggle/toggle.scss';
-@import './components/like-button/like-button.scss';
-@import './components/rate-button/rate-button.scss';
-@import './components/range-slider/range-slider.scss';
-@import './components/buttons/button.scss';
-@import './components/buttons/border-button.scss';
-@import './components/buttons/flat-button.scss';
-@import './components/buttons/action-button.scss';
-@import './components/pagination/pagination.scss';
-@import './components/date-dropdown/date-dropdown.scss';
-@import './components/filter-date-dropdown/filter-date-dropdown.scss';
-@import './components/subscription-text-field/subscriptoin-text-field.scss';
-@import './components/counter/counter.scss';
-@import './components/dropdown-counter/dropdown-counter.scss';
-@import './components/expandable-checkbox-list/expandable-checkbox-list.scss';
-@import './components/rich-checkbox/rich-checkbox.scss';
-@import './components/bullet-list/bullet-list.scss';
-@import './components/top-feature/top-feature.scss';
-@import './components/comment/comment.scss';
-@import './components/cards/cards.scss';
-@import './components/sub-form-wrapper/sub-form-wrapper.scss';
-@import './components/calendar/calendar.scss';
-@import './components/header/header.scss';
-@import './components/logo/logo.scss';
-@import './components/menu/menu.scss';
-@import './components/user/user.scss';
-@import './components/footer/footer.scss';
-@import './components/social-buttons/social-buttons.scss';
-@import './components/room-item/room-item.scss';
+@import './components/index.scss';
+
+@import './pages/landing/index.scss';
+@import './pages/login/index.scss';
+@import './pages/registration/index.scss';
+@import './pages/room-details/index.scss';
+@import './pages/search-room/index.scss';
+@import './pages/ui-kit/index.scss';
 
 
-.link-button-list {
-  display: flex;
-  flex-flow: column nowrap;
-  list-style: none;
-  margin-top: 60px;
-  align-items: center;
+h1 {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: $dark-shade-100;
+  font-size: 24px;
+  line-height: 30px;
 }
 
-.link-button {
-  border: none;
-  margin: 9px auto;
-  padding: 20px 25px;
-  background-color: #ffffff;
-  box-shadow: 1px 1px 3px 1px $dark-shade-50;
-  transition: all ease-in .2s;
-  border-radius: 4px;
-
-  background: linear-gradient(90deg, $blue-color 0%, $green-color 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-
-  text-decoration: none;
-  font-family: 'Montserrat';
+h2 {
+  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  color: $dark-shade-100;
+  font-size: 19px;
   line-height: 24px;
+}
 
-  &:hover,
-  &:focus {
-    transition: all ease-in .2s;
-    box-shadow: 1px 1px 8px 1px $dark-shade-75;
-  }
+h3 {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $dark-shade-100;
+  font-size: 12px;
+  line-height: 15px;
+}
 
+hr {
+  border: none;
+  border-bottom: 1px solid $dark-shade-25;
+  width: 100%;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 24px;
+  color: $dark-shade-75;
+}
+
+.container {
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.text_dark-shade-100 {
+  color: $dark-shade-100;
+}
+
+.bgc_dark-shade-100 {
+  background-color: $dark-shade-100;
+}
+
+.bgc_dark-shade-75 {
+  background-color: $dark-shade-75;
+}
+
+.bgc_dark-shade-50 {
+  background-color: $dark-shade-50;
+}
+
+.bgc_dark-shade-25 {
+  background-color: $dark-shade-25;
+}
+
+.bgc_dark-shade-5 {
+  background-color: $dark-shade-5;
+}
+
+.bgc_purple-color {
+  background-color: $purple-color;
+}
+
+.bgc_green-color {
+  background-color: $green-color;
 }

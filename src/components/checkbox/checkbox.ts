@@ -1,4 +1,4 @@
-import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../globals/store';
+import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../store/store';
 
 
 const checkboxes = Array(...document.getElementsByClassName('checkbox__element') as unknown as Array<Element>);

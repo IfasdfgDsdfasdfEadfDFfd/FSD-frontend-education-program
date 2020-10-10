@@ -1,4 +1,4 @@
-import { createStore, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric, Action } from '../../globals/store';
+import { createStore, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric, Action } from '../../store/store';
 
 
 const sliders = Array(...document.getElementsByClassName('range-slider') as unknown as Array<HTMLElement>);

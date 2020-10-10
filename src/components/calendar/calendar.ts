@@ -1,4 +1,4 @@
-import { createStore } from '../../globals/store';
+import { createStore } from '../../store/store';
 
 export const store = createStore({}, () => {});
 

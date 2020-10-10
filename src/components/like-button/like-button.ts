@@ -1,4 +1,4 @@
-import { createStore, Action } from '../../globals/store';
+import { createStore, Action } from '../../store/store';
 
 
 const likeButtonContainer = Array(...document.getElementsByClassName('like-button') as unknown as Array<Element>);
@@ -55,10 +55,10 @@ store.subscribe(state => {
     }
 
     if (isLiked) {
-      likeButton.classList.add('like-button_checked');
+      likeButton.classList.add('like-button__element--checked');
       likeButton.setAttribute('checked', 'true');
     } else {
-      likeButton.classList.remove('like-button_checked');
+      likeButton.classList.remove('like-button__element--checked');
       likeButton.removeAttribute('checked');
     }
   });

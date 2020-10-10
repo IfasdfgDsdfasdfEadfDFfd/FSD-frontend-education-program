@@ -1,23 +1,23 @@
-extends ../globals/common.pug
+extends ../common.pug
 
 block title
   | Room Details
 
 block body
-  include ../components/header/header.pug
-  include ../components/footer/footer.pug
-  include ../components/cards/book-a-room/book-a-room.pug
-  include ../components/top-feature/top-feature.pug
-  include ../components/comment/comment.pug
-  include ../components/bullet-list/bullet-list.pug
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+  include ../../components/cards/book-a-room/book-a-room.pug
+  include ../../components/top-feature/top-feature.pug
+  include ../../components/comment/comment.pug
+  include ../../components/bullet-list/bullet-list.pug
 
   +header(false, true)
   main.room-details__body
     .room-details__body__photos
-      img(src="room_888_big.png").room-details__body__photos-big
+      img(src="/static/room_888_big.png").room-details__body__photos-big
       .room-details__body__photos-lower-group
-        img(src="room_888_details_1.png").room-details__body__photos-lower
-        img(src="room_888_details_2.png").room-details__body__photos-lower
+        img(src="/static/room_888_details_1.png").room-details__body__photos-lower
+        img(src="/static/room_888_details_2.png").room-details__body__photos-lower
     .room-details__body__desc
       .room-details__body__desc__left
         .room-details__body__desc-row
@@ -48,13 +48,13 @@ block body
             | Отзывы посетителей номера
           .room-details__body__desc-row__comment-counter
             | 2 отзыва
-        +comment('comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад')
+        +comment('/static/comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад')
           | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
           br
           | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
           br
           | не жаловался из соседей.
-        +comment('comment_avatar_2.png', 'Мурад Сарафанов', 'Неделю назад')
+        +comment('/static/comment_avatar_2.png', 'Мурад Сарафанов', 'Неделю назад')
           | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
           br
           | каждый день новое блюдо и десерт как комплимент

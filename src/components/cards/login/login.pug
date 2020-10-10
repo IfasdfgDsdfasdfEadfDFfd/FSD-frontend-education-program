@@ -1,5 +1,5 @@
 include ../../text-field/text-field.pug
-include ../../buttons/border-button.pug
+include ../../buttons/action-button.pug
 include ../link-footer-button.pug
 
 mixin login-card()
@@ -10,4 +10,4 @@ mixin login-card()
       +text-field({type: 'email', placeholder: 'Email'})
       +text-field({type: 'password', placeholder: 'Пароль'})
     +action-button('войти')
-    +link-footer-button('Нет аккаунта на Toxin?', './registration.html', 'создать')
+    +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')

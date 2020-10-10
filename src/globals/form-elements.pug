@@ -1,9 +1,28 @@
-extends ../globals/common.pug
+include /components/text-field/text-field.pug
+include /components/dropdown/dropdown.pug
+include /components/checkbox/checkbox.pug
+include /components/radio-button/radio-button.pug
+include /components/toggle/toggle.pug
+include /components/like-button/like-button.pug
+include /components/rate-button/rate-button.pug
+include /components/range-slider/range-slider.pug
+include /components/buttons/button.pug
+include /components/buttons/border-button.pug
+include /components/buttons/flat-button.pug
+include /components/buttons/action-button.pug
+include /components/pagination/pagination.pug
+include /components/date-dropdown/date-dropdown.pug
+include /components/filter-date-dropdown/filter-date-dropdown.pug
+include /components/subscription-text-field/subscription-text-field.pug
+include /components/counter/counter.pug
+include /components/dropdown-counter/dropdown-counter.pug
+include /components/expandable-checkbox-list/expandable-checkbox-list.pug
+include /components/rich-checkbox/rich-checkbox.pug
+include /components/bullet-list/bullet-list.pug
+include /components/top-feature/top-feature.pug
+include /components/comment/comment.pug
 
-block title
-  | Form Elements
-
-block body
+mixin form_elements()
   .toolbox__container
 
     mixin item(label, state, attrs)
@@ -12,29 +31,6 @@ block body
           span&attributes(attrs)= state ? state : ''
         block
 
-    include ../components/text-field/text-field.pug
-    include ../components/dropdown/dropdown.pug
-    include ../components/checkbox/checkbox.pug
-    include ../components/radio-button/radio-button.pug
-    include ../components/toggle/toggle.pug
-    include ../components/like-button/like-button.pug
-    include ../components/rate-button/rate-button.pug
-    include ../components/range-slider/range-slider.pug
-    include ../components/buttons/button.pug
-    include ../components/buttons/border-button.pug
-    include ../components/buttons/flat-button.pug
-    include ../components/buttons/action-button.pug
-    include ../components/pagination/pagination.pug
-    include ../components/date-dropdown/date-dropdown.pug
-    include ../components/filter-date-dropdown/filter-date-dropdown.pug
-    include ../components/subscription-text-field/subscription-text-field.pug
-    include ../components/counter/counter.pug
-    include ../components/dropdown-counter/dropdown-counter.pug
-    include ../components/expandable-checkbox-list/expandable-checkbox-list.pug
-    include ../components/rich-checkbox/rich-checkbox.pug
-    include ../components/bullet-list/bullet-list.pug
-    include ../components/top-feature/top-feature.pug
-    include ../components/comment/comment.pug
 
     .toolbox__form-elements
 
@@ -87,8 +83,8 @@ block body
 
         +item('like button')
           .inline-componets
-            +like-button('like-1')
-            +like-button('like-2')
+            +like-button('like-1', false, '2')
+            +like-button('like-2', true, '12')
 
         +item('rate button')
           .inline-componets

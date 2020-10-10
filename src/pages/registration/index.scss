@@ -1,12 +1,12 @@
-.login-page {
+.account-registration-page {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   height: 830px;
 
   background-image: url("./images/bg_login-registration.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
 }

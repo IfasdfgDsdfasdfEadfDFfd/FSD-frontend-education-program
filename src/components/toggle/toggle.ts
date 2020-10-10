@@ -1,4 +1,4 @@
-import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../globals/store';
+import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../store/store';
 
 
 const toggles = Array(...document.getElementsByClassName('toggle__element') as unknown as Array<Element>);

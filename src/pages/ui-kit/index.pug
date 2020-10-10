@@ -1,0 +1,10 @@
+extends ../common.pug
+
+block title
+  | UI-KIT
+
+block body
+  include ../../components/buttons/border-button.pug
+  include ../../components/header/header.pug
+
+  +border-button('awesome')

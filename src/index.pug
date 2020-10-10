@@ -1,15 +1,16 @@
-extends ./globals/common.pug
-include ./globals/link-list.pug
+extends ./pages/common.pug
 
 block title
   | Booking hotel website
 
 block body
+  include ./components/link-list/index.pug
+
   +link-list([
-    {href: './ui-kit.html', text: 'UI-KIT'},
-    {href: './login.html', text: 'Login'},
-    {href: './registration.html', text: 'Registration'},
-    {href: './landing.html', text: 'Landing'},
-    {href: './search-room.html', text: 'Search Room'},
-    {href: "./room-details.html", text: "Room Details"},
+    {href: './ui-kit/', text: 'UI-KIT'},
+    {href: './login/', text: 'Login'},
+    {href: './registration/', text: 'Registration'},
+    {href: './landing/', text: 'Landing'},
+    {href: './search-room/', text: 'Search Room'},
+    {href: './room-details/', text: 'Room Details'},
   ])

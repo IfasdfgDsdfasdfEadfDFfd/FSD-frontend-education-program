@@ -1,4 +1,4 @@
-import { createStore, Action } from '../../globals/store';
+import { createStore, Action } from '../../store/store';
 
 
 const masked_text_fields = document.getElementsByClassName('text-field_masked');

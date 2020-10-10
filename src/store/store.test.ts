@@ -1,4 +1,4 @@
-import { createStore, Store, Action } from '../globals/store';
+import { createStore, Store, Action } from './store';
 
 describe('store', () => {
   let store: Store;

@@ -1,5 +1,5 @@
-mixin like-button(name)
+mixin like-button(name, liked=false, count='0')
   .like-button
     -var id = name + '-id'
-    input(type="checkbox", name=name, id=id, value=name).like-button__element
-    label(for=id).like-button__label
+    input(type="checkbox", name=name, id=id, value=name, class=liked ? 'like-button__element--checked' : '').like-button__element
+    label(for=id).like-button__label= count

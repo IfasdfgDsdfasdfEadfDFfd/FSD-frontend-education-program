@@ -1,0 +1,14 @@
+extends ../common.pug
+
+block title
+  | Login
+
+block body
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+  include ../../components/cards/login/login.pug
+
+  +header(false, true)
+  main.login-page
+    +login-card()
+  +footer-desktop()

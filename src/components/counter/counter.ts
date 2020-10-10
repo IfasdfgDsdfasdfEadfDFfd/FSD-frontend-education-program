@@ -3,7 +3,7 @@ import {
   Action,
   saveToLocalStoragePlugin,
   saveToLocalStorageMiddlewareFabric
-} from '../../globals/store';
+} from '../../store/store';
 
 
 const counters = Array(...document.getElementsByClassName('counter') as unknown as Array<Element>);

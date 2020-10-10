@@ -1,0 +1,14 @@
+extends ../common.pug
+
+block title
+  | Landing Page
+
+block body
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+  include ../../components/cards/search-room/search-room.pug
+
+  +header(false, true)
+  main.landing
+    +search-room-card()
+  +footer-desktop()

@@ -1,0 +1,14 @@
+extends ../common.pug
+
+block title
+  | Registration
+
+block body
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+  include ../../components/cards/account-registration/account-registration.pug
+
+  +header(false, true)
+  main.account-registration-page
+    +account-registration-card()
+  +footer-desktop()
