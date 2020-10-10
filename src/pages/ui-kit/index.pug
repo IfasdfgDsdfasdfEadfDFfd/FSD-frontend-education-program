@@ -12,6 +12,10 @@ block body
   include ../../components/calendar/calendar.pug
   include ../../components/room-item/room-item.pug
 
+  // header & footers
+  include ../../components/header/header.pug
+  include ../../components/footer/footer.pug
+
 
   .container.toolbox
     .colors-type
@@ -73,27 +77,34 @@ block body
           br
           | of the design, like paragraphs, lists, etc.
           span= 'Body'
-    .form-elements
-    .cards.toolbox
-      +search-room-card()
-      +account-registration-card()
-      +book-a-room-card()
-      +login-card()
-      +calendar()
-      +room-item({
-        bgi: "/static/room_888.png",
-        number: "888",
-        luxury: true,
-        cost: "9 990",
-        stars: 5,
-        review: 145
-      })
-      +room-item({
-        bgi: "/static/room_840.png",
-        number: "840",
-        luxury: false,
-        cost: "9 900",
-        stars: 4,
-        review: 65
-      })
-    .headers-footers
+  .form-elements
+  .container.toolbox.cards
+    +search-room-card()
+    +account-registration-card()
+    +book-a-room-card()
+    +login-card()
+    +calendar()
+
+    +room-item({
+      bgi: "/static/room_888.png",
+      number: "888",
+      luxury: true,
+      cost: "9 990",
+      stars: 5,
+      review: 145
+    })
+
+    +room-item({
+      bgi: "/static/room_840.png",
+      number: "840",
+      luxury: false,
+      cost: "9 900",
+      stars: 4,
+      review: 65
+    })
+
+  .toolbox.headers-footers
+    +header(false)
+    +header(true)
+    +footer-desktop()
+    +footer-mobile()
