@@ -4,6 +4,15 @@ block title
   | UI-KIT
 
 block body
+  // cards
+  include ../../components/cards/search-room/search-room.pug
+  include ../../components/cards/account-registration/account-registration.pug
+  include ../../components/cards/book-a-room/book-a-room.pug
+  include ../../components/cards/login/login.pug
+  include ../../components/calendar/calendar.pug
+  include ../../components/room-item/room-item.pug
+
+
   .container.toolbox
     .colors-type
       .colors-type__colors
@@ -65,5 +74,26 @@ block body
           | of the design, like paragraphs, lists, etc.
           span= 'Body'
     .form-elements
-    .cards
+    .cards.toolbox
+      +search-room-card()
+      +account-registration-card()
+      +book-a-room-card()
+      +login-card()
+      +calendar()
+      +room-item({
+        bgi: "/static/room_888.png",
+        number: "888",
+        luxury: true,
+        cost: "9 990",
+        stars: 5,
+        review: 145
+      })
+      +room-item({
+        bgi: "/static/room_840.png",
+        number: "840",
+        luxury: false,
+        cost: "9 900",
+        stars: 4,
+        review: 65
+      })
     .headers-footers
