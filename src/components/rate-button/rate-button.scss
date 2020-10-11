@@ -1,13 +1,16 @@
 .rate-button {
   font-family: 'Material-Icons';
+  height: 24px;
 }
 
 .rate-button__star {
   font-family: 'Material-Icons';
   display: inline-flex;
   width: 24px;
+
   font-size: 24px;
-  line-height: 20px;
+  line-height: 24px;
+
   background: $from-purple-to-blue-gradient;
   background-clip: text;
   -webkit-background-clip: text;
