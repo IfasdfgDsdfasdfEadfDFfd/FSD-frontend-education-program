@@ -1,6 +1,6 @@
 include ../like-button/like-button.pug
 
-mixin comment(avatar_path, username, date)
+mixin comment(avatar_path, username, date, like_attrs)
   .comment
     .comment__header
       image(src=avatar_path).comment__header-avatar
@@ -8,6 +8,6 @@ mixin comment(avatar_path, username, date)
         .comment__header-username= username
         .comment__header-date= date
     .comment__body
-      +like-button('like-3')
+      +like-button(like_attrs.name, like_attrs.liked, like_attrs.like_count)
       .comment__body-text
         block

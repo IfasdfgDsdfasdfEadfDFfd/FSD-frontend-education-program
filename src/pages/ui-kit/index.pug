@@ -261,6 +261,36 @@ block body
         },
       ], false)
 
+    .form-elements__container
+      +element-wrapper('rich checkbox buttons', '', false, true)
+        +rich-checkbox('Широкий коридор', 'wide-corridor')
+          | Ширина коридоров в номере
+          br
+          | не менее 91 см.
+
+        +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
+          | На 1 этаже вас стретит специалист и проводит до номера
+
+    .form-elements__container
+      +element-wrapper('bullet list', '', false, true)
+        +bullet-list([
+          'Нельзя с питомцами',
+          'Без вечеринок и мероприятий',
+          'Время прибытия — после 13:00, а выезд до 12:00'
+        ])
+
+    +element-wrapper('')
+      +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+      +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
+
+    .form-elements__comment-container
+      +comment('/static/comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like', liked: true, like_count: '12'})
+        | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
+        br
+        | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
+        br
+        | не жаловался из соседей.
+
   .container.toolbox.toolbox--gray.cards
     +search-room-card()
     +account-registration-card()

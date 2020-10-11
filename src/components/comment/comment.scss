@@ -21,13 +21,13 @@
 
 .comment__body {
   display: flex;
-  margin-top: 5px;
+  margin-top: 7px;
 
   & > .like-button {
-    margin-top: 5px;
+    margin: 5px 3px 0px 3px;
   }
 }
 
 .comment__body-text {
-  margin-left: 15px;
+  margin-left: 10px;
 }

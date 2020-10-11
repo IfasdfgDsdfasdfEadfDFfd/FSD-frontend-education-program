@@ -12,6 +12,10 @@
   gap: 40px;
 }
 
+.form-elements__comment-container {
+  grid-column: 2 / 4;
+}
+
 .form-elements__text-fields {
   display: flex;
   flex-flow: column nowrap;
