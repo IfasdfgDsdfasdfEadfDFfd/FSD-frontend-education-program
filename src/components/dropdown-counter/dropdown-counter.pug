@@ -1,7 +1,7 @@
 include ../counter/counter.pug
 
 mixin dropdown-counter(id, placeholder, counters, closed=false, need_to_be_applied=false)
-  - var closed_class = closed ? 'dropdown-counter_closed' : ''
+  - var closed_class = closed ? 'dropdown-counter--closed' : ''
 
   div(class=closed_class, id=id).dropdown-counter
     button.dropdown-counter__btn= placeholder

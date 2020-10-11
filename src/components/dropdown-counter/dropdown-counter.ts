@@ -11,16 +11,16 @@ dropdowns.forEach(dropdown => {
     }).map(key => state[key]).reduce((prev, cur) => prev + cur, 0);
 
     if (sumOfCounters !== 0) {
-      dropdown.classList.add('dropdown-counter_dirty');
+      dropdown.classList.add('dropdown-counter--dirty');
     } else {
-      dropdown.classList.remove('dropdown-counter_dirty');
+      dropdown.classList.remove('dropdown-counter--dirty');
     }
   });
 
   store.dispatch({name: '@COLD_START'});
 
   button?.addEventListener('click', () => {
-    const className = 'dropdown-counter_closed';
+    const className = 'dropdown-counter--closed';
     if (dropdown.classList.contains(className)) {
       dropdown.classList.remove(className);
     } else {

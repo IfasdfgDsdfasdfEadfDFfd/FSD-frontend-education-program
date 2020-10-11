@@ -29,7 +29,7 @@
   }
 }
 
-.dropdown-counter_closed > .dropdown-counter__btn {
+.dropdown-counter--closed > .dropdown-counter__btn {
   border: 1px solid $dark-shade-25;
   transition: all .2s ease-in;
 }
@@ -49,7 +49,7 @@
   padding: 5px 7px 0px 15px;
 }
 
-.dropdown-counter_closed .dropdown-counter__list {
+.dropdown-counter--closed .dropdown-counter__list {
   display: none;
 }
 
@@ -79,7 +79,7 @@
   visibility: hidden;
 }
 
-.dropdown-counter_dirty .dropdown-counter__buttons-cancel {
+.dropdown-counter--dirty .dropdown-counter__buttons-cancel {
   visibility: visible;
 }
 
