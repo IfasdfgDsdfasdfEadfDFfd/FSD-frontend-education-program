@@ -1,4 +1,4 @@
-mixin dropdown(text, opened)
+mixin dropdown(text, opened=false)
   - var class_name = opened ? 'dropdown--opened' : ''
   button(class=class_name).dropdown
     | #{text}

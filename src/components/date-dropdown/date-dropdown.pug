@@ -5,9 +5,11 @@ include ../calendar/calendar.pug
 mixin date-dropdown(left, right)
   .dropdown-container
     +element-wrapper('', '', true)
-      .date-dropdown
-        +dropdown(left.placeholder, false)
-      .date-dropdown
-        +dropdown(right.placeholder, false)
+      +element-wrapper(left.label)
+        .date-dropdown.dropdown-container
+          +dropdown(left.placeholder, false)
+      +element-wrapper(right.label)
+        .date-dropdown
+          +dropdown(right.placeholder, false)
     .dropdown-container__body
       +calendar('Август', '2019')

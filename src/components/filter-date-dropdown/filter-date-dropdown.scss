@@ -1,24 +1,5 @@
 .filter-date-dropdown {
-  position: relative;
-  background-color: #fff;
   width: 266px;
-  display: flex;
-  flex-flow: row nowrap;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
-  padding: 12px 0px 8px 15px;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: 'Montserrat';
-  color: $dark-shade-75;
-
-
-  &::after {
-    content: 'expand_more';
-    position: absolute;
-    right: 10px;
-    font-size: 24px;
-    line-height: 24px;
-    font-family: 'Material-Icons';
-  }
 }
