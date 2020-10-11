@@ -12,16 +12,11 @@ mixin account-registration-card()
     .account-registration__item
       +text-field({type: 'text', placeholder: 'Имя'})
       +text-field({type: 'text', placeholder: 'Фамилия'})
-      +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
+      +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
     .account-registration__item
       h3
         label(for="birthday-field")= 'Дата рождения'
-      +masked-text-field(
-        '(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])(19|20)\\d\\d',
-        '01012000',
-        '__.__.____',
-        {placeholder: 'ДД.ММ.ГГГГ', id: 'birthday-field'}
-      )
+      +masked-text-field()
     .account-registration__item
       +text-field({label: 'данные для входа в сервис', type: 'email', placeholder: 'Email'})
       +text-field({type: 'password', placeholder: 'Пароль'})
