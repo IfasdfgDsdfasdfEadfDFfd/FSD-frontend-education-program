@@ -52,7 +52,12 @@ sliders.forEach(slider => {
 
     const {min, max, left, right} = state[slider.id];
 
-    display.innerHTML = `${left}&#8381;-${right}&#8381;`;
+    display.innerHTML = `
+      ${Math.floor(left / 1000) || ''} 
+      ${String(left).slice(-3)}&#8381; - 
+      ${Math.floor(right / 1000) || ''} 
+      ${String(right).slice(-3)}&#8381;
+    `;
 
     const leftThumb = slider.querySelector('.slider__thumb_left') as HTMLElement;
     const rightThumb = slider.querySelector('.slider__thumb_right') as HTMLElement;
