@@ -183,6 +183,84 @@ block body
       +element-wrapper('dropdown')
         +dropdown-counter('guests-counter-3', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
 
+    .form-elements__container
+      +expandable-checkbox-list('expandable checkbox list', [
+        {
+          text: 'Завтрак',
+          name: 'breakfast-0',
+          value: 'has-breakfast',
+          checked: false,
+        },
+        {
+          text: 'Письменный стол',
+          name: 'desk-0',
+          value: 'has-desk',
+          checked: true,
+        },
+        {
+          text: 'стул для кормления',
+          name: 'feeding-chair-0',
+          value: 'has-feeding-chair',
+          checked: true,
+        },
+        {
+          text: 'кроватка',
+          name: 'crib-0',
+          value: 'has-crib',
+          checked: true,
+        },
+        {
+          text: 'телевизор',
+          name: 'tv-0',
+          value: 'has-tv',
+          checked: false,
+        },
+        {
+          text: 'шампунь',
+          name: 'shampoo-0',
+          value: 'has-shampoo',
+          checked: false,
+        },
+      ], true)
+      +expandable-checkbox-list('expandable checkbox list', [
+        {
+          text: 'Завтрак',
+          name: 'breakfast',
+          value: 'has-breakfast',
+          checked: false,
+        },
+        {
+          text: 'Письменный стол',
+          name: 'desk',
+          value: 'has-desk',
+          checked: true,
+        },
+        {
+          text: 'стул для кормления',
+          name: 'feeding-chair',
+          value: 'has-feeding-chair',
+          checked: true,
+        },
+        {
+          text: 'кроватка',
+          name: 'crib',
+          value: 'has-crib',
+          checked: true,
+        },
+        {
+          text: 'телевизор',
+          name: 'tv',
+          value: 'has-tv',
+          checked: false,
+        },
+        {
+          text: 'шампунь',
+          name: 'shampoo',
+          value: 'has-shampoo',
+          checked: false,
+        },
+      ], false)
+
   .container.toolbox.toolbox--gray.cards
     +search-room-card()
     +account-registration-card()
