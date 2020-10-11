@@ -12,7 +12,7 @@ const initState = counters.reduce((state, counter) => {
   return {...state, [counter.id]: parseInt((counter.querySelector('.counter__count')?.textContent || '0'))}
 }, {});
 
-enum actions {
+export enum actions {
   INC,
   DEC,
   RESET,
@@ -36,7 +36,9 @@ export const store = createStore(initState,
         return {...state, [action.value]: nextCount}
 
       case actions.RESET:
-        return {...state, [action.value]: 0};
+        return {...state, ...action.value.reduce((prev: any, id: string) => {
+          return {...prev, [id]: 0};
+        }, {})};
 
       default:
         return state;

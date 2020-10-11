@@ -1,4 +1,4 @@
-import { store } from '../counter/counter';
+import { store, actions } from '../counter/counter';
 
 const dropdowns = Array(...document.getElementsByClassName('dropdown-counter') as unknown as Array<HTMLElement>);
 
@@ -26,5 +26,21 @@ dropdowns.forEach(dropdown => {
     } else {
       dropdown.classList.add(className);
     }
+  });
+
+  const cancelButton = dropdown?.querySelector('.dropdown-counter__buttons-cancel');
+  const applyButton = dropdown?.querySelector('.dropdown-counter__buttons-apply');
+  const counters = dropdown?.querySelectorAll('.counter');
+
+  applyButton?.addEventListener('click', () => {
+
+  });
+
+  cancelButton?.addEventListener('click', () => {
+    console.log(store.getState())
+    store.dispatch({
+      name: actions.RESET,
+      value: Array(...counters as unknown as Array<HTMLElement>).map(counter => counter.id)
+    });
   });
 });
