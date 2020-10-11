@@ -5,6 +5,18 @@ const sliders = Array(...document.getElementsByClassName('range-slider') as unkn
 const sliderStorageName = 'range-slider-data';
 const defaultValue = {left: 0, right: 0, min: 0, max: 100};
 
+const initState = sliders.reduce((state, slider) => {
+  const left = slider.getElementsByClassName('range-slider__element-left')[0] as HTMLInputElement;
+  const right = slider.getElementsByClassName('range-slider__element-right')[0] as HTMLInputElement;
+
+  return {...state, [slider.id]: {
+    left: left.getAttribute('value'),
+    right: right.getAttribute('value'),
+    min: left.getAttribute('min'),
+    max: left.getAttribute('max'),
+  }}
+}, {});
+
 enum actions {
   CHANGE_LEFT_THUMB,
   CHANGE_RIGHT_THUMB,
@@ -28,7 +40,7 @@ const reducer = (action: Action, state: any) => {
 };
 
 
-const store = createStore({},
+const store = createStore(initState,
   reducer,
   [saveToLocalStoragePlugin(sliderStorageName, sliders, defaultValue)],
   {post: [saveToLocalStorageMiddlewareFabric(sliderStorageName)]}
