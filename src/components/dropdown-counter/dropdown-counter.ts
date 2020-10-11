@@ -33,11 +33,10 @@ dropdowns.forEach(dropdown => {
   const counters = dropdown?.querySelectorAll('.counter');
 
   applyButton?.addEventListener('click', () => {
-
+    dropdown.classList.add('dropdown-counter--closed');
   });
 
   cancelButton?.addEventListener('click', () => {
-    console.log(store.getState())
     store.dispatch({
       name: actions.RESET,
       value: Array(...counters as unknown as Array<HTMLElement>).map(counter => counter.id)
