@@ -12,7 +12,7 @@ mixin account-registration-card()
     .account-registration__item
       +text-field({type: 'text', placeholder: 'Имя'})
       +text-field({type: 'text', placeholder: 'Фамилия'})
-      +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
+      +radio-buttons-group('user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
     .account-registration__item
       h3
         label(for="birthday-field")= 'Дата рождения'

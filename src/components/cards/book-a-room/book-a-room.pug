@@ -11,7 +11,7 @@ mixin book-a-room-card()
       {label: 'Прибытие', placeholder: 'ДД.ММ.ГГГГ'},
       {label: 'Выезд', placeholder: 'ДД.ММ.ГГГГ'},
     )
-    +dropdown-counter('book-a-room-guests-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
+    +dropdown-counter('book-a-room-guests-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
     .bill
       .bill__row
         .bill__row__desc
