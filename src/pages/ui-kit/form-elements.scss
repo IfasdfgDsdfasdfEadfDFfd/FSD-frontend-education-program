@@ -23,6 +23,10 @@
   gap: 20px;
 }
 
+.form-elements__narrow {
+  max-width: 266px;
+}
+
 .form-elements__buttons {
   display: flex;
   flex-flow: column nowrap;

@@ -167,14 +167,14 @@ block body
             +flat-button('click me', true)
           .form-elements__buttons__row
             +action-button('Перейти к оплате')
-      +element-wrapper('pagination')
+      +element-wrapper('pagination', '', false, true)
         +pagination('1 - 12 из 100+ вариантов аренды')
 
-    .form-elements__container
-      +element-wrapper('dropdown', 'default')
-        +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true, false)
-      +element-wrapper('dropdown', 'expanded')
-        +dropdown-counter('room-properties-1-2', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false, false)
+    .form-elements__container.form-elements__narrow
+        +element-wrapper('dropdown', 'default')
+          +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true, false)
+        +element-wrapper('dropdown', 'expanded')
+          +dropdown-counter('room-properties-1-2', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false, false)
 
     .form-elements__container
       +element-wrapper('dropdown')
