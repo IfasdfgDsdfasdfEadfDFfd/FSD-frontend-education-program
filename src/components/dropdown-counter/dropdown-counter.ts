@@ -10,6 +10,21 @@ dropdowns.forEach(dropdown => {
       return key.startsWith(dropdown.id);
     }).map(key => state[key]).reduce((prev, cur) => prev + cur, 0);
 
+    const placeholder = <string>button?.getAttribute('data-placeholder');
+    let text = '';
+
+    if (sumOfCounters === 0) {
+      text = placeholder;
+    } else if (String(sumOfCounters).endsWith('1')) {
+      text = `${sumOfCounters} гость`;
+    } else if (['2', '3', '4'].includes(String(sumOfCounters).slice(-1))) {
+      text = `${sumOfCounters} гостя`;
+    } else {
+      text = `${sumOfCounters} гостей`;
+    }
+
+    button?.replaceChild(document.createTextNode(text), button.firstChild as Node);
+
     if (sumOfCounters !== 0) {
       dropdown.classList.add('dropdown-counter--dirty');
     } else {

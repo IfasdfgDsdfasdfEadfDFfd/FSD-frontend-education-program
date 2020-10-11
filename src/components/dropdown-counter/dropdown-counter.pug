@@ -4,7 +4,7 @@ mixin dropdown-counter(id, placeholder, counters, closed=false, need_to_be_appli
   - var closed_class = closed ? 'dropdown-counter--closed' : ''
 
   div(class=closed_class, id=id).dropdown-counter
-    button.dropdown-counter__btn= placeholder
+    button(data-placeholder=placeholder).dropdown-counter__btn= placeholder
 
     ul.dropdown-counter__list
       each counter, index in counters
