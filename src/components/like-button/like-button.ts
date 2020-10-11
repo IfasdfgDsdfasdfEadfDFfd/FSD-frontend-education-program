@@ -7,7 +7,10 @@ const data = JSON.parse(window.localStorage.getItem('like-button-data') || '{}')
 
 likeButtonContainer.forEach((likeButton) => {
   const likeButtonElement = likeButton.getElementsByTagName('input')[0];
-  data[likeButtonElement.id] = data[likeButtonElement.id] || {likesCount: 0, isLiked: false};
+  const likesCount = parseInt(<string>likeButton.getElementsByTagName('label')[0].textContent);
+  const isLiked = likeButton.classList.contains('like-button--checked')
+
+  data[likeButtonElement.id] = data[likeButtonElement.id] || {likesCount, isLiked};
 });
 
 
@@ -48,19 +51,10 @@ store.subscribe(state => {
 
     const { likesCount, isLiked } = state[likeButton.id];
     const likesCountNode = document.createTextNode(likesCount);
-    if (likeCounter.hasChildNodes()) {
-      likeCounter.replaceChild(likesCountNode, likeCounter.firstChild as Node);
-    } else {
-      likeCounter.appendChild(likesCountNode);
-    }
 
-    if (isLiked) {
-      likeButton.classList.add('like-button__element--checked');
-      likeButton.setAttribute('checked', 'true');
-    } else {
-      likeButton.classList.remove('like-button__element--checked');
-      likeButton.removeAttribute('checked');
-    }
+    likeCounter.replaceChild(likesCountNode, likeCounter.firstChild as Node);
+
+    element.classList.toggle('like-button--checked', isLiked);
   });
 });
 
