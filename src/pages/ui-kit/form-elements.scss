@@ -18,3 +18,19 @@
 
   gap: 20px;
 }
+
+.form-elements__buttons {
+  display: flex;
+  flex-flow: column nowrap;
+
+  gap: 30px;
+}
+
+.form-elements__buttons__row {
+  display: flex;
+  flex-flow: row nowrap;
+
+  min-height: 44px;
+
+  gap: 20px
+}

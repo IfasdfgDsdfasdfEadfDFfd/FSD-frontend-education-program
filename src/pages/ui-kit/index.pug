@@ -154,22 +154,23 @@ block body
           left: 5000,
           right: 10000,
         })
-      +element-wrapper('buttons')
-        +button('click me')
-        +button('click me', true)
-        +border-button('click me')
-        +border-button('click me', true)
-        +flat-button('click me')
-        +flat-button('click me', true)
-        +action-button('Перейти к оплате')
+      +element-wrapper('buttons', '', false, true)
+        .form-elements__buttons
+          .form-elements__buttons__row
+            +button('click me')
+            +button('click me', true)
+          .form-elements__buttons__row
+            +border-button('click me')
+            +border-button('click me', true)
+          .form-elements__buttons__row
+            +flat-button('click me')
+            +flat-button('click me', true)
+          .form-elements__buttons__row
+            +action-button('Перейти к оплате')
       +element-wrapper('pagination')
         +pagination('1 - 12 из 100+ вариантов аренды')
 
-    .form-elements__container
-    .form-elements__container
-    .form-elements__container
-    .form-elements__container
-  .container.toolbox.cards
+  .container.toolbox.toolbox--gray.cards
     +search-room-card()
     +account-registration-card()
     +book-a-room-card()
@@ -194,7 +195,7 @@ block body
       review: 65
     })
 
-  .toolbox.headers-footers
+  .toolbox.toolbox--gray.headers-footers
     +header(false)
     +header(true)
     +footer-desktop()
