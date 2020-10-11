@@ -1,8 +1,9 @@
-mixin element-wrapper(label, sub_label='', inline=false)
+mixin element-wrapper(label, sub_label='', inline=false, extra_spacing)
   - var inline_class_name = inline ? 'element-wrapper__item--inline' : ''
+  - var extra_spacing_class_name = extra_spacing ? 'element-wrapper__label--extra-spacing' : ''
 
   .element-wrapper
-    .element-wrapper__label
+    div(class=extra_spacing_class_name).element-wrapper__label
       h3= label
       span= sub_label
     div(class=inline_class_name).element-wrapper__item
