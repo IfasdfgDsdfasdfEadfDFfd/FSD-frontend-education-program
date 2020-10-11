@@ -18,7 +18,6 @@ enum actions {
   RESET,
 };
 
-
 // controller
 const counterStorageName = 'counter-data';
 export const store = createStore(initState,
@@ -78,6 +77,12 @@ counters.forEach(counter => {
       minusButton?.setAttribute('disabled', 'true');
     } else {
       minusButton?.removeAttribute('disabled');
+    }
+
+    if (newCount === 10) {
+      plusButton?.setAttribute('disabled', 'true');
+    } else {
+      plusButton?.removeAttribute('disabled');
     }
   });
 

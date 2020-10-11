@@ -1,7 +1,7 @@
 mixin counter(id, text, initial_count=0)
   .counter(id=id)
-    span.counter__text.montserrat_bold.text_uppercase= text
+    span.counter__text= text
     .counter__right
-      button.counter__btn.counter__minus.montserrat= '-'
-      span.counter__count.montserrat_bold.text_uppercase= initial_count
-      button.counter__btn.counter__plus.montserrat= '+'
+      button.counter__btn.counter__minus= '-'
+      span.counter__count= initial_count
+      button.counter__btn.counter__plus= '+'
