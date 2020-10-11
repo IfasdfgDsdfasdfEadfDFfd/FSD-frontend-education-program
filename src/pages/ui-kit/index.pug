@@ -111,7 +111,7 @@ block body
         +element-wrapper('text field', 'hover / focus')
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
         +element-wrapper('dropdown')
-          +dropdown-counter('guests-counter-1', 'dropdown', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+          +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
         +element-wrapper('masked text field')
           +masked-text-field()
       +date-dropdown(
@@ -169,6 +169,19 @@ block body
             +action-button('Перейти к оплате')
       +element-wrapper('pagination')
         +pagination('1 - 12 из 100+ вариантов аренды')
+
+    .form-elements__container
+      +element-wrapper('dropdown', 'default')
+        +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true, false)
+      +element-wrapper('dropdown', 'expanded')
+        +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false, false)
+
+    .form-elements__container
+      +element-wrapper('dropdown')
+        +dropdown-counter('guests-counter-2', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
+    .form-elements__container
+      +element-wrapper('dropdown')
+        +dropdown-counter('guests-counter-3', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
 
   .container.toolbox.toolbox--gray.cards
     +search-room-card()
