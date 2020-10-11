@@ -1,0 +1,19 @@
+.element-wrapper__label {
+  display: flex;
+  justify-content: space-between;
+
+  & span {
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark-shade-50;
+    text-transform: uppercase;
+  }
+
+  margin-bottom: 5px;
+}
+
+.element-wrapper__item--inline {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 20px;
+}

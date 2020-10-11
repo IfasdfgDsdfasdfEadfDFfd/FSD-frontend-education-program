@@ -4,6 +4,32 @@ block title
   | UI-KIT
 
 block body
+  // components
+  include ../../components/element-wrapper/element-wrapper.pug
+  include ../../components/text-field/text-field.pug
+  include ../../components/dropdown/dropdown.pug
+  include ../../components/checkbox/checkbox.pug
+  include ../../components/radio-button/radio-button.pug
+  include ../../components/toggle/toggle.pug
+  include ../../components/like-button/like-button.pug
+  include ../../components/rate-button/rate-button.pug
+  include ../../components/range-slider/range-slider.pug
+  include ../../components/buttons/button.pug
+  include ../../components/buttons/border-button.pug
+  include ../../components/buttons/flat-button.pug
+  include ../../components/buttons/action-button.pug
+  include ../../components/pagination/pagination.pug
+  include ../../components/date-dropdown/date-dropdown.pug
+  include ../../components/filter-date-dropdown/filter-date-dropdown.pug
+  include ../../components/subscription-text-field/subscription-text-field.pug
+  include ../../components/counter/counter.pug
+  include ../../components/dropdown-counter/dropdown-counter.pug
+  include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
+  include ../../components/rich-checkbox/rich-checkbox.pug
+  include ../../components/bullet-list/bullet-list.pug
+  include ../../components/top-feature/top-feature.pug
+  include ../../components/comment/comment.pug
+
   // cards
   include ../../components/cards/search-room/search-room.pug
   include ../../components/cards/account-registration/account-registration.pug
@@ -15,6 +41,7 @@ block body
   // header & footers
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
+
 
 
   .container.toolbox
@@ -77,13 +104,78 @@ block body
           br
           | of the design, like paragraphs, lists, etc.
           span= 'Body'
-  .form-elements
+
+  .toolbox.container.form-elements
+    .form-elements__container
+      +element-wrapper('text field', 'default')
+        +text-field({type: 'email', placeholder: 'Email'})
+      +element-wrapper('text field', 'hover / focus')
+        +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
+      +element-wrapper('dropdown')
+        +dropdown-counter('guests-counter-1', 'dropdown', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+      +element-wrapper('masked text field')
+        +masked-text-field()
+      +date-dropdown(
+        {label: 'date-dropdown', placeholder: 'ДД.ММ.ГГГГ'},
+        {label: 'date-dropdown', placeholder: '19.08.2019'},
+      )
+      +element-wrapper('filter date dropdown')
+        +filter-date-dropdown('19 авг - 23 авг')
+      +element-wrapper('subscription text field')
+        +subscription-text-field()
+
+    .form-elements__container
+      +element-wrapper('checkbox buttons')
+        +checkbox('allow-smoking', 'allow-smoking', false)
+          | Можно курить
+        +checkbox('allow-pets', 'allow-pets', true)
+          | Можно с питомцами
+        +checkbox('allow-guests', 'allow-guests', true)
+          | Можно пригласить гостей (до 10 человек)
+      +element-wrapper('radio buttons')
+        +radio-buttons-group('gender', ['Мужчина', 'Женщина'])
+      +element-wrapper('toggle')
+        +toggle('special-offers-toggle_1', 'recieve-special-offers')
+          | Получать спецпредложения
+        +toggle('special-offers-toggle_2', 'recieve-special-offers')
+          | Получать спецпредложения
+      +element-wrapper('like button')
+        +like-button('like-1', false, '2')
+        +like-button('like-2', true, '12')
+      +element-wrapper('rate button')
+        +rate-button(4)
+        +rate-button(5)
+
+    .form-elements__container
+      +element-wrapper('')
+        +range-slider('range slider', 'cost-range-slider', {
+          min: 0,
+          max: 15000,
+          step: 100,
+          left: 5000,
+          right: 10000,
+        })
+      +element-wrapper('buttons')
+        +button('click me')
+        +button('click me', true)
+        +border-button('click me')
+        +border-button('click me', true)
+        +flat-button('click me')
+        +flat-button('click me', true)
+        +action-button('Перейти к оплате')
+      +element-wrapper('pagination')
+        +pagination('1 - 12 из 100+ вариантов аренды')
+
+    .form-elements__container
+    .form-elements__container
+    .form-elements__container
+    .form-elements__container
   .container.toolbox.cards
     +search-room-card()
     +account-registration-card()
     +book-a-room-card()
     +login-card()
-    +calendar()
+    +calendar('Август', 2019)
 
     +room-item({
       bgi: "/static/room_888.png",

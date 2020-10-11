@@ -1,7 +1,5 @@
-mixin dropdown(default_option, counters)
-  select.dropdown
-    option(value="" disabled selected)
-      | #{default_option}
-    each counter in counters
-      option(value=counter)
-        | #{counter}
+mixin dropdown(text, opened)
+  - var class_name = opened ? 'dropdown--opened' : ''
+  button(class=class_name).dropdown
+    | #{text}
+    span.dropdown__arrow= 'expand_more'

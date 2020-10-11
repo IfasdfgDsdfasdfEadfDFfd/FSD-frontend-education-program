@@ -1,0 +1,9 @@
+mixin element-wrapper(label, sub_label='', inline=false)
+  - var inline_class_name = inline ? 'element-wrapper__item--inline' : ''
+
+  .element-wrapper
+    .element-wrapper__label
+      h3= label
+      span= sub_label
+    div(class=inline_class_name).element-wrapper__item
+      block

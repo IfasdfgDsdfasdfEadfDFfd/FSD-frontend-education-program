@@ -1,10 +1,13 @@
+include ../dropdown/dropdown.pug
+include ../element-wrapper/element-wrapper.pug
+include ../calendar/calendar.pug
+
 mixin date-dropdown(left, right)
-  .date-dropdown
-    .date-dropdown__left
-      h3
-        | #{left.label}
-      button.date-dropdown__element= left.placeholder
-    .date-dropdown__right
-      h3
-        | #{right.label}
-      button.date-dropdown__element= right.placeholder
+  .dropdown-container
+    +element-wrapper('', '', true)
+      .date-dropdown
+        +dropdown(left.placeholder, false)
+      .date-dropdown
+        +dropdown(right.placeholder, false)
+    .dropdown-container__body
+      +calendar('Август', '2019')

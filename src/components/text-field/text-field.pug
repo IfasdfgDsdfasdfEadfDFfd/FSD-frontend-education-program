@@ -4,13 +4,12 @@ mixin text-field(attrs)
       label(for=attrs.id)= attrs.label
   input&attributes(attrs).text-field
 
-mixin masked-text-field(mask, example, placeholder, attrs)
-  - attrs['data-mask'] = mask
-  - attrs['data-example'] = example
-  - attrs['data-placeholder'] = placeholder
-  - attrs.class = "text-field_masked"
-  +text-field(attrs)
+mixin masked-text-field()
+  +text-field({
+    class: 'text-field--masked',
+    placeholder: 'ДД.ММ.ГГГГ'
+  })
 
 mixin focused-text-field(attrs)
-  - attrs.class = "text-field_focused"
+  - attrs.class = "text-field--focused"
   +text-field(attrs)
