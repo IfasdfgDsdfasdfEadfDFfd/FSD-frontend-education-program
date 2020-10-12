@@ -9,8 +9,8 @@
   width: 100%;
   height: 44px;
   border: 1px solid $dark-shade-50;
-  border-radius: 4px 4px 0px 0px;
   background-color: #ffffff;
+  border-radius: 4px 4px 0px 0px;
   color: $dark-shade-75;
   font-family: 'Montserrat';
   font-size: 14px;
@@ -32,6 +32,7 @@
 .dropdown-counter--closed > .dropdown-counter__btn {
   border: 1px solid $dark-shade-25;
   transition: all .2s ease-in;
+  border-radius: 4px 4px 4px 4px;
 }
 
 .dropdown-counter__list {
