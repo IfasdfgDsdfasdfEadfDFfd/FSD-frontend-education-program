@@ -4,6 +4,7 @@ block title
   | Room Details
 
 block body
+  include ../../components/element-wrapper/element-wrapper.pug
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
   include ../../components/cards/book-a-room/book-a-room.pug
@@ -21,16 +22,24 @@ block body
     .room-details__body__desc
       .room-details__body__desc__left
         .room-details__body__desc-row
-          div
-            h2
-              | Сведения о номере
+          +element-wrapper({
+            label: 'Сведения о номере',
+            sub_label: '',
+            inline: false,
+            extra_spacing: true,
+            large_label: true
+          })
             +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглащающие стены')
             +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
             +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
-          div
-            h2
-              | Впечатления от номера
-            div.room-impressions
+          +element-wrapper({
+            label: 'Впечатления от номера',
+            sub_label: '',
+            inline: false,
+            extra_spacing: true,
+            large_label: true
+          })
+            .room-impressions
               .statictic-ring
                 .room-impressions__magnificent-ring
                 .room-impressions__good-ring
@@ -43,33 +52,44 @@ block body
                 li Хорошо
                 li Удовлетворительно
                 li Разочарован
+        +element-wrapper({
+          label: 'Отзывы поситителей номера',
+          sub_label: '2 отзыва',
+          inline: false,
+          extra_spacing: true,
+          large_label: true
+        })
+          .room-details__body__comment-section
+            +comment('/static/comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
+              | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
+              br
+              | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
+              br
+              | не жаловался из соседей.
+            +comment('/static/comment_avatar_2.png', 'Мурад Сарафанов', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
+              | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
+              br
+              | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
-          h2
-            | Отзывы посетителей номера
-          .room-details__body__desc-row__comment-counter
-            | 2 отзыва
-        +comment('/static/comment_avatar_1.png', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
-          | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
-          br
-          | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
-          br
-          | не жаловался из соседей.
-        +comment('/static/comment_avatar_2.png', 'Мурад Сарафанов', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
-          | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
-          br
-          | каждый день новое блюдо и десерт как комплимент
-        .room-details__body__desc-row
-          div
-            h2
-              | Правила
+          +element-wrapper({
+            label: 'Правила',
+            sub_label: '',
+            inline: false,
+            extra_spacing: true,
+            large_label: true
+          })
             +bullet-list([
               'Нельзя с питомцами',
               'Без вечеринок и мероприятий',
               'Время прибытия — после 13:00, а выезд до 12:00 ',
             ])
-          div
-            h2
-              | Отмена
+          +element-wrapper({
+            label: 'Отмена',
+            sub_label: '',
+            inline: false,
+            extra_spacing: true,
+            large_label: true
+          })
             | Бесплатная отмена в течение 48 ч. После
             br
             | этого при отмене не позднее чем за 5 дн. до

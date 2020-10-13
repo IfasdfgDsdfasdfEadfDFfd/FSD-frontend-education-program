@@ -1,12 +1,12 @@
 .element-wrapper__label {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   & span {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 15px;
     color: $dark-shade-50;
-    text-transform: uppercase;
   }
 
   margin-bottom: 5px;
