@@ -106,47 +106,119 @@ block body
   .toolbox.container.form-elements
     .form-elements__container
       .form-elements__text-fields
-        +element-wrapper('text field', 'default')
+        +element-wrapper({
+          label: 'text field',
+          sub_label: 'default',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +text-field({type: 'email', placeholder: 'Email'})
-        +element-wrapper('text field', 'hover / focus')
+        +element-wrapper({
+          label: 'text field',
+          sub_label: 'hover / focus',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
-        +element-wrapper('dropdown')
+        +element-wrapper({
+          label: 'dropdown',
+          sub_label: '',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
-        +element-wrapper('masked text field')
+        +element-wrapper({
+          label: 'masked text field',
+          sub_label: '',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +masked-text-field()
       +date-dropdown(
         {label: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'},
         {label: 'date dropdown', placeholder: '19.08.2019'},
       )
-      +element-wrapper('filter date dropdown')
+      +element-wrapper({
+        label: 'filter date dropdown',
+        sub_label: '',
+        extra_spacing: false,
+        inline: false,
+        large_label: false,
+      })
         +filter-date-dropdown('19 авг - 23 авг')
-      +element-wrapper('subscription text field')
+      +element-wrapper({
+        label: 'subscription text field',
+        sub_label: '',
+        extra_spacing: false,
+        inline: false,
+        large_label: false,
+      })
         +subscription-text-field()
 
     .form-elements__container
-      +element-wrapper('checkbox buttons', '', false, true)
+      +element-wrapper({
+        label: 'checkbox buttons',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +checkbox('allow-smoking', 'allow-smoking', false)
           | Можно курить
         +checkbox('allow-pets', 'allow-pets', true)
           | Можно с питомцами
         +checkbox('allow-guests', 'allow-guests', true)
           | Можно пригласить гостей (до 10 человек)
-      +element-wrapper('radio buttons', '', false, true)
+      +element-wrapper({
+        label: 'radio buttons',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
-      +element-wrapper('toggle')
+      +element-wrapper({
+        label: 'toggle',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +toggle('special-offers-toggle_1', 'recieve-special-offers', true)
           | Получать спецпредложения
         +toggle('special-offers-toggle_2', 'recieve-special-offers')
           | Получать спецпредложения
-      +element-wrapper('like button', '', true, true)
+      +element-wrapper({
+        label: 'like button',
+        sub_label: '',
+        extra_spacing: true,
+        inline: true,
+        large_label: false,
+      })
         +like-button('like-1', false, '2')
         +like-button('like-2', true, '12')
-      +element-wrapper('rate button', '', true, true)
+      +element-wrapper({
+        label: 'rate button',
+        sub_label: '',
+        extra_spacing: true,
+        inline: true,
+        large_label: false,
+      })
         +rate-button(4)
         +rate-button(5)
 
     .form-elements__container
-      +element-wrapper('')
+      +element-wrapper({
+        label: '',
+        sub_label: '',
+        extra_spacing: false,
+        inline: false,
+        large_label: false,
+      })
         +range-slider('range slider', 'cost-range-slider', {
           min: 0,
           max: 15000,
@@ -154,7 +226,13 @@ block body
           left: 5000,
           right: 10000,
         })
-      +element-wrapper('buttons', '', false, true)
+      +element-wrapper({
+        label: 'buttons',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         .form-elements__buttons
           .form-elements__buttons__row
             +button('click me')
@@ -167,20 +245,50 @@ block body
             +flat-button('click me', true)
           .form-elements__buttons__row
             +action-button('Перейти к оплате')
-      +element-wrapper('pagination', '', false, true)
+      +element-wrapper({
+        label: 'pagination',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +pagination('1 - 12 из 100+ вариантов аренды')
 
     .form-elements__container.form-elements__narrow
-        +element-wrapper('dropdown', 'default')
+        +element-wrapper({
+          label: 'dropdown',
+          sub_label: 'default',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true, false)
-        +element-wrapper('dropdown', 'expanded')
+        +element-wrapper({
+          label: 'dropdown',
+          sub_label: 'expanded',
+          extra_spacing: false,
+          inline: false,
+          large_label: false,
+        })
           +dropdown-counter('room-properties-1-2', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false, false)
 
     .form-elements__container
-      +element-wrapper('dropdown')
+      +element-wrapper({
+        label: 'dropdown',
+        sub_label: '',
+        extra_spacing: false,
+        inline: false,
+        large_label: false,
+      })
         +dropdown-counter('guests-counter-2', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
     .form-elements__container
-      +element-wrapper('dropdown')
+      +element-wrapper({
+        label: 'dropdown',
+        sub_label: '',
+        extra_spacing: false,
+        inline: false,
+        large_label: false,
+      })
         +dropdown-counter('guests-counter-3', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
 
     .form-elements__container
@@ -262,7 +370,13 @@ block body
       ], false)
 
     .form-elements__container
-      +element-wrapper('rich checkbox buttons', '', false, true)
+      +element-wrapper({
+        label: 'rich checkbox buttons',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +rich-checkbox('Широкий коридор', 'wide-corridor')
           | Ширина коридоров в номере
           br
@@ -272,14 +386,26 @@ block body
           | На 1 этаже вас стретит специалист и проводит до номера
 
     .form-elements__container
-      +element-wrapper('bullet list', '', false, true)
+      +element-wrapper({
+        label: 'bullet list',
+        sub_label: '',
+        extra_spacing: true,
+        inline: false,
+        large_label: false,
+      })
         +bullet-list([
           'Нельзя с питомцами',
           'Без вечеринок и мероприятий',
           'Время прибытия — после 13:00, а выезд до 12:00'
         ])
 
-    +element-wrapper('')
+    +element-wrapper({
+      label: '',
+      sub_label: '',
+      extra_spacing: false,
+      inline: false,
+      large_label: false,
+    })
       +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
       +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
 
