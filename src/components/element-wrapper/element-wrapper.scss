@@ -3,13 +3,17 @@
   justify-content: space-between;
   align-items: center;
 
-  & span {
-    font-size: 14px;
-    line-height: 15px;
-    color: $dark-shade-50;
-  }
-
   margin-bottom: 5px;
+}
+
+.element-wrapper__sub-label {
+  font-size: 12px;
+  line-height: 15px;
+  color: $dark-shade-50;
+}
+
+.element-wrapper__sub-label--large {
+  font-size: 14px;
 }
 
 .element-wrapper__item--inline {
