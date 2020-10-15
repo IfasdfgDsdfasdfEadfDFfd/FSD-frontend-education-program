@@ -22,7 +22,15 @@ block body
         h3
           | даты пребывания в отеле
         +filter-date-dropdown('19 авг - 23 авг')
-      +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true)
+      +dropdown-counter({
+        id: 'guests-counter-1',
+        placeholder: 'Сколько гостей',
+        counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
+        counting_way: 'sum',
+        declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+        closed: true,
+        need_to_be_applied: true
+      })
 
       +range-slider('диапозон цены', 'cost-range-slider', {
         min: 0,
@@ -53,7 +61,19 @@ block body
         +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
           | На 1 этаже вас стретит специалист и проводит до номера
 
-      +dropdown-counter('room-properties-1-1', 'Параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true)
+      +dropdown-counter({
+        id: 'room-properties-1',
+        placeholder: 'Параметры номера',
+        counters: [{name: 'спальни', value: 0}, {name: 'кровати', value: 0}, {name: 'ванные комнаты', value: 0}],
+        counting_way: 'apart',
+        declensions: [
+          {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
+          {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
+          {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
+        ],
+        closed: true,
+        need_to_be_applied: false
+      })
 
       +expandable-checkbox-list('дополнительные удобства', [
         {

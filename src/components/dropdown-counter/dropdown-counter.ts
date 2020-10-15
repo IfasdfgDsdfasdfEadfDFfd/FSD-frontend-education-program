@@ -6,24 +6,49 @@ dropdowns.forEach(dropdown => {
   const button = dropdown.querySelector('.dropdown-counter__btn');
 
   store.subscribe((state: any) => {
-    const sumOfCounters = Object.keys(state).filter(key => {
+    const countersData = Object.keys(state).filter(key => {
       return key.startsWith(dropdown.id);
-    }).map(key => state[key]).reduce((prev, cur) => prev + cur, 0);
+    }).map(key => state[key]);
+
+    const sumOfCounters = countersData.reduce((prev, cur) => prev + cur, 0)
 
     const placeholder = <string>button?.getAttribute('data-placeholder');
-    let text = '';
+    const countingWay = <string>button?.getAttribute('data-counting-way');
+    const declensions = JSON.parse(<string>button?.getAttribute('data-declensions'));
 
-    if (sumOfCounters === 0) {
-      text = placeholder;
-    } else if (String(sumOfCounters).endsWith('1')) {
-      text = `${sumOfCounters} гость`;
-    } else if (['2', '3', '4'].includes(String(sumOfCounters).slice(-1))) {
-      text = `${sumOfCounters} гостя`;
-    } else {
-      text = `${sumOfCounters} гостей`;
+    const defineDeclension = (number: string): string => {
+      if (String(number).endsWith('1')) {
+        return 'singular';
+      } else if (['2', '3', '4'].includes(String(number).slice(-1))) {
+        return 'genitive';
+      } else {
+        return 'plural';
+      }
     }
 
-    button?.replaceChild(document.createTextNode(text), button.firstChild as Node);
+    let text = '';
+
+    if (countingWay === 'sum') {
+
+      if (sumOfCounters === 0) {
+        text = placeholder;
+      } else {
+        const label = declensions[defineDeclension(String(sumOfCounters))];
+        text = `${sumOfCounters} ${label}`;
+      }
+    } else if (countingWay === 'apart') {
+
+      if (sumOfCounters === 0) {
+        text = placeholder;
+      } else {
+        text = countersData.map((counterValue, index) => {
+          if (counterValue === 0) return '';
+          return `${counterValue} ${declensions[index][defineDeclension(String(counterValue))]}`;
+        }).filter(v => v).join(', ');
+      }
+    }
+
+    button?.firstChild?.replaceChild(document.createTextNode(text), button.firstChild.firstChild as Node);
 
     if (sumOfCounters !== 0) {
       dropdown.classList.add('dropdown-counter--dirty');
