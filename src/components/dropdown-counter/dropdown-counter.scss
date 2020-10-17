@@ -1,97 +1,27 @@
 .dropdown-counter {
-  position: relative;
-}
-
-.dropdown-counter__btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 44px;
-  border: 1px solid $dark-shade-50;
-  background-color: #ffffff;
-  border-radius: 4px 4px 0px 0px;
-  color: $dark-shade-75;
-  font-family: 'Montserrat';
-  font-size: 14px;
-  line-height: 24px;
-  padding-left: 15px;
-  transition: all .2s ease-in;
-
-  & span {
-    max-width: 65%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  &::after {
-    content: 'expand_more';
-    position: absolute;
-    right: 10px;
-    font-family: 'Material-Icons';
-    font-size: 24px;
-    line-height: 24px;
-    color: $dark-shade-75;
-  }
-}
-
-.dropdown-counter--closed > .dropdown-counter__btn {
   border: 1px solid $dark-shade-25;
-  transition: all .2s ease-in;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 0px 0px;
+  display: flex;
 }
+
 
 .dropdown-counter__list {
-  position: absolute;
   font-family: 'Montserrat';
   font-weight: bold;
   text-transform: uppercase;
   font-size: 12px;
+
   background-color: #fff;
-  z-index: 1;
+
   width: 100%;
-  border: 1px solid $dark-shade-50;
+  padding: 5px 7px 0px 15px;
+
+  border: 1px solid $dark-shade-25;
   border-top: none;
   border-radius: 0px 0px 4px 4px;
-  padding: 5px 7px 0px 15px;
-}
-
-.dropdown-counter--closed .dropdown-counter__list {
-  display: none;
 }
 
 .dropdown-counter__list__item {
   list-style: none;
   margin-bottom: 7px;
-}
-
-.dropdown-counter__buttons {
-  display: flex;
-  justify-content: space-between;
-
-
-  & > * {
-    border: none;
-    background-color: #fff;
-    font-family: 'Montserrat';
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px 0;
-    font-size: 12px;
-    line-height: 15px;
-  }
-}
-
-.dropdown-counter__buttons-cancel {
-  color: $purple-color;
-  visibility: hidden;
-}
-
-.dropdown-counter--dirty .dropdown-counter__buttons-cancel {
-  visibility: visible;
-}
-
-.dropdown-counter__buttons-apply {
-  color: $purple-color;
 }

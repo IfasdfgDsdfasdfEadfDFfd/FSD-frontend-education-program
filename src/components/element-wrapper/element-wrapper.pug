@@ -6,10 +6,11 @@ mixin element-wrapper(attrs)
   .element-wrapper
     div(class=extra_spacing_class_name).element-wrapper__label
 
-      if attrs.large_label
-        h2= attrs.label
-      else
-        h3= attrs.label
+      if attrs.label
+        if attrs.large_label
+          h2= attrs.label
+        else
+          h3= attrs.label
 
       span(class=large_sub_label_class_name).element-wrapper__sub-label= attrs.sub_label
     div(class=inline_class_name).element-wrapper__item

@@ -4,10 +4,9 @@
   background-color: #fff;
   color: $dark-shade-75;
 
-  min-width: 100%;
-  min-height: 100%;
-
   border-radius: inherit;
+
+  min-width: 100%;
 
   font-family: 'Montserrat';
   font-size: 14px;
@@ -24,11 +23,18 @@
   border: none;
 
   padding: 12px;
+}
 
-  & span {
-    font-family: 'Material-Icons';
-    font-size: 24px;
-  }
+.dropdown__text {
+  max-width: 71%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdown__arrow {
+  font-family: 'Material-Icons';
+  font-size: 24px;
 }
 
 .dropdown-container { 
@@ -40,11 +46,12 @@
 }
 
 .dropdown-container__body {
+  position: absolute;
   display: none;
   z-index: 1;
 
-  position: absolute;
+  width: 100%;
 
-  top: calc(100% + 5px);
+  top: 100%;
   left: 0px;
 }

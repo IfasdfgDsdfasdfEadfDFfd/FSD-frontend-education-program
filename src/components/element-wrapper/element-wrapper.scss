@@ -3,7 +3,9 @@
   justify-content: space-between;
   align-items: center;
 
-  margin-bottom: 5px;
+  & h3, h2 {
+    margin-bottom: 5px;
+  }
 }
 
 .element-wrapper__sub-label {

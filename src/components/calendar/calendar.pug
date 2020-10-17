@@ -1,9 +1,9 @@
-include ../sub-form-wrapper/sub-form-wrapper.pug
+include ../form-action-buttons/form-action-buttons.pug
 
 // usage example: +calendar('Август', 2019)
 mixin calendar(month, year)
   .calendar
-    +sub-form-wrapper()
+    +form-action-buttons()
       .calendar__year-month-picker
         button.backward= 'arrow_back'
         h2.calendar__year-month

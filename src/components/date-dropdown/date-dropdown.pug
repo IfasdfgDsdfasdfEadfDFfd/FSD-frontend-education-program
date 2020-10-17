@@ -18,8 +18,8 @@ mixin date-dropdown(left, right)
         extra_spacing: false,
         large_label: false,
       })
-        .date-dropdown.dropdown-container
-          +dropdown(left.placeholder, false)
+        .date-dropdown
+          +dropdown(left.placeholder)
       +element-wrapper({
         label: right.label,
         sub_label: '',
@@ -28,6 +28,6 @@ mixin date-dropdown(left, right)
         large_label: false,
       })
         .date-dropdown
-          +dropdown(right.placeholder, false)
+          +dropdown(right.placeholder)
     .dropdown-container__body
       +calendar('Август', '2019')

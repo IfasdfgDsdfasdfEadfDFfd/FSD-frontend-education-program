@@ -1,0 +1,24 @@
+.form-action-buttons__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-action-buttons__action-button {
+  border: none;
+  background-color: #fff;
+  font-family: 'Montserrat';
+  color: $purple-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.form-action-buttons__cancel-button {
+  visibility: hidden;
+}
+
+.form-action-buttons--dirty .form-action-buttons__cancel-button {
+  visibility: visible;
+}

@@ -3,7 +3,7 @@ import { store, actions } from '../counter/counter';
 const dropdowns = Array(...document.getElementsByClassName('dropdown-counter') as unknown as Array<HTMLElement>);
 
 dropdowns.forEach(dropdown => {
-  const button = dropdown.querySelector('.dropdown-counter__btn');
+  const button = dropdown.querySelector('.dropdown') as HTMLElement;
 
   store.subscribe((state: any) => {
     const countersData = Object.keys(state).filter(key => {
@@ -50,11 +50,8 @@ dropdowns.forEach(dropdown => {
 
     button?.firstChild?.replaceChild(document.createTextNode(text), button.firstChild.firstChild as Node);
 
-    if (sumOfCounters !== 0) {
-      dropdown.classList.add('dropdown-counter--dirty');
-    } else {
-      dropdown.classList.remove('dropdown-counter--dirty');
-    }
+    dropdown.querySelector('.form-action-buttons')
+      ?.classList.toggle('form-action-buttons--dirty', sumOfCounters !== 0);
   });
 
   store.dispatch({name: '@COLD_START'});
@@ -68,12 +65,12 @@ dropdowns.forEach(dropdown => {
     }
   });
 
-  const cancelButton = dropdown?.querySelector('.dropdown-counter__buttons-cancel');
-  const applyButton = dropdown?.querySelector('.dropdown-counter__buttons-apply');
+  const cancelButton = dropdown?.querySelector('.form-action-buttons__cancel-button');
+  const applyButton = dropdown?.querySelector('.form-action-buttons__apply-button');
   const counters = dropdown?.querySelectorAll('.counter');
 
   applyButton?.addEventListener('click', () => {
-    dropdown.classList.add('dropdown-counter--closed');
+    dropdown.click();
   });
 
   cancelButton?.addEventListener('click', () => {
