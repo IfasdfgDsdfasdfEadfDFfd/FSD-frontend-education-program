@@ -16,7 +16,7 @@ mixin account-registration-card()
     .account-registration__item
       h3
         label(for="birthday-field")= 'Дата рождения'
-      +masked-text-field()
+      +masked-text-field('account-registration-masked-text-field-id')
     .account-registration__item
       +text-field({label: 'данные для входа в сервис', type: 'email', placeholder: 'Email'})
       +text-field({type: 'password', placeholder: 'Пароль'})

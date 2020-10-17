@@ -4,9 +4,11 @@ mixin text-field(attrs)
       label(for=attrs.id)= attrs.label
   input&attributes(attrs).text-field
 
-mixin masked-text-field()
+mixin masked-text-field(id)
   +text-field({
+    id: id,
     class: 'text-field--masked',
+    value: '',
     placeholder: 'ДД.ММ.ГГГГ'
   })
 
