@@ -45,6 +45,12 @@
     height: 40px;
   }
 
+  & td:hover, td:focus {
+    background-image: $from-green-to-blue-gradient;
+    border-radius: 50%;
+    color: #fff;
+  }
+
   & button {
     background-color: transparent;
     border: none;
@@ -52,7 +58,7 @@
     font-size: 12px;
     line-height: 15px;
     font-weight: normal;
-    color: $dark-shade-50;
+    color: inherit;
   }
 }
 
