@@ -135,7 +135,7 @@ block body
             counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
             counting_way: 'sum',
             declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-            closed: true,
+            opened: false,
             need_to_be_applied: true
           })
         +element-wrapper({
@@ -280,7 +280,7 @@ block body
               {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
               {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
             ],
-            closed: true,
+            opened: false,
             need_to_be_applied: false
           })
         +element-wrapper({
@@ -300,7 +300,7 @@ block body
               {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
               {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
             ],
-            closed: false,
+            opened: true,
             need_to_be_applied: false
           })
 
@@ -318,7 +318,7 @@ block body
           counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
           counting_way: 'sum',
           declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-          closed: false,
+          opened: true,
           need_to_be_applied: true
         })
     .form-elements__container
@@ -335,7 +335,7 @@ block body
           counters: [{name: 'взрослые', value: 2}, {name: 'дети', value: 1}, {name: 'младенцы', value: 0}],
           counting_way: 'sum',
           declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-          closed: false,
+          opened: true,
           need_to_be_applied: true
         })
 
