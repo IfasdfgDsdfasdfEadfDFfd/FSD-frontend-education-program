@@ -1,19 +1,41 @@
+$star-size: 24px;
+
 .rate-button {
   font-family: 'Material-Icons';
-  height: 24px;
+  height: $star-size;
+  width: $star-size * 5;
+
+  &:focus-within {
+    outline: 1px solid $purple-color;
+    outline-offset: .3rem;
+  }
 }
 
 .rate-button__star {
   font-family: 'Material-Icons';
   display: inline-flex;
-  width: 24px;
 
-  font-size: 24px;
-  line-height: 24px;
+  width: $star-size;
+  height: $star-size;
+
+  font-size: $star-size;
+  line-height: $star-size;
 
   background: $from-purple-to-blue-gradient;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.rate-button__star::after {
+  content: 'star';
+}
+
+.rate-button__star:checked ~ .rate-button__star::after {
+  content: 'star_border';
 }
