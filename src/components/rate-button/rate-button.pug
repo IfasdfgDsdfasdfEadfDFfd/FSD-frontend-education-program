@@ -1,9 +1,9 @@
 mixin rate-button(count)
   .rate-button
     - for (var i = 0; i < count; i++)
-      .rate-button__star.rate-button__star_filled
+      .rate-button__star.rate-button__star--filled
         | star
 
     - for (var i = 0; i < 5 - count; i++ )
-      span.rate-button__star.rate-button__star_empty
+      span.rate-button__star.rate-button__star--empty
         | star_border
