@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background-color: #fff;
 }
 
 .footer-desktop {
@@ -45,12 +46,24 @@
 }
 
 .footer-mobile {
-  background-color: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
   padding-top: 140px;
   padding-bottom: 140px;
   margin: 0px 340px;
+  justify-content: center;
 
   & > small {
-    margin: 20px 0px 25px;
+    text-align: center;
   }
+}
+
+@media(max-width: $middle-size) {
+  .footer-mobile {
+    margin: 0px;
+  }
+}
+
+@media(max-width: $small-size) {
 }
