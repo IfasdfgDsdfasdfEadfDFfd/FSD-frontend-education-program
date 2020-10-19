@@ -66,7 +66,7 @@ module.exports = {
         use: ['awesome-typescript-loader'],
       },
       {
-        test: /\.(png|svg|eot|woff|woff2|ttf|)$/,
+        test: /\.(webp|png|svg|eot|woff|woff2|ttf|)$/,
         loader: 'file-loader',
         options: {
           outputPath: path.join(DIST_DIR, 'static'),
