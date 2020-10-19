@@ -27,7 +27,7 @@ mixin room-item(props)
       +room-desc(props.number, props.cost, props.luxury)
       hr
       .room-item__desc-item
-        +rate-button(props.stars)
+        +rate-button('rating-room-' + props.number, props.stars)
         - var text = 'отзывов'
         .room-item__review
           strong

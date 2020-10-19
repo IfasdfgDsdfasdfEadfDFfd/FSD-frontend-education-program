@@ -1,20 +1,27 @@
 include ../counter/counter.pug
+include ../dropdown/dropdown.pug
+include ../form-action-buttons/form-action-buttons.pug
 
-mixin dropdown-counter(id, placeholder, counters, closed=false, need_to_be_applied=false)
-  - var closed_class = closed ? 'dropdown-counter--closed' : ''
+mixin dropdown-counter(attrs)
+  -var opened_class_name = attrs.opened ? 'dropdown-container--opened' : ''
 
-  div(class=closed_class, id=id).dropdown-counter
-    button(data-placeholder=placeholder).dropdown-counter__btn= placeholder
+  div(class=opened_class_name).dropdown-container
+    div(id=attrs.id).dropdown-counter
+      +dropdown(
+        attrs.placeholder,
+        {
+          'data-placeholder': attrs.placeholder,
+          'data-counting-way': attrs.counting_way,
+          'data-declensions': attrs.declensions,
+        }
+      )
 
-    ul.dropdown-counter__list
-      each counter, index in counters
-        li.dropdown-counter__list__item
-          - var _id = id + '-' + index
-          +counter(_id, counter)
+      .dropdown-container__body
+        ul.dropdown-counter__list
+          each counter, index in attrs.counters
+            li.dropdown-counter__list__item
+              - var _id = attrs.id + '-' + index
+              +counter(_id, index, counter.name, counter.value)
 
-      if need_to_be_applied
-        .dropdown-counter__buttons
-          button.dropdown-counter__buttons-cancel
-            | отмена
-          button.dropdown-counter__buttons-apply
-            | применить
+          if attrs.need_to_be_applied
+            +form-action-buttons()

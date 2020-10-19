@@ -1,5 +1,5 @@
-mixin dropdown(text, opened=false)
-  - var class_name = opened ? 'dropdown--opened' : ''
-  button(class=class_name).dropdown
-    | #{text}
+mixin dropdown(text, attrs)
+  button&attributes(attrs).dropdown
+    span.dropdown__text
+      | #{text}
     span.dropdown__arrow= 'expand_more'

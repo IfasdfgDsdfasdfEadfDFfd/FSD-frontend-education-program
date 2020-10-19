@@ -1,8 +1,9 @@
 .top-feature {
   display: flex;
   flex-flow: row nowrap;
-  padding: 20px 0px;
   border-bottom: 1px solid $dark-shade-5;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .top-feature__icon {
@@ -24,9 +25,9 @@
 }
 
 .top-feature__body {
-  margin-left: 10px;
   display: flex;
   flex-flow: column nowrap;
   font-size: 14px;
   line-height: 24px;
+  margin-left: 10px;
 }

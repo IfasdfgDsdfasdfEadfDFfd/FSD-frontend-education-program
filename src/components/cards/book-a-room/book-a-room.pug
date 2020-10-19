@@ -18,7 +18,15 @@ mixin book-a-room-card()
       inline: false,
       large_label: false,
     })
-      +dropdown-counter('book-a-room-guests-counter', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+      +dropdown-counter({
+        id: 'book-a-room-guests-counter',
+        placeholder: 'Сколько гостей',
+        counters: [{name: 'взрослые', value: 1}, {name: 'дети', value: 1}, {name: 'младенцы', value: 1}],
+        counting_way: 'sum',
+        declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+        opened: false,
+        need_to_be_applied: true
+      })
     .bill
       .bill__row
         .bill__row__desc

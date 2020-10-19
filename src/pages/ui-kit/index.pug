@@ -108,7 +108,7 @@ block body
       .form-elements__text-fields
         +element-wrapper({
           label: 'text field',
-          sub_label: 'default',
+          sub_label: 'DEFAULT',
           extra_spacing: false,
           inline: false,
           large_label: false,
@@ -116,7 +116,7 @@ block body
           +text-field({type: 'email', placeholder: 'Email'})
         +element-wrapper({
           label: 'text field',
-          sub_label: 'hover / focus',
+          sub_label: 'HOVER / FOCUS',
           extra_spacing: false,
           inline: false,
           large_label: false,
@@ -129,7 +129,15 @@ block body
           inline: false,
           large_label: false,
         })
-          +dropdown-counter('guests-counter-1', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], true, true)
+          +dropdown-counter({
+            id: 'guests-counter-1',
+            placeholder: 'Сколько гостей',
+            counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
+            counting_way: 'sum',
+            declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+            opened: false,
+            need_to_be_applied: true
+          })
         +element-wrapper({
           label: 'masked text field',
           sub_label: '',
@@ -137,7 +145,7 @@ block body
           inline: false,
           large_label: false,
         })
-          +masked-text-field()
+          +masked-text-field('ui-kit-masked-text-field-id')
       +date-dropdown(
         {label: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'},
         {label: 'date dropdown', placeholder: '19.08.2019'},
@@ -208,8 +216,8 @@ block body
         inline: true,
         large_label: false,
       })
-        +rate-button(4)
-        +rate-button(5)
+        +rate-button('ui-kit-rate-buttons-1', 4)
+        +rate-button('ui-kit-rate-buttons-2', 5)
 
     .form-elements__container
       +element-wrapper({
@@ -257,20 +265,44 @@ block body
     .form-elements__container.form-elements__narrow
         +element-wrapper({
           label: 'dropdown',
-          sub_label: 'default',
+          sub_label: 'DEFAULT',
           extra_spacing: false,
           inline: false,
           large_label: false,
         })
-          +dropdown-counter('room-properties-1-1', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], true, false)
+          +dropdown-counter({
+            id: 'room-properties-1',
+            placeholder: 'Параметры номера',
+            counters: [{name: 'спальни', value: 2}, {name: 'кровати', value: 2}, {name: 'вынные комнаты', value: 1}],
+            counting_way: 'apart',
+            declensions: [
+              {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
+              {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
+              {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
+            ],
+            opened: false,
+            need_to_be_applied: false
+          })
         +element-wrapper({
           label: 'dropdown',
-          sub_label: 'expanded',
+          sub_label: 'EXPANDED',
           extra_spacing: false,
           inline: false,
           large_label: false,
         })
-          +dropdown-counter('room-properties-1-2', 'параметры номера', ['спальни', 'кровати', 'ванные комнаты'], false, false)
+          +dropdown-counter({
+            id: 'room-properties-2',
+            placeholder: 'Параметры номера',
+            counters: [{name: 'спальни', value: 2}, {name: 'кровати', value: 2}, {name: 'вынные комнаты', value: 0}],
+            counting_way: 'apart',
+            declensions: [
+              {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
+              {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
+              {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
+            ],
+            opened: true,
+            need_to_be_applied: false
+          })
 
     .form-elements__container
       +element-wrapper({
@@ -280,7 +312,15 @@ block body
         inline: false,
         large_label: false,
       })
-        +dropdown-counter('guests-counter-2', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
+        +dropdown-counter({
+          id: 'guests-counter-2',
+          placeholder: 'Сколько гостей',
+          counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
+          counting_way: 'sum',
+          declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+          opened: true,
+          need_to_be_applied: true
+        })
     .form-elements__container
       +element-wrapper({
         label: 'dropdown',
@@ -289,7 +329,15 @@ block body
         inline: false,
         large_label: false,
       })
-        +dropdown-counter('guests-counter-3', 'Сколько гостей', ['взрослые', 'дети', 'младенцы'], false, true)
+        +dropdown-counter({
+          id: 'guests-counter-3',
+          placeholder: 'Сколько гостей',
+          counters: [{name: 'взрослые', value: 2}, {name: 'дети', value: 1}, {name: 'младенцы', value: 0}],
+          counting_way: 'sum',
+          declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+          opened: true,
+          need_to_be_applied: true
+        })
 
     .form-elements__container
       +expandable-checkbox-list('expandable checkbox list', [

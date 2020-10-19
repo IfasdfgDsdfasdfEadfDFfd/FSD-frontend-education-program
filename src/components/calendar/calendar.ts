@@ -5,7 +5,7 @@ export const store = createStore({}, () => {});
 
 const getCalendarRepresentationByMonth = (year: number, month: number) => {
   const getDaysInMonth = (year: number, month: number) => {
-    return [...new Array(new Date(year, month+1, 0).getDate()).keys()].map((i: number) => ++i);
+    return [...new Array(new Date(year, month + 1, 0).getDate()).keys()].map((i: number) => ++i);
   }
 
   const prevMonth = new Date(Number(new Date(year, month)) - 1);
