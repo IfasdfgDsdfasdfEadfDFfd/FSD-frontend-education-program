@@ -51,7 +51,7 @@
   gap: 20px;
   padding-top: 140px;
   padding-bottom: 140px;
-  margin: 0px 340px;
+  margin: 0px 25%;
   justify-content: center;
 
   & > small {
@@ -61,9 +61,6 @@
 
 @media(max-width: $middle-size) {
   .footer-mobile {
-    margin: 0px;
+    margin: 0;
   }
-}
-
-@media(max-width: $small-size) {
 }
