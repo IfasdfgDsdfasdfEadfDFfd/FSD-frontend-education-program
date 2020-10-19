@@ -1,7 +1,7 @@
 const header = document.getElementById('header-id');
 
-const hidingClass = 'header-hidden';
-const attachingClass = 'header-attached';
+const hidingClass = 'header--hidden';
+const attachingClass = 'header--attached';
 
 let lastScrollYPosition = window.scrollY;
 
