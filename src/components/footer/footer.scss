@@ -51,8 +51,9 @@
   gap: 20px;
   padding-top: 140px;
   padding-bottom: 140px;
-  margin: 0px 25%;
   justify-content: center;
+  max-width: $middle-size;
+  margin: auto;
 
   & > small {
     text-align: center;
