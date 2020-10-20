@@ -56,12 +56,7 @@
 }
 
 .footer-mobile {
-  display: flex;
-  flex-flow: column nowrap;
   align-self: center;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
   max-width: $middle-size;
   gap: 20px;
   padding-top: 120px;
