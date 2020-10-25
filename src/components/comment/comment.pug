@@ -10,4 +10,5 @@ mixin comment(avatar_path, username, date, like_attrs)
     .comment__body
       +like-button(like_attrs.name, like_attrs.liked, like_attrs.like_count)
       .comment__body-text
-        block
+        pre
+          block

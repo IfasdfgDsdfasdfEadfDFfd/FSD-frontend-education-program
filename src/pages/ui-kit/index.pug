@@ -89,18 +89,18 @@ block body
             span= 'H1'
         .colors-type__text-types__item
           h2
-            | Next one is the item title inside
-            br
-            | widgets
+            pre
+              | Next one is the item title inside
+              | widgets
             span= 'H2'
         .colors-type__text-types__item
           h3
             | This is a label or cta text
             span= 'H3'
         .colors-type__text-types__item
-          | This is the body text which is used for most
-          br
-          | of the design, like paragraphs, lists, etc.
+          pre
+            | This is the body text which is used for most
+            | of the design, like paragraphs, lists, etc.
           span= 'Body'
 
   .toolbox.container.form-elements
@@ -427,7 +427,6 @@ block body
       })
         +rich-checkbox('Широкий коридор', 'wide-corridor')
           | Ширина коридоров в номере
-          br
           | не менее 91 см.
 
         +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
@@ -460,9 +459,7 @@ block body
     .form-elements__comment-container
       +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like', liked: true, like_count: '12'})
         | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
-        br
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
-        br
         | не жаловался из соседей.
 
   .container.toolbox.toolbox--gray.cards
