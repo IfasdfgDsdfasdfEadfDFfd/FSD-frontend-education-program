@@ -1,4 +1,4 @@
-@import '../../consts.scss';
+@import "../../consts";
 
 .footer {
   display: flex;
@@ -93,7 +93,7 @@
   padding-bottom: 25px;
 }
 
-@media(max-width: $large-size) {
+@media (max-width: $large-size) {
   .footer hr {
     display: none;
   }

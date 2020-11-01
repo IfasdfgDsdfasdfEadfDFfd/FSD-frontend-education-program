@@ -4,29 +4,11 @@ include ../calendar/calendar.pug
 
 mixin date-dropdown(left, right)
   .dropdown-container
-    +element-wrapper({
-      label: '',
-      sub_label: '',
-      inline: true,
-      extra_spacing: false,
-      large_label: false,
-    })
-      +element-wrapper({
-        label: left.label,
-        sub_label: '',
-        inline: false,
-        extra_spacing: false,
-        large_label: false,
-      })
+    +element-wrapper({ label: '', sub_label: '', inline: true, extra_spacing: false, large_label: false, })
+      +element-wrapper({ label: left.label, sub_label: '', inline: false, extra_spacing: false, large_label: false, })
         .date-dropdown
           +dropdown(left.placeholder)
-      +element-wrapper({
-        label: right.label,
-        sub_label: '',
-        inline: false,
-        extra_spacing: false,
-        large_label: false,
-      })
+      +element-wrapper({ label: right.label, sub_label: '', inline: false, extra_spacing: false, large_label: false, })
         .date-dropdown
           +dropdown(right.placeholder)
     .dropdown-container__body

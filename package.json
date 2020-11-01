@@ -6,7 +6,8 @@
   "scripts": {
     "build": "NODE_ENVIRONMENT=development webpack",
     "dev": "NODE_ENVIRONMENT=development webpack-dev-server",
-    "lint": "stylelint ./src/**/*.scss",
+    "lint": "stylelint ./src/**/*.scss ./src/*.scss",
+    "prettify": "prettier --write ./src/**/*",
     "test": "jest --watch --runInBand",
     "coverage": "jest --coverage"
   },
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/gugfug/FSD-frontend-education-program#readme",
   "devDependencies": {
+    "@prettier/plugin-pug": "^1.10.0",
     "@types/jest": "^26.0.5",
     "@types/node": "^14.0.24",
     "@types/webpack": "^4.41.21",

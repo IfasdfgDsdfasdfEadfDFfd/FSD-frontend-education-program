@@ -1,18 +1,18 @@
 $star-size: 24px;
 
 .rate-button {
-  font-family: 'Material-Icons';
+  font-family: "Material-Icons";
   height: $star-size;
   width: $star-size * 5;
 
   &:focus-within {
     outline: 1px solid $purple-color;
-    outline-offset: .3rem;
+    outline-offset: 0.3rem;
   }
 }
 
 .rate-button__star {
-  font-family: 'Material-Icons';
+  font-family: "Material-Icons";
   display: inline-flex;
 
   width: $star-size;
@@ -33,9 +33,9 @@ $star-size: 24px;
 }
 
 .rate-button__star::after {
-  content: 'star';
+  content: "star";
 }
 
 .rate-button__star:checked ~ .rate-button__star::after {
-  content: 'star_border';
+  content: "star_border";
 }

@@ -18,7 +18,7 @@
   justify-content: space-between;
 
   & > button {
-    font-family: 'Material-Icons';
+    font-family: "Material-Icons";
     font-size: 24px;
     line-height: 20px;
     color: $purple-color;
@@ -30,13 +30,14 @@
 .calendar__table-row {
   display: flex;
   flex-flow: row nowrap;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 12px;
   line-height: 15px;
   font-weight: normal;
   color: $dark-shade-50;
 
-  & th,td {
+  & th,
+  td {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -45,7 +46,8 @@
     height: 40px;
   }
 
-  & td:hover, td:focus {
+  & td:hover,
+  td:focus {
     background-image: $from-green-to-blue-gradient;
     border-radius: 50%;
     color: #fff;
@@ -54,7 +56,7 @@
   & button {
     background-color: transparent;
     border: none;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 12px;
     line-height: 15px;
     font-weight: normal;

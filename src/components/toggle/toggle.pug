@@ -1,6 +1,6 @@
 mixin toggle(name, value, checked=false)
   .toggle
-    -var id = name + '-id'
-    input(type="checkbox", name=name, id=id, checked=checked).toggle__element
-    label(for=id).toggle__label
+    - var id = name + "-id";
+    input.toggle__element(type='checkbox', name=name, id=id, checked=checked)
+    label.toggle__label(for=id)
       block

@@ -3,25 +3,18 @@ include ../dropdown/dropdown.pug
 include ../form-action-buttons/form-action-buttons.pug
 
 mixin dropdown-counter(attrs)
-  -var opened_class_name = attrs.opened ? 'dropdown-container--opened' : ''
+  - var opened_class_name = attrs.opened ? "dropdown-container--opened" : "";
 
-  div(class=opened_class_name).dropdown-container
-    div(id=attrs.id).dropdown-counter
-      +dropdown(
-        attrs.placeholder,
-        {
-          'data-placeholder': attrs.placeholder,
-          'data-counting-way': attrs.counting_way,
-          'data-declensions': attrs.declensions,
-        }
-      )
+  div.dropdown-container(class=opened_class_name)
+    div.dropdown-counter(id=attrs.id)
+      +dropdown(attrs.placeholder, { 'data-placeholder': attrs.placeholder, 'data-counting-way': attrs.counting_way, 'data-declensions': attrs.declensions, })
 
       .dropdown-container__body
         ul.dropdown-counter__list
           each counter, index in attrs.counters
             li.dropdown-counter__list__item
-              - var _id = attrs.id + '-' + index
+              - var _id = attrs.id + "-" + index;
               +counter(_id, index, counter.name, counter.value)
 
           if attrs.need_to_be_applied
-            +form-action-buttons()
+            +form-action-buttons

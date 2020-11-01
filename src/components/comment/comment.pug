@@ -3,7 +3,7 @@ include ../like-button/like-button.pug
 mixin comment(avatar_path, username, date, like_attrs)
   .comment
     .comment__header
-      image(src=avatar_path).comment__header-avatar
+      image.comment__header-avatar(src=avatar_path)
       .comment__header-title
         .comment__header-username= username
         .comment__header-date= date

@@ -1,20 +1,31 @@
-import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../store/store';
+import {
+  createStore,
+  Action,
+  saveToLocalStoragePlugin,
+  saveToLocalStorageMiddlewareFabric,
+} from '../../store/store';
 
-
-const radioButtons = Array(...document.getElementsByClassName('radio-button__element') as unknown as Array<Element>);
-
+const radioButtons = Array(
+  ...((document.getElementsByClassName(
+    'radio-button__element',
+  ) as unknown) as Array<Element>),
+);
 
 const initState = radioButtons.reduce((state, radioButton) => {
-  return {...state, [radioButton.id]: radioButton.hasAttribute('checked') || false};
+  return {
+    ...state,
+    [radioButton.id]: radioButton.hasAttribute('checked') || false,
+  };
 }, {});
 
 enum actions {
   TOGGLE,
-};
+}
 
 // controller
 const radioButtonStorageName = 'radio-button-data';
-const store = createStore(initState,
+const store = createStore(
+  initState,
   (action: Action, state: any) => {
     switch (action.name) {
       case actions.TOGGLE:
@@ -22,10 +33,10 @@ const store = createStore(initState,
         return state;
       default:
         return state;
-    };
+    }
   },
   [saveToLocalStoragePlugin(radioButtonStorageName, radioButtons, false)],
-  {post: [saveToLocalStorageMiddlewareFabric(radioButtonStorageName)]},
+  { post: [saveToLocalStorageMiddlewareFabric(radioButtonStorageName)] },
 );
 
 // view

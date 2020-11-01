@@ -1,10 +1,15 @@
 import {
-  createStore, Action,
-  saveToLocalStorageMiddlewareFabric, saveToLocalStoragePlugin
+  createStore,
+  Action,
+  saveToLocalStorageMiddlewareFabric,
+  saveToLocalStoragePlugin,
 } from '../../store/store';
 
-
-const maskedTextFields = new Array(...document.getElementsByClassName('text-field--masked') as unknown as HTMLInputElement[]);
+const maskedTextFields = new Array(
+  ...((document.getElementsByClassName(
+    'text-field--masked',
+  ) as unknown) as HTMLInputElement[]),
+);
 
 enum actions {
   INIT,
@@ -28,22 +33,26 @@ const applyMask = (text: string): string => {
 };
 
 const storageName = 'maskes-text-field-data';
-const store = createStore({}, (action: Action, state: any) => {
-  switch (action.name) {
+const store = createStore(
+  {},
+  (action: Action, state: any) => {
+    switch (action.name) {
+      case actions.INIT:
+        if (state[action.value].text !== '') return state;
+        return {
+          ...state,
+          [action.value]: {
+            displayedText: applyMask(''),
+            text: '',
+            caretPosition: 0,
+          },
+        };
 
-    case actions.INIT:
-      if (state[action.value].text !== '') return state;
-      return {...state, [action.value]: {
-        displayedText: applyMask(''),
-        text: '',
-        caretPosition: 0,
-      }};
-
-    case actions.CHANGE_VALUE:
+      case actions.CHANGE_VALUE:
         const text = applyMask(action.value.text);
 
         const regexp = /([0-3]|_)([0-9]|_)\.([0-1]|_)([0-9]|_)\.([1-2]|_)(0|9|_)([0-9]|_)([0-9]|_)/;
-        if (!(regexp.test(text))) {
+        if (!regexp.test(text)) {
           return state;
         }
 
@@ -61,18 +70,27 @@ const store = createStore({}, (action: Action, state: any) => {
           return state;
         }
 
-        return {...state, [action.value.id]: {
-          displayedText: text,
-          text: action.value.text,
-          caretPosition: action.value.caretPosition,
-        }};
+        return {
+          ...state,
+          [action.value.id]: {
+            displayedText: text,
+            text: action.value.text,
+            caretPosition: action.value.caretPosition,
+          },
+        };
 
       default:
         return state;
     }
   },
-    [saveToLocalStoragePlugin(storageName, maskedTextFields, {displayedText:'', text: '', caretPosition: 0})],
-    {post: [saveToLocalStorageMiddlewareFabric(storageName)]},
+  [
+    saveToLocalStoragePlugin(storageName, maskedTextFields, {
+      displayedText: '',
+      text: '',
+      caretPosition: 0,
+    }),
+  ],
+  { post: [saveToLocalStorageMiddlewareFabric(storageName)] },
 );
 
 maskedTextFields.forEach((input: HTMLInputElement) => {
@@ -89,7 +107,6 @@ maskedTextFields.forEach((input: HTMLInputElement) => {
       .split('')
       .filter((s: string) => s !== '.')
       .join('');
-
 
     let caretPosition = text.length;
     if (text.length >= 4) {
@@ -110,12 +127,12 @@ maskedTextFields.forEach((input: HTMLInputElement) => {
         id: input.id,
         text,
         caretPosition,
-      }
-    })
+      },
+    });
   });
 
   store.subscribe(state => {
-    const {caretPosition, displayedText} = state[input.id];
+    const { caretPosition, displayedText } = state[input.id];
 
     input.value = displayedText;
     input.setSelectionRange(caretPosition, caretPosition);

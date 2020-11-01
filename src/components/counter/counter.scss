@@ -44,7 +44,7 @@
   font-size: 18px;
 
   border-radius: 50%;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 
   padding-bottom: 2px;
 }
@@ -58,5 +58,5 @@
 .counter__btn:hover {
   color: $dark-shade-75;
   border-color: $dark-shade-50;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }

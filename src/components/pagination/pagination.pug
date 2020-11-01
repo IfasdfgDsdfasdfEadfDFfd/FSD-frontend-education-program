@@ -1,12 +1,11 @@
 mixin pagination(footer_text)
   .pagination
-
     .pagination__range
       button.montserrat.pagination__button.pagination__button_active= 1
       button.montserrat.pagination__button= 2
       button.montserrat.pagination__button= 3
-      button.montserrat.pagination__button= '...'
+      button.montserrat.pagination__button= "..."
       button.montserrat.pagination__button= 15
-      button.montserrat.pagination__button.pagination__button_next= 'arrow_forward'
+      button.montserrat.pagination__button.pagination__button_next= "arrow_forward"
 
     .pagination__footer.montserrat= footer_text

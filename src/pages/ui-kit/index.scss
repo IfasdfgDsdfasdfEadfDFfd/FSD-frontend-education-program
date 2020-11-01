@@ -1,8 +1,7 @@
-@import './colors&types.scss';
-@import './form-elements.scss';
-@import './cards.scss';
-@import './headers&footers.scss';
-
+@import "./colors&types";
+@import "./form-elements";
+@import "./cards";
+@import "./headers&footers";
 
 .toolbox {
   padding-top: 140px;
@@ -10,5 +9,5 @@
 }
 
 .toolbox--gray {
-  background-color: #F4F4F6;
+  background-color: #f4f4f6;
 }

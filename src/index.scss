@@ -1,71 +1,70 @@
-@import './reset.scss';
-@import './consts.scss';
-@import './fonts/fonts.scss';
+@import "./reset";
+@import "./consts";
+@import "./fonts/fonts";
 
-@import './components/index.scss';
+@import "./components/index";
 
-@import './pages/landing/index.scss';
-@import './pages/login/index.scss';
-@import './pages/registration/index.scss';
-@import './pages/room-details/index.scss';
-@import './pages/search-room/index.scss';
-@import './pages/ui-kit/index.scss';
-
+@import "./pages/landing/index";
+@import "./pages/login/index";
+@import "./pages/registration/index";
+@import "./pages/room-details/index";
+@import "./pages/search-room/index";
+@import "./pages/ui-kit/index";
 
 h1 {
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-weight: bold;
   color: $dark-shade-100;
+  font-weight: bold;
   font-size: 24px;
+  font-family: "Quicksand", "Arial", "Helvetica", sans-serif;
   line-height: 30px;
 }
 
 h2 {
-  font-family: 'Quicksand', Arial, Helvetica, sans-serif;
-  font-weight: bold;
   color: $dark-shade-100;
+  font-weight: bold;
   font-size: 19px;
+  font-family: "Quicksand", "Arial", "Helvetica", sans-serif;
   line-height: 24px;
 }
 
 h3 {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
   color: $dark-shade-100;
+  font-weight: bold;
   font-size: 12px;
+  font-family: "Montserrat", "Arial", "Helvetica", sans-serif;
   line-height: 15px;
+  text-transform: uppercase;
 }
 
 hr {
-  border: none;
-  border-bottom: 1px solid $dark-shade-25;
   width: 100%;
-  margin: 0px;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid $dark-shade-25;
 }
 
 body {
-  font-family: 'Montserrat';
-  font-size: 14px;
-  line-height: 24px;
   color: $dark-shade-75;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
 }
 
 .container {
-  padding-left: 140px;
   padding-right: 140px;
+  padding-left: 140px;
 }
 
-@media(max-width: $middle-size) {
+@media (max-width: $middle-size) {
   .container {
-    padding-left: 50px;
     padding-right: 50px;
+    padding-left: 50px;
   }
 }
 
-@media(max-width: $small-size) {
+@media (max-width: $small-size) {
   .container {
-    padding-left: 20px;
     padding-right: 20px;
+    padding-left: 20px;
   }
 }

@@ -35,7 +35,7 @@
         height: 20px;
 
         &::after {
-          content: 'i';
+          content: "i";
         }
       }
     }
@@ -43,7 +43,7 @@
 
   & .bill__row-result {
     margin-top: 20px;
-    font-family: 'Quicksand', Arial, Helvetica, sans-serif;
+    font-family: "Quicksand", Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
     color: $dark-shade-100;

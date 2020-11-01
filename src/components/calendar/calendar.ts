@@ -2,33 +2,59 @@ import { createStore } from '../../store/store';
 
 export const store = createStore({}, () => {});
 
-
 const getCalendarRepresentationByMonth = (year: number, month: number) => {
   const getDaysInMonth = (year: number, month: number) => {
-    return [...new Array(new Date(year, month + 1, 0).getDate()).keys()].map((i: number) => ++i);
-  }
+    return [...new Array(new Date(year, month + 1, 0).getDate()).keys()].map(
+      (i: number) => ++i,
+    );
+  };
 
   const prevMonth = new Date(Number(new Date(year, month)) - 1);
   const nextMonth = new Date(Number(new Date(year, month)) + 1);
-  const daysInPrevMonth = getDaysInMonth(prevMonth.getFullYear(), prevMonth.getMonth());
-  const daysInNextMonth = getDaysInMonth(nextMonth.getFullYear(), nextMonth.getMonth());
+  const daysInPrevMonth = getDaysInMonth(
+    prevMonth.getFullYear(),
+    prevMonth.getMonth(),
+  );
+  const daysInNextMonth = getDaysInMonth(
+    nextMonth.getFullYear(),
+    nextMonth.getMonth(),
+  );
 
   const displayDays = [
-    ...daysInPrevMonth.slice(daysInPrevMonth.length - new Date(year, month).getDay() + 1),
+    ...daysInPrevMonth.slice(
+      daysInPrevMonth.length - new Date(year, month).getDay() + 1,
+    ),
     ...getDaysInMonth(year, month),
-    ...daysInNextMonth.slice(0, 7 - new Date(year, month+1, 0).getDay()),
+    ...daysInNextMonth.slice(0, 7 - new Date(year, month + 1, 0).getDay()),
   ];
 
   return displayDays;
 };
 
-
-Array(...document.getElementsByClassName('calendar') as unknown as Array<HTMLElement>).forEach((calendar: HTMLElement) => {
+Array(
+  ...((document.getElementsByClassName('calendar') as unknown) as Array<
+    HTMLElement
+  >),
+).forEach((calendar: HTMLElement) => {
   const calendarTable = calendar.querySelector('.calendar__table')?.firstChild;
 
-
-  const months = ['Январь', 'Февраль', 'Март', 'Арель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
-  const [month, year] = calendar.querySelector('.calendar__year-month')?.textContent?.split(' ') || ['', ''];
+  const months = [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Арель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ];
+  const [month, year] = calendar
+    .querySelector('.calendar__year-month')
+    ?.textContent?.split(' ') || ['', ''];
 
   const curMonth = months.indexOf(month);
   const curYear = Number(year);

@@ -1,6 +1,5 @@
 include ../rate-button/rate-button.pug
 
-
 mixin room-desc(number, cost, luxury=false)
   .room-item__desc-item
     .room-item__name
@@ -28,7 +27,7 @@ mixin room-item(props)
       hr
       .room-item__desc-item
         +rate-button('rating-room-' + props.number, props.stars)
-        - var text = 'отзывов'
+        - var text = "отзывов";
         .room-item__review
           strong
             | #{props.review}

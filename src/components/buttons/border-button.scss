@@ -19,9 +19,12 @@ $border-width: 2px;
   min-width: 100%;
 
   &:before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
     border-radius: inherit;
     background: $from-purple-to-blue-gradient;
@@ -32,6 +35,6 @@ $border-width: 2px;
   }
 
   &[disabled]:before {
-    opacity: .5;
+    opacity: 0.5;
   }
 }

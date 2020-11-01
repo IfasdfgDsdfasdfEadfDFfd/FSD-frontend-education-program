@@ -3,13 +3,13 @@ include ../form-action-buttons/form-action-buttons.pug
 // usage example: +calendar('Август', 2019)
 // @picked: JSON object {"from": [valid ISO date format], "to": [valid ISO date format]}
 mixin calendar(month, year, picked)
-  div(data-picked=picked).calendar
-    +form-action-buttons()
+  div.calendar(data-picked=picked)
+    +form-action-buttons
       .calendar__year-month-picker
-        button.calendar__backward-button= 'arrow_back'
+        button.calendar__backward-button= "arrow_back"
         h2.calendar__year-month
           | #{month} #{year}
-        button.calendar__forward-button= 'arrow_forward'
+        button.calendar__forward-button= "arrow_forward"
       table.calendar__table
         tr.calendar__table-row.calendar__table-row_heading
           each day in ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']

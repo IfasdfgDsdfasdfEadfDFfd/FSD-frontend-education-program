@@ -1,8 +1,8 @@
-@import './search-room/search-room.scss';
-@import './account-registration/account-registration.scss';
-@import './login/login.scss';
-@import './book-a-room/book-a-room.scss';
-@import './link-footer-button.scss';
+@import "./search-room/search-room";
+@import "./account-registration/account-registration";
+@import "./login/login";
+@import "./book-a-room/book-a-room";
+@import "./link-footer-button";
 
 .card {
   display: flex;

@@ -15,30 +15,18 @@ block body
   +header(false, true)
   main.room-details__body
     .room-details__body__photos
-      img(src="/static/room_888_big.webp").room-details__body__photos-big
+      img.room-details__body__photos-big(src='/static/room_888_big.webp')
       .room-details__body__photos-lower-group
-        img(src="/static/room_888_details_1.webp").room-details__body__photos-lower
-        img(src="/static/room_888_details_2.webp").room-details__body__photos-lower
+        img.room-details__body__photos-lower(src='/static/room_888_details_1.webp')
+        img.room-details__body__photos-lower(src='/static/room_888_details_2.webp')
     .room-details__body__desc
       .room-details__body__desc__left
         .room-details__body__desc-row
-          +element-wrapper({
-            label: 'Сведения о номере',
-            sub_label: '',
-            inline: false,
-            extra_spacing: true,
-            large_label: true
-          })
+          +element-wrapper({ label: 'Сведения о номере', sub_label: '', inline: false, extra_spacing: true, large_label: true })
             +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглащающие стены')
             +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
             +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
-          +element-wrapper({
-            label: 'Впечатления от номера',
-            sub_label: '',
-            inline: false,
-            extra_spacing: true,
-            large_label: true
-          })
+          +element-wrapper({ label: 'Впечатления от номера', sub_label: '', inline: false, extra_spacing: true, large_label: true })
             .room-impressions
               .statictic-ring
                 .room-impressions__magnificent-ring
@@ -52,13 +40,7 @@ block body
                 li Хорошо
                 li Удовлетворительно
                 li Разочарован
-        +element-wrapper({
-          label: 'Отзывы поситителей номера',
-          sub_label: '2 отзыва',
-          inline: false,
-          extra_spacing: true,
-          large_label: true
-        })
+        +element-wrapper({ label: 'Отзывы поситителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
           .room-details__body__comment-section
             +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
               | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
@@ -68,30 +50,14 @@ block body
               | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
               | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
-          +element-wrapper({
-            label: 'Правила',
-            sub_label: '',
-            inline: false,
-            extra_spacing: true,
-            large_label: true
-          })
-            +bullet-list([
-              'Нельзя с питомцами',
-              'Без вечеринок и мероприятий',
-              'Время прибытия — после 13:00, а выезд до 12:00 ',
-            ])
-          +element-wrapper({
-            label: 'Отмена',
-            sub_label: '',
-            inline: false,
-            extra_spacing: true,
-            large_label: true
-          })
+          +element-wrapper({ label: 'Правила', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+            +bullet-list([ 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00 ', ])
+          +element-wrapper({ label: 'Отмена', sub_label: '', inline: false, extra_spacing: true, large_label: true })
             pre
               | Бесплатная отмена в течение 48 ч. После
               | этого при отмене не позднее чем за 5 дн. до
               | прибытия вы получите полный возврат за
               | вычетом сбора за услуги
       .room-details__body__desc__right
-        +book-a-room-card()
-  +footer()
+        +book-a-room-card
+  +footer

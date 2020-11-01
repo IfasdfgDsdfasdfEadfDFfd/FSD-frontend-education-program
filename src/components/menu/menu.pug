@@ -2,9 +2,9 @@ mixin menu(menu_list)
   menu.menu
     ul.menu__list
       each item in menu_list
-        - var bold = item.primary ? 'menu__item--bold' : ''
-        - var expandable = item.children ? 'menu__item--expandable' : ''
-        li.menu__item(class=bold + ' ' + expandable)
+        - var bold = item.primary ? "menu__item--bold" : "";
+        - var expandable = item.children ? "menu__item--expandable" : "";
+        li.menu__item(class=bold + " " + expandable)
           .menu__item__text= item.text
           if item.children
             ul.menu__submenu-list

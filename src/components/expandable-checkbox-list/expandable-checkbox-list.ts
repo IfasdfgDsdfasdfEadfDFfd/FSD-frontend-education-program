@@ -1,4 +1,8 @@
-const checkboxLists = Array(...document.getElementsByClassName('expandable-checkbox-list') as unknown as Array<HTMLElement>);
+const checkboxLists = Array(
+  ...((document.getElementsByClassName(
+    'expandable-checkbox-list',
+  ) as unknown) as Array<HTMLElement>),
+);
 
 checkboxLists.forEach(list => {
   const button = list.querySelector('.expandable-checkbox-list__btn');

@@ -1,16 +1,21 @@
-$green-color: #6FCF97;
-$purple-color: #BC9CFF;
-$blue-color: #8BA4F9;
-$dark-shade: #1F2041;
+$green-color: #6fcf97;
+$purple-color: #bc9cff;
+$blue-color: #8ba4f9;
+$dark-shade: #1f2041;
 $dark-shade-100: change-color($dark-shade, $alpha: 1);
 $dark-shade-75: change-color($dark-shade, $alpha: 0.75);
-$dark-shade-50: change-color($dark-shade, $alpha: 0.50);
+$dark-shade-50: change-color($dark-shade, $alpha: 0.5);
 $dark-shade-25: change-color($dark-shade, $alpha: 0.25);
-$dark-shade-10: change-color($dark-shade, $alpha: 0.10);
+$dark-shade-10: change-color($dark-shade, $alpha: 0.1);
 $dark-shade-5: change-color($dark-shade, $alpha: 0.05);
-$from-purple-to-blue-gradient: linear-gradient(180deg, $purple-color 0%, $blue-color 100%);
-$from-green-to-blue-gradient: linear-gradient(180deg, $green-color 0%, #66D2EA 100%);
-
+$from-purple-to-blue-gradient:
+  linear-gradient(180deg,
+  $purple-color 0%,
+  $blue-color 100%);
+$from-green-to-blue-gradient:
+  linear-gradient(180deg,
+  $green-color 0%,
+  #66d2ea 100%);
 $large-size: 1280px;
 $middle-size: 768px;
 $small-size: 540px;

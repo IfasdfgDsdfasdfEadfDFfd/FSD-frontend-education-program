@@ -1,4 +1,4 @@
-@import '../../consts.scss';
+@import "../../consts";
 
 .like-button {
   position: relative;
@@ -31,23 +31,23 @@
   background-color: #fff;
 
   &::before {
-    content: 'favorite_border';
-    font-family: 'Material-Icons';
+    content: "favorite_border";
+    font-family: "Material-Icons";
     padding: 5px;
 
     font-size: 10px;
     line-height: 9px;
 
     color: $dark-shade-25;
-    transition: color .2s ease-in;
+    transition: color 0.2s ease-in;
   }
 }
 
 .like-button--checked > .like-button__element {
   &::before {
-    content: 'favorite';
+    content: "favorite";
     color: $purple-color;
-    transition: color .2s ease-in;
+    transition: color 0.2s ease-in;
   }
 }
 
@@ -59,10 +59,10 @@
 
   font-size: 10px;
   line-height: 12px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .like-button--checked > .like-button__label {
   color: $purple-color;
-  transition: color .2s ease-in;
+  transition: color 0.2s ease-in;
 }

@@ -28,7 +28,7 @@
   font-size: 14px;
   font-weight: bold;
 
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: $dark-shade-100;
 
   & .room-item__number {
@@ -40,15 +40,15 @@
     color: $purple-color;
     text-transform: uppercase;
 
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
   }
 }
 
 .room-item__desc-item {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
-  font-family: 'Montserrat';
+  align-items: center;
+  font-family: "Montserrat";
   font-size: 14px;
 
   & strong {

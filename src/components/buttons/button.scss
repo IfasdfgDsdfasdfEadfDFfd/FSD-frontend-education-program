@@ -1,6 +1,6 @@
 .button {
   background-image: $from-purple-to-blue-gradient;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: bold;
   text-transform: uppercase;
   border: none;
@@ -18,5 +18,5 @@
 }
 
 .button[disabled] {
-  opacity: .5;
+  opacity: 0.5;
 }

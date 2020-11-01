@@ -1,7 +1,13 @@
 mixin radio-buttons-group(group_name, items)
   .radio-buttons-group
     each item in items
-      -var id = item.value + '-id'
+      - var id = item.value + "-id";
         .radio-button
-          input(type="radio", value=item.value, name=group_name, id=id, checked=item.checked).radio-button__element
-          label(for=id).radio-button__label= item.value
+          input.radio-button__element(
+            type='radio',
+            value=item.value,
+            name=group_name,
+            id=id,
+            checked=item.checked
+          )
+          label.radio-button__label(for=id)= item.value

@@ -13,7 +13,8 @@
 	"extensions": [
 		"dbaeumer.vscode-eslint",
 		"ms-vscode.vscode-typescript-tslint-plugin",
-		"vscodevim.vim"
+		"vscodevim.vim",
+		"esbenp.prettier-vscode"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

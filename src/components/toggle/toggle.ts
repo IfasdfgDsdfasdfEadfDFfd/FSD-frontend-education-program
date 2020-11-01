@@ -1,20 +1,28 @@
-import { createStore, Action, saveToLocalStoragePlugin, saveToLocalStorageMiddlewareFabric } from '../../store/store';
+import {
+  createStore,
+  Action,
+  saveToLocalStoragePlugin,
+  saveToLocalStorageMiddlewareFabric,
+} from '../../store/store';
 
-
-const toggles = Array(...document.getElementsByClassName('toggle__element') as unknown as Array<Element>);
-
+const toggles = Array(
+  ...((document.getElementsByClassName('toggle__element') as unknown) as Array<
+    Element
+  >),
+);
 
 const initState = toggles.reduce((state, toggle) => {
-  return {...state, [toggle.id]: toggle.hasAttribute('checked') || false};
+  return { ...state, [toggle.id]: toggle.hasAttribute('checked') || false };
 }, {});
 
 enum actions {
   TOGGLE,
-};
+}
 
 // controller
 const toggleStorageName = 'toggle-data';
-const store = createStore(initState,
+const store = createStore(
+  initState,
   (action: Action, state: any) => {
     switch (action.name) {
       case actions.TOGGLE:
@@ -22,10 +30,10 @@ const store = createStore(initState,
         return state;
       default:
         return state;
-    };
+    }
   },
   [saveToLocalStoragePlugin(toggleStorageName, toggles, false)],
-  {post: [saveToLocalStorageMiddlewareFabric(toggleStorageName)]},
+  { post: [saveToLocalStorageMiddlewareFabric(toggleStorageName)] },
 );
 
 // view

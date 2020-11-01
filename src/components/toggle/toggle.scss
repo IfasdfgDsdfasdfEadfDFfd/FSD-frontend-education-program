@@ -16,30 +16,30 @@
   background-color: #ffffff;
   width: 40px;
   height: 20px;
-  transition: border-color .2s ease-in;
+  transition: border-color 0.2s ease-in;
 }
 
 .toggle__element::before {
   position: absolute;
   left: 3px;
   top: 3px;
-  content: '';
+  content: "";
   width: 12px;
   height: 12px;
   border-radius: 10px;
   background-color: $dark-shade-25;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .toggle__element:checked::before {
   background-image: linear-gradient(180deg, $purple-color 0%, $blue-color 100%);
   transform: translateX(20px);
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .toggle__element:checked {
   border: 1px solid $purple-color;
-  transition: border-color .2s ease-in;
+  transition: border-color 0.2s ease-in;
 }
 
 .toggle__label {

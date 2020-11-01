@@ -10,16 +10,17 @@ describe('store', () => {
   const INIT_STATE: Array<any> = [];
 
   beforeEach(() => {
-
-    store = createStore(INIT_STATE, (action: Action, state: typeof INIT_STATE) => {
-      switch (action.name) {
-        case 'new':
-          return [...state, action.value];
-        default:
-          return state;
-      }
-    });
-
+    store = createStore(
+      INIT_STATE,
+      (action: Action, state: typeof INIT_STATE) => {
+        switch (action.name) {
+          case 'new':
+            return [...state, action.value];
+          default:
+            return state;
+        }
+      },
+    );
   });
 
   it('should should return current state', () => {

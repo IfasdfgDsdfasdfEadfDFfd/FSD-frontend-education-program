@@ -1,13 +1,25 @@
 mixin range-slider(label, name, opts)
   .range-slider__container
-    - var id = name + '-id'
+    - var id = name + "-id";
     .range-slider__title
       h3
         label= label
-      span(id='display-for-' + id)
+      span(id="display-for-" + id)
     .range-slider(id=id)
-      input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.left).range-slider__element.range-slider__element-left
-      input(type="range", min=opts.min, max=opts.max, step=opts.step, value=opts.right).range-slider__element.range-slider__element-right
+      input.range-slider__element.range-slider__element-left(
+        type='range',
+        min=opts.min,
+        max=opts.max,
+        step=opts.step,
+        value=opts.left
+      )
+      input.range-slider__element.range-slider__element-right(
+        type='range',
+        min=opts.min,
+        max=opts.max,
+        step=opts.step,
+        value=opts.right
+      )
 
       .slider
         .slider__track

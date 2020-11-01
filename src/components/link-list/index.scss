@@ -12,7 +12,7 @@
   padding: 20px 25px;
   background-color: #ffffff;
   box-shadow: 1px 1px 3px 1px $dark-shade-50;
-  transition: all ease-in .2s;
+  transition: all ease-in 0.2s;
   border-radius: 4px;
 
   background: linear-gradient(90deg, $blue-color 0%, $green-color 100%);
@@ -23,14 +23,14 @@
   -moz-text-fill-color: transparent;
 
   text-decoration: none;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: bold;
   font-size: 20px;
   line-height: 24px;
 
   &:hover,
   &:focus {
-    transition: all ease-in .2s;
+    transition: all ease-in 0.2s;
     box-shadow: 1px 1px 8px 1px $dark-shade-75;
   }
 }

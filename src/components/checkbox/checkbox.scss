@@ -17,9 +17,7 @@
   max-height: 20px;
   margin-right: 10px;
   background-size: 0px;
-  transition:
-    border .4s ease-in,
-    background-size .2s ease-in;
+  transition: border 0.4s ease-in, background-size 0.2s ease-in;
   background-image: url("./images/check_mark.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -27,9 +25,7 @@
 
 .checkbox_checked,
 .checkbox__element:checked {
-  transition:
-    border .4s ease-in,
-    background-size .2s ease-in;
+  transition: border 0.4s ease-in, background-size 0.2s ease-in;
   border: 1px solid $purple-color;
   background-image: url("./images/check_mark.svg");
   background-size: 12px;
@@ -39,7 +35,7 @@
 
 .checkbox__label {
   max-width: 200px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 14px;
   line-height: 23px;
   &::first-letter {

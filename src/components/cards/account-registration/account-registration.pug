@@ -5,7 +5,7 @@ include ../../buttons/action-button.pug
 include ../../buttons/border-button.pug
 include ../link-footer-button.pug
 
-mixin account-registration-card()
+mixin account-registration-card
   .card.account-registration
     h1
       | Регистрация аккаунта
@@ -15,7 +15,7 @@ mixin account-registration-card()
       +radio-buttons-group('user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
     .account-registration__item
       h3
-        label(for="birthday-field")= 'Дата рождения'
+        label(for='birthday-field')= "Дата рождения"
       +masked-text-field('account-registration-masked-text-field-id')
     .account-registration__item
       +text-field({label: 'данные для входа в сервис', type: 'email', placeholder: 'Email'})

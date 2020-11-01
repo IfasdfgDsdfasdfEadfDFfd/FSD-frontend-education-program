@@ -22,23 +22,9 @@ block body
         h3
           | даты пребывания в отеле
         +filter-date-dropdown('19 авг - 23 авг')
-      +dropdown-counter({
-        id: 'guests-counter-1',
-        placeholder: 'Сколько гостей',
-        counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}],
-        counting_way: 'sum',
-        declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-        opened: false,
-        need_to_be_applied: true
-      })
+      +dropdown-counter({ id: 'guests-counter-1', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
 
-      +range-slider('диапозон цены', 'cost-range-slider', {
-        min: 0,
-        max: 15000,
-        step: 100,
-        left: 5000,
-        right: 10000,
-      })
+      +range-slider('диапозон цены', 'cost-range-slider', { min: 0, max: 15000, step: 100, left: 5000, right: 10000, })
         | Стоимость за сутки пребывания в номере
 
       div
@@ -60,75 +46,26 @@ block body
         +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
           | На 1 этаже вас стретит специалист и проводит до номера
 
-      +dropdown-counter({
-        id: 'room-properties-1',
-        placeholder: 'Параметры номера',
-        counters: [{name: 'спальни', value: 0}, {name: 'кровати', value: 0}, {name: 'ванные комнаты', value: 0}],
-        counting_way: 'apart',
-        declensions: [
-          {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
-          {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
-          {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
-        ],
-        opened: false,
-        need_to_be_applied: false
-      })
+      +dropdown-counter({ id: 'room-properties-1', placeholder: 'Параметры номера', counters: [{name: 'спальни', value: 0}, {name: 'кровати', value: 0}, {name: 'ванные комнаты', value: 0}], counting_way: 'apart', declensions: [ {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'}, {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'}, {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'}, ], opened: false, need_to_be_applied: false })
 
-      +expandable-checkbox-list('дополнительные удобства', [
-        {
-          text: 'Завтрак',
-          name: 'breakfast',
-          value: 'has-breakfast',
-          checked: false,
-        },
-        {
-          text: 'Письменный стол',
-          name: 'desk',
-          value: 'has-desk',
-          checked: true,
-        },
-        {
-          text: 'стул для кормления',
-          name: 'feeding-chair',
-          value: 'has-feeding-chair',
-          checked: true,
-        },
-        {
-          text: 'кроватка',
-          name: 'crib',
-          value: 'has-crib',
-          checked: true,
-        },
-        {
-          text: 'телевизор',
-          name: 'tv',
-          value: 'has-tv',
-          checked: false,
-        },
-        {
-          text: 'шампунь',
-          name: 'shampoo',
-          value: 'has-shampoo',
-          checked: false,
-        },
-      ], true)
+      +expandable-checkbox-list('дополнительные удобства', [ { text: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, }, { text: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, }, { text: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, }, { text: 'кроватка', name: 'crib', value: 'has-crib', checked: true, }, { text: 'телевизор', name: 'tv', value: 'has-tv', checked: false, }, { text: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, }, ], true)
     main
       h1
         | Номера, которые мы для вас подобрали
       .search-room-body__catalog
-        - var props1 = {bgi: "/static/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145}
-        - var props2 = {bgi: "/static/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65}
-        - var props3 = {bgi: "/static/room_980.webp", number: "980", luxury: true, cost: "8 500", stars: 3, review: 35}
-        - var props4 = {bgi: "/static/room_856.webp", number: "856", luxury: false, cost: "7 300", stars: 5, review: 19}
-        - var props5 = {bgi: "/static/room_740.webp", number: "740", luxury: false, cost: "6 000", stars: 4, review: 44}
-        - var props6 = {bgi: "/static/room_982.webp", number: "982", luxury: false, cost: "5 800", stars: 3, review: 56}
-        - var props7 = {bgi: "/static/room_678.webp", number: "678", luxury: false, cost: "5 500", stars: 5, review: 45}
-        - var props8 = {bgi: "/static/room_450.webp", number: "450", luxury: false, cost: "5 300", stars: 4, review: 39}
-        - var props9 = {bgi: "/static/room_350.webp", number: "350", luxury: false, cost: "5 000", stars: 3, review: 77}
-        - var props10 = {bgi: "/static/room_666.webp", number: "666", luxury: false, cost: "5 000", stars: 5, review: 25}
-        - var props11 = {bgi: "/static/room_444.webp", number: "444", luxury: false, cost: "5 000", stars: 3, review: 15}
-        - var props12 = {bgi: "/static/room_352.webp", number: "352", luxury: false, cost: "5 000", stars: 3, review: 55}
+        - var props1 = { bgi: "/static/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 };
+        - var props2 = { bgi: "/static/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65 };
+        - var props3 = { bgi: "/static/room_980.webp", number: "980", luxury: true, cost: "8 500", stars: 3, review: 35 };
+        - var props4 = { bgi: "/static/room_856.webp", number: "856", luxury: false, cost: "7 300", stars: 5, review: 19 };
+        - var props5 = { bgi: "/static/room_740.webp", number: "740", luxury: false, cost: "6 000", stars: 4, review: 44 };
+        - var props6 = { bgi: "/static/room_982.webp", number: "982", luxury: false, cost: "5 800", stars: 3, review: 56 };
+        - var props7 = { bgi: "/static/room_678.webp", number: "678", luxury: false, cost: "5 500", stars: 5, review: 45 };
+        - var props8 = { bgi: "/static/room_450.webp", number: "450", luxury: false, cost: "5 300", stars: 4, review: 39 };
+        - var props9 = { bgi: "/static/room_350.webp", number: "350", luxury: false, cost: "5 000", stars: 3, review: 77 };
+        - var props10 = { bgi: "/static/room_666.webp", number: "666", luxury: false, cost: "5 000", stars: 5, review: 25 };
+        - var props11 = { bgi: "/static/room_444.webp", number: "444", luxury: false, cost: "5 000", stars: 3, review: 15 };
+        - var props12 = { bgi: "/static/room_352.webp", number: "352", luxury: false, cost: "5 000", stars: 3, review: 55 };
         each props in [props1, props2, props3, props4, props5, props6, props7, props8, props9, props10, props11, props12]
           +room-item(props)
       +pagination('1 - 12 из 100+ вариантов аренды')
-  +footer()
+  +footer

@@ -2,16 +2,11 @@ mixin text-field(attrs)
   if attrs.label
     h3
       label(for=attrs.id)= attrs.label
-  input&attributes(attrs).text-field
+  input.text-field&attributes(attrs)
 
 mixin masked-text-field(id)
-  +text-field({
-    id: id,
-    class: 'text-field--masked',
-    value: '',
-    placeholder: 'ДД.ММ.ГГГГ'
-  })
+  +text-field({ id: id, class: 'text-field--masked', value: '', placeholder: 'ДД.ММ.ГГГГ' })
 
 mixin focused-text-field(attrs)
-  - attrs.class = "text-field--focused"
+  - attrs.class = "text-field--focused";
   +text-field(attrs)

@@ -5,17 +5,11 @@ include ../menu/menu.pug
 include ../user/user.pug
 
 mixin header(isSigned=false, attached=false)
-  - var header_id = attached ? 'header-id' : ''
-  header(id=header_id).header.container
-    +logo()
+  - var header_id = attached ? "header-id" : "";
+  header.header.container(id=header_id)
+    +logo
     .header__right
-      +menu([
-        {text: 'о нас', primary: true},
-        {text: 'услуги', children: []},
-        {text: 'вакансии'},
-        {text: 'новости'},
-        {text: 'соглашения', children: []},
-      ])
+      +menu([ {text: 'о нас', primary: true}, {text: 'услуги', children: []}, {text: 'вакансии'}, {text: 'новости'}, {text: 'соглашения', children: []}, ])
       if isSigned
         +user('Юлий Цезарь')
       else
