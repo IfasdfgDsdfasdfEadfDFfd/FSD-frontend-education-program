@@ -6,18 +6,21 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  > .search-room {
+    position: absolute;
+    top: 70px;
+    left: 160px;
+  }
 }
 
-.search-room {
-  position: absolute;
-  top: 70px;
-  left: 160px;
-}
 
 @media (max-width: $middle-size) {
-  .search-room {
-    position: relative;
-    left: 0;
-    margin: auto;
+  .landing {
+    > .search-room {
+      position: relative;
+      left: 0;
+      margin: auto;
+    }
   }
 };
