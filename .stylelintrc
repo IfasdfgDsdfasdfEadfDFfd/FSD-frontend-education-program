@@ -22,6 +22,7 @@
     "indentation": 2,
     "max-nesting-depth": 2,
     "selector-max-type": 1,
+    "at-rule-no-unknown": null,
     "selector-no-qualifying-type": [
       true,
       {
