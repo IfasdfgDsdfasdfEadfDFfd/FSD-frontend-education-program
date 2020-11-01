@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines",
+    "stylelint-config-hudochenkov/full"
+  ],
+  "plugins": [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "export"
+        ]
+      }
+    ],
+    "order/properties-alphabetical-order": null,
+    "indentation": 2,
+    "max-nesting-depth": 2,
+    "selector-max-type": 1,
+    "at-rule-no-unknown": null,
+    "selector-no-qualifying-type": [
+      true,
+      {
+        "ignore": [
+          "attribute"
+        ]
+      }
+    ]
+  }
+}
