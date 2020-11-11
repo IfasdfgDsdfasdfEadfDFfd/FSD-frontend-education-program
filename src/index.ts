@@ -1,4 +1,3 @@
-import './components/text-field/text-field';
 import './components/dropdown/dropdown';
 import './components/range-slider/range-slider';
 import './components/dropdown-counter/dropdown-counter';
