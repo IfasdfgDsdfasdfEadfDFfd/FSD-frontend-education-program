@@ -2,19 +2,18 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const glob = require('glob');
-
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
 const DIST_DIR = path.resolve(path.join(process.cwd(), 'dist'));
 
+const IS_DEV_MODE = process.env.NODE_ENV === 'development';
 
 const getAllTemplates = folder => {
   const SEARCH_DIR = path.join(SRC_DIR, folder);
 
   return glob.sync(`${SEARCH_DIR}/**/*.pug`).map(filepath => {
-    const {name, dir} = path.parse(filepath);
+    const { name, dir } = path.parse(filepath);
 
     return new HtmlWebpackPlugin({
       template: filepath,
@@ -23,7 +22,6 @@ const getAllTemplates = folder => {
     });
   });
 };
-
 
 module.exports = {
   entry: path.join(SRC_DIR, 'index.ts'),
@@ -55,11 +53,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.ts$/,
@@ -77,9 +71,8 @@ module.exports = {
     ],
   },
 
-  mode: process.env.NODE_ENVIRONMENT,
-  devtool: 'inline-source-map',
-  watch: true,
+  mode: process.env.NODE_ENV,
+  devtool: IS_DEV_MODE ? 'inline-source-map' : 'source-map',
 
   devServer: {
     contentBase: DIST_DIR,
@@ -97,5 +90,5 @@ module.exports = {
       poll: true,
       ignored: /node_modules/,
     },
-  }
+  },
 };
