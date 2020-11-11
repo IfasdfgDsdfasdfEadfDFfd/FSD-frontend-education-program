@@ -1,9 +1,4 @@
-import {
-  createStore,
-  Action,
-  saveToLocalStoragePlugin,
-  saveToLocalStorageMiddlewareFabric,
-} from '../../store/store';
+import { createStore, Action } from '../../store/store';
 
 const counters = Array(
   ...((document.getElementsByClassName('counter') as unknown) as Array<
@@ -27,37 +22,31 @@ export enum actions {
 }
 
 // controller
-const counterStorageName = 'counter-data';
-export const store = createStore(
-  initState,
-  (action: Action, state: any) => {
-    let newCount: Number, nextCount: Number;
-    switch (action.name) {
-      case actions.INC:
-        newCount = state[action.value] + 1;
-        nextCount = newCount > 10 ? 10 : newCount;
-        return { ...state, [action.value]: nextCount };
+export const store = createStore(initState, (action: Action, state: any) => {
+  let newCount: Number, nextCount: Number;
+  switch (action.name) {
+    case actions.INC:
+      newCount = state[action.value] + 1;
+      nextCount = newCount > 10 ? 10 : newCount;
+      return { ...state, [action.value]: nextCount };
 
-      case actions.DEC:
-        newCount = state[action.value] - 1;
-        nextCount = newCount < 0 ? 0 : newCount;
-        return { ...state, [action.value]: nextCount };
+    case actions.DEC:
+      newCount = state[action.value] - 1;
+      nextCount = newCount < 0 ? 0 : newCount;
+      return { ...state, [action.value]: nextCount };
 
-      case actions.RESET:
-        return {
-          ...state,
-          ...action.value.reduce((prev: any, id: string) => {
-            return { ...prev, [id]: 0 };
-          }, {}),
-        };
+    case actions.RESET:
+      return {
+        ...state,
+        ...action.value.reduce((prev: any, id: string) => {
+          return { ...prev, [id]: 0 };
+        }, {}),
+      };
 
-      default:
-        return state;
-    }
-  },
-  [saveToLocalStoragePlugin(counterStorageName, counters, 0)],
-  { post: [saveToLocalStorageMiddlewareFabric(counterStorageName)] },
-);
+    default:
+      return state;
+  }
+});
 
 // view
 counters.forEach(counter => {

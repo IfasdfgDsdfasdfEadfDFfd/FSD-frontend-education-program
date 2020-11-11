@@ -19,14 +19,9 @@ export type Store = {
   getState: () => any;
 };
 
-export const createStore = (
-  initState: any,
-  reducer: Reducer,
-  mods: StateModifier[] = [],
-  middlewares: { pre?: Middleware[]; post?: Middleware[] } = {},
-): Store => {
+export const createStore = (initState: any, reducer: Reducer): Store => {
   let listeners: Array<Listener> = [];
-  let _state = mods?.reduce((state, mod) => mod(state), initState);
+  let _state = initState;
 
   const setNextState = (nextState: any) => {
     _state = nextState;
@@ -37,17 +32,7 @@ export const createStore = (
   };
 
   const dispatch = (action: Action) => {
-    const result = middlewares.pre?.reduce((args, mid) => mid(args), {
-      action,
-      state: getState(),
-    });
-    setNextState(
-      reducer(result?.action || action, result?.state || getState()),
-    );
-    middlewares.post?.reduce((args, mid) => mid(args), {
-      action: result?.action || action,
-      state: result?.state || getState(),
-    });
+    setNextState(reducer(action, getState()));
     listeners.forEach(listener => listener(getState()));
   };
 
@@ -58,29 +43,4 @@ export const createStore = (
   };
 
   return { subscribe, dispatch, getState };
-};
-
-export const saveToLocalStoragePlugin = (
-  storageName: string,
-  elements: Array<Element>,
-  defaultValue: any = '',
-): StateModifier => initState => {
-  const data = JSON.parse(
-    window.localStorage.getItem(storageName) || JSON.stringify(initState),
-  );
-
-  elements.forEach(elem => {
-    data[elem.id] = data[elem.id] || defaultValue;
-  });
-
-  return data;
-};
-
-export const saveToLocalStorageMiddlewareFabric = (
-  storageName: string,
-): Middleware => {
-  return ({ action, state }) => {
-    window.localStorage.setItem(storageName, JSON.stringify(state));
-    return { action, state };
-  };
 };
