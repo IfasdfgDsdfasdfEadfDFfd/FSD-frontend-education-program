@@ -1,17 +1,10 @@
-import {
-  createStore,
-  saveToLocalStoragePlugin,
-  saveToLocalStorageMiddlewareFabric,
-  Action,
-} from '../../store/store';
+import { createStore, Action } from '../../store/store';
 
 const sliders = Array(
   ...((document.getElementsByClassName('range-slider') as unknown) as Array<
     HTMLElement
   >),
 );
-const sliderStorageName = 'range-slider-data';
-const defaultValue = { left: 0, right: 0, min: 0, max: 100 };
 
 const initState = sliders.reduce((state, slider) => {
   const left = slider.getElementsByClassName(
@@ -72,12 +65,7 @@ const reducer = (action: Action, state: any) => {
   }
 };
 
-const store = createStore(
-  initState,
-  reducer,
-  [saveToLocalStoragePlugin(sliderStorageName, sliders, defaultValue)],
-  { post: [saveToLocalStorageMiddlewareFabric(sliderStorageName)] },
-);
+const store = createStore(initState, reducer);
 
 sliders.forEach(slider => {
   store.subscribe(state => {

@@ -1,9 +1,4 @@
-import {
-  createStore,
-  Action,
-  saveToLocalStorageMiddlewareFabric,
-  saveToLocalStoragePlugin,
-} from '../../store/store';
+import { createStore, Action } from '../../store/store';
 
 const maskedTextFields = new Array(
   ...((document.getElementsByClassName(
@@ -32,66 +27,54 @@ const applyMask = (text: string): string => {
   return [day, month, year].join('.');
 };
 
-const storageName = 'maskes-text-field-data';
-const store = createStore(
-  {},
-  (action: Action, state: any) => {
-    switch (action.name) {
-      case actions.INIT:
-        if (state[action.value].text !== '') return state;
-        return {
-          ...state,
-          [action.value]: {
-            displayedText: applyMask(''),
-            text: '',
-            caretPosition: 0,
-          },
-        };
+const store = createStore({}, (action: Action, state: any) => {
+  switch (action.name) {
+    case actions.INIT:
+      if (state[action.value].text !== '') return state;
+      return {
+        ...state,
+        [action.value]: {
+          displayedText: applyMask(''),
+          text: '',
+          caretPosition: 0,
+        },
+      };
 
-      case actions.CHANGE_VALUE:
-        const text = applyMask(action.value.text);
+    case actions.CHANGE_VALUE:
+      const text = applyMask(action.value.text);
 
-        const regexp = /([0-3]|_)([0-9]|_)\.([0-1]|_)([0-9]|_)\.([1-2]|_)(0|9|_)([0-9]|_)([0-9]|_)/;
-        if (!regexp.test(text)) {
-          return state;
-        }
-
-        const [day, month, year] = text.split('.').map(Number);
-
-        if (day > 31 || day < 1) {
-          return state;
-        }
-
-        if (month == 2 && day > 29) {
-          return state;
-        }
-
-        if (year > new Date().getFullYear() || year < 1900) {
-          return state;
-        }
-
-        return {
-          ...state,
-          [action.value.id]: {
-            displayedText: text,
-            text: action.value.text,
-            caretPosition: action.value.caretPosition,
-          },
-        };
-
-      default:
+      const regexp = /([0-3]|_)([0-9]|_)\.([0-1]|_)([0-9]|_)\.([1-2]|_)(0|9|_)([0-9]|_)([0-9]|_)/;
+      if (!regexp.test(text)) {
         return state;
-    }
-  },
-  [
-    saveToLocalStoragePlugin(storageName, maskedTextFields, {
-      displayedText: '',
-      text: '',
-      caretPosition: 0,
-    }),
-  ],
-  { post: [saveToLocalStorageMiddlewareFabric(storageName)] },
-);
+      }
+
+      const [day, month, year] = text.split('.').map(Number);
+
+      if (day > 31 || day < 1) {
+        return state;
+      }
+
+      if (month == 2 && day > 29) {
+        return state;
+      }
+
+      if (year > new Date().getFullYear() || year < 1900) {
+        return state;
+      }
+
+      return {
+        ...state,
+        [action.value.id]: {
+          displayedText: text,
+          text: action.value.text,
+          caretPosition: action.value.caretPosition,
+        },
+      };
+
+    default:
+      return state;
+  }
+});
 
 maskedTextFields.forEach((input: HTMLInputElement) => {
   input.addEventListener('focusin', (event: any) => {
