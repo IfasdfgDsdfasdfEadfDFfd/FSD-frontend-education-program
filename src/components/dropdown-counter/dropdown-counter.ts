@@ -1,12 +1,12 @@
 import { store, actions } from '../counter/counter';
 
-const dropdowns = Array(
+const dropdownElements = Array(
   ...((document.getElementsByClassName('dropdown-counter') as unknown) as Array<
     HTMLElement
   >),
 );
 
-dropdowns.forEach(dropdown => {
+dropdownElements.forEach(dropdown => {
   const button = dropdown.querySelector('.dropdown') as HTMLElement;
 
   store.subscribe((state: any) => {
@@ -83,9 +83,11 @@ dropdowns.forEach(dropdown => {
   const cancelButton = dropdown?.querySelector(
     '.form-action-buttons__cancel-button',
   );
+
   const applyButton = dropdown?.querySelector(
     '.form-action-buttons__apply-button',
   );
+
   const counters = dropdown?.querySelectorAll('.counter');
 
   applyButton?.addEventListener('click', () => {
@@ -99,5 +101,6 @@ dropdowns.forEach(dropdown => {
         counter => counter.id,
       ),
     });
+    dropdown.click();
   });
 });
