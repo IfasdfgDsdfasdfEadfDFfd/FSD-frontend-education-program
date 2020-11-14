@@ -3,7 +3,7 @@ $star-size: 24px;
 .rate-button {
   width: $star-size * 5;
   height: $star-size;
-  font-family: "Material-Icons", serif;
+  font-family: "Material-Icons";
 
   &:focus-within {
     outline: 1px solid $purple-color;
@@ -19,7 +19,7 @@ $star-size: 24px;
   background-clip: text;
   background-clip: text;
   font-size: $star-size;
-  font-family: "Material-Icons", serif;
+  font-family: "Material-Icons";
   line-height: $star-size;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
