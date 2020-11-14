@@ -1,24 +1,23 @@
 $border-width: 2px;
 
 .button_border__container {
-  display: flex;
   position: relative;
   z-index: 0;
-  padding: $border-width;
+  display: flex;
   min-height: 100%;
+  padding: $border-width;
 }
 
 .button_border__element {
+  min-width: 100%;
   padding-right: 20px - $border-width;
   padding-left: 20px - $border-width;
-  color: $purple-color;
+  border: 0;
   background-color: #fff;
   background-image: none;
-  border: none;
+  color: $purple-color;
 
-  min-width: 100%;
-
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -34,7 +33,7 @@ $border-width: 2px;
     opacity: 1;
   }
 
-  &[disabled]:before {
+  &[disabled]::before {
     opacity: 0.5;
   }
 }

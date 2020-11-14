@@ -3,20 +3,19 @@
   display: flex;
   flex-flow: column nowrap;
   width: 270px;
-
-  background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 .room-item__desc {
-  padding: 20px 20px;
+  padding: 20px;
   color: $dark-shade-50;
 
-  & > hr {
-    border: none;
+  > hr {
+    margin: 10px 0 12px;
+    border: 0;
     border-top: 1px solid $dark-shade-10;
-    margin: 10px 0px 12px;
   }
 }
 
@@ -24,51 +23,48 @@
   display: flex;
   gap: 5px;
   align-items: baseline;
-
-  font-size: 14px;
-  font-weight: bold;
-
-  font-family: "Quicksand", sans-serif;
   color: $dark-shade-100;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Quicksand", "Open-Sans", sans-serif;
 
-  & .room-item__number {
+  .room-item__number {
     font-size: 18px;
   }
 
-  & .room-item__luxury {
-    font-size: 12px;
+  .room-item__luxury {
     color: $purple-color;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
   }
 }
 
 .room-item__desc-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-family: "Montserrat";
+  justify-content: space-between;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 
-  & strong {
-    font-weight: bold;
+  strong {
     margin-right: 5px;
+    font-weight: bold;
   }
 }
 
 .image-slider {
   position: absolute;
-  display: flex;
   top: 130px;
   right: 15px;
+  display: flex;
 
-  & > * {
-    border-radius: 50%;
-    border: 1px solid #fff;
+  > * {
     width: 8px;
     height: 8px;
-    margin: 0px 1.5px;
+    margin: 0 1.5px;
+    border: 1px solid #fff;
+    border-radius: 50%;
   }
 }
 

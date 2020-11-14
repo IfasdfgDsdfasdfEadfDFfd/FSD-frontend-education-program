@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "dev": "NODE_ENV=development webpack-dev-server",
-    "lint": "stylelint ./src/**/*.scss ./src/*.scss",
+    "lint": "stylelint -f verbose --fix './src/**/*.scss'",
     "prettify": "prettier --write ./src/**/*",
     "test": "jest --watch --runInBand",
     "coverage": "jest --coverage"

@@ -3,21 +3,17 @@
 .social-buttons {
   display: flex;
   flex-flow: row nowrap;
-
   gap: 20px;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  & > a {
-    text-decoration: none;
+  > a {
     background-image: $from-purple-to-blue-gradient;
-
+    background-clip: text;
+    background-clip: text;
     font-size: 24px;
     line-height: 23px;
-
-    background-clip: text;
-    -webkit-background-clip: text;
+    text-decoration: none;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
@@ -26,7 +22,7 @@
 .social-buttons__twitter {
   @extend .fab;
 
-  &:before {
+  &::before {
     content: fa-content($fa-var-twitter);
   }
 }
@@ -34,7 +30,7 @@
 .social-buttons__facebook {
   @extend .fab;
 
-  &:before {
+  &::before {
     content: fa-content($fa-var-facebook);
   }
 }
@@ -42,7 +38,7 @@
 .social-buttons__instagram {
   @extend .fab;
 
-  &:before {
+  &::before {
     content: fa-content($fa-var-instagram);
   }
 }

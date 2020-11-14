@@ -1,12 +1,10 @@
 .login-page {
   display: flex;
-  justify-content: center;
   align-items: center;
-
+  justify-content: center;
   height: 830px;
-
   background-image: url("./images/bg_login-registration.webp");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }

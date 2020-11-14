@@ -1,18 +1,18 @@
 .element-wrapper__label {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  & h3,
+  h3,
   h2 {
     margin-bottom: 5px;
   }
 }
 
 .element-wrapper__sub-label {
+  color: $dark-shade-50;
   font-size: 12px;
   line-height: 15px;
-  color: $dark-shade-50;
 }
 
 .element-wrapper__sub-label--large {

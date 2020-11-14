@@ -3,9 +3,9 @@ $slider-range-thickness: 6px;
 
 .range-slider {
   position: relative;
+  margin: 20px 0 15px;
   border: 1px solid $dark-shade-25;
   border-radius: 3px;
-  margin: 20px 0px 15px;
 }
 
 .range-slider__container {
@@ -17,51 +17,49 @@ $slider-range-thickness: 6px;
 .range-slider__title {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .range-slider__element {
-  width: 100%;
   position: absolute;
   z-index: 2;
-  pointer-events: none;
+  width: 100%;
   height: 6px;
   opacity: 0;
+  pointer-events: none;
 }
 
 .range-slider__element::-webkit-slider-thumb {
-  pointer-events: all;
-  -webkit-appearance: none;
   width: $slider-thumb-radius * 1.2;
   height: $slider-thumb-radius * 1.2;
-  background-color: red;
   border: 2px solid #fff;
   border-radius: 50%;
+  pointer-events: all;
+  appearance: none;
 }
 
 .range-slider__element::-moz-range-thumb {
-  pointer-events: all;
-  -moz-appearance: none;
   width: $slider-thumb-radius * 1.2;
   height: $slider-thumb-radius * 1.2;
-  background-color: red;
   border: 2px solid #fff;
   border-radius: 50%;
+  pointer-events: all;
+  appearance: none;
 }
 
 .slider {
   position: relative;
-  height: 6px;
   width: 100%;
+  height: 6px;
 }
 
 .slider__track {
   position: absolute;
   width: 100%;
   height: $slider-range-thickness;
-  background-color: #fff;
   border-radius: 5px;
+  background-color: #fff;
 }
 
 .slider__range {
@@ -72,10 +70,10 @@ $slider-range-thickness: 6px;
 
 .slider__thumb {
   position: absolute;
+  top: -$slider-thumb-radius / 2 + $slider-range-thickness / 2;
   width: $slider-thumb-radius;
   height: $slider-thumb-radius;
-  border-radius: 50%;
   border: 2px solid #fff;
+  border-radius: 50%;
   background-image: $from-green-to-blue-gradient;
-  top: -$slider-thumb-radius / 2 + $slider-range-thickness / 2;
 }
