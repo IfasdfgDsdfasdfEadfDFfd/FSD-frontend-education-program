@@ -1,9 +1,10 @@
-.expandable-checkbox-list__btn {
+.expandable-checkbox-list__button {
   display: flex;
   position: relative;
   align-items: center;
   flex-flow: row nowrap;
   width: 100%;
+  margin-bottom: 17px;
   font-size: 12px;
   font-family: "Montserrat";
   font-weight: bold;
@@ -30,12 +31,18 @@
   }
 }
 
-.expandable-checkbox-list:not(.expandable-checkbox-list_closed)
-  > .expandable-checkbox-list__btn::after {
+.expandable-checkbox-list:not(.expandable-checkbox-list--closed)
+  > .expandable-checkbox-list__button::after {
   transform: rotate(-180deg);
   transition: all 0.4s ease-in;
 }
 
-.expandable-checkbox-list.expandable-checkbox-list_closed > ul {
+.expandable-checkbox-list--closed > .expandable-checkbox-list__items-container {
   display: none;
+}
+
+.expandable-checkbox-list__items-container {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
 }
