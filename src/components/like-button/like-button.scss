@@ -15,6 +15,8 @@ $like-border-width: 1px;
   width: 100%;
   height: 100%;
   border-radius: $like-border-radius;
+  background-color: $dark-shade-25;
+  background-image: none;
 
   .like-button__element:checked ~ & {
     background-image: $from-purple-to-blue-gradient;
