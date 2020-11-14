@@ -30,6 +30,10 @@ module.exports = {
     filename: 'build.js',
   },
 
+  externals: {
+    jquery: 'jQuery',
+  },
+
   // don't foget about dots...
   resolve: {
     extensions: ['.ts', '.js', '.scss', '.pug', '.html', '.css'],
