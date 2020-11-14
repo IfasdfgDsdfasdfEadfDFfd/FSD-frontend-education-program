@@ -30,6 +30,7 @@
     "@prettier/plugin-pug": "^1.10.1",
     "@types/cleave.js": "^1.4.3",
     "@types/jest": "^26.0.5",
+    "@types/jquery": "^3.5.4",
     "@types/node": "^14.0.24",
     "@types/webpack": "^4.41.21",
     "@types/webpack-env": "^1.15.2",
@@ -63,6 +64,7 @@
   },
   "dependencies": {
     "@dmuy/datepicker": "^2.0.1-rc",
-    "cleave.js": "^1.6.0"
+    "cleave.js": "^1.6.0",
+    "jquery": "^3.5.1"
   }
 }
