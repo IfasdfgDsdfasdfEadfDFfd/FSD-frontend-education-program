@@ -4,7 +4,6 @@ import './components/range-slider/range-slider';
 import './components/dropdown-counter/dropdown-counter';
 import './components/expandable-checkbox-list/expandable-checkbox-list';
 import './components/counter/counter';
-import './components/calendar/calendar';
 import './components/header/header';
 
 import './index.scss';

@@ -4,7 +4,7 @@ mixin element-wrapper(attrs)
   - var large_sub_label_class_name = attrs.large_label ? "element-wrapper__sub-label--large" : "";
 
   .element-wrapper
-    div.element-wrapper__label(class=extra_spacing_class_name)
+    .element-wrapper__label(class=extra_spacing_class_name)
       if attrs.label
         if attrs.large_label
           h2= attrs.label
@@ -12,5 +12,5 @@ mixin element-wrapper(attrs)
           h3= attrs.label
 
       span.element-wrapper__sub-label(class=large_sub_label_class_name)= attrs.sub_label
-    div.element-wrapper__item(class=inline_class_name)
+    .element-wrapper__item(class=inline_class_name)
       block

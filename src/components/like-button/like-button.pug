@@ -1,5 +1,5 @@
 mixin like-button(name, liked=false, count='0')
-  div.like-button(class=liked ? "like-button--checked" : "")
+  .like-button(class=liked ? "like-button--checked" : "")
     - var id = name + "-id";
     input.like-button__element(type='checkbox', id=id, name=name, value=name)
     label.like-button__label(for=id)= count

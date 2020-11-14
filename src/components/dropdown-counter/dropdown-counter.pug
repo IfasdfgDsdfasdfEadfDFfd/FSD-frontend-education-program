@@ -5,8 +5,8 @@ include ../form-action-buttons/form-action-buttons.pug
 mixin dropdown-counter(attrs)
   - var opened_class_name = attrs.opened ? "dropdown-container--opened" : "";
 
-  div.dropdown-container(class=opened_class_name)
-    div.dropdown-counter(id=attrs.id)
+  .dropdown-container(class=opened_class_name)
+    .dropdown-counter(id=attrs.id)
       +dropdown(attrs.placeholder, { 'data-placeholder': attrs.placeholder, 'data-counting-way': attrs.counting_way, 'data-declensions': attrs.declensions, })
 
       .dropdown-container__body

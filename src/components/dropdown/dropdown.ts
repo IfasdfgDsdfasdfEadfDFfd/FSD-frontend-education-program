@@ -1,7 +1,5 @@
-const dropdowns = Array(
-  ...((document.getElementsByClassName(
-    'dropdown-container',
-  ) as unknown) as Array<HTMLElement>),
+const dropdowns = Array.from(
+  document.getElementsByClassName('dropdown-container'),
 );
 
 dropdowns.forEach(dropdown => {

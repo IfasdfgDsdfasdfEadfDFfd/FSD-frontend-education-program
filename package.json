@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/gugfug/FSD-frontend-education-program#readme",
   "devDependencies": {
-    "@prettier/plugin-pug": "^1.10.0",
+    "@prettier/plugin-pug": "^1.10.1",
     "@types/cleave.js": "^1.4.3",
     "@types/jest": "^26.0.5",
     "@types/node": "^14.0.24",
@@ -42,6 +42,8 @@
     "jest": "^26.1.0",
     "mini-css-extract-plugin": "^1.0.0",
     "node-sass": "^4.14.1",
+    "postcss": "^8.1.7",
+    "postcss-loader": "^4.0.4",
     "prettier": "^2.1.2",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",

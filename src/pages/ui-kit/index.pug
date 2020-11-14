@@ -35,7 +35,6 @@ block body
   include ../../components/cards/account-registration/account-registration.pug
   include ../../components/cards/book-a-room/book-a-room.pug
   include ../../components/cards/login/login.pug
-  include ../../components/calendar/calendar.pug
   include ../../components/room-item/room-item.pug
 
   // header & footers
@@ -114,20 +113,22 @@ block body
           +dropdown-counter({ id: 'guests-counter-1', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
         +element-wrapper({ label: 'masked text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
           +masked-text-field('ui-kit-masked-text-field-id')
-      +date-dropdown({label: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}, {label: 'date dropdown', placeholder: '19.08.2019'},)
+      +element-wrapper({label: 'date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
+        //- +date-dropdown({label: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'}, {label: 'date dropdown', placeholder: '19.08.2019'},)
       +element-wrapper({ label: 'filter date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-        +filter-date-dropdown('19 авг - 23 авг')
+        //- +filter-date-dropdown('19 авг - 23 авг')
       +element-wrapper({ label: 'subscription text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
         +subscription-text-field
 
     .form-elements__container
       +element-wrapper({ label: 'checkbox buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
-        +checkbox('allow-smoking', 'allow-smoking', false)
-          | Можно курить
-        +checkbox('allow-pets', 'allow-pets', true)
-          | Можно с питомцами
-        +checkbox('allow-guests', 'allow-guests', true)
-          | Можно пригласить гостей (до 10 человек)
+        .form-elements__checkbox-group
+          +checkbox('allow-smoking', 'allow-smoking', false)
+            | Можно курить
+          +checkbox('allow-pets', 'allow-pets', true)
+            | Можно с питомцами
+          +checkbox('allow-guests', 'allow-guests', true)
+            | Можно пригласить гостей (до 10 человек)
       +element-wrapper({ label: 'radio buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
         +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
       +element-wrapper({ label: 'toggle', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
@@ -206,7 +207,6 @@ block body
     +account-registration-card
     +book-a-room-card
     +login-card
-    +calendar('Август', 2019)
 
     +room-item({ bgi: "/static/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 })
 
