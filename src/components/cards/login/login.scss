@@ -1,5 +1,11 @@
-.login-form__block {
+.login-form__element {
+  margin-bottom: 30px;
+}
+
+.login-form__element__block {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
