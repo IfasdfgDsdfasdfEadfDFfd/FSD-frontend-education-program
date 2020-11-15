@@ -6,8 +6,9 @@ mixin login-card
   .card.login-form
     h1
       | Войти
-    .login-form__block
-      +text-field({type: 'email', placeholder: 'Email'})
-      +text-field({type: 'password', placeholder: 'Пароль'})
-    +action-button('войти')
+    form.login-form__element
+      .login-form__element__block
+        +text-field({type: 'email', placeholder: 'Email'})
+        +text-field({type: 'password', placeholder: 'Пароль'})
+      +action-button('войти')
     +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
