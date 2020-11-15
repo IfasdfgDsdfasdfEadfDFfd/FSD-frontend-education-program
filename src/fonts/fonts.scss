@@ -4,11 +4,22 @@
 }
 
 @font-face {
-  font-family: "Quicksand", "Open-Sans", sans-serif;
-  src: url("./fonts/Quicksand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand/Quicksand-Regular.eot");
+  src: local("☺"),
+    url("./fonts/Quicksand/Quicksand-Regular.woff") format("woff"),
+    url("./fonts/Quicksand/Quicksand-Regular.ttf") format("truetype"),
+    url("./fonts/Quicksand/Quicksand-Regular.svg") format("svg");
 }
 
 @font-face {
-  font-family: "Montserrat", sans-serif;
-  src: url("./fonts/Montserrat.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-family: "Quicksand";
+  src: url("./fonts/Quicksand/Quicksand-Bold.eot");
+  src: local("☺"), url("./fonts/Quicksand/Quicksand-Bold.woff") format("woff"),
+    url("./fonts/Quicksand/Quicksand-Bold.ttf") format("truetype"),
+    url("./fonts/Quicksand/Quicksand-Bold.svg") format("svg");
 }
