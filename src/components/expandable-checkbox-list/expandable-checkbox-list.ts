@@ -1,18 +1,12 @@
-const checkboxLists = Array(
-  ...((document.getElementsByClassName(
-    'expandable-checkbox-list',
-  ) as unknown) as Array<HTMLElement>),
+const checkboxLists = Array.from(
+  document.getElementsByClassName('expandable-checkbox-list'),
 );
 
 checkboxLists.forEach(list => {
-  const button = list.querySelector('.expandable-checkbox-list__btn');
+  const button = list.querySelector('.expandable-checkbox-list__button');
 
   button?.addEventListener('click', () => {
-    const className = 'expandable-checkbox-list_closed';
-    if (list.classList.contains(className)) {
-      list.classList.remove(className);
-    } else {
-      list.classList.add(className);
-    }
+    const className = 'expandable-checkbox-list--closed';
+    list.classList.toggle(className);
   });
 });

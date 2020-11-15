@@ -3,9 +3,9 @@
 }
 
 .comment__header-username {
-  font-family: "Montserrat";
   font-weight: bold;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   line-height: 24px;
 }
 
@@ -23,8 +23,8 @@
   display: flex;
   margin-top: 7px;
 
-  & > .like-button {
-    margin: 5px 3px 0px 3px;
+  > .like-button {
+    margin: 5px 3px 0;
   }
 }
 

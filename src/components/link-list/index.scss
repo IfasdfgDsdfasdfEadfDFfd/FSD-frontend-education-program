@@ -1,36 +1,34 @@
 .link-list {
   display: flex;
   flex-flow: column nowrap;
-  list-style: none;
-  margin-top: 60px;
   align-items: center;
+  margin-top: 60px;
+  list-style: none;
 }
 
 .link-list__button {
-  border: none;
   margin: 9px auto;
   padding: 20px 25px;
-  background-color: #ffffff;
-  box-shadow: 1px 1px 3px 1px $dark-shade-50;
-  transition: all ease-in 0.2s;
+  border: 0;
   border-radius: 4px;
-
   background: linear-gradient(90deg, $blue-color 0%, $green-color 100%);
+  background-color: #fff;
   background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
+  box-shadow: 1px 1px 3px 1px $dark-shade-50;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 24px;
+  text-decoration: none;
+  transition: all ease-in 0.2s;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 
-  text-decoration: none;
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
-
   &:hover,
   &:focus {
-    transition: all ease-in 0.2s;
     box-shadow: 1px 1px 8px 1px $dark-shade-75;
+    transition: all ease-in 0.2s;
   }
 }

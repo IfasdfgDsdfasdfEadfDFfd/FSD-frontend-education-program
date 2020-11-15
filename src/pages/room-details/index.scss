@@ -1,15 +1,15 @@
 .room-details__body {
-  background-color: #fff;
   display: flex;
   flex-flow: column nowrap;
+  background-color: #fff;
 }
 
 .room-details__body__photos {
-  & .room-details__body__photos-big {
+  .room-details__body__photos-big {
     float: left;
   }
 
-  & .room-details__body__photos-lower-group {
+  .room-details__body__photos-lower-group {
     display: flex;
     flex-flow: column nowrap;
   }
@@ -18,9 +18,9 @@
 .room-details__body__desc {
   display: flex;
   flex-flow: row nowrap;
-  align-self: center;
-  padding: 70px 0px;
   gap: 70px;
+  align-self: center;
+  padding: 70px 0;
 }
 
 .room-details__body__desc__left {
@@ -31,8 +31,8 @@
 
 .room-details__body__desc-row {
   display: flex;
-  gap: 100px;
   flex-flow: row nowrap;
+  gap: 100px;
 }
 
 .room-details__body__comment-section {
@@ -45,119 +45,105 @@
 
 .room-impressions {
   display: flex;
+  gap: 30px;
   align-items: flex-end;
   padding-top: 20px;
-  gap: 30px;
 }
 
 .statictic-ring {
   position: relative;
-  background-color: transparent;
-
-  width: 120px;
-  height: 120px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 120px;
+  height: 120px;
+  background-color: transparent;
 }
 
 .room-impressions__center-ring {
   position: relative;
-  background-color: #fff;
-
-  color: $purple-color;
-
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-
-  border-radius: 50%;
-
   width: 96%;
   height: 96%;
+  border-radius: 50%;
+  background-color: #fff;
+  color: $purple-color;
 
-  & > span {
+  > span {
     font-weight: bold;
     font-size: 24px;
-    font-family: "Quicksand";
+    font-family: "Quicksand", "Open-Sans", sans-serif;
   }
 }
 
 .room-impressions__magnificent-ring {
-  left: 0;
   position: absolute;
+  left: 0;
   width: 60px;
   height: 120px;
-
   border-right: 2px solid #fff;
   border-radius: 120px 0% 0% 120px;
-
   background-image: linear-gradient(#ffe39c 0%, #ffba9c 100%);
 }
 
 .room-impressions__good-ring {
+  position: absolute;
   top: 60px;
   left: 60px;
-  position: absolute;
-
   width: 60px;
   height: 60px;
-
-  border-left: 2px solid #fff;
   border-top: 2px solid #fff;
-  border-radius: 0% 0% 100% 0%;
-
+  border-left: 2px solid #fff;
+  border-radius: 0% 0% 100%;
   background-image: linear-gradient(#6fcf97 0%, #66d2ea 100%);
 }
 
 .room-impressions__nice-ring {
+  position: absolute;
   top: 0;
   left: 60px;
-  position: absolute;
-
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  border-radius: 0% 100% 0% 0%;
-
   width: 60px;
   height: 60px;
-
+  border-bottom: 2px solid #fff;
+  border-left: 2px solid #fff;
+  border-radius: 0% 100% 0% 0%;
   background-image: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
 }
 
 .color-bullet-list {
   position: relative;
-  list-style-type: none;
-  padding-left: 20px;
-  max-width: 260px;
   display: flex;
   flex-flow: column nowrap;
+  max-width: 260px;
+  padding-left: 20px;
+  list-style-type: none;
 
-  & > li::before {
+  > li::before {
     content: "";
-    border-radius: 50%;
-    margin-top: 6px;
     position: absolute;
     left: 0;
     width: 10px;
     height: 10px;
+    margin-top: 6px;
+    border-radius: 50%;
   }
 
-  & > li:nth-child(1)::before {
+  > li:nth-child(1)::before {
     background-image: linear-gradient(#ffe39c 0%, #ffba9c 100%);
   }
 
-  & > li:nth-child(2)::before {
+  > li:nth-child(2)::before {
     background-image: linear-gradient(#6fcf97 0%, #66d2ea 100%);
   }
 
-  & > li:nth-child(3)::before {
+  > li:nth-child(3)::before {
     background-image: linear-gradient(#bc9cff 0%, #8ba4f9 100%);
   }
 
-  & > li:nth-child(4)::before {
+  > li:nth-child(4)::before {
     background-image: linear-gradient(#909090 0%, #3d4975 100%);
   }
 }

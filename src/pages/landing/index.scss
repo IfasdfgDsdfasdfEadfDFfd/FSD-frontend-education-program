@@ -1,11 +1,10 @@
 .landing {
-  height: 1000px;
-
   position: relative;
+  height: 1000px;
   background-image: url("./images/bg_landing.webp");
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 
   > .search-room {
     position: absolute;
@@ -22,4 +21,4 @@
       margin: auto;
     }
   }
-} ;
+}

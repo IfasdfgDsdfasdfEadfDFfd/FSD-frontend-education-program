@@ -4,15 +4,15 @@
 }
 
 .form-action-buttons__action-button {
-  border: none;
+  padding: 10px 0;
+  border: 0;
   background-color: #fff;
-  font-family: "Montserrat";
   color: $purple-color;
   font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 0;
   font-size: 12px;
+  font-family: "Montserrat", sans-serif;
   line-height: 15px;
+  text-transform: uppercase;
 }
 
 .form-action-buttons__cancel-button {

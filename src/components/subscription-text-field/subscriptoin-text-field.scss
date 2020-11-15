@@ -6,14 +6,14 @@
 }
 
 .subscription-text-field__input {
-  background-color: #fff;
   padding: 12px 44px 8px 15px;
-  color: $dark-shade-25;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
+  background-color: #fff;
+  color: $dark-shade-25;
   font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   line-height: 24px;
-  font-family: "Montserrat";
 
   &:hover,
   &:focus {
@@ -22,12 +22,13 @@
     transition: all 0.2s ease-in;
   }
 }
+
 .subscription-text-field__push-button {
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
   margin-left: -42px;
+  border: 0;
+  background-color: transparent;
   color: $purple-color;
-  line-height: 24px;
+  font-size: 24px;
   font-family: "Material-Icons";
+  line-height: 24px;
 }

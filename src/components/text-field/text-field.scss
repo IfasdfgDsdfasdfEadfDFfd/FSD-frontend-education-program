@@ -1,14 +1,14 @@
 .text-field {
-  border: 1px solid $dark-shade-25;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 4px;
-  font-family: "Montserrat";
-  background-color: #ffffff;
   padding: 12px 13px;
-  font-size: 14px;
-  line-height: 18px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  background-color: #fff;
   color: $dark-shade-25;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
 }
 
 .text-field--focused,
