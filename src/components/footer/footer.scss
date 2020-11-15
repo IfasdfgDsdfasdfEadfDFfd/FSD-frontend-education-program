@@ -1,10 +1,12 @@
 @import "../../consts";
 
 .footer {
+  position: absolute;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
@@ -70,7 +72,7 @@ a:active {
 .footer__body__column {
   display: flex;
   flex-flow: column nowrap;
-  gap: 20px;
+  gap: 15px;
 
   > a {
     color: inherit;
@@ -83,8 +85,8 @@ a:active {
   flex-flow: row nowrap;
   justify-content: space-between;
   width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 26px;
+  padding-bottom: 26px;
   background-color: #fff;
 }
 

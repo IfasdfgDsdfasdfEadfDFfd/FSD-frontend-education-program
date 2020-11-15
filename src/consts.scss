@@ -8,14 +8,17 @@ $dark-shade-50: change-color($dark-shade, $alpha: 0.5);
 $dark-shade-25: change-color($dark-shade, $alpha: 0.25);
 $dark-shade-10: change-color($dark-shade, $alpha: 0.1);
 $dark-shade-5: change-color($dark-shade, $alpha: 0.05);
-$from-purple-to-blue-gradient:
-  linear-gradient(180deg,
+$from-purple-to-blue-gradient: linear-gradient(
+  180deg,
   $purple-color 0%,
-  $blue-color 100%);
-$from-green-to-blue-gradient:
-  linear-gradient(180deg,
+  $blue-color 100%
+);
+$from-green-to-blue-gradient: linear-gradient(
+  180deg,
   $green-color 0%,
-  #66d2ea 100%);
+  #66d2ea 100%
+);
+$footer-height: 443px;
 $large-size: 1280px;
 $middle-size: 768px;
 $small-size: 540px;

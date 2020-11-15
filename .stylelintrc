@@ -33,6 +33,7 @@
       }
     ],
     "scss/at-extend-no-missing-placeholder": null,
-    "font-family-no-missing-generic-family-keyword": null
+    "font-family-no-missing-generic-family-keyword": null,
+    "scss/dollar-variable-colon-newline-after": null
   }
 }
