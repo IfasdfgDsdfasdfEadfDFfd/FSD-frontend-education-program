@@ -6,3 +6,6 @@ dist
 
 # logs
 *error.log
+
+# macos specific
+.DS_store
