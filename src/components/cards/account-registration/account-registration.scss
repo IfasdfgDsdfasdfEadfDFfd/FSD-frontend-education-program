@@ -1,9 +1,15 @@
 .account-registration {
-  .action-button {
-    margin-bottom: 10px;
+  .element-wrapper__item {
+    gap: 10px;
   }
 }
 
-.account-registration__item .text-field {
-  margin: 5px 0;
+.account-registration__buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+
+  .button-border__container {
+    min-width: 99px;
+  }
 }

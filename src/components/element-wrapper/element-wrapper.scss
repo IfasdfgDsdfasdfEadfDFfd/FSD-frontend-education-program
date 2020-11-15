@@ -19,6 +19,11 @@
   font-size: 14px;
 }
 
+.element-wrapper__item {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .element-wrapper__item--inline {
   display: flex;
   flex-flow: row nowrap;
