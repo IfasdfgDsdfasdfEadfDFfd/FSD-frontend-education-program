@@ -2,7 +2,8 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-sass-guidelines",
-    "stylelint-config-hudochenkov/full"
+    "stylelint-config-hudochenkov/full",
+    "stylelint-prettier/recommended"
   ],
   "plugins": [
     "stylelint-scss",
