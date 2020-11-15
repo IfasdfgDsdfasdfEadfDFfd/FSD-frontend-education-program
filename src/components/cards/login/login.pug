@@ -3,12 +3,12 @@ include ../../buttons/action-button.pug
 include ../link-footer-button.pug
 
 mixin login-card
-  .card.login-form
+  form.card.login-form
     h1
       | Войти
-    form.login-form__element
-      .login-form__element__block
-        +text-field({type: 'email', placeholder: 'Email'})
-        +text-field({type: 'password', placeholder: 'Пароль'})
+    .login-form__user-data
+      +text-field({type: 'email', placeholder: 'Email'})
+      +text-field({type: 'password', placeholder: 'Пароль'})
+    .login-form__buttons
       +action-button('войти')
-    +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
+      +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
