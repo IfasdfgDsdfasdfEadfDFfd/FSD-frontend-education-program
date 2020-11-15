@@ -4,4 +4,9 @@
   justify-content: space-between;
   min-height: 44px;
   line-height: 42px;
+
+  a:focus,
+  a:hover {
+    text-decoration: none;
+  }
 }
