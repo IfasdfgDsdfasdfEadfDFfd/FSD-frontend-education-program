@@ -1,6 +1,4 @@
 include ../dropdown/dropdown.pug
 
-mixin filter-date-dropdown(default_value)
-  .filter-date-dropdown.dropdown-container
-    +dropdown(default_value)
-    .dropdown-container__body
+mixin filter-date-dropdown
+  input.date-picker(type='text')

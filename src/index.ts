@@ -1,10 +1,11 @@
+import './components/header/header';
 import './components/text-field/text-field';
-import './components/dropdown/dropdown';
 import './components/range-slider/range-slider';
+import './components/date-picker/date-picker';
+import './components/dropdown/dropdown';
+import './components/counter/counter';
 import './components/dropdown-counter/dropdown-counter';
 import './components/expandable-checkbox-list/expandable-checkbox-list';
-import './components/counter/counter';
-import './components/header/header';
 
 import './index.scss';
 
