@@ -4,12 +4,19 @@
   gap: 20px;
 }
 
-.menu__item__text::first-letter {
-  text-transform: uppercase;
+.menu__item {
+  color: $dark-shade-50;
+  font-weight: normal;
+
+  &:hover {
+    color: $dark-shade-75;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 
-.menu__item--bold {
-  font-weight: bold;
+.menu__item__text::first-letter {
+  text-transform: uppercase;
 }
 
 .menu__item--expandable {

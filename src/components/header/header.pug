@@ -9,7 +9,7 @@ mixin header(isSigned=false, attached=false)
   header.header.container(id=header_id)
     +logo
     .header__right
-      +menu([ {text: 'о нас', primary: true}, {text: 'услуги', children: []}, {text: 'вакансии'}, {text: 'новости'}, {text: 'соглашения', children: []}, ])
+      +menu([ {text: 'о нас'}, {text: 'услуги', children: []}, {text: 'вакансии'}, {text: 'новости'}, {text: 'соглашения', children: []}, ])
       if isSigned
         +user('Юлий Цезарь')
       else
