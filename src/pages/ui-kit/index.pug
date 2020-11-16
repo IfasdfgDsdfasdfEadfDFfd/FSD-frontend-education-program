@@ -19,8 +19,6 @@ block body
   include ../../components/buttons/flat-button.pug
   include ../../components/buttons/action-button.pug
   include ../../components/pagination/pagination.pug
-  include ../../components/date-dropdown/date-dropdown.pug
-  include ../../components/filter-date-dropdown/filter-date-dropdown.pug
   include ../../components/subscription-text-field/subscription-text-field.pug
   include ../../components/counter/counter.pug
   include ../../components/dropdown-counter/dropdown-counter.pug
@@ -114,9 +112,7 @@ block body
         +element-wrapper({ label: 'masked text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
           +masked-text-field('ui-kit-masked-text-field-id')
       +element-wrapper({label: 'date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-        +date-dropdown
       +element-wrapper({ label: 'filter date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-        +filter-date-dropdown
       +element-wrapper({ label: 'subscription text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
         +subscription-text-field
 

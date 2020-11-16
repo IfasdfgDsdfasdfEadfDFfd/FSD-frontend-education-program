@@ -13,13 +13,13 @@ mixin account-registration-card
     +element-wrapper({label: '', sub_label: '', inline:false, extra_spacing: false, large_label: false})
       +text-field({type: 'text', placeholder: 'Имя'})
       +text-field({type: 'text', placeholder: 'Фамилия'})
-      +radio-buttons-group('user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
+      +radio-buttons-group('registration-user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
     +element-wrapper({label: 'Дата рождения', sub_label: '', inline:false, extra_spacing: false, large_label: false})
       +masked-text-field('account-registration-masked-text-field-id')
     +element-wrapper({label: 'данные для входа в сервис', sub_label: '', inline:false, extra_spacing: false, large_label: false})
       +text-field({type: 'email', placeholder: 'Email'})
       +text-field({type: 'password', placeholder: 'Пароль'})
-      +toggle('special-offers-toggle', 'recieve-special-offers')
+      +toggle('registration-special-offers-toggle', 'registration-recieve-special-offers')
         | Получать спецпредложения
     .account-registration__buttons
       +action-button('Перейти к оплате')
