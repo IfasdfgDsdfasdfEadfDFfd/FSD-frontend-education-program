@@ -16,8 +16,8 @@ block body
   include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 
   +header(false, true)
-  .search-room-body
-    aside
+  .search-room-body.container
+    aside.search-room-body__aside
       div
         h3
           | даты пребывания в отеле
@@ -44,12 +44,14 @@ block body
           | Ширина коридоров в номере
           | не менее 91 см.
         +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
-          | На 1 этаже вас стретит специалист и проводит до номера
+          | На 1 этаже вас стретит специалист и
+          br
+          | проводит до номера
 
       +dropdown-counter({ id: 'room-properties-1', placeholder: 'Параметры номера', counters: [{name: 'спальни', value: 0}, {name: 'кровати', value: 0}, {name: 'ванные комнаты', value: 0}], counting_way: 'apart', declensions: [ {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'}, {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'}, {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'}, ], opened: false, need_to_be_applied: false })
 
       +expandable-checkbox-list('дополнительные удобства', [ { text: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, }, { text: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, }, { text: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, }, { text: 'кроватка', name: 'crib', value: 'has-crib', checked: true, }, { text: 'телевизор', name: 'tv', value: 'has-tv', checked: false, }, { text: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, }, ], true)
-    main
+    main.search-room-body__main
       h1
         | Номера, которые мы для вас подобрали
       .search-room-body__catalog

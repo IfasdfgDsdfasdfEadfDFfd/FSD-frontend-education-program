@@ -60,7 +60,7 @@ a:active {
 .footer-mobile {
   gap: 20px;
   align-self: center;
-  max-width: $middle-size;
+  max-width: $middle-screen;
   padding-top: 120px;
   padding-bottom: 120px;
 
@@ -90,7 +90,7 @@ a:active {
   background-color: #fff;
 }
 
-@media (max-width: $large-size) {
+@media (max-width: $large-screen) {
   .footer hr {
     display: none;
   }
@@ -119,5 +119,15 @@ a:active {
 
   .ad-text {
     display: none;
+  }
+}
+
+@media (max-width: $small-screen) {
+  .footer__body {
+    padding-top: 0;
+  }
+
+  .footer__bottom {
+    padding-bottom: 30px;
   }
 }

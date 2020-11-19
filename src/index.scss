@@ -56,14 +56,14 @@ body {
   padding-left: 140px;
 }
 
-@media (max-width: $middle-size) {
+@media (max-width: $middle-screen) {
   .container {
     padding-right: 50px;
     padding-left: 50px;
   }
 }
 
-@media (max-width: $small-size) {
+@media (max-width: $small-screen) {
   .container {
     padding-right: 20px;
     padding-left: 20px;
