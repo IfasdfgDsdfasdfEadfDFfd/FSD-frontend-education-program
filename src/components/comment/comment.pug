@@ -2,12 +2,11 @@ include ../like-button/like-button.pug
 
 mixin comment(avatar_path, username, date, like_attrs)
   .comment
-    .comment__header
-      image.comment__header-avatar(src=avatar_path)
-      .comment__header-title
-        .comment__header-username= username
-        .comment__header-date= date
-    .comment__body
+    .comment__author
+      image.comment__avatar(src=avatar_path)
       +like-button(like_attrs.name, like_attrs.liked, like_attrs.like_count)
-      .comment__body-text
-        block
+    .comment__text
+      .comment__title
+        .comment__username= username
+        .comment__date= date
+      block
