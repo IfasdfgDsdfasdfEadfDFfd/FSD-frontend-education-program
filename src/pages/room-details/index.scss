@@ -4,15 +4,15 @@
   background-color: #fff;
 }
 
-.room-details__body__photos {
-  .room-details__body__photos-big {
-    float: left;
-  }
+.room-details__body__photos-big {
+  float: left;
+  width: 100%;
+  height: auto;
+}
 
-  .room-details__body__photos-lower-group {
-    display: flex;
-    flex-flow: column nowrap;
-  }
+.room-details__body__photos-lower-group {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .room-details__body__desc {
@@ -145,5 +145,29 @@
 
   > li:nth-child(4)::before {
     background-image: linear-gradient(#909090 0%, #3d4975 100%);
+  }
+}
+
+@media (max-width: $large-screen) {
+  .room-details__body__photos-lower-group {
+    display: none;
+  }
+}
+
+@media (max-width: $middle-screen) {
+  .room-details__body__desc {
+    flex-flow: column nowrap;
+  }
+
+  .room-details__body__desc__right {
+    align-self: center;
+  }
+}
+
+@media (max-width: $small-screen) {
+  .room-details__body__desc-row {
+    flex-flow: column nowrap;
+    gap: 10px;
+    align-items: center;
   }
 }

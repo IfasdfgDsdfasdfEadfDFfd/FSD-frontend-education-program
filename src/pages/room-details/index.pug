@@ -23,7 +23,7 @@ block body
         img.room-details__body__photos-lower(
           src='/static/room_888_details_2.webp'
         )
-    .room-details__body__desc
+    .room-details__body__desc.container
       .room-details__body__desc__left
         .room-details__body__desc-row
           +element-wrapper({ label: 'Сведения о номере', sub_label: '', inline: false, extra_spacing: true, large_label: true })
@@ -50,7 +50,7 @@ block body
               | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
               | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
               | не жаловался из соседей.
-            +comment('/static/comment_avatar_2.webp', 'Мурад Сарафанов', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
+            +comment('/static/comment_avatar_2.webp', 'Placeholder', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
               | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
               | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
