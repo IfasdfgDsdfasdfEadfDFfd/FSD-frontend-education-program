@@ -15,7 +15,8 @@
 		"ms-vscode.vscode-typescript-tslint-plugin",
 		"vscodevim.vim",
 		"esbenp.prettier-vscode",
-		"stylelint.vscode-stylelint"
+		"stylelint.vscode-stylelint",
+		"mhutchie.git-graph"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
