@@ -1,5 +1,5 @@
 mixin counter(id, index, text, initial_count=0)
-  .counter(id=id, data-index=index)
+  .counter(data-index=index, id=id)
     span.counter__text= text
     .counter__actions
       button.counter__btn.counter__minus= "-"

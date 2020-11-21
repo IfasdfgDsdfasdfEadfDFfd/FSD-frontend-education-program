@@ -3,8 +3,8 @@ mixin rate-button(name, count)
     - for (var x = 1; x <= 5; x++)
       - var value = x + " star" + (x > 1) ? "s" : "";
       input.rate-button__star(
-        type='radio',
+        checked=x == count,
         name=name,
-        value=value,
-        checked=x == count
+        type='radio',
+        value=value
       )

@@ -44,24 +44,27 @@ block body
                 li Хорошо
                 li Удовлетворительно
                 li Разочарован
-        +element-wrapper({ label: 'Отзывы поситителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
-          .room-details__body__comment-section
-            +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
-              | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
-              | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
-              | не жаловался из соседей.
-            +comment('/static/comment_avatar_2.webp', 'Placeholder', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
-              | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
-              | каждый день новое блюдо и десерт как комплимент
+        .room-details__body__desc-row
+          +element-wrapper({ label: 'Отзывы поситителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
+            .room-details__body__comment-section
+              +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
+                | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
+                | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
+                | не жаловался из соседей.
+              +comment('/static/comment_avatar_2.webp', 'Патрисия Стеклышкова', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
+                | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
+                | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
           +element-wrapper({ label: 'Правила', sub_label: '', inline: false, extra_spacing: true, large_label: true })
             +bullet-list([ 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00 ', ])
           +element-wrapper({ label: 'Отмена', sub_label: '', inline: false, extra_spacing: true, large_label: true })
-            pre
-              | Бесплатная отмена в течение 48 ч. После
-              | этого при отмене не позднее чем за 5 дн. до
-              | прибытия вы получите полный возврат за
-              | вычетом сбора за услуги
+            | Бесплатная отмена в течение 48 ч. После
+            br
+            | этого при отмене не позднее чем за 5 дн. до
+            br
+            | прибытия вы получите полный возврат за
+            br
+            | вычетом сбора за услуги
       .room-details__body__desc__right
         +book-a-room-card
   +footer

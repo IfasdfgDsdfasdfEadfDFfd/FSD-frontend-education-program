@@ -7,12 +7,19 @@
 .room-details__body__photos-big {
   float: left;
   width: 100%;
+  max-width: 981px;
   height: auto;
 }
 
 .room-details__body__photos-lower-group {
   display: flex;
   flex-flow: column nowrap;
+  max-width: 481px;
+}
+
+.room-details__body__photos-lower {
+  width: 100%;
+  height: auto;
 }
 
 .room-details__body__desc {
@@ -33,14 +40,6 @@
   display: flex;
   flex-flow: row nowrap;
   gap: 100px;
-}
-
-.room-details__body__comment-section {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding-top: 7px;
 }
 
 .room-impressions {
@@ -66,8 +65,8 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  width: 96%;
-  height: 96%;
+  width: 90%;
+  height: 90%;
   border-radius: 50%;
   background-color: #fff;
   color: $purple-color;
@@ -148,7 +147,19 @@
   }
 }
 
+.room-details__body__comment-section {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-top: 7px;
+}
+
 @media (max-width: $large-screen) {
+  .room-details__body__photos-big {
+    max-width: 100%;
+  }
+
   .room-details__body__photos-lower-group {
     display: none;
   }
@@ -165,6 +176,10 @@
 }
 
 @media (max-width: $small-screen) {
+  .room-details__body__desc__left {
+    gap: 30px;
+  }
+
   .room-details__body__desc-row {
     flex-flow: column nowrap;
     gap: 10px;

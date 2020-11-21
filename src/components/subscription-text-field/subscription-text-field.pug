@@ -1,5 +1,11 @@
 mixin subscription-text-field
-  form.subscription-text-field(aciton='POST', href='#')
-    input.subscription-text-field__input(type='email', placeholder='Email')
+  form.subscription-text-field(
+    aciton='POST',
+    href='#'
+  )
+    input.subscription-text-field__input(
+      placeholder='Email',
+      type='email'
+    )
     button.subscription-text-field__push-button(type='submit')
       | arrow_forward

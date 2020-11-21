@@ -4,10 +4,10 @@ mixin radio-buttons-group(group_name, items)
       - var id = group_name + item.value + "-id";
         .radio-button
           input.radio-button__element(
-            type='radio',
-            value=item.value,
-            name=group_name,
+            checked=item.checked,
             id=id,
-            checked=item.checked
+            name=group_name,
+            type='radio',
+            value=item.value
           )
           label.radio-button__label(for=id)= item.value

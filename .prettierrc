@@ -15,7 +15,9 @@
     {
       "files": "*.pug",
       "options": {
-        "pugWrapAttributesThreshold": 3
+        "pugSortAttributes": "asc",
+        "pugWrapAttributesThreshold": 1,
+        "pugWrapAttributesPattern": "2"
       }
     }
   ]

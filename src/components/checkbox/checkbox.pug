@@ -2,11 +2,11 @@ mixin checkbox(name, value, checked=false)
   - var id = name + "-id";
   .checkbox
     input.checkbox__element(
-      type='checkbox',
+      checked=checked,
       id=id,
       name=name,
-      value=value,
-      checked=checked
+      type='checkbox',
+      value=value
     )
     label.checkbox__label(for=id)
       block

@@ -7,17 +7,17 @@ mixin range-slider(label, name, opts)
       span(id="display-for-" + id)
     .range-slider(id=id)
       input.range-slider__element.range-slider__element-left(
-        type='range',
-        min=opts.min,
         max=opts.max,
+        min=opts.min,
         step=opts.step,
+        type='range',
         value=opts.left
       )
       input.range-slider__element.range-slider__element-right(
-        type='range',
-        min=opts.min,
         max=opts.max,
+        min=opts.min,
         step=opts.step,
+        type='range',
         value=opts.right
       )
 
