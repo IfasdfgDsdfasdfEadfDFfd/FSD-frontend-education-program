@@ -178,12 +178,11 @@ block body
 
     .form-elements__container
       +element-wrapper({ label: 'rich checkbox buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
-        +rich-checkbox('Широкий коридор', 'wide-corridor')
-          | Ширина коридоров в номере
-          | не менее 91 см.
-
-        +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
-          | На 1 этаже вас стретит специалист и проводит до номера
+        .form-elements__rich-checkbox-group
+          +rich-checkbox('Широкий коридор', 'wide-corridor')
+            | Ширина коридоров в номере не менее 91 см.
+          +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
+            | На 1 этаже вас стретит специалист и проводит до номера
 
     .form-elements__container
       +element-wrapper({ label: 'bullet list', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
