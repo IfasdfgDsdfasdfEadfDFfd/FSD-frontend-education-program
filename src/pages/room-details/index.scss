@@ -4,17 +4,21 @@
   background-color: #fff;
 }
 
+.room-details__body__photos {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
 .room-details__body__photos-big {
-  float: left;
-  width: 100%;
-  max-width: 981px;
+  width: 68%;
   height: auto;
 }
 
 .room-details__body__photos-lower-group {
   display: flex;
   flex-flow: column nowrap;
-  max-width: 481px;
+  width: 32%;
+  height: auto;
 }
 
 .room-details__body__photos-lower {
@@ -159,10 +163,6 @@
 @media (max-width: $large-screen) {
   .room-details__body__photos-big {
     max-width: 100%;
-  }
-
-  .room-details__body__photos-lower-group {
-    display: none;
   }
 }
 
