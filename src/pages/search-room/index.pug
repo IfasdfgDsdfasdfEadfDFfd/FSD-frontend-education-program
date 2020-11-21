@@ -30,20 +30,17 @@ block body
       div
         h3
           | checkbox buttons
-        +checkbox('allow-smoking', 'allow-smoking', false)
-          | Можно курить
-        +checkbox('allow-pets', 'allow-pets', true)
-          | Можно с питомцами
-        +checkbox('allow-guests', 'allow-guests', true)
-          | Можно пригласить гостей (до 10 человек)
+        +checkbox('allow-smoking', 'allow-smoking', 'Можно курить')
+        +checkbox('allow-pets', 'allow-pets', 'Можно с питомцами', true)
+        +checkbox('allow-guests', 'allow-guests', 'Можно пригласить гостей (до 10 человек)', true)
 
       div
         h3
           | доступность
-        +rich-checkbox('Широкий коридор', 'wide-corridor')
+        +checkbox('wide-corridor', 'wide-corridor', 'Широкий коридор')
           | Ширина коридоров в номере
           | не менее 91 см.
-        +rich-checkbox('Помощник для инвалидов', 'assistant for disabled')
+        +checkbox('assistant for disabled', 'assistant for disabled', 'Помощник для инвалидов')
           | На 1 этаже вас стретит специалист и
           br
           | проводит до номера

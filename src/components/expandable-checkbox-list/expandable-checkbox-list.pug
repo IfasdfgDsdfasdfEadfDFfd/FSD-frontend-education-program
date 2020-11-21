@@ -9,5 +9,4 @@ mixin expandable-checkbox-list(title, checkboxes, closed)
     ul.expandable-checkbox-list__items-container
       each checkbox in checkboxes
         li
-          +checkbox(checkbox.name, checkbox.value, checkbox.checked)
-            | #{checkbox.text}
+          +checkbox(checkbox.name, checkbox.value, checkbox.text, checkbox.checked)

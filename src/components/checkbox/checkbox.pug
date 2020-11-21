@@ -1,12 +1,14 @@
-mixin checkbox(name, value, checked=false)
+mixin checkbox(name, value, label, checked=false)
   - var id = name + "-id";
   .checkbox
-    input.checkbox__element(
-      checked=checked,
-      id=id,
-      name=name,
-      type='checkbox',
-      value=value
-    )
-    label.checkbox__label(for=id)
+    .checkbox__body
+      input.checkbox__element(
+        checked=checked,
+        id=id,
+        name=name,
+        type='checkbox',
+        value=value
+      )
+      label.checkbox__label(for=id)= label
+    span.checkbox__desc
       block
