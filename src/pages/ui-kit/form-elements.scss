@@ -27,6 +27,12 @@
   gap: 10px;
 }
 
+.form-elements__rich-checkbox-group {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
 .form-elements__toggle-group {
   display: flex;
   flex-flow: column nowrap;
