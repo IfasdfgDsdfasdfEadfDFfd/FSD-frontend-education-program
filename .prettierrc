@@ -5,12 +5,17 @@
   "singleQuote": true,
   "bracketSpacing": true,
   "arrowParens": "avoid",
-
   "overrides": [
     {
       "files": "*.scss",
       "options": {
         "singleQuote": false
+      }
+    },
+    {
+      "files": "*.pug",
+      "options": {
+        "pugWrapAttributesThreshold": 3
       }
     }
   ]
