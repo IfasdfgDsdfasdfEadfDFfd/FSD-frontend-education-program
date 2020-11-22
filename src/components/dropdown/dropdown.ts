@@ -19,8 +19,4 @@ dropdowns.forEach(dropdown => {
       dropdown.classList.toggle(openClassName);
     }
   });
-
-  dropdown.querySelector('.dropdown')?.addEventListener('blur', () => {
-    dropdown.classList.remove(openClassName);
-  });
 });

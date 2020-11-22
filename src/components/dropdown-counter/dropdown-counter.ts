@@ -71,15 +71,6 @@ dropdownElements.forEach(dropdown => {
 
   store.dispatch({ name: '@COLD_START' });
 
-  button?.addEventListener('click', () => {
-    const className = 'dropdown-counter--closed';
-    if (dropdown.classList.contains(className)) {
-      dropdown.classList.remove(className);
-    } else {
-      dropdown.classList.add(className);
-    }
-  });
-
   const cancelButton = dropdown?.querySelector(
     '.form-action-buttons__cancel-button',
   );
