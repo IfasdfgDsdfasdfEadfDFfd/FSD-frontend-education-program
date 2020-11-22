@@ -32,6 +32,7 @@ module.exports = {
 
   externals: {
     jquery: 'jQuery',
+    datepicker: 'air-datepicker',
   },
 
   // don't foget about dots...

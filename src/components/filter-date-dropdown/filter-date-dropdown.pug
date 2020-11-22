@@ -1,4 +1,8 @@
 include ../dropdown/dropdown.pug
+include ../calendar/calendar.pug
 
 mixin filter-date-dropdown
-  input.date-picker(type='text')
+  .filter-date-dropdown.dropdown-container
+    +dropdown
+    .dropdown-container__body
+      +calendar

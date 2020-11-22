@@ -22,6 +22,7 @@ block body
   include ../../components/subscription-text-field/subscription-text-field.pug
   include ../../components/counter/counter.pug
   include ../../components/dropdown-counter/dropdown-counter.pug
+  include ../../components/filter-date-dropdown/filter-date-dropdown.pug
   include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
   include ../../components/bullet-list/bullet-list.pug
   include ../../components/top-feature/top-feature.pug
@@ -123,6 +124,7 @@ block body
           +masked-text-field('ui-kit-masked-text-field-id')
       +element-wrapper({label: 'date dropdown', })
       +element-wrapper({ label: 'filter date dropdown', })
+        +filter-date-dropdown()
       +element-wrapper({ label: 'subscription text field', })
         +subscription-text-field
 

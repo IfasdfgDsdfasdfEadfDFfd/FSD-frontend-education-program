@@ -1,1 +1,3 @@
-declare module '@dmuy/datepicker';
+interface JQuery {
+  datepicker(options: any): JQuery;
+}

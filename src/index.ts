@@ -1,5 +1,6 @@
 import './components/header/header';
 import './components/text-field/text-field';
+import './components/calendar/calendar';
 import './components/range-slider/range-slider';
 import './components/dropdown/dropdown';
 import './components/counter/counter';
