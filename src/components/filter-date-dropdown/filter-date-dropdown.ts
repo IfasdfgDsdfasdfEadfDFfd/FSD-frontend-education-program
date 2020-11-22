@@ -10,7 +10,7 @@ $('.filter-date-dropdown').each(function () {
     dateFormat: 'dd M',
     multipleDatesSeparator: separator,
     onSelect: (dateFormatted: string) => {
-      $valueContainer.text(dateFormatted);
+      $valueContainer.text(dateFormatted.toLowerCase());
     },
   });
 });
