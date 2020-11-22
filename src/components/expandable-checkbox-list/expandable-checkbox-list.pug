@@ -1,12 +1,9 @@
-include ../checkbox/checkbox.pug
+include ../checkbox-list/checkbox-list.pug
 
-mixin expandable-checkbox-list(title, checkboxes, closed)
-  - var closed_class = closed ? "expandable-checkbox-list--closed" : "";
-
-  .expandable-checkbox-list(class=closed_class)
-    button.expandable-checkbox-list__button= title
-
-    ul.expandable-checkbox-list__items-container
-      each checkbox in checkboxes
-        li
-          +checkbox(checkbox.name, checkbox.value, checkbox.text, checkbox.checked)
+mixin expandable-checkbox-list(title, checkboxes, opened)
+  .expandable-checkbox-list.dropdown-container(class=opened ? "dropdown-container--opened" : "")
+    +dropdown
+      h3
+        | #{title}
+    .dropdown-container__body
+      +checkbox-list(checkboxes)

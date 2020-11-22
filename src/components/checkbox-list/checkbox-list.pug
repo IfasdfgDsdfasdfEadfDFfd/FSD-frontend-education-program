@@ -1,0 +1,5 @@
+mixin checkbox-list(params)
+  ul.checkbox-list
+    each item in params
+      li.checkbox-list__item
+        +checkbox(item.name, item.value, item.label, item.checked)

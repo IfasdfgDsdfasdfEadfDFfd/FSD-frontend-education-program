@@ -21,10 +21,31 @@ block body
         h3
           | даты пребывания в отеле
         +filter-date-dropdown('19 авг - 23 авг')
-      +dropdown-counter({ id: 'guests-counter-1', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
-
-      +range-slider('диапозон цены', 'cost-range-slider', { min: 0, max: 15000, step: 100, left: 5000, right: 10000, })
-        | Стоимость за сутки пребывания в номере
+        +dropdown-counter({
+          id: 'guests-counter-1',
+          placeholder: 'Сколько гостей',
+          counters: [
+            {name: 'взрослые', value: 0},
+            {name: 'дети', value: 0},
+            {name: 'младенцы', value: 0}
+          ],
+          counting_way: 'sum',
+          declensions: {
+            'singular': 'гость',
+            'genitive': 'гостя',
+            'plural': 'гостей'
+          },
+          opened: false,
+          need_to_be_applied: true 
+        })
+        +range-slider('диапозон цены', 'cost-range-slider', {
+          min: 0,
+          max: 15000,
+          step: 100,
+          left: 5000,
+          right: 10000,
+        })
+          | Стоимость за сутки пребывания в номере
 
       div
         h3
@@ -41,12 +62,54 @@ block body
           | не менее 91 см.
         +checkbox('assistant for disabled', 'assistant for disabled', 'Помощник для инвалидов')
           | На 1 этаже вас стретит специалист и
-          br
           | проводит до номера
 
-      +dropdown-counter({ id: 'room-properties-1', placeholder: 'Параметры номера', counters: [{name: 'спальни', value: 0}, {name: 'кровати', value: 0}, {name: 'ванные комнаты', value: 0}], counting_way: 'apart', declensions: [ {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'}, {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'}, {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'}, ], opened: false, need_to_be_applied: false })
+      +dropdown-counter({
+        id: 'room-properties-1',
+        placeholder: 'Параметры номера',
+        counters: [
+          {
+            name: 'спальни',
+            value: 0,
+          },
+          {
+            name: 'кровати',
+            value: 0
+          },
+          {
+            name: 'ванные комнаты',
+            value: 0
+          }
+        ],
+        counting_way: 'apart',
+        declensions: [
+          {
+            singular: 'спальня',
+            genitive: 'спальни',
+            plural: 'спален'
+          },
+          {
+            singular: 'кровать',
+            genitive: 'кровати',
+            plural: 'кроватей'
+          },
+          {
+            singular: 'ванная комната',
+            genitive: 'ванные комнаты',
+            plural: 'ванных комнат'
+          },
+        ], opened: false, need_to_be_applied: false })
 
-      +expandable-checkbox-list('дополнительные удобства', [ { text: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, }, { text: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, }, { text: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, }, { text: 'кроватка', name: 'crib', value: 'has-crib', checked: true, }, { text: 'телевизор', name: 'tv', value: 'has-tv', checked: false, }, { text: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, }, ], true)
+      +expandable-checkbox-list(
+        'Дополнительные удобства', [
+          { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, },
+          { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
+          { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
+          { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
+          { label: 'телевизор', name: 'tv', value: 'has-tv', checked: false, },
+          { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, },
+        ], true)
+
     main.search-room-body__main
       h1
         | Номера, которые мы для вас подобрали

@@ -7,7 +7,13 @@ mixin dropdown-counter(attrs)
 
   .dropdown-container(class=opened_class_name)
     .dropdown-counter(id=attrs.id)
-      +dropdown(attrs.placeholder, { 'data-placeholder': attrs.placeholder, 'data-counting-way': attrs.counting_way, 'data-declensions': attrs.declensions, })
+      +dropdown({
+          'data-placeholder': attrs.placeholder,
+          'data-counting-way': attrs.counting_way,
+          'data-declensions': attrs.declensions,
+      })
+        span.dropdown-counter__text
+          | #{attrs.placeholder}
 
       .dropdown-container__body
         ul.dropdown-counter__list

@@ -4,7 +4,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   min-width: 100%;
-  padding: 12px;
+  padding: 0;
   border: 0;
   border-radius: inherit;
   background-color: #fff;
@@ -13,15 +13,6 @@
   font-family: "Montserrat", sans-serif;
   line-height: 24px;
   appearance: none;
-  appearance: none;
-  appearance: none;
-}
-
-.dropdown__text {
-  overflow: hidden;
-  max-width: 71%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .dropdown__arrow {

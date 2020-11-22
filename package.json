@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/gugfug/FSD-frontend-education-program#readme",
   "devDependencies": {
-    "@prettier/plugin-pug": "^1.10.1",
     "@types/cleave.js": "^1.4.3",
     "@types/jest": "^26.0.5",
     "@types/jquery": "^3.5.4",

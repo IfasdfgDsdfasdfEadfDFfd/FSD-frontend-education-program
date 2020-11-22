@@ -1,5 +1,4 @@
-mixin dropdown(text, attrs)
+mixin dropdown(attrs)
   button.dropdown&attributes(attrs)
-    span.dropdown__text
-      | #{text}
+    block
     span.dropdown__arrow= "expand_more"
