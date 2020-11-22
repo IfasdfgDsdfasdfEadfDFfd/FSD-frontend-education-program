@@ -1,9 +1,9 @@
 import { store, actions } from '../counter/counter';
 
 const dropdownElements = Array(
-  ...((document.getElementsByClassName('dropdown-counter') as unknown) as Array<
-    HTMLElement
-  >),
+  ...((document.getElementsByClassName(
+    'dropdown-counter',
+  ) as unknown) as Array<HTMLElement>),
 );
 
 dropdownElements.forEach(dropdown => {
@@ -88,9 +88,7 @@ dropdownElements.forEach(dropdown => {
   cancelButton?.addEventListener('click', () => {
     store.dispatch({
       name: actions.RESET,
-      value: Array(...((counters as unknown) as Array<HTMLElement>)).map(
-        counter => counter.id,
-      ),
+      value: Array.from(counters).map(counter => counter.id),
     });
     dropdown.click();
   });

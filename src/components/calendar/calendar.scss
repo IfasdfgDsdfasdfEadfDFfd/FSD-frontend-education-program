@@ -9,4 +9,8 @@
 .calendar__element {
   width: 100%;
   border: 0;
+
+  .datepicker--nav-title {
+    justify-content: center;
+  }
 }
