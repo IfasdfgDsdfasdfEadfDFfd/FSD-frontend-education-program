@@ -1,4 +1,4 @@
-mixin checkbox(name, value, label, checked=false)
+mixin checkbox(name, value, label, desc, checked=false)
   - var id = name + "-id";
   .checkbox
     .checkbox__body
@@ -10,5 +10,6 @@ mixin checkbox(name, value, label, checked=false)
         value=value
       )
       label.checkbox__label(for=id)= label
-    span.checkbox__desc
-      block
+    if desc
+      span.checkbox__desc
+        | #{desc}

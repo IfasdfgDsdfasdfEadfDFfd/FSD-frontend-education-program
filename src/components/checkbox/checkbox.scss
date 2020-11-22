@@ -1,6 +1,7 @@
 .checkbox {
   display: flex;
   flex-flow: column nowrap;
+  gap: 5px;
   max-width: 250px;
 }
 
@@ -48,7 +49,6 @@
 
 .checkbox__desc {
   display: block;
-  margin-top: 5px;
   padding-left: 30px;
   color: $dark-shade-50;
   font-size: 12px;

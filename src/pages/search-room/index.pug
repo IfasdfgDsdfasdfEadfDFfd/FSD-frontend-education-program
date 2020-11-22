@@ -50,19 +50,43 @@ block body
       div
         h3
           | checkbox buttons
-        +checkbox('allow-smoking', 'allow-smoking', 'Можно курить')
-        +checkbox('allow-pets', 'allow-pets', 'Можно с питомцами', true)
-        +checkbox('allow-guests', 'allow-guests', 'Можно пригласить гостей (до 10 человек)', true)
+        +checkbox-list([
+          {
+            name: 'allow-smoking',
+            value: 'allow-smoking',
+            label: 'Можно курить'
+          },
+          {
+            name: 'allow-pets',
+            value: 'allow-pets',
+            label: 'Можно с питомцами',
+            checked: true,
+          },
+          {
+            name: 'allow-guests',
+            value: 'allow-guests',
+            label: 'Можно пригласить гостей (до 10 человек)',
+            checkbed: true,
+          }
+        ])
 
       div
         h3
           | доступность
-        +checkbox('wide-corridor', 'wide-corridor', 'Широкий коридор')
-          | Ширина коридоров в номере
-          | не менее 91 см.
-        +checkbox('assistant for disabled', 'assistant for disabled', 'Помощник для инвалидов')
-          | На 1 этаже вас стретит специалист и
-          | проводит до номера
+        +checkbox-list([
+          {
+            name: 'wide-corridor',
+            value: 'wide-corridor',
+            label: 'широкий коридор',
+            desc: 'Ширина коридоров в номере не менее 91 см.'
+          },
+          {
+            name: 'assistant-for-disabled',
+            value: 'assistant-for-disabled',
+            label: 'Помощник для инвалидов',
+            desc: 'На 1 этаже вас стретит специалист и проводит до номера'
+          }
+        ])
 
       +dropdown-counter({
         id: 'room-properties-1',
