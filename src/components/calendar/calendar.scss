@@ -9,8 +9,16 @@
 .calendar__element {
   width: 100%;
   border: 0;
+  font-family: "Montserrat";
+
+  .datepicker--nav {
+    border-bottom: 0;
+  }
 
   .datepicker--nav-title {
-    justify-content: center;
+    color: $dark-shade-100;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
   }
 }
