@@ -102,44 +102,73 @@ block body
   .toolbox.container.form-elements
     .form-elements__container
       .form-elements__text-fields
-        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT', extra_spacing: false, inline: false, large_label: false, })
+        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT', })
           +text-field({type: 'email', placeholder: 'Email'})
-        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS', extra_spacing: false, inline: false, large_label: false, })
+        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS', })
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
-        +element-wrapper({ label: 'dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-          +dropdown-counter({ id: 'guests-counter-1', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
-        +element-wrapper({ label: 'masked text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
+        +element-wrapper({ label: 'dropdown', })
+          +dropdown-counter({
+            id: 'guests-counter-1',
+            placeholder: 'Сколько гостей',
+            counters: [
+              {name: 'взрослые', value: 0},
+              {name: 'дети', value: 0},
+              {name: 'младенцы', value: 0}
+            ],
+            counting_way: 'sum',
+            declensions: {singular: 'гость', genitive: 'гостя', plural: 'гостей'},
+            opened: false, need_to_be_applied: true,
+          })
+        +element-wrapper({ label: 'masked text field', })
           +masked-text-field('ui-kit-masked-text-field-id')
-      +element-wrapper({label: 'date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-      +element-wrapper({ label: 'filter date dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-      +element-wrapper({ label: 'subscription text field', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
+      +element-wrapper({label: 'date dropdown', })
+      +element-wrapper({ label: 'filter date dropdown', })
+      +element-wrapper({ label: 'subscription text field', })
         +subscription-text-field
 
     .form-elements__container
-      +element-wrapper({ label: 'checkbox buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+      +element-wrapper({ label: 'checkbox buttons', extra_spacing: true, })
         .form-elements__checkbox-group
-          +checkbox('allow-smoking', 'allow-smoking', 'Можно курить', false)
-          +checkbox('allow-pets', 'allow-pets', 'Можно с питомцами', true)
-          +checkbox('allow-guests', 'allow-guests', 'Можно пригласить гостей (до 10 человек)', true)
-      +element-wrapper({ label: 'radio buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+          +checkbox-list([
+            {
+              name: 'allow-smoking',
+              value: 'allow-smoking',
+              label: 'Можно курить'
+            },
+            {
+              name: 'allow-pets',
+              value: 'allow-pets',
+              label: 'Можно с питомцами',
+              checked: true,
+            },
+            {
+              name: 'allow-guests',
+              value: 'allow-guests',
+              label: 'Можно пригласить гостей (до 10 человек)',
+              checked: true,
+            },
+          ])
+      +element-wrapper({ label: 'radio buttons', extra_spacing: true, })
         +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
-      +element-wrapper({ label: 'toggle', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+      +element-wrapper({ label: 'toggle', extra_spacing: true, })
         .form-elements__toggle-group
           +toggle('special-offers-toggle_1', 'recieve-special-offers', true)
             | Получать спецпредложения
           +toggle('special-offers-toggle_2', 'recieve-special-offers')
             | Получать спецпредложения
-      +element-wrapper({ label: 'like button', sub_label: '', extra_spacing: true, inline: true, large_label: false, })
+      +element-wrapper({ label: 'like button', extra_spacing: true, inline: true, })
         +like-button('like-1', false, '2')
         +like-button('like-2', true, '12')
-      +element-wrapper({ label: 'rate button', sub_label: '', extra_spacing: true, inline: true, large_label: false, })
+      +element-wrapper({ label: 'rate button', extra_spacing: true, inline: true, })
         +rate-button('ui-kit-rate-buttons-1', 4)
         +rate-button('ui-kit-rate-buttons-2', 5)
 
     .form-elements__container
-      +element-wrapper({ label: '', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-        +range-slider('range slider', 'cost-range-slider', { min: 0, max: 15000, step: 100, left: 5000, right: 10000, })
-      +element-wrapper({ label: 'buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+      +element-wrapper
+        +range-slider('range slider', 'cost-range-slider', {
+          min: 0, max: 15000, step: 100, left: 5000, right: 10000,
+        })
+      +element-wrapper({ label: 'buttons', extra_spacing: true, })
         .form-elements__buttons
           .form-elements__buttons__row
             +button('click me')
@@ -152,44 +181,109 @@ block body
             +flat-button('click me', true)
           .form-elements__buttons__row
             +action-button('Перейти к оплате')
-      +element-wrapper({ label: 'pagination', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+      +element-wrapper({ label: 'pagination', extra_spacing: true, })
         +pagination('1 - 12 из 100+ вариантов аренды')
 
-    .form-elements__container.form-elements__narrow
-      +element-wrapper({ label: 'dropdown', sub_label: 'DEFAULT', extra_spacing: false, inline: false, large_label: false, })
-        +dropdown-counter({ id: 'room-properties-1', placeholder: 'Параметры номера', counters: [{name: 'спальни', value: 2}, {name: 'кровати', value: 2}, {name: 'вынные комнаты', value: 1}], counting_way: 'apart', declensions: [ {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'}, {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'}, {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'}, ], opened: false, need_to_be_applied: false })
-      +element-wrapper({ label: 'dropdown', sub_label: 'EXPANDED', extra_spacing: false, inline: false, large_label: false, })
-        +dropdown-counter({ id: 'room-properties-2', placeholder: 'Параметры номера', counters: [{name: 'спальни', value: 2}, {name: 'кровати', value: 2}, {name: 'вынные комнаты', value: 0}], counting_way: 'apart', declensions: [ {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'}, {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'}, {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'}, ], opened: true, need_to_be_applied: false })
+    .form-elements__container.form-elements__container--narrow
+      +element-wrapper({ label: 'dropdown', sub_label: 'DEFAULT', })
+        +dropdown-counter({
+          id: 'room-properties-1', placeholder: 'Параметры номера',
+          counters: [
+            {name: 'спальни', value: 2},
+            {name: 'кровати', value: 2},
+            {name: 'вынные комнаты', value: 1}
+          ], counting_way: 'apart', declensions: [
+            {singular: 'спальня', genitive: 'спальни', plural: 'спален'},
+            {singular: 'кровать', genitive: 'кровати', plural: 'кроватей'},
+            {singular: 'ванная комната', genitive: 'ванные комнаты', plural: 'ванных комнат'},
+          ], opened: false, need_to_be_applied: false
+        })
+      +element-wrapper({ label: 'dropdown', sub_label: 'EXPANDED', })
+        +dropdown-counter({ id: 'room-properties-2', placeholder: 'Параметры номера',
+          counters: [
+            {name: 'спальни', value: 2},
+            {name: 'кровати', value: 2},
+            {name: 'вынные комнаты', value: 0}
+          ], counting_way: 'apart', declensions: [
+            {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
+            {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
+            {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
+          ], opened: true, need_to_be_applied: false
+        })
 
     .form-elements__container
       +element-wrapper({ label: 'dropdown', })
-        +dropdown-counter({ id: 'guests-counter-2', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: true, need_to_be_applied: true })
+        +dropdown-counter({ id: 'guests-counter-2', placeholder: 'Сколько гостей',
+          counters: [
+            {name: 'взрослые', value: 0},
+            {name: 'дети', value: 0},
+            {name: 'младенцы', value: 0}
+          ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+          opened: true, need_to_be_applied: true
+        })
     .form-elements__container
-      +element-wrapper({ label: 'dropdown', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-        +dropdown-counter({ id: 'guests-counter-3', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 2}, {name: 'дети', value: 1}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: true, need_to_be_applied: true })
+      +element-wrapper({ label: 'dropdown', })
+        +dropdown-counter({ id: 'guests-counter-3', placeholder: 'Сколько гостей',
+          counters: [
+            {name: 'взрослые', value: 2},
+            {name: 'дети', value: 1},
+            {name: 'младенцы', value: 0}
+          ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+          opened: true, need_to_be_applied: true
+        })
+
+    .form-elements__container.form-elements__container--narrow
+      +expandable-checkbox-list('expandable checkbox list', [
+        { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
+        { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
+        { label: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, },
+        { label: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, },
+        { label: 'телевизор', name: 'tv-0', value: 'has-tv', },
+        { label: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', },
+      ], false)
+      +expandable-checkbox-list('expandable checkbox list', [
+        { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', },
+        { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
+        { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
+        { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
+        { label: 'телевизор', name: 'tv', value: 'has-tv', },
+        { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', },
+      ], true)
 
     .form-elements__container
-      +expandable-checkbox-list('expandable checkbox list', [ { text: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', checked: false, }, { text: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, }, { text: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, }, { text: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, }, { text: 'телевизор', name: 'tv-0', value: 'has-tv', checked: false, }, { text: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', checked: false, }, ], true)
-      +expandable-checkbox-list('expandable checkbox list', [ { text: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, }, { text: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, }, { text: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, }, { text: 'кроватка', name: 'crib', value: 'has-crib', checked: true, }, { text: 'телевизор', name: 'tv', value: 'has-tv', checked: false, }, { text: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, }, ], false)
-
-    .form-elements__container
-      +element-wrapper({ label: 'rich checkbox buttons', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
+      +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true, })
         .form-elements__rich-checkbox-group
-          +checkbox('wide-corridor', 'wide-corridor', 'Широкий коридор')
-            | Ширина коридоров в номере не менее 91 см.
-          +checkbox('assistant for disabled', 'assistant for disabled', 'Помощник для инвалидов')
-            | На 1 этаже вас стретит специалист и проводит до номера
+          +checkbox-list([
+            {
+              name: 'wide-corridor',
+              value: 'wide-corridor',
+              label: 'Широкий коридор',
+              desc: 'Ширина коридоров в номере не менее 91 см.'
+            },
+            {
+              name: 'wide-corridor',
+              value: 'wide-corridor',
+              label: 'Широкий коридор',
+              desc: 'На 1 этаже вас стретит специалист и проводит до номера'
+            },
+          ])
 
     .form-elements__container
-      +element-wrapper({ label: 'bullet list', sub_label: '', extra_spacing: true, inline: false, large_label: false, })
-        +bullet-list([ 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00' ])
+      +element-wrapper({ label: 'bullet list', extra_spacing: true, })
+        +bullet-list([
+          'Нельзя с питомцами',
+          'Без вечеринок и мероприятий',
+          'Время прибытия — после 13:00, а выезд до 12:00'
+        ])
 
-    +element-wrapper({ label: '', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
+    +element-wrapper
       +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
       +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
 
     .form-elements__comment-container
-      +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like', liked: true, like_count: '12'})
+      +comment('/static/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {
+        name: 'comment-like', liked: true, like_count: '12'
+      })
         | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
         | не жаловался из соседей.

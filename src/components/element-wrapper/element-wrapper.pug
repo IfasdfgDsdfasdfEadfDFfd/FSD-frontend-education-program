@@ -1,4 +1,5 @@
 mixin element-wrapper(attrs)
+  - var attrs = attrs ? attrs : {}
   - var inline_class_name = attrs.inline ? "element-wrapper__item--inline" : "";
   - var extra_spacing_class_name = attrs.extra_spacing ? "element-wrapper__label--extra-spacing" : "";
   - var large_sub_label_class_name = attrs.large_label ? "element-wrapper__sub-label--large" : "";
