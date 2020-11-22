@@ -1,4 +1,5 @@
 .calendar-container {
+  width: 320px;
   margin-top: 5px;
   padding: 20px;
   border: 1px solid $dark-shade-25;
@@ -12,6 +13,7 @@
   font-family: "Montserrat";
 
   .datepicker--nav {
+    padding: 0;
     border-bottom: 0;
   }
 
@@ -22,11 +24,22 @@
     text-align: center;
   }
 
+  .datepicker--content {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+
   .datepicker--day-name {
-    width: 40px;
     height: 40px;
     color: $purple-color;
     font-weight: bold;
+    font-size: 12px;
+    font-family: "Montserrat";
+  }
+
+  .datepicker--cell {
+    height: 40px;
+    border-radius: 50%;
     font-size: 12px;
     font-family: "Montserrat";
   }
