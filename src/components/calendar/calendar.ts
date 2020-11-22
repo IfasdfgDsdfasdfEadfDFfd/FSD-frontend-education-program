@@ -8,7 +8,7 @@ const initCalendar = (
       inline: true,
       range: true,
       navTitles: {
-        days: 'MM<br/>yyyy',
+        days: 'MM yyyy',
         months: 'yyyy',
         years: 'yyyy1 - yyyy2',
       },
