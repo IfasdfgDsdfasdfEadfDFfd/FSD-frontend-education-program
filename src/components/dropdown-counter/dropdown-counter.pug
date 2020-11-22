@@ -16,11 +16,12 @@ mixin dropdown-counter(attrs)
           | #{attrs.placeholder}
 
       .dropdown-container__body
-        ul.dropdown-counter__list
-          each counter, index in attrs.counters
-            li.dropdown-counter__list__item
-              - var _id = attrs.id + "-" + index;
-              +counter(_id, index, counter.name, counter.value)
+        .dropdown-counter__list
+          ul.dropdown-counter__counters
+            each counter, index in attrs.counters
+              li.dropdown-counter__counter
+                - var _id = attrs.id + "-" + index;
+                +counter(_id, index, counter.name, counter.value)
 
           if attrs.need_to_be_applied
             +form-action-buttons

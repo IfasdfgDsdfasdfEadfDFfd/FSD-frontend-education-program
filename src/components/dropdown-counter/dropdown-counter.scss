@@ -14,7 +14,7 @@
 
 .dropdown-counter__list {
   width: 100%;
-  padding: 5px 7px 0 15px;
+  padding: 5px 7px 13px 15px;
   border: 1px solid $dark-shade-25;
   border-top: 0;
   border-radius: 0 0 4px 4px;
@@ -25,7 +25,11 @@
   text-transform: uppercase;
 }
 
-.dropdown-counter__list__item {
+.dropdown-counter__counters {
+  margin-bottom: 20px;
+}
+
+.dropdown-counter__counter {
   margin-bottom: 7px;
   list-style: none;
 }
