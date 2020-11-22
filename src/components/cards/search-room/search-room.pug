@@ -8,6 +8,7 @@ mixin search-room-card
   .card.search-room
     h1.search-room__title
       | Найдем номер под
+      br
       | ваши пожелания
     +date-dropdown('прибытие', 'выезд')
     +element-wrapper({ label: 'гости', sub_label: '', inline: false, extra_spacing: false, large_label: false, })

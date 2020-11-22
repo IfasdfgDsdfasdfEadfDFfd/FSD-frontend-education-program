@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-between;
   min-width: 100%;
   padding: 0;
@@ -11,7 +12,6 @@
   color: $dark-shade-75;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  line-height: 24px;
   appearance: none;
 }
 
