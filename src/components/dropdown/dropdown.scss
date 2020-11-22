@@ -18,6 +18,7 @@
 .dropdown__arrow {
   font-size: 24px;
   font-family: "Material-Icons";
+  transition: all 0.2s ease;
 }
 
 .dropdown-container {
@@ -35,4 +36,9 @@
 
 .dropdown-container--opened .dropdown-container__body {
   display: block;
+}
+
+.dropdown-container--opened .dropdown__arrow {
+  transition: all 0.2s ease;
+  transform: rotate(180deg);
 }
