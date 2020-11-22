@@ -1,15 +1,17 @@
-mixin date-dropdown()
+mixin date-dropdown(label_left, label_right)
   - var placeholder = 'ДД.ММ.ГГГГ'
 
   .dropdown-container
     .date-dropdown
-      .date-dropdown__element
-        +dropdown
-          span.date-dropdown__from-date
-            | #{placeholder}
-      .date-dropdown__element
-        +dropdown
-          span.date-dropdown__to-date
-            | #{placeholder}
+      +element-wrapper({label: label_left})
+        .date-dropdown__element
+          +dropdown
+            span.date-dropdown__from-date
+              | #{placeholder}
+      +element-wrapper({label: label_right})
+        .date-dropdown__element
+          +dropdown
+            span.date-dropdown__to-date
+              | #{placeholder}
       .dropdown-container__body
         +calendar

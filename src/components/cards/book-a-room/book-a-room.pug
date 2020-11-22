@@ -1,14 +1,25 @@
 include ../../element-wrapper/element-wrapper.pug
 include ../../buttons/action-button.pug
+include ../../date-dropdown/date-dropdown.pug
 include ../../dropdown-counter/dropdown-counter.pug
+include ../../calendar/calendar.pug
 include ../../room-item/room-item.pug
 
 mixin book-a-room-card
   .card.book-a-room
     +room-desc('888', '9 990', true)
-    //- date-dropdown
-    +element-wrapper({ label: 'Гости', sub_label: '', extra_spacing: false, inline: false, large_label: false, })
-      +dropdown-counter({ id: 'book-a-room-guests-counter', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 1}, {name: 'дети', value: 1}, {name: 'младенцы', value: 1}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
+    +date-dropdown('прибытие', 'выезд')
+    +element-wrapper({ label: 'Гости', })
+      +dropdown-counter({
+        id: 'book-a-room-guests-counter',
+        placeholder: 'Сколько гостей',
+        counters: [
+          {name: 'взрослые', value: 1},
+          {name: 'дети', value: 1},
+          {name: 'младенцы', value: 1}
+        ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+        opened: false, need_to_be_applied: true,
+      })
     .bill
       .bill__row
         .bill__row__desc
