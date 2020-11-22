@@ -21,4 +21,13 @@
     font-size: 19px;
     text-align: center;
   }
+
+  .datepicker--day-name {
+    width: 40px;
+    height: 40px;
+    color: $purple-color;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "Montserrat";
+  }
 }
