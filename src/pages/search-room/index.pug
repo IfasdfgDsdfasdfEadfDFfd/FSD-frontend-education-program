@@ -6,21 +6,22 @@ block title
 block body
   include ../../components/header/header.pug
   include ../../components/footer/footer.pug
-  include ../../components/pagination/pagination.pug
   include ../../components/room-item/room-item.pug
+  include ../../components/pagination/pagination.pug
+  include ../../components/element-wrapper/element-wrapper.pug
   include ../../components/filter-date-dropdown/filter-date-dropdown.pug
   include ../../components/dropdown-counter/dropdown-counter.pug
   include ../../components/range-slider/range-slider.pug
   include ../../components/checkbox/checkbox.pug
+  include ../../components/checkbox-list/checkbox-list.pug
   include ../../components/expandable-checkbox-list/expandable-checkbox-list.pug
 
   +header(false, true)
   .search-room-body.container
     aside.search-room-body__aside
-      div
-        h3
-          | даты пребывания в отеле
+      +element-wrapper({label: 'даты пребывания в отеле'})
         +filter-date-dropdown('19 авг - 23 авг')
+      +element-wrapper({label: 'гости'})
         +dropdown-counter({
           id: 'guests-counter-1',
           placeholder: 'Сколько гостей',
@@ -38,18 +39,16 @@ block body
           opened: false,
           need_to_be_applied: true 
         })
-        +range-slider('диапозон цены', 'cost-range-slider', {
-          min: 0,
-          max: 15000,
-          step: 100,
-          left: 5000,
-          right: 10000,
-        })
-          | Стоимость за сутки пребывания в номере
+      +range-slider('диапозон цены', 'cost-range-slider', {
+        min: 0,
+        max: 15000,
+        step: 100,
+        left: 5000,
+        right: 10000,
+      })
+        | Стоимость за сутки пребывания в номере
 
-      div
-        h3
-          | checkbox buttons
+      +element-wrapper({label: 'правила дома'})
         +checkbox-list([
           {
             name: 'allow-smoking',
@@ -70,9 +69,7 @@ block body
           }
         ])
 
-      div
-        h3
-          | доступность
+      +element-wrapper({label: 'доступность'})
         +checkbox-list([
           {
             name: 'wide-corridor',
