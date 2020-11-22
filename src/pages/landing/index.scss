@@ -13,6 +13,12 @@
   }
 }
 
+.landing__text {
+  position: absolute;
+  right: 140px;
+  bottom: 18px;
+}
+
 @media (max-width: $middle-screen) {
   .landing {
     > .search-room {
