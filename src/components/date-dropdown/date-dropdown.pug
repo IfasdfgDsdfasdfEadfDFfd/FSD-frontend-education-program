@@ -1,0 +1,15 @@
+mixin date-dropdown()
+  - var placeholder = 'ДД.ММ.ГГГГ'
+
+  .dropdown-container
+    .date-dropdown
+      .date-dropdown__element
+        +dropdown
+          span.date-dropdown__from-date
+            | #{placeholder}
+      .date-dropdown__element
+        +dropdown
+          span.date-dropdown__to-date
+            | #{placeholder}
+      .dropdown-container__body
+        +calendar

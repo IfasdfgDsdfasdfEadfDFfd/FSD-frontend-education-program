@@ -1,0 +1,12 @@
+.date-dropdown {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.date-dropdown__element {
+  width: 150px;
+  padding: 12px 15px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+}
