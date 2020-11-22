@@ -65,7 +65,7 @@ $slider-range-thickness: 6px;
 .slider__range {
   position: absolute;
   height: $slider-range-thickness;
-  background-image: $from-green-to-blue-gradient;
+  background-image: $secondary-gradient;
 }
 
 .slider__thumb {
@@ -75,5 +75,5 @@ $slider-range-thickness: 6px;
   height: $slider-thumb-radius;
   border: 2px solid #fff;
   border-radius: 50%;
-  background-image: $from-green-to-blue-gradient;
+  background-image: $secondary-gradient;
 }

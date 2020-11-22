@@ -12,6 +12,8 @@ const initCalendar = (
         months: 'yyyy',
         years: 'yyyy1 - yyyy2',
       },
+      prevHtml: 'arrow_back',
+      nextHtml: 'arrow_forward',
       classes: 'calendar__element',
       ...customProps,
     })
