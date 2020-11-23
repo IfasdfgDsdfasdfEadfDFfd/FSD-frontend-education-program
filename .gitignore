@@ -3,6 +3,7 @@ node_modules
 
 # build stuff
 dist
+build
 
 # logs
 *error.log
