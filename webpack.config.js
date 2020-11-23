@@ -2,6 +2,10 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const glob = require('glob');
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
@@ -44,6 +48,7 @@ module.exports = {
   },
 
   plugins: [
+    new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(SRC_DIR, 'index.pug'),
@@ -55,6 +60,10 @@ module.exports = {
     }),
     ...getAllTemplates('components'),
     ...getAllTemplates('pages'),
+    new MiniCssExtractPlugin({
+      filename: IS_DEV_MODE ? '[name].css' : '[name].[fullhash].css',
+      chunkFilename: IS_DEV_MODE ? '[id].css' : '[id].[fullhash].css',
+    }),
   ],
 
   module: {
@@ -65,7 +74,14 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        use: [
+          IS_DEV_MODE
+            ? { loader: 'style-loader' }
+            : MiniCssExtractPlugin.loader,
+          { loader: 'css-loader' },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' },
+        ],
       },
       {
         test: /\.ts$/,
@@ -84,7 +100,7 @@ module.exports = {
   },
 
   mode: process.env.NODE_ENV,
-  devtool: IS_DEV_MODE ? 'inline-source-map' : 'source-map',
+  devtool: IS_DEV_MODE ? 'eval-cheap-module-source-map' : 'source-map',
 
   devServer: {
     contentBase: BUILD_DIR,
@@ -102,5 +118,12 @@ module.exports = {
       poll: true,
       ignored: /node_modules/,
     },
+  },
+
+  optimization: {
+    minimize: true,
+    removeAvailableModules: true,
+    mergeDuplicateChunks: true,
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
   },
 };
