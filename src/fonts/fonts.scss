@@ -6,27 +6,6 @@
 @font-face {
   font-weight: normal;
   font-style: normal;
-  font-family: "Quicksand";
-  src: url("./fonts/Quicksand/Quicksand-Regular.eot");
-  src: local("☺"),
-    url("./fonts/Quicksand/Quicksand-Regular.woff") format("woff"),
-    url("./fonts/Quicksand/Quicksand-Regular.ttf") format("truetype"),
-    url("./fonts/Quicksand/Quicksand-Regular.svg") format("svg");
-}
-
-@font-face {
-  font-weight: bold;
-  font-style: normal;
-  font-family: "Quicksand";
-  src: url("./fonts/Quicksand/Quicksand-Bold.eot");
-  src: local("☺"), url("./fonts/Quicksand/Quicksand-Bold.woff") format("woff"),
-    url("./fonts/Quicksand/Quicksand-Bold.ttf") format("truetype"),
-    url("./fonts/Quicksand/Quicksand-Bold.svg") format("svg");
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
   font-family: "Montserrat";
   src: url("./fonts/Montserrat/Montserrat-Regular.eot");
   src: local("☺"),
@@ -43,24 +22,4 @@
   src: local("☺"), url("./fonts/Montserrat/Montserrat-Bold.woff") format("woff"),
     url("./fonts/Montserrat/Montserrat-Bold.ttf") format("truetype"),
     url("./fonts/Montserrat/Montserrat-Bold.svg") format("svg");
-}
-
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: "OpenSans";
-  src: url("./fonts/OpenSans/OpenSans-Regular.eot");
-  src: local("☺"), url("./fonts/OpenSans/OpenSans-Regular.woff") format("woff"),
-    url("./fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"),
-    url("./fonts/OpenSans/OpenSans-Regular.svg") format("svg");
-}
-
-@font-face {
-  font-weight: bold;
-  font-style: normal;
-  font-family: "OpenSans";
-  src: url("./fonts/OpenSans/OpenSans-Bold.eot");
-  src: local("☺"), url("./fonts/OpenSans/OpenSans-Bold.woff") format("woff"),
-    url("./fonts/OpenSans/OpenSans-Bold.ttf") format("truetype"),
-    url("./fonts/OpenSans/OpenSans-Bold.svg") format("svg");
 }
