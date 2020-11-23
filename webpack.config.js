@@ -68,7 +68,7 @@ module.exports = {
         test: /\.(webp|png|svg|eot|woff|woff2|ttf|)$/,
         loader: 'file-loader',
         options: {
-          outputPath: path.join(BUILD_DIR, 'static'),
+          outputPath: 'static',
           publicPath: '/static',
           name: '[name].[ext]',
         },
