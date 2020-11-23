@@ -19,6 +19,9 @@ const getAllTemplates = folder => {
       template: filepath,
       favicon: path.join(SRC_DIR, 'logo.svg'),
       filename: `${path.basename(dir)}/${name}.html`,
+      templateParameters: {
+        asset_path: process.env.ASSET_PATH,
+      },
     });
   });
 };
@@ -44,7 +47,11 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(SRC_DIR, 'index.pug'),
+      favicon: path.join(SRC_DIR, 'logo.svg'),
       filename: 'index.html',
+      templateParameters: {
+        asset_path: process.env.ASSET_PATH,
+      },
     }),
     ...getAllTemplates('components'),
     ...getAllTemplates('pages'),
