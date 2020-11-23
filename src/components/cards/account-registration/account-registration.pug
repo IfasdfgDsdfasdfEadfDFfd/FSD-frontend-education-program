@@ -10,7 +10,7 @@ mixin account-registration-card
   .card.account-registration
     h1
       | Регистрация аккаунта
-    +element-wrapper({label: '', sub_label: '', inline:false, extra_spacing: false, large_label: false})
+    +element-wrapper({})
       +text-field({type: 'text', placeholder: 'Имя'})
       +text-field({type: 'text', placeholder: 'Фамилия'})
       +radio-buttons-group('registration-user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
