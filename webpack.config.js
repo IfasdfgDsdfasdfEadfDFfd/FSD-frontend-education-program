@@ -69,7 +69,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'static',
-          publicPath: process.env.ASSET_PAHT || '/',
+          publicPath: process.env.ASSET_PATH || '/',
           name: '[name].[ext]',
         },
       },
