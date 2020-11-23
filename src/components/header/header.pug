@@ -9,10 +9,17 @@ mixin header(isSigned=false, attached=false)
   header.header.container(id=header_id)
     +logo
     .header__right
-      +menu([ {text: 'о нас'}, {text: 'услуги', children: []}, {text: 'вакансии'}, {text: 'новости'}, {text: 'соглашения', children: []}, ])
+      +menu([
+        {text: 'о нас'},
+        {text: 'услуги', children: []},
+        {text: 'вакансии'}, {text: 'новости'},
+        {text: 'соглашения', children: []},
+      ])
       if isSigned
         +user('Юлий Цезарь')
       else
         .header__buttons
-          +border-button('войти')
-          +button('зарегистрироваться')
+          a(href='../login')
+            +border-button('войти')
+          a(href='../registration')
+            +button('регистрация')
