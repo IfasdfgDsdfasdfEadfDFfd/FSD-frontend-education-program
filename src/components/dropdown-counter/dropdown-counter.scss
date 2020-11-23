@@ -13,6 +13,9 @@
 }
 
 .dropdown-counter__list {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
   width: 100%;
   padding: 5px 7px 13px 15px;
   border: 1px solid $dark-shade-25;
@@ -23,10 +26,6 @@
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-}
-
-.dropdown-counter__counters {
-  margin-bottom: 20px;
 }
 
 .dropdown-counter__counter {
