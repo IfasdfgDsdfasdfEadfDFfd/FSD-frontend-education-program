@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const glob = require('glob');
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
-const DIST_DIR = path.resolve(path.join(process.cwd(), 'dist'));
+const BUILD_DIR = path.resolve(path.join(process.cwd(), 'build'));
 
 const IS_DEV_MODE = process.env.NODE_ENV === 'development';
 
@@ -26,7 +26,7 @@ const getAllTemplates = folder => {
 module.exports = {
   entry: path.join(SRC_DIR, 'index.ts'),
   output: {
-    path: DIST_DIR,
+    path: BUILD_DIR,
     filename: 'build.js',
   },
 
@@ -68,7 +68,7 @@ module.exports = {
         test: /\.(webp|png|svg|eot|woff|woff2|ttf|)$/,
         loader: 'file-loader',
         options: {
-          outputPath: path.join(DIST_DIR, 'static'),
+          outputPath: path.join(BUILD_DIR, 'static'),
           publicPath: '/static',
           name: '[name].[ext]',
         },
@@ -80,7 +80,7 @@ module.exports = {
   devtool: IS_DEV_MODE ? 'inline-source-map' : 'source-map',
 
   devServer: {
-    contentBase: DIST_DIR,
+    contentBase: BUILD_DIR,
     compress: true,
 
     open: true,
