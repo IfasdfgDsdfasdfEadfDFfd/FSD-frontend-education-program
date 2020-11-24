@@ -32,6 +32,10 @@ $header-height: 70px;
   gap: 20px;
   justify-content: flex-end;
   min-width: 310px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .header--attached {
