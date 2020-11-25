@@ -40,6 +40,7 @@ module.exports = {
   externals: {
     jquery: 'jQuery',
     datepicker: 'air-datepicker',
+    'cleave.js': 'cleave.js',
   },
 
   // don't foget about dots...
