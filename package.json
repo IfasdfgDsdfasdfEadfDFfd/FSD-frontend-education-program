@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "ASSET_PATH=/toxin-hotel-booking-website/static NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack-dev-server",
+    "dev": "ASSET_PATH=/static NODE_ENV=development webpack-dev-server",
     "lint": "stylelint -f verbose --fix './src/**/*.scss'",
     "prettify": "prettier --write ./src/**/*",
     "test": "jest --watch --runInBand",
