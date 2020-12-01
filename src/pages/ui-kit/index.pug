@@ -44,37 +44,37 @@ block body
     .colors-type
       .colors-type__colors
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-100
+          .color-example.color-example_dark-shade-100
           .color-desc
             h2= "Dark Shader 100%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-75
+          .color-example.color-example_dark-shade-75
           .color-desc
             h2= "Dark Shader 75%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-50
+          .color-example.color-example_dark-shade-50
           .color-desc
             h2= "Dark Shader 50%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-25
+          .color-example.color-example_dark-shade-25
           .color-desc
             h2= "Dark Shader 25%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-5
+          .color-example.color-example_dark-shade-5
           .color-desc
             h2= "Dark Shader 5%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--purple
+          .color-example.color-example_purple
           .color-desc
             h2= "Purple"
             | #BC9CFF
         .colors-type__colors__item
-          .color-example.color-example--green
+          .color-example.color-example_green
           .color-desc
             h2= "Green"
             | #6FCF87
@@ -187,7 +187,7 @@ block body
       +element-wrapper({ label: 'pagination', extra_spacing: true, })
         +pagination('1 - 12 из 100+ вариантов аренды')
 
-    .form-elements__container.form-elements__container--narrow
+    .form-elements__container.form-elements__container_narrow
       +element-wrapper({ label: 'dropdown', sub_label: 'DEFAULT', })
         +dropdown-counter({
           id: 'room-properties-1', placeholder: 'Параметры номера',
@@ -235,7 +235,7 @@ block body
           opened: true, need_to_be_applied: true
         })
 
-    .form-elements__container.form-elements__container--narrow
+    .form-elements__container.form-elements__container_narrow
       +expandable-checkbox-list('expandable checkbox list', [
         { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
         { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
@@ -291,7 +291,7 @@ block body
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
         | не жаловался из соседей.
 
-  .container.toolbox.toolbox--gray.cards
+  .container.toolbox.toolbox_gray.cards
     +search-room-card
     +account-registration-card
     +book-a-room-card
@@ -301,7 +301,7 @@ block body
     +room-item({ bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 })
     +room-item({ bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65 })
 
-  .toolbox.toolbox--gray.headers-footers
+  .toolbox.toolbox_gray.headers-footers
     +header(false)
     +header(true)
     +footer-desktop

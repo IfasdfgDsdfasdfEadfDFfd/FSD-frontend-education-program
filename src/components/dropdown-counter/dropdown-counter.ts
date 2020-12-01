@@ -66,7 +66,7 @@ dropdownElements.forEach(dropdown => {
 
     dropdown
       .querySelector('.form-action-buttons')
-      ?.classList.toggle('form-action-buttons--dirty', sumOfCounters !== 0);
+      ?.classList.toggle('form-action-buttons_dirty', sumOfCounters !== 0);
   });
 
   store.dispatch({ name: '@COLD_START' });

@@ -5,8 +5,8 @@ mixin text-field(attrs)
   input.text-field&attributes(attrs)
 
 mixin masked-text-field(id)
-  +text-field({ id: id, class: 'text-field--masked', value: '', placeholder: 'ДД.ММ.ГГГГ' })
+  +text-field({ id: id, class: 'text-field_masked', value: '', placeholder: 'ДД.ММ.ГГГГ' })
 
 mixin focused-text-field(attrs)
-  - attrs.class = "text-field--focused";
+  - attrs.class = "text-field_focused";
   +text-field(attrs)
