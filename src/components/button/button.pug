@@ -1,8 +1,13 @@
 mixin button(text, disabled=false, attrs={})
   button.button(disabled=disabled)&attributes(attrs)= text
+    block
 
 mixin flat-button(text, disabled=false)
   +button(text, disabled, {class: 'button--flat'})
 
 mixin action-button(text)
   +button(text, false, {class: 'button--action'})
+
+mixin border-button(text, disabled=false)
+  .button-container
+    +button(text, disabled, {class: 'button--border'})
