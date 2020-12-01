@@ -1,9 +1,9 @@
 import { createStore, Action } from '../../store/store';
 
 const counters = Array(
-  ...((document.getElementsByClassName('counter') as unknown) as Array<
-    Element
-  >),
+  ...((document.getElementsByClassName(
+    'counter',
+  ) as unknown) as Array<Element>),
 );
 
 const initState = counters.reduce((state, counter) => {
