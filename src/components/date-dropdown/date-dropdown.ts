@@ -1,12 +1,12 @@
 import { initCalendar } from '../calendar/calendar';
 
-$('.date-dropdown').each(function () {
-  const $from = $('.date-dropdown__from-date', this);
-  const $to = $('.date-dropdown__to-date', this);
+$('.js-date-dropdown').each(function () {
+  const $from = $('.js-date-dropdown-from', this);
+  const $to = $('.js-date-dropdown-to', this);
   const placeholder = $from.text();
   const separator = ',';
 
-  const $calendar = $('.calendar', this);
+  const $calendar = $('.js-calendar', this);
   initCalendar($calendar, {
     dateFormat: 'dd.mm.yyyy',
     multipleDatesSeparator: separator,
