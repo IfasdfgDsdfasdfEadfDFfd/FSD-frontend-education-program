@@ -71,13 +71,9 @@ dropdownElements.forEach(dropdown => {
 
   store.dispatch({ name: '@COLD_START' });
 
-  const cancelButton = dropdown?.querySelector(
-    '.form-action-buttons__cancel-button',
-  );
+  const cancelButton = dropdown?.querySelector('.js-action-button-cancel');
 
-  const applyButton = dropdown?.querySelector(
-    '.form-action-buttons__apply-button',
-  );
+  const applyButton = dropdown?.querySelector('.js-action-button-apply');
 
   const counters = dropdown?.querySelectorAll('.js-counter');
 
