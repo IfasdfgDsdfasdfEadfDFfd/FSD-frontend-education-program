@@ -1,0 +1,8 @@
+mixin button(text, disabled=false, attrs={})
+  button.button(disabled=disabled)&attributes(attrs)= text
+
+mixin flat-button(text, disabled=false)
+  +button(text, disabled, {class: 'button--flat'})
+
+mixin action-button(text)
+  +button(text, false, {class: 'button--action'})
