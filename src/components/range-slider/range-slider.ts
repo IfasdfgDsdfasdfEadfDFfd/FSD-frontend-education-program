@@ -1,9 +1,9 @@
 import { createStore, Action } from '../../store/store';
 
 const sliders = Array(
-  ...((document.getElementsByClassName('range-slider') as unknown) as Array<
-    HTMLElement
-  >),
+  ...((document.getElementsByClassName(
+    'js-range-slider',
+  ) as unknown) as Array<HTMLElement>),
 );
 
 const initState = sliders.reduce((state, slider) => {

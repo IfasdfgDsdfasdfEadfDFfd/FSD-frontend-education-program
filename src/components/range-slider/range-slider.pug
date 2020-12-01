@@ -5,7 +5,7 @@ mixin range-slider(label, name, opts)
       h3
         label= label
       span(id="display-for-" + id)
-    .range-slider(id=id)
+    .range-slider.js-range-slider(id=id)
       input.range-slider__element.range-slider__element-left(
         max=opts.max,
         min=opts.min,
