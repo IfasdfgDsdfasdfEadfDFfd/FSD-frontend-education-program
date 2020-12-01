@@ -2,9 +2,9 @@ include ../dropdown/dropdown.pug
 include ../calendar/calendar.pug
 
 mixin filter-date-dropdown
-  .filter-date-dropdown.dropdown-container.js-dropdown-container
+  .filter-date-dropdown.js-filter-date.dropdown-container.js-dropdown-container
     +dropdown
-      span.filter-date-dropdown__text
+      span.filter-date-dropdown__text.js-filter-date-text
         | даты пребывания в номере
     .dropdown-container__body
       +calendar
