@@ -1,16 +1,16 @@
 import { createStore, Action } from '../../store/store';
 
 const counters = Array(
-  ...((document.getElementsByClassName('counter') as unknown) as Array<
-    Element
-  >),
+  ...((document.getElementsByClassName(
+    'js-counter',
+  ) as unknown) as Array<Element>),
 );
 
 const initState = counters.reduce((state, counter) => {
   return {
     ...state,
     [counter.id]: parseInt(
-      counter.querySelector('.counter__count')?.textContent || '0',
+      counter.querySelector('.js-counter__count')?.textContent || '0',
     ),
   };
 }, {});
@@ -50,7 +50,7 @@ export const store = createStore(initState, (action: Action, state: any) => {
 
 // view
 counters.forEach(counter => {
-  const minusButton = counter.querySelector('.counter__minus');
+  const minusButton = counter.querySelector('.js-counter__minus');
   minusButton?.addEventListener('click', () => {
     store.dispatch({
       name: actions.DEC,
@@ -58,7 +58,7 @@ counters.forEach(counter => {
     });
   });
 
-  const plusButton = counter.querySelector('.counter__plus');
+  const plusButton = counter.querySelector('.js-counter__plus');
   plusButton?.addEventListener('click', () => {
     store.dispatch({
       name: actions.INC,
@@ -67,7 +67,7 @@ counters.forEach(counter => {
   });
 
   store.subscribe((state: any) => {
-    const countElement = counter.querySelector('.counter__count') as Element;
+    const countElement = counter.querySelector('.js-counter__count') as Element;
     const newCount = state[counter.id];
 
     if (Number(countElement.textContent) !== newCount) {

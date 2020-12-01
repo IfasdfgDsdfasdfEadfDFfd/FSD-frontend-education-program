@@ -2,7 +2,7 @@ import { store, actions } from '../counter/counter';
 
 const dropdownElements = Array(
   ...((document.getElementsByClassName(
-    'dropdown-counter',
+    'js-dropdown-counter',
   ) as unknown) as Array<HTMLElement>),
 );
 
@@ -79,7 +79,7 @@ dropdownElements.forEach(dropdown => {
     '.form-action-buttons__apply-button',
   );
 
-  const counters = dropdown?.querySelectorAll('.counter');
+  const counters = dropdown?.querySelectorAll('.js-counter');
 
   applyButton?.addEventListener('click', () => {
     dropdown.click();

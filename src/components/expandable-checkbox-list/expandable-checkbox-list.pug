@@ -1,7 +1,7 @@
 include ../checkbox-list/checkbox-list.pug
 
 mixin expandable-checkbox-list(title, checkboxes, opened)
-  .expandable-checkbox-list.dropdown-container(class=opened ? "dropdown-container--opened" : "")
+  .expandable-checkbox-list.dropdown-container.js-dropdown-container(class=opened ? "dropdown-container--opened" : "")
     +dropdown
       h3
         | #{title}

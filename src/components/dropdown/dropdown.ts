@@ -1,5 +1,5 @@
 const dropdowns = Array.from(
-  document.getElementsByClassName('dropdown-container'),
+  document.getElementsByClassName('js-dropdown-container'),
 );
 
 dropdowns.forEach(dropdown => {
