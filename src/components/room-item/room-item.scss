@@ -6,10 +6,10 @@
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
 
-  img {
-    border-radius: 4px 4px 0 0;
-  }
+.root-item__img {
+  border-radius: 4px 4px 0 0;
 }
 
 .room-item__desc {
