@@ -1,13 +1,15 @@
-mixin button(text, disabled=false, attrs={})
-  button.button(disabled=disabled)&attributes(attrs)= text
-    block
+mixin button({text, type, theme, disabled=false})
+  -
+    const typeModifiers = {
+      action: 'button_type_action',
+    };
+    const themeModifiers = {
+      flat: 'button_theme_flat',
+      bordered: 'button_theme_bordered',
+    };
+    const classes = [
+      typeModifiers[type],
+      themeModifiers[theme],
+    ];
 
-mixin flat-button(text, disabled=false)
-  +button(text, disabled, {class: 'button--flat'})
-
-mixin action-button(text)
-  +button(text, false, {class: 'button--action'})
-
-mixin border-button(text, disabled=false)
-  .button-container
-    +button(text, disabled, {class: 'button--border'})
+  button.button(class=classes, disabled=disabled)= text

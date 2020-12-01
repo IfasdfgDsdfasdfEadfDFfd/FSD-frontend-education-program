@@ -171,16 +171,16 @@ block body
       +element-wrapper({ label: 'buttons', extra_spacing: true, })
         .form-elements__buttons
           .form-elements__buttons__row
-            +button('click me')
-            +button('click me', true)
+            +button({text: 'click me'})
+            +button({text: 'click me', disabled: true})
           .form-elements__buttons__row
-            +border-button('click me')
-            +border-button('click me', true)
+            +button({text: 'click me', theme: 'bordered'})
+            +button({text: 'click me', theme: 'bordered', disabled: true})
           .form-elements__buttons__row
-            +flat-button('click me')
-            +flat-button('click me', true)
+            +button({text: 'click me', theme: 'flat'})
+            +button({text: 'click me', theme: 'flat', disabled: true})
           .form-elements__buttons__row
-            +action-button('Перейти к оплате')
+            +button({text: 'Перейти к оплате', type: 'action'})
       +element-wrapper({ label: 'pagination', extra_spacing: true, })
         +pagination('1 - 12 из 100+ вариантов аренды')
 

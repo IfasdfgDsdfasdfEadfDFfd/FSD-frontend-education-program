@@ -4,4 +4,4 @@ mixin link-footer-button(text, link, button_text)
   .link-footer-button
     | #{text}
     a(href=link)
-      +border-button(button_text)
+      +button({text: button_text, theme: 'bordered'})

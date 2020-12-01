@@ -10,5 +10,5 @@ mixin login-card
       +text-field({type: 'email', placeholder: 'Email'})
       +text-field({type: 'password', placeholder: 'Пароль'})
     .login-form__buttons
-      +action-button('войти')
+      +button({text: 'Войти', type: 'action'})
       +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')

@@ -19,6 +19,6 @@ mixin header(isSigned=false, attached=false)
       else
         .header__buttons
           a(href='../login')
-            +border-button('войти')
+            +button({text: 'войти', theme: 'bordered'})
           a(href='../registration')
             +button('зарегистрироваться')
