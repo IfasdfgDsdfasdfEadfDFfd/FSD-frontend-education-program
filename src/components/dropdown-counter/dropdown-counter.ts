@@ -7,7 +7,7 @@ const dropdownElements = Array(
 );
 
 dropdownElements.forEach(dropdown => {
-  const button = dropdown.querySelector('.dropdown') as HTMLElement;
+  const button = dropdown.querySelector('.js-dropdown') as HTMLElement;
 
   store.subscribe((state: any) => {
     const countersData = Object.keys(state)
@@ -65,7 +65,7 @@ dropdownElements.forEach(dropdown => {
     );
 
     dropdown
-      .querySelector('.form-action-buttons')
+      .querySelector('.js-form-action-buttons')
       ?.classList.toggle('form-action-buttons--dirty', sumOfCounters !== 0);
   });
 
