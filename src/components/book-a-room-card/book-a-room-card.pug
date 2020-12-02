@@ -7,8 +7,8 @@ include ../room-item/room-item.pug
 include ../card/card.pug
 
 mixin book-a-room-card
-  +card()
-    .book-a-room-card
+  .book-a-room-card
+    +card()
       +room-desc('888', '9 990', true)
       +date-dropdown('прибытие', 'выезд')
       +element-wrapper({ label: 'Гости', })
