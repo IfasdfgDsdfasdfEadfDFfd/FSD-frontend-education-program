@@ -7,8 +7,6 @@ const dropdownElements = Array(
 );
 
 dropdownElements.forEach(dropdown => {
-  const button = dropdown.querySelector('.js-dropdown') as HTMLElement;
-
   store.subscribe((state: any) => {
     const countersData = Object.keys(state)
       .filter(key => {
@@ -18,10 +16,10 @@ dropdownElements.forEach(dropdown => {
 
     const sumOfCounters = countersData.reduce((prev, cur) => prev + cur, 0);
 
-    const placeholder = <string>button?.getAttribute('data-placeholder');
-    const countingWay = <string>button?.getAttribute('data-counting-way');
+    const placeholder = <string>dropdown?.getAttribute('data-placeholder');
+    const countingWay = <string>dropdown?.getAttribute('data-counting-way');
     const declensions = JSON.parse(
-      <string>button?.getAttribute('data-declensions'),
+      <string>dropdown?.getAttribute('data-declensions'),
     );
 
     const defineDeclension = (number: string): string => {
@@ -59,14 +57,17 @@ dropdownElements.forEach(dropdown => {
       }
     }
 
-    button?.firstChild?.replaceChild(
+    const buttonText = dropdown.querySelector(
+      '.dropdown__button__text',
+    ) as Node;
+    buttonText.replaceChild(
       document.createTextNode(text),
-      button.firstChild.firstChild as Node,
+      buttonText.firstChild as Node,
     );
 
     dropdown
       .querySelector('.js-form-action-buttons')
-      ?.classList.toggle('form-action-buttons--dirty', sumOfCounters !== 0);
+      ?.classList.toggle('form-action-buttons_dirty', sumOfCounters !== 0);
   });
 
   store.dispatch({ name: '@COLD_START' });

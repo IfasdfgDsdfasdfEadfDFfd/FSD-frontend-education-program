@@ -1,17 +1,11 @@
 mixin date-dropdown(label_left, label_right)
   - var placeholder = 'ДД.ММ.ГГГГ'
 
-  .dropdown-container.js-dropdown-container
-    .date-dropdown.js-date-dropdown
-      +element-wrapper({label: label_left})
-        .date-dropdown__element
-          +dropdown
-            span.date-dropdown__from-date.js-date-dropdown-from
-              | #{placeholder}
-      +element-wrapper({label: label_right})
-        .date-dropdown__element
-          +dropdown
-            span.date-dropdown__to-date.js-date-dropdown-to
-              | #{placeholder}
-      .dropdown-container__body
-        +calendar
+  .date-dropdown.js-date-dropdown
+    +element-wrapper({label: label_left})
+      .date-dropdown__element
+    +element-wrapper({label: label_right})
+      .date-dropdown__element
+        +dropdown({text: placeholder})
+    .dropdown__body
+      +calendar
