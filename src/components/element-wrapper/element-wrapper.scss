@@ -1,3 +1,7 @@
+.element-wrapper {
+  border-radius: inherit;
+}
+
 .element-wrapper__label {
   display: flex;
   align-items: center;
@@ -22,6 +26,7 @@
 .element-wrapper__item {
   display: flex;
   flex-flow: column nowrap;
+  border-radius: inherit;
 }
 
 .element-wrapper__item_inline {

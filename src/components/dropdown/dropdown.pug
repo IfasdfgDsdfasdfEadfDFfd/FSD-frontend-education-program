@@ -1,4 +1,4 @@
-mixin dropdown({text, buttonTheme, textTheme, opened})
+mixin dropdown({text, buttonTheme, textTheme, splitted, opened})
   -
     const buttonThemeModifiers = {
       bordered: 'dropdown__button_bordered',
@@ -13,8 +13,13 @@ mixin dropdown({text, buttonTheme, textTheme, opened})
     const textClass = [textThemeModifiers[textTheme]];
 
   .dropdown.js-dropdown(class=opened ? 'dropdown_opened': '')
-    button.dropdown__button.js-dropdown__button(class=buttonClass)
-      span.dropdown__button__text(class=textClass)= text
-      span.dropdown__button__arrow= "expand_more"
+    +element-wrapper({inline: true})
+      button.dropdown__button.js-dropdown__button(class=buttonClass)
+        span.dropdown__button__text(class=textClass)= text
+        span.dropdown__button__arrow= "expand_more"
+      if splitted
+        button.dropdown__button.js-dropdown__button(class=buttonClass)
+          span.dropdown__button__text(class=textClass)= text
+          span.dropdown__button__arrow= "expand_more"
     .dropdown__body
       block

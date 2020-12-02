@@ -2,7 +2,7 @@ include ../counter/counter.pug
 include ../dropdown/dropdown.pug
 include ../form-action-buttons/form-action-buttons.pug
 
-mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, opened=false, need_to_be_applied=false})
+mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, opened, need_to_be_applied})
   .dropdown-counter.js-dropdown-counter(
     id=id
     data-placeholder=placeholder,

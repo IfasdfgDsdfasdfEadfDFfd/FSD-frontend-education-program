@@ -1,9 +1,8 @@
 import { initCalendar } from '../calendar/calendar';
 
 $('.js-date-dropdown').each(function () {
-  const $from = $('.js-date-dropdown-from', this);
-  const $to = $('.js-date-dropdown-to', this);
-  const placeholder = $from.text();
+  const $dateText = $('.js-dropdown__button .dropdown__button__text', this);
+  const placeholder = $dateText.first().text();
   const separator = ',';
 
   const $calendar = $('.js-calendar', this);
@@ -13,12 +12,12 @@ $('.js-date-dropdown').each(function () {
     onSelect: (dateFormatted: string) => {
       const [from, to] = dateFormatted.split(separator);
 
-      $from.text(from);
-      $to.text(to);
+      $dateText.first().text(from);
+      $dateText.last().text(to);
     },
     onClear: () => {
-      $from.text(placeholder);
-      $to.text(placeholder);
+      $dateText.first().text(placeholder);
+      $dateText.last().text(placeholder);
     },
   });
 });

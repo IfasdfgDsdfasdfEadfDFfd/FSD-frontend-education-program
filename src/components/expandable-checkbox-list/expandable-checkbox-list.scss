@@ -1,4 +1,7 @@
 .expandable-checkbox-list {
+  display: flex;
+  flex-flow: column nowrap;
+
   .dropdown__body {
     margin-top: 17px;
     background-color: #fff;
