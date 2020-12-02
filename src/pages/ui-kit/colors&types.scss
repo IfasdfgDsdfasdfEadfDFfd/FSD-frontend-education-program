@@ -21,18 +21,18 @@
   gap: 50px;
 }
 
-.colors-type__text-types__item {
+.text-example {
   position: relative;
   padding-left: 30px;
+}
 
-  span {
-    position: absolute;
-    top: 0;
-    right: 100%;
-    color: $dark-shade-25;
-    font-weight: normal;
-    font-family: "Montserrat", sans-serif;
-  }
+.text-example__label {
+  position: absolute;
+  top: 0;
+  right: 100%;
+  color: $dark-shade-25;
+  font-weight: normal;
+  font-family: "Montserrat", sans-serif;
 }
 
 .color-desc {
