@@ -1,0 +1,87 @@
+.button {
+  min-height: 100%;
+  padding-right: 20px;
+  padding-left: 17px;
+  border: 0;
+  border-radius: 30px;
+  background-image: $primary-gradient;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.button[disabled] {
+  opacity: 0.5;
+}
+
+.button_type_action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 22px;
+  background-image: $primary-gradient;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 15px;
+  text-transform: uppercase;
+
+  &::after {
+    content: "arrow_forward";
+    position: absolute;
+    right: 10px;
+    font-weight: normal;
+    font-size: 24px;
+    font-family: "Material-Icons";
+    line-height: 24px;
+    text-transform: none;
+  }
+}
+
+.button_theme_flat {
+  border: 0;
+  background-color: transparent;
+  background-image: none;
+  color: $purple-color;
+
+  &[disabled] {
+    color: $dark-shade-50;
+  }
+}
+
+.button_theme_bordered {
+  position: relative;
+  border: 0;
+  background-color: #fff;
+  background-image: none;
+  color: $purple-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: $primary-gradient;
+  }
+
+  &[disabled] {
+    opacity: 1;
+  }
+
+  &[disabled]::before {
+    opacity: 0.5;
+  }
+}

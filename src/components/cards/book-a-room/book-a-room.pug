@@ -1,5 +1,5 @@
 include ../../element-wrapper/element-wrapper.pug
-include ../../buttons/action-button.pug
+include ../../button/button.pug
 include ../../date-dropdown/date-dropdown.pug
 include ../../dropdown-counter/dropdown-counter.pug
 include ../../calendar/calendar.pug
@@ -42,4 +42,4 @@ mixin book-a-room-card
         | Итого
         .bill__row-result__dashed-line
         .bill__row__count= "38 081₽"
-    +action-button('забронировать')
+    +button({text: 'Забронировать', type: 'action'})

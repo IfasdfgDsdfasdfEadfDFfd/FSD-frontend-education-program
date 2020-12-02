@@ -1,0 +1,15 @@
+mixin button({text, type, theme, disabled=false})
+  -
+    const typeModifiers = {
+      action: 'button_type_action',
+    };
+    const themeModifiers = {
+      flat: 'button_theme_flat',
+      bordered: 'button_theme_bordered',
+    };
+    const classes = [
+      typeModifiers[type],
+      themeModifiers[theme],
+    ];
+
+  button.button(class=classes, disabled=disabled)= text

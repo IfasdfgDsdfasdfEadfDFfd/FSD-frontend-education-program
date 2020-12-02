@@ -2,7 +2,7 @@ include ../../element-wrapper/element-wrapper.pug
 include ../../date-dropdown/date-dropdown.pug
 include ../../dropdown-counter/dropdown-counter.pug
 include ../../calendar/calendar.pug
-include ../../buttons/action-button.pug
+include ../../button/button.pug
 
 mixin search-room-card
   .card.search-room
@@ -13,4 +13,4 @@ mixin search-room-card
     +date-dropdown('прибытие', 'выезд')
     +element-wrapper({ label: 'гости', sub_label: '', inline: false, extra_spacing: false, large_label: false, })
       +dropdown-counter({ id: 'search-room-guests-counter', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
-    +action-button('Подобрать номер')
+    +button({text: 'Подобрать номер', type: 'action'})
