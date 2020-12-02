@@ -15,7 +15,7 @@
   line-height: 15px;
 }
 
-.element-wrapper__sub-label--large {
+.element-wrapper__sub-label_large {
   font-size: 14px;
 }
 
@@ -24,12 +24,12 @@
   flex-flow: column nowrap;
 }
 
-.element-wrapper__item--inline {
+.element-wrapper__item_inline {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
 }
 
-.element-wrapper__label--extra-spacing {
+.element-wrapper__label_extra-spacing {
   margin-bottom: 15px;
 }
