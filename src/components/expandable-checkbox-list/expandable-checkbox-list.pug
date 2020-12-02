@@ -2,5 +2,5 @@ include ../checkbox-list/checkbox-list.pug
 
 mixin expandable-checkbox-list(title, checkboxes, opened)
   .expandable-checkbox-list
-    +dropdown({text: title, textTheme: 'bold'})
+    +dropdown({text: title, opened, textTheme: 'bold'})
       +checkbox-list(checkboxes)

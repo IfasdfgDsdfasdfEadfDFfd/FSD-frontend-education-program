@@ -2,14 +2,14 @@ include ../counter/counter.pug
 include ../dropdown/dropdown.pug
 include ../form-action-buttons/form-action-buttons.pug
 
-mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, need_to_be_applied=false})
+mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, opened=false, need_to_be_applied=false})
   .dropdown-counter.js-dropdown-counter(
     id=id
     data-placeholder=placeholder,
     data-counting-way=counting_way,
     data-declensions=declensions,
   )
-    +dropdown({text: placeholder, buttonTheme: 'bordered', textTheme: 'nowrap'})
+    +dropdown({text: placeholder, opened, buttonTheme: 'bordered', textTheme: 'nowrap'})
       .dropdown-counter__list
         ul.dropdown-counter__counters
           each counter, index in counters
