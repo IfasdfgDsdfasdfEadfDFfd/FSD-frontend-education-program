@@ -1,0 +1,11 @@
+.account-registration-card {
+  .element-wrapper__item {
+    gap: 10px;
+  }
+}
+
+.account-registration-card__buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+}

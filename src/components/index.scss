@@ -1,6 +1,10 @@
 @import "./bullet-list/bullet-list";
 @import "./button/button";
-@import "./cards/cards";
+@import "./card/card";
+@import "./login-card/login-card";
+@import "./account-registration-card/account-registration-card";
+@import "./search-room-card/search-room-card";
+@import "./book-a-room-card/book-a-room-card";
 @import "./checkbox/checkbox";
 @import "./checkbox-list/checkbox-list";
 @import "./expandable-checkbox-list/expandable-checkbox-list";
@@ -15,7 +19,9 @@
 @import "./footer/footer";
 @import "./header/header";
 @import "./like-button/like-button";
-@import "./link-list/index";
+@import "./link-list/link-list";
+@import "./link-footer-button/link-footer-button";
+@import "./form-action-buttons/form-action-buttons";
 @import "./logo/logo";
 @import "./menu/menu";
 @import "./pagination/pagination";

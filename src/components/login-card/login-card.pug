@@ -1,0 +1,16 @@
+include ../text-field/text-field.pug
+include ../button/button.pug
+include ../link-footer-button/link-footer-button.pug
+include ../card/card.pug
+
+mixin login-card
+  +card()
+    .login-card
+      h1
+        | Войти
+      .login-card__user-data
+        +text-field({type: 'email', placeholder: 'Email'})
+        +text-field({type: 'password', placeholder: 'Пароль'})
+      .login-card__buttons
+        +button({text: 'Войти', type: 'action'})
+        +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
