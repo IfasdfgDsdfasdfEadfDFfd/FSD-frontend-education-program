@@ -34,11 +34,11 @@
   width: 100%;
 }
 
-.dropdown-container--opened .dropdown-container__body {
+.dropdown-container_opened .dropdown-container__body {
   display: block;
 }
 
-.dropdown-container--opened .dropdown__arrow {
+.dropdown-container_opened .dropdown__arrow {
   transition: all 0.2s ease;
   transform: rotate(180deg);
 }

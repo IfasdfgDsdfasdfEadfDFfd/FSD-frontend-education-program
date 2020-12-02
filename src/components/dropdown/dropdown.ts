@@ -3,7 +3,7 @@ const dropdowns = Array.from(
 );
 
 dropdowns.forEach(dropdown => {
-  const openClassName = 'dropdown-container--opened';
+  const openClassName = 'dropdown-container_opened';
 
   dropdown.addEventListener('click', event => {
     const target = event.target as HTMLElement;

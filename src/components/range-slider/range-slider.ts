@@ -76,9 +76,9 @@ sliders.forEach(slider => {
     const { min, max, left, right } = state[slider.id];
 
     display.innerHTML = `
-      ${Math.floor(left / 1000) || ''} 
-      ${String(left).slice(-3)}&#8381; - 
-      ${Math.floor(right / 1000) || ''} 
+      ${Math.floor(left / 1000) || ''}
+      ${String(left).slice(-3)}&#8381; -
+      ${Math.floor(right / 1000) || ''}
       ${String(right).slice(-3)}&#8381;
     `;
 

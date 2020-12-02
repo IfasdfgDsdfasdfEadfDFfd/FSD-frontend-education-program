@@ -3,7 +3,7 @@ include ../dropdown/dropdown.pug
 include ../form-action-buttons/form-action-buttons.pug
 
 mixin dropdown-counter(attrs)
-  - var opened_class_name = attrs.opened ? "dropdown-container--opened" : "";
+  - var opened_class_name = attrs.opened ? "dropdown-container_opened" : "";
 
   .dropdown-container.js-dropdown-container(class=opened_class_name)
     .dropdown-counter.js-dropdown-counter(id=attrs.id)

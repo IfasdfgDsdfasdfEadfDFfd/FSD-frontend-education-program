@@ -1,5 +1,4 @@
-include ../buttons/button.pug
-include ../buttons/border-button.pug
+include ../button/button.pug
 include ../logo/logo.pug
 include ../menu/menu.pug
 include ../user/user.pug
@@ -20,6 +19,6 @@ mixin header(isSigned=false, attached=false)
       else
         .header__buttons
           a(href='../login')
-            +border-button('войти')
+            +button({text: 'войти', theme: 'bordered'})
           a(href='../registration')
             +button('зарегистрироваться')

@@ -14,10 +14,7 @@ block body
   include ../../components/like-button/like-button.pug
   include ../../components/rate-button/rate-button.pug
   include ../../components/range-slider/range-slider.pug
-  include ../../components/buttons/button.pug
-  include ../../components/buttons/border-button.pug
-  include ../../components/buttons/flat-button.pug
-  include ../../components/buttons/action-button.pug
+  include ../../components/button/button.pug
   include ../../components/pagination/pagination.pug
   include ../../components/subscription-text-field/subscription-text-field.pug
   include ../../components/counter/counter.pug
@@ -44,62 +41,62 @@ block body
     .colors-type
       .colors-type__colors
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-100
+          .color-example.color-example_dark-shade-100
           .color-desc
             h2= "Dark Shader 100%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-75
+          .color-example.color-example_dark-shade-75
           .color-desc
             h2= "Dark Shader 75%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-50
+          .color-example.color-example_dark-shade-50
           .color-desc
             h2= "Dark Shader 50%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-25
+          .color-example.color-example_dark-shade-25
           .color-desc
             h2= "Dark Shader 25%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--dark-shade-5
+          .color-example.color-example_dark-shade-5
           .color-desc
             h2= "Dark Shader 5%"
             | #1F2041
         .colors-type__colors__item
-          .color-example.color-example--purple
+          .color-example.color-example_purple
           .color-desc
             h2= "Purple"
             | #BC9CFF
         .colors-type__colors__item
-          .color-example.color-example--green
+          .color-example.color-example_green
           .color-desc
             h2= "Green"
             | #6FCF87
       .colors-type__text-types
-        .colors-type__text-types__item
+        .text-example
           h1
             | This one is the sub-section or
             br
             | widget title
-            span= "H1"
-        .colors-type__text-types__item
+            span.text-example__label= "H1"
+        .text-example
           h2
             pre
               | Next one is the item title inside
               | widgets
-            span= "H2"
-        .colors-type__text-types__item
+            span.text-example__label= "H2"
+        .text-example
           h3
             | This is a label or cta text
-            span= "H3"
-        .colors-type__text-types__item
+            span.text-example__label= "H3"
+        .text-example
           pre
             | This is the body text which is used for most
             | of the design, like paragraphs, lists, etc.
-          span= "Body"
+            span.text-example__label= "Body"
 
   .toolbox.container.form-elements
     .form-elements__container
@@ -174,20 +171,20 @@ block body
       +element-wrapper({ label: 'buttons', extra_spacing: true, })
         .form-elements__buttons
           .form-elements__buttons__row
-            +button('click me')
-            +button('click me', true)
+            +button({text: 'click me'})
+            +button({text: 'click me', disabled: true})
           .form-elements__buttons__row
-            +border-button('click me')
-            +border-button('click me', true)
+            +button({text: 'click me', theme: 'bordered'})
+            +button({text: 'click me', theme: 'bordered', disabled: true})
           .form-elements__buttons__row
-            +flat-button('click me')
-            +flat-button('click me', true)
+            +button({text: 'click me', theme: 'flat'})
+            +button({text: 'click me', theme: 'flat', disabled: true})
           .form-elements__buttons__row
-            +action-button('Перейти к оплате')
+            +button({text: 'Перейти к оплате', type: 'action'})
       +element-wrapper({ label: 'pagination', extra_spacing: true, })
         +pagination('1 - 12 из 100+ вариантов аренды')
 
-    .form-elements__container.form-elements__container--narrow
+    .form-elements__container.form-elements__container_narrow
       +element-wrapper({ label: 'dropdown', sub_label: 'DEFAULT', })
         +dropdown-counter({
           id: 'room-properties-1', placeholder: 'Параметры номера',
@@ -235,7 +232,7 @@ block body
           opened: true, need_to_be_applied: true
         })
 
-    .form-elements__container.form-elements__container--narrow
+    .form-elements__container.form-elements__container_narrow
       +expandable-checkbox-list('expandable checkbox list', [
         { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
         { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
@@ -291,7 +288,7 @@ block body
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
         | не жаловался из соседей.
 
-  .container.toolbox.toolbox--gray.cards
+  .container.toolbox.toolbox_gray.cards
     +search-room-card
     +account-registration-card
     +book-a-room-card
@@ -301,7 +298,7 @@ block body
     +room-item({ bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 })
     +room-item({ bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65 })
 
-  .toolbox.toolbox--gray.headers-footers
+  .toolbox.toolbox_gray.headers-footers
     +header(false)
     +header(true)
     +footer-desktop

@@ -37,13 +37,13 @@ block body
                 .room-impressions__good-ring
                 .room-impressions__nice-ring
                 .room-impressions__center-ring
-                  span= "260"
+                  span.room-impressions__votes= "260"
                   | голосов
               ul.color-bullet-list
-                li Великолепно
-                li Хорошо
-                li Удовлетворительно
-                li Разочарован
+                li.color-bullet-list__item Великолепно
+                li.color-bullet-list__item Хорошо
+                li.color-bullet-list__item Удовлетворительно
+                li.color-bullet-list__item Разочарован
         .room-details__body__desc-row
           +element-wrapper({ label: 'Отзывы поситителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
             .room-details__body__comment-section
