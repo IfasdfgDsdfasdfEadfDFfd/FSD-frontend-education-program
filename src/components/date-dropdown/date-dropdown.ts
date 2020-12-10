@@ -6,7 +6,7 @@ $('.date-dropdown').each(function () {
   const placeholder = $from.text();
   const separator = ',';
 
-  const $calendar = $('.calendar', this);
+  const $calendar = $('.js-calendar__container', this);
   initCalendar($calendar, {
     dateFormat: 'dd.mm.yyyy',
     multipleDatesSeparator: separator,
