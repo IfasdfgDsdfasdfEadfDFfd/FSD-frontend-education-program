@@ -1,6 +1,6 @@
 include ../like-button/like-button.pug
 
-mixin comment(avatar_path, username, date, like_attrs)
+mixin comment({avatar_path, username, date, like_attrs})
   .comment
     .comment__author
       image.comment__avatar(src=avatar_path)
