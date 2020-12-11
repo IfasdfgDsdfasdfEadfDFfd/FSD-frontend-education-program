@@ -2,11 +2,17 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  min-height: 44px;
+  height: 44px;
   line-height: 42px;
 
   a:focus,
   a:hover {
     text-decoration: none;
+  }
+}
+
+@media (max-width: $tiny-screen) {
+  .link-footer-button {
+    line-height: inherit;
   }
 }
