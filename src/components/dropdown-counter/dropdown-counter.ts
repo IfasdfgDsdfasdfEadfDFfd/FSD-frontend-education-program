@@ -58,7 +58,7 @@ dropdownElements.forEach(dropdown => {
     }
 
     const buttonText = dropdown.querySelector(
-      '.dropdown__button__text',
+      '.js-dropdown__button__text',
     ) as Node;
     buttonText.replaceChild(
       document.createTextNode(text),
