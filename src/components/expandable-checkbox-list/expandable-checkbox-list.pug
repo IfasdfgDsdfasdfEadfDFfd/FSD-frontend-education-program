@@ -1,6 +1,6 @@
 include ../checkbox-list/checkbox-list.pug
 
-mixin expandable-checkbox-list(title, checkboxes, opened)
+mixin expandable-checkbox-list({title, checkboxes, opened=false})
   .expandable-checkbox-list
     +dropdown({text: title, opened, textTheme: 'bold'})
       +checkbox-list(checkboxes)
