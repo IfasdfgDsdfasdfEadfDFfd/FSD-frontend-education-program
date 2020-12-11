@@ -2,5 +2,10 @@ mixin checkbox-list(params)
   ul.checkbox-list
     each item in params
       li.checkbox-list__item
-        const { name, value, label, desc, checked } = item;
-        +checkbox({name, value, label, desc, checked})
+        +checkbox({
+          name: item.name,
+          value: item.value,
+          label: item.label,
+          desc: item.desc,
+          checked: item.checked,
+        })
