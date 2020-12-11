@@ -1,4 +1,4 @@
-mixin toggle(name, value, checked=false)
+mixin toggle({ name, value, checked=false })
   .toggle
     - var id = name + "-id";
     input.toggle__element(

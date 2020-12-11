@@ -22,7 +22,10 @@ mixin account-registration-card
       +element-wrapper({label: 'данные для входа в сервис'})
         +text-field({type: 'email', placeholder: 'Email'})
         +text-field({type: 'password', placeholder: 'Пароль'})
-        +toggle('registration-special-offers-toggle', 'registration-recieve-special-offers')
+        +toggle({
+          name: 'registration-special-offers-toggle',
+          value: 'registration-recieve-special-offers',
+        })
           | Получать спецпредложения
       .account-registration-card__buttons
         +button({text: 'Перейти к оплате', type: 'action'})

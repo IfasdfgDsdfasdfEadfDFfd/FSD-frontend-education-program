@@ -152,9 +152,16 @@ block body
         +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
       +element-wrapper({ label: 'toggle', extra_spacing: true, })
         .form-elements__toggle-group
-          +toggle('special-offers-toggle_1', 'recieve-special-offers', true)
+          +toggle({
+            name: 'special-offers-toggle_1',
+            value: 'recieve-special-offers',
+            checked: true,
+          })
             | Получать спецпредложения
-          +toggle('special-offers-toggle_2', 'recieve-special-offers')
+          +toggle({
+            name: 'special-offers-toggle_2',
+            value: 'recieve-special-offers',
+          })
             | Получать спецпредложения
       +element-wrapper({ label: 'like button', extra_spacing: true, inline: true, })
         +like-button({name: 'like-1', liked: false, count: '2'})
