@@ -1,6 +1,29 @@
 include ../rate-button/rate-button.pug
 
-mixin room-desc(number, cost, luxury=false)
+mixin room-item(props)
+  .room-item
+    img.root-item__img(src=props.bgi)
+    .image-slider
+      .image-slider__filled
+      .image-slider__empty
+      .image-slider__empty
+      .image-slider__empty
+    .room-item__desc
+      +room-desc({
+        number: props.number,
+        cost: props.cost,
+        luxury: props.luxury,
+      })
+      hr
+      .room-item__desc-item
+        +rate-button('rating-room-' + props.number, props.stars)
+        - var text = "отзывов";
+        .room-item__review
+          strong
+            | #{props.review}
+          | #{text}
+
+mixin room-desc({ number, cost, luxury=false })
   .room-item__desc-item
     .room-item__name
       | №
@@ -13,22 +36,3 @@ mixin room-desc(number, cost, luxury=false)
       strong
         | #{cost}₽
       | в сутки
-
-mixin room-item(props)
-  .room-item
-    img.root-item__img(src=props.bgi)
-    .image-slider
-      .image-slider__filled
-      .image-slider__empty
-      .image-slider__empty
-      .image-slider__empty
-    .room-item__desc
-      +room-desc(props.number, props.cost, props.luxury)
-      hr
-      .room-item__desc-item
-        +rate-button('rating-room-' + props.number, props.stars)
-        - var text = "отзывов";
-        .room-item__review
-          strong
-            | #{props.review}
-          | #{text}
