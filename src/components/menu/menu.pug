@@ -2,7 +2,7 @@ mixin menu(menu_list)
   menu.menu
     ul.menu__list
       each item in menu_list
-        - var expandable = item.children ? "menu__item_expandable" : "";
+        - var expandable = item.children ? "menu__item_type_expandable" : "";
         li.menu__item(class=expandable)
           .menu__item__text= item.text
           if item.children
