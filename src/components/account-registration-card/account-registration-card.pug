@@ -26,4 +26,4 @@ mixin account-registration-card
           | Получать спецпредложения
       .account-registration-card__buttons
         +button({text: 'Перейти к оплате', type: 'action'})
-        +link-footer-button('Уже есть аккаунт на Toxin', '../login/', 'войти')
+        +link-footer-button({ text: 'Уже есть аккаунт на Toxin', link: '../login/', button_text: 'войти' })

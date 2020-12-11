@@ -13,4 +13,4 @@ mixin login-card
         +text-field({type: 'password', placeholder: 'Пароль'})
       .login-card__buttons
         +button({text: 'Войти', type: 'action'})
-        +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
+        +link-footer-button({ text: 'Нет аккаунта на Toxin?', link: '../registration/', button_text: 'создать' })
