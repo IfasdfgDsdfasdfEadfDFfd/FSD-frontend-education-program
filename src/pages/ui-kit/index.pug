@@ -101,9 +101,9 @@ block body
   .toolbox.container.form-elements
     .form-elements__container
       .form-elements__text-fields
-        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT', })
+        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT' })
           +text-field({type: 'email', placeholder: 'Email'})
-        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS', })
+        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS' })
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
         +element-wrapper({ label: 'dropdown', })
           +dropdown-counter({
@@ -251,7 +251,7 @@ block body
       ], true)
 
     .form-elements__container
-      +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true, })
+      +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true })
         .form-elements__rich-checkbox-group
           +checkbox-list([
             {
@@ -269,7 +269,7 @@ block body
           ])
 
     .form-elements__container
-      +element-wrapper({ label: 'bullet list', extra_spacing: true, })
+      +element-wrapper({ label: 'bullet list', extra_spacing: true })
         +bullet-list([
           'Нельзя с питомцами',
           'Без вечеринок и мероприятий',

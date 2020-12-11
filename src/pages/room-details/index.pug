@@ -26,11 +26,11 @@ block body
     .room-details__body__desc.container
       .room-details__body__desc__left
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Сведения о номере', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Сведения о номере', extra_spacing: true, large_label: true })
             +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглащающие стены')
             +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
             +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
-          +element-wrapper({ label: 'Впечатления от номера', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Впечатления от номера', extra_spacing: true, large_label: true })
             .room-impressions
               .statictic-ring
                 .room-impressions__magnificent-ring
@@ -45,7 +45,12 @@ block body
                 li.color-bullet-list__item Удовлетворительно
                 li.color-bullet-list__item Разочарован
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Отзывы поситителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({
+            label: 'Отзывы поситителей номера',
+            sub_label: '2 отзыва',
+            extra_spacing: true,
+            large_label: true
+          })
             .room-details__body__comment-section
               +comment({
                 avatar_path: asset_path + '/comment_avatar_1.webp', 
@@ -65,15 +70,16 @@ block body
                 | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
                 | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Правила', sub_label: '', inline: false, extra_spacing: true, large_label: true })
-            +bullet-list([ 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00 ', ])
-          +element-wrapper({ label: 'Отмена', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Правила', extra_spacing: true, large_label: true })
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00 '
+            ])
+          +element-wrapper({ label: 'Отмена', extra_spacing: true, large_label: true })
             | Бесплатная отмена в течение 48 ч. После
-            br
             | этого при отмене не позднее чем за 5 дн. до
-            br
             | прибытия вы получите полный возврат за
-            br
             | вычетом сбора за услуги
       .room-details__body__desc__right
         +book-a-room-card
