@@ -177,13 +177,36 @@
 }
 
 @media (max-width: $small-screen) {
-  .room-details__body__desc__left {
-    gap: 30px;
+  .room-impressions {
+    gap: 15px;
+    margin: auto;
+    padding: 0;
+  }
+
+  .room-details__body__comment-section {
+    margin-bottom: 0;
+  }
+
+  .color-bullet-list {
+    font-size: 12px;
+  }
+
+  .room-details__body__desc {
+    gap: 20px;
+    padding: 20px;
   }
 
   .room-details__body__desc-row {
     flex-flow: column nowrap;
     gap: 10px;
     align-items: center;
+
+    .bullet-list {
+      margin: auto;
+    }
+
+    .element-wrapper__sub-label {
+      display: none;
+    }
   }
 }
