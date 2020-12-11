@@ -39,12 +39,16 @@ block body
           opened: false,
           need_to_be_applied: true
         })
-      +range-slider('диапозон цены', 'cost-range-slider', {
-        min: 0,
-        max: 15000,
-        step: 100,
-        left: 5000,
-        right: 10000,
+      +range-slider({ 
+        label: 'диапозон цены',
+        name: 'cost-range-slider',
+        opts: {
+          min: 0,
+          max: 15000,
+          step: 100,
+          left: 5000,
+          right: 10000,
+        }
       })
         | Стоимость за сутки пребывания в номере
 

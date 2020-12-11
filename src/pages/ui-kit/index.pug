@@ -165,8 +165,12 @@ block body
 
     .form-elements__container
       +element-wrapper
-        +range-slider('range slider', 'cost-range-slider', {
-          min: 0, max: 15000, step: 100, left: 5000, right: 10000,
+        +range-slider({
+          label: 'range slider',
+          name: 'cost-range-slider',
+          opts: {
+            min: 0, max: 15000, step: 100, left: 5000, right: 10000,
+          }
         })
       +element-wrapper({ label: 'buttons', extra_spacing: true, })
         .form-elements__buttons
