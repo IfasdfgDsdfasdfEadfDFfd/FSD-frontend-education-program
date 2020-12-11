@@ -1,4 +1,4 @@
-mixin counter(id, index, text, initial_count=0)
+mixin counter({id, index, text, initial_count=0})
   .counter.js-counter(data-index=index, id=id)
     span.counter__text= text
     .counter__actions
