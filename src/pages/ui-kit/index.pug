@@ -157,8 +157,8 @@ block body
           +toggle('special-offers-toggle_2', 'recieve-special-offers')
             | Получать спецпредложения
       +element-wrapper({ label: 'like button', extra_spacing: true, inline: true, })
-        +like-button('like-1', false, '2')
-        +like-button('like-2', true, '12')
+        +like-button({name: 'like-1', liked: false, count: '2'})
+        +like-button({name: 'like-2', liked: true, count: '12'})
       +element-wrapper({ label: 'rate button', extra_spacing: true, inline: true, })
         +rate-button('ui-kit-rate-buttons-1', 4)
         +rate-button('ui-kit-rate-buttons-2', 5)
@@ -233,22 +233,29 @@ block body
         })
 
     .form-elements__container.form-elements__container_narrow
-      +expandable-checkbox-list('expandable checkbox list', [
-        { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
-        { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
-        { label: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, },
-        { label: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, },
-        { label: 'телевизор', name: 'tv-0', value: 'has-tv', },
-        { label: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', },
-      ], false)
-      +expandable-checkbox-list('expandable checkbox list', [
-        { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', },
-        { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
-        { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
-        { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
-        { label: 'телевизор', name: 'tv', value: 'has-tv', },
-        { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', },
-      ], true)
+      +expandable-checkbox-list({
+        title: 'expandable checkbox list',
+        checkboxes: [
+          { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
+          { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
+          { label: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, },
+          { label: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, },
+          { label: 'телевизор', name: 'tv-0', value: 'has-tv', },
+          { label: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', },
+        ],
+      })
+      +expandable-checkbox-list({
+        title: 'expandable checkbox list',
+        checkboxes: [
+          { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', },
+          { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
+          { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
+          { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
+          { label: 'телевизор', name: 'tv', value: 'has-tv', },
+          { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', },
+        ],
+        opened: true
+      })
 
     .form-elements__container
       +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true })
