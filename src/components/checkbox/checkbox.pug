@@ -9,7 +9,7 @@ mixin checkbox(name, value, label, desc, checked=false)
         type='checkbox',
         value=value
       )
-      label.checkbox__label(for=id)= label
+      label.checkbox__label(for=id, class=desc ? 'checkbox__label_bold' : '')= label
     if desc
       span.checkbox__desc
         | #{desc}
