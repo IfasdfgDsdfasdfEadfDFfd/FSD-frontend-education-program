@@ -1,7 +1,7 @@
 import { initCalendar } from '../calendar/calendar';
 
-$('.filter-date-dropdown').each(function () {
-  const $valueContainer = $('.filter-date-dropdown__text', this);
+$('.js-filter-date-dropdown').each(function () {
+  const $valueContainer = $('.dropdown__button__text', this);
   const placeholder = $valueContainer.text();
   const separator = ' - ';
 

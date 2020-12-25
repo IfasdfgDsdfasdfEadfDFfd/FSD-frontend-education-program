@@ -2,9 +2,6 @@ include ../dropdown/dropdown.pug
 include ../calendar/calendar.pug
 
 mixin filter-date-dropdown
-  .filter-date-dropdown.dropdown-container
-    +dropdown
-      span.filter-date-dropdown__text
-        | даты пребывания в номере
-    .dropdown-container__body
+  .filter-date-dropdown.js-filter-date-dropdown
+    +dropdown({text: 'даты пребывания в номере', buttonTheme: 'bordered'})
       +calendar

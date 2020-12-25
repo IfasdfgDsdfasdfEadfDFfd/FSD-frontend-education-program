@@ -1,10 +1,15 @@
-.login-form__user-data {
+.login-card {
+  z-index: 0;
+  background-color: #fff;
+}
+
+.login-card__user-data {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
 }
 
-.login-form__buttons {
+.login-card__buttons {
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;

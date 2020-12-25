@@ -1,15 +1,6 @@
 .dropdown-counter {
   display: flex;
-  padding: 12px;
-  border: 1px solid $dark-shade-25;
   border-radius: 4px 4px 0 0;
-}
-
-.dropdown-counter__text {
-  overflow: hidden;
-  max-width: 71%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .dropdown-counter__list {
@@ -18,7 +9,7 @@
   gap: 20px;
   width: 100%;
   padding: 5px 7px 13px 15px;
-  border: 1px solid $dark-shade-25;
+  border: 1px solid $dark-shade-50;
   border-top: 0;
   border-radius: 0 0 4px 4px;
   background-color: #fff;

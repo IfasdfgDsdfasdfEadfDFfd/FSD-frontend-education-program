@@ -1,16 +1,14 @@
-const dropdowns = Array.from(
-  document.getElementsByClassName('dropdown-container'),
-);
+const dropdowns = Array.from(document.getElementsByClassName('js-dropdown'));
 
 dropdowns.forEach(dropdown => {
-  const openClassName = 'dropdown-container_opened';
+  const openClassName = 'dropdown_opened';
 
   dropdown.addEventListener('click', event => {
     const target = event.target as HTMLElement;
 
     if (
-      target.classList.contains('dropdown') ||
-      target.parentElement?.classList.contains('dropdown')
+      target.classList.contains('dropdown__button') ||
+      target.parentElement?.classList.contains('dropdown__button')
     ) {
       dropdown.classList.toggle(openClassName);
     }

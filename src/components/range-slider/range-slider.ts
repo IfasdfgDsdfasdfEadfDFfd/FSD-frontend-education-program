@@ -2,17 +2,17 @@ import { createStore, Action } from '../../store/store';
 
 const sliders = Array(
   ...((document.getElementsByClassName(
-    'range-slider',
+    'js-range-slider',
   ) as unknown) as Array<HTMLElement>),
 );
 
 const initState = sliders.reduce((state, slider) => {
-  const left = slider.getElementsByClassName(
-    'range-slider__element-left',
-  )[0] as HTMLInputElement;
-  const right = slider.getElementsByClassName(
-    'range-slider__element-right',
-  )[0] as HTMLInputElement;
+  const left = slider.querySelector(
+    '.js-range-slider__element-left',
+  ) as HTMLInputElement;
+  const right = slider.querySelector(
+    '.js-range-slider__element-right',
+  ) as HTMLInputElement;
 
   return {
     ...state,
@@ -76,19 +76,19 @@ sliders.forEach(slider => {
     const { min, max, left, right } = state[slider.id];
 
     display.innerHTML = `
-      ${Math.floor(left / 1000) || ''} 
-      ${String(left).slice(-3)}&#8381; - 
-      ${Math.floor(right / 1000) || ''} 
+      ${Math.floor(left / 1000) || ''}
+      ${String(left).slice(-3)}&#8381; -
+      ${Math.floor(right / 1000) || ''}
       ${String(right).slice(-3)}&#8381;
     `;
 
     const leftThumb = slider.querySelector(
-      '.slider__thumb_left',
+      '.js-slider__thumb_left',
     ) as HTMLElement;
     const rightThumb = slider.querySelector(
-      '.slider__thumb_right',
+      '.js-slider__thumb_right',
     ) as HTMLElement;
-    const range = slider.querySelector('.slider__range') as HTMLElement;
+    const range = slider.querySelector('.js-slider__range') as HTMLElement;
 
     const leftPercent = ((left - min) / (max - min)) * 100;
     const rightPercent = ((right - min) / (max - min)) * 100;
@@ -99,27 +99,27 @@ sliders.forEach(slider => {
     range.style.right = `${100 - rightPercent}%`;
   });
 
-  const inputElement = slider.querySelector(
-    '.range-slider__element',
+  const inputElementLeft = slider.querySelector(
+    '.js-range-slider__element-left',
+  ) as HTMLInputElement;
+  const inputElementRight = slider.querySelector(
+    '.js-range-slider__element-right',
   ) as HTMLInputElement;
 
   store.dispatch({ name: 'COLD_START' });
   store.dispatch({
     name: actions.SET_MIN_VALUE,
-    value: { id: slider.id, min: parseInt(inputElement.min) },
+    value: { id: slider.id, min: parseInt(inputElementLeft.min) },
   });
   store.dispatch({
     name: actions.SET_MAX_VALUE,
-    value: { id: slider.id, max: parseInt(inputElement.max) },
+    value: { id: slider.id, max: parseInt(inputElementLeft.max) },
   });
 
   const { left, right } = store.getState()[slider.id];
 
-  const leftThumbEl = slider.querySelector(
-    '.range-slider__element-left',
-  ) as HTMLInputElement;
-  leftThumbEl.value = left;
-  leftThumbEl.addEventListener('input', (event: any) => {
+  inputElementLeft.value = left;
+  inputElementLeft.addEventListener('input', (event: any) => {
     const value = Math.min(
       parseInt(event.target.value),
       store.getState()[slider.id].right,
@@ -136,11 +136,8 @@ sliders.forEach(slider => {
     });
   });
 
-  const rightThumbEl = slider.querySelector(
-    '.range-slider__element-right',
-  ) as HTMLInputElement;
-  rightThumbEl.value = right;
-  rightThumbEl.addEventListener('input', (event: any) => {
+  inputElementRight.value = right;
+  inputElementRight.addEventListener('input', (event: any) => {
     const value = Math.max(
       parseInt(event.target.value),
       store.getState()[slider.id].left,

@@ -18,7 +18,7 @@ mixin header(isSigned=false, attached=false)
         +user('Юлий Цезарь')
       else
         .header__buttons
-          a(href='../login')
+          a.header__buttons__link(href='../login')
             +button({text: 'войти', theme: 'bordered'})
-          a(href='../registration')
-            +button('зарегистрироваться')
+          a.header__buttons__link(href='../registration')
+            +button({text: 'зарегистрироваться'})

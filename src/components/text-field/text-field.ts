@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import Cleave from 'cleave.js';
 
-$('.text-field_masked')
+$('.js-text-field--masked')
   .toArray()
   .forEach(input => {
     new Cleave(input, {

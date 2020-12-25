@@ -5,15 +5,15 @@ mixin range-slider(label, name, opts)
       h3
         label= label
       span(id="display-for-" + id)
-    .range-slider(id=id)
-      input.range-slider__element.range-slider__element-left(
+    .range-slider.js-range-slider(id=id)
+      input.range-slider__element.js-range-slider__element-left(
         max=opts.max,
         min=opts.min,
         step=opts.step,
         type='range',
         value=opts.left
       )
-      input.range-slider__element.range-slider__element-right(
+      input.range-slider__element.js-range-slider__element-right(
         max=opts.max,
         min=opts.min,
         step=opts.step,
@@ -22,9 +22,9 @@ mixin range-slider(label, name, opts)
       )
 
       .slider
-        .slider__track
-        .slider__range
-        .slider__thumb.slider__thumb_left
-        .slider__thumb.slider__thumb_right
+        .slider__track.js-slider__track
+        .slider__range.js-slider__range
+        .slider__thumb.js-slider__thumb_left
+        .slider__thumb.js-slider__thumb_right
 
     block

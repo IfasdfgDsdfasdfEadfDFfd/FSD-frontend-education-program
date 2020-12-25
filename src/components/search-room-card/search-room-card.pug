@@ -1,0 +1,18 @@
+include ../element-wrapper/element-wrapper.pug
+include ../date-dropdown/date-dropdown.pug
+include ../dropdown-counter/dropdown-counter.pug
+include ../calendar/calendar.pug
+include ../button/button.pug
+include ../card/card.pug
+
+mixin search-room-card
+  .search-room-card
+    +card()
+      h1.search-room-card__title
+        | Найдем номер под
+        br
+        | ваши пожелания
+      +date-dropdown('прибытие', 'выезд')
+      +element-wrapper({ label: 'гости', sub_label: '', inline: false, extra_spacing: false, large_label: false, })
+        +dropdown-counter({ id: 'search-room-guests-counter', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
+      +button({text: 'Подобрать номер', type: 'action'})

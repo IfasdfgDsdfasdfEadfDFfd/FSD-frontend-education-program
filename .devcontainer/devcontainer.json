@@ -16,7 +16,8 @@
 		"vscodevim.vim",
 		"esbenp.prettier-vscode",
 		"stylelint.vscode-stylelint",
-		"mhutchie.git-graph"
+		"mhutchie.git-graph",
+		"editorconfig.editorconfig"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

@@ -7,7 +7,6 @@ import './components/range-slider/range-slider';
 import './components/dropdown/dropdown';
 import './components/counter/counter';
 import './components/dropdown-counter/dropdown-counter';
-import './components/expandable-checkbox-list/expandable-checkbox-list';
 import './pages/ui-kit/ui-kit';
 
 import './index.scss';

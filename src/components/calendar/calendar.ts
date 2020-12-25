@@ -19,11 +19,9 @@ const initCalendar = (
     })
     .data('datepicker');
 
-  const cancelButton = $(
-    '.calendar-container .form-action-buttons__cancel-button',
-  );
-  cancelButton.css('visibility', 'visible');
-  cancelButton.on('click', () => {
+  const $cancelButton = $('.js-calendar-container .js-action-button-cancel');
+  $cancelButton.css('visibility', 'visible');
+  $cancelButton.on('click', () => {
     datepicker.clear();
     customProps.onClear && customProps.onClear();
   });

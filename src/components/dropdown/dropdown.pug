@@ -1,4 +1,25 @@
-mixin dropdown(attrs)
-  button.dropdown&attributes(attrs)
-    block
-    span.dropdown__arrow= "expand_more"
+mixin dropdown({text, buttonTheme, textTheme, splitted, opened})
+  -
+    const buttonThemeModifiers = {
+      bordered: 'dropdown__button_bordered',
+    };
+
+    const textThemeModifiers = {
+      bold: 'dropdown__button__text_bold',
+      nowrap: 'dropdown__button__text_nowrap',
+    };
+
+    const buttonClass = [buttonThemeModifiers[buttonTheme]];
+    const textClass = [textThemeModifiers[textTheme]];
+
+  .dropdown.js-dropdown(class=opened ? 'dropdown_opened': '')
+    +element-wrapper({inline: true})
+      button.dropdown__button.js-dropdown__button(class=buttonClass)
+        span.dropdown__button__text.js-dropdown__button__text(class=textClass)= text
+        span.dropdown__button__arrow= "expand_more"
+      if splitted
+        button.dropdown__button.js-dropdown__button(class=buttonClass)
+          span.dropdown__button__text.js-dropdown__button__text(class=textClass)= text
+          span.dropdown__button__arrow= "expand_more"
+    .dropdown__body
+      block

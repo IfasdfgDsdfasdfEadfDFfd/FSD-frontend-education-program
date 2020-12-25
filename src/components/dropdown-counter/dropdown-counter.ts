@@ -2,13 +2,11 @@ import { store, actions } from '../counter/counter';
 
 const dropdownElements = Array(
   ...((document.getElementsByClassName(
-    'dropdown-counter',
+    'js-dropdown-counter',
   ) as unknown) as Array<HTMLElement>),
 );
 
 dropdownElements.forEach(dropdown => {
-  const button = dropdown.querySelector('.dropdown') as HTMLElement;
-
   store.subscribe((state: any) => {
     const countersData = Object.keys(state)
       .filter(key => {
@@ -18,10 +16,10 @@ dropdownElements.forEach(dropdown => {
 
     const sumOfCounters = countersData.reduce((prev, cur) => prev + cur, 0);
 
-    const placeholder = <string>button?.getAttribute('data-placeholder');
-    const countingWay = <string>button?.getAttribute('data-counting-way');
+    const placeholder = <string>dropdown?.getAttribute('data-placeholder');
+    const countingWay = <string>dropdown?.getAttribute('data-counting-way');
     const declensions = JSON.parse(
-      <string>button?.getAttribute('data-declensions'),
+      <string>dropdown?.getAttribute('data-declensions'),
     );
 
     const defineDeclension = (number: string): string => {
@@ -59,27 +57,26 @@ dropdownElements.forEach(dropdown => {
       }
     }
 
-    button?.firstChild?.replaceChild(
+    const buttonText = dropdown.querySelector(
+      '.js-dropdown__button__text',
+    ) as Node;
+    buttonText.replaceChild(
       document.createTextNode(text),
-      button.firstChild.firstChild as Node,
+      buttonText.firstChild as Node,
     );
 
     dropdown
-      .querySelector('.form-action-buttons')
+      .querySelector('.js-form-action-buttons')
       ?.classList.toggle('form-action-buttons_dirty', sumOfCounters !== 0);
   });
 
   store.dispatch({ name: '@COLD_START' });
 
-  const cancelButton = dropdown?.querySelector(
-    '.form-action-buttons__cancel-button',
-  );
+  const cancelButton = dropdown?.querySelector('.js-action-button-cancel');
 
-  const applyButton = dropdown?.querySelector(
-    '.form-action-buttons__apply-button',
-  );
+  const applyButton = dropdown?.querySelector('.js-action-button-apply');
 
-  const counters = dropdown?.querySelectorAll('.counter');
+  const counters = dropdown?.querySelectorAll('.js-counter');
 
   applyButton?.addEventListener('click', () => {
     dropdown.click();
