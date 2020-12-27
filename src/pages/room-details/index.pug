@@ -21,13 +21,21 @@ block body
   +header(false, true)
   main.room-details__body
     .room-details__body__photos
-      img.room-details__body__photos-big(src=asset_path + '/room_888_big.webp')
+      img.room-details__body__photos-big(
+        src=asset_path + '/room_888_big.webp',
+        alt="room # 888 big preview",
+        aria-label="room # 888 big preview"
+      )
       .room-details__body__photos-lower-group
         img.room-details__body__photos-lower(
           src=asset_path + '/room_888_details_1.webp'
+          alt="room # 888 small preview",
+          aria-label="room # 888 small preview"
         )
         img.room-details__body__photos-lower(
           src=asset_path + '/room_888_details_2.webp'
+          alt="room # 888 small preview",
+          aria-label="room # 888 small preview"
         )
     .room-details__body__desc.container
       .room-details__body__desc__left
