@@ -1,13 +1,13 @@
 # Website for booking a hotel
 
-[website page](https://unpredictable-username.github.io/toxin-hotel-booking-website/)
+[website page](https://patchwork-body.github.io/toxin-hotel-booking-website/)
 
 ## Project setup:
 
 - clone repository
 
 ```bash
-git clone https://github.com/unpredictable-username/toxin-hotel-booking-website.git
+git clone https://github.com/patchwork-body/toxin-hotel-booking-website.git
 ```
 
 - install dependencies
