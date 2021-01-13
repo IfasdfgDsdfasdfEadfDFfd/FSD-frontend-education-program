@@ -3,7 +3,7 @@ include ../like-button/like-button.pug
 mixin comment({avatar_path, username, date, like_attrs})
   .comment
     .comment__author
-      image.comment__avatar(src=avatar_path)
+      image.comment__avatar(src=avatar_path alt="user avatar")
       +like-button({
         name: like_attrs.name,
         liked: like_attrs.liked,
