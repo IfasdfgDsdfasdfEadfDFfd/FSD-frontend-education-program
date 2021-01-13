@@ -21,8 +21,13 @@
 }
 
 .dropdown__button_flat {
-  padding: 12px;
+  padding: 12px 0;
   border: 0;
+
+  &:focus,
+  &:hover {
+    border: 0;
+  }
 }
 
 .dropdown__button__text_nowrap {
