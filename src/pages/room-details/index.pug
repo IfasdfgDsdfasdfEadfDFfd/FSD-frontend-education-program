@@ -40,11 +40,11 @@ block body
     .room-details__body__desc.container
       .room-details__body__desc__left
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Сведения о номере', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Сведения о номере', extra_spacing: true, large_label: true })
             +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
             +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
             +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
-          +element-wrapper({ label: 'Впечатления от номера', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Впечатления от номера', extra_spacing: true, large_label: true })
             .room-impressions
               .statictic-ring
                 .room-impressions__magnificent-ring
@@ -59,9 +59,19 @@ block body
                 li.color-bullet-list__item Удовлетворительно
                 li.color-bullet-list__item Разочарован
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Отзывы посетителей номера', sub_label: '2 отзыва', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({
+            label: 'Отзывы посетителей номера',
+            sub_label: '2 отзыва',
+            extra_spacing: true,
+            large_label: true
+          })
             .room-details__body__comment-section
-              +comment(asset_path + '/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {name: 'comment-like-1', liked: true, like_count: 12})
+              +comment({
+                avataro_path: asset_path + '/comment_avatar_1.webp',
+                username: 'Мурад Сарафанов',
+                date: '5 дней назад',
+                like_attrs: {name: 'comment-like-1', liked: true, like_count: 12}
+              })
                 | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
                 | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
                 | не жаловался из соседей.

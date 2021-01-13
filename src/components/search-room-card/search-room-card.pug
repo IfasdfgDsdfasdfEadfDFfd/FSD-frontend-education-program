@@ -13,7 +13,18 @@ mixin search-room-card
         br
         | ваши пожелания
       +date-dropdown('прибытие', 'выезд')
-      +element-wrapper({ label: 'гости', sub_label: '', inline: false, extra_spacing: false, large_label: false, })
-        +dropdown-counter({ id: 'search-room-guests-counter', placeholder: 'Сколько гостей', counters: [{name: 'взрослые', value: 0}, {name: 'дети', value: 0}, {name: 'младенцы', value: 0}], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'}, opened: false, need_to_be_applied: true })
+      +element-wrapper({ label: 'гости'})
+        +dropdown-counter({
+          id: 'search-room-guests-counter',
+          placeholder: 'Сколько гостей',
+          counters: [
+            {name: 'взрослые', value: 0},
+            {name: 'дети', value: 0},
+            {name: 'младенцы', value: 0}
+          ],
+          counting_way: 'sum',
+          declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
+          opened: false, need_to_be_applied: true
+        })
       +button({type: 'action'})
         | Подобрать номер
