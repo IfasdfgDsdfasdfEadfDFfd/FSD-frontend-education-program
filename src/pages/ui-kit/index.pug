@@ -107,9 +107,9 @@ block body
   .toolbox.container.form-elements
     .form-elements__container
       .form-elements__text-fields
-        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT', })
+        +element-wrapper({ label: 'text field', sub_label: 'DEFAULT' })
           +text-field({type: 'email', placeholder: 'Email'})
-        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS', })
+        +element-wrapper({ label: 'text field', sub_label: 'HOVER / FOCUS' })
           +focused-text-field({type: 'text', placeholder: 'some text', value: 'This is pretty awesome'})
         +element-wrapper({ label: 'dropdown', })
           +dropdown-counter({
@@ -158,21 +158,32 @@ block body
         +radio-buttons-group('gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
       +element-wrapper({ label: 'toggle', extra_spacing: true, })
         .form-elements__toggle-group
-          +toggle('special-offers-toggle_1', 'recieve-special-offers', true)
+          +toggle({
+            name: 'special-offers-toggle_1',
+            value: 'recieve-special-offers',
+            checked: true,
+          })
             | Получать спецпредложения
-          +toggle('special-offers-toggle_2', 'recieve-special-offers')
+          +toggle({
+            name: 'special-offers-toggle_2',
+            value: 'recieve-special-offers',
+          })
             | Получать спецпредложения
       +element-wrapper({ label: 'like button', extra_spacing: true, inline: true, })
-        +like-button('like-1', false, '2')
-        +like-button('like-2', true, '12')
+        +like-button({name: 'like-1', liked: false, count: '2'})
+        +like-button({name: 'like-2', liked: true, count: '12'})
       +element-wrapper({ label: 'rate button', extra_spacing: true, inline: true, })
         +rate-button('ui-kit-rate-buttons-1', 4)
         +rate-button('ui-kit-rate-buttons-2', 5)
 
     .form-elements__container
       +element-wrapper
-        +range-slider('range slider', 'cost-range-slider', {
-          min: 0, max: 15000, step: 100, left: 5000, right: 10000,
+        +range-slider({
+          label: 'range slider',
+          name: 'cost-range-slider',
+          opts: {
+            min: 0, max: 15000, step: 100, left: 5000, right: 10000,
+          }
         })
       +element-wrapper({ label: 'buttons', extra_spacing: true, })
         .form-elements__buttons
@@ -246,25 +257,32 @@ block body
         })
 
     .form-elements__container.form-elements__container_narrow
-      +expandable-checkbox-list('expandable checkbox list', [
-        { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
-        { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
-        { label: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, },
-        { label: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, },
-        { label: 'телевизор', name: 'tv-0', value: 'has-tv', },
-        { label: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', },
-      ], false)
-      +expandable-checkbox-list('expandable checkbox list', [
-        { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', },
-        { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
-        { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
-        { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
-        { label: 'телевизор', name: 'tv', value: 'has-tv', },
-        { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', },
-      ], true)
+      +expandable-checkbox-list({
+        title: 'expandable checkbox list',
+        checkboxes: [
+          { label: 'Завтрак', name: 'breakfast-0', value: 'has-breakfast', },
+          { label: 'Письменный стол', name: 'desk-0', value: 'has-desk', checked: true, },
+          { label: 'стул для кормления', name: 'feeding-chair-0', value: 'has-feeding-chair', checked: true, },
+          { label: 'кроватка', name: 'crib-0', value: 'has-crib', checked: true, },
+          { label: 'телевизор', name: 'tv-0', value: 'has-tv', },
+          { label: 'шампунь', name: 'shampoo-0', value: 'has-shampoo', },
+        ],
+      })
+      +expandable-checkbox-list({
+        title: 'expandable checkbox list',
+        checkboxes: [
+          { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', },
+          { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
+          { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
+          { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
+          { label: 'телевизор', name: 'tv', value: 'has-tv', },
+          { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', },
+        ],
+        opened: true
+      })
 
     .form-elements__container
-      +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true, })
+      +element-wrapper({ label: 'rich checkbox buttons', extra_spacing: true })
         .form-elements__rich-checkbox-group
           +checkbox-list([
             {
@@ -282,7 +300,7 @@ block body
           ])
 
     .form-elements__container
-      +element-wrapper({ label: 'bullet list', extra_spacing: true, })
+      +element-wrapper({ label: 'bullet list', extra_spacing: true })
         +bullet-list([
           'Нельзя с питомцами',
           'Без вечеринок и мероприятий',
@@ -290,12 +308,15 @@ block body
         ])
 
     +element-wrapper
-      +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
-      +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
+      +top-feature({ icon: 'insert_emoticon', title: 'Комфорт', desc: 'Шумопоглощающие стены' })
+      +top-feature({ icon: 'location_city', title: 'Удобство', desc: 'Окно в каждой из спален' })
 
     .form-elements__comment-container
-      +comment(asset_path + '/comment_avatar_1.webp', 'Мурад Сарафанов', '5 дней назад', {
-        name: 'comment-like', liked: true, like_count: '12'
+      +comment({
+        avatar_path: asset_path + '/comment_avatar_1.webp',
+        username: 'Мурад Сарафанов',
+        date: '5 дней назад',
+        like_attrs: {name: 'comment-like', liked: true, like_count: '12'}
       })
         | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто

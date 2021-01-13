@@ -15,7 +15,12 @@ mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, op
           each counter, index in counters
             li.dropdown-counter__counter
               - var _id = id + "-" + index;
-              +counter(_id, index, counter.name, counter.value)
+              +counter({
+                id: _id,
+                index: index,
+                text: counter.name,
+                initial_count: counter.value
+              })
 
         if need_to_be_applied
           +form-action-buttons

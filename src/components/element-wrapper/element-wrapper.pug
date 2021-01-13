@@ -1,17 +1,16 @@
-mixin element-wrapper(attrs)
-  - var attrs = attrs ? attrs : {}
-  - var inline_class_name = attrs.inline ? "element-wrapper__item_inline" : "";
-  - var extra_spacing_class_name = attrs.extra_spacing ? "element-wrapper__label_extra-spacing" : "";
-  - var large_sub_label_class_name = attrs.large_label ? "element-wrapper__sub-label_large" : "";
+mixin element-wrapper({ label='', sub_label='', inline=false, extra_spacing=false, large_label=false } = {})
+  - var inline_class_name = inline ? "element-wrapper__item_inline" : "";
+  - var extra_spacing_class_name = extra_spacing ? "element-wrapper__label_extra-spacing" : "";
+  - var large_sub_label_class_name = large_label ? "element-wrapper__sub-label_large" : "";
 
   .element-wrapper
     .element-wrapper__label(class=extra_spacing_class_name)
-      if attrs.label
-        if attrs.large_label
-          h2= attrs.label
+      if label
+        if large_label
+          h2= label
         else
-          h3= attrs.label
+          h3= label
 
-      span.element-wrapper__sub-label(class=large_sub_label_class_name)= attrs.sub_label
+      span.element-wrapper__sub-label(class=large_sub_label_class_name)= sub_label
     .element-wrapper__item(class=inline_class_name)
       block

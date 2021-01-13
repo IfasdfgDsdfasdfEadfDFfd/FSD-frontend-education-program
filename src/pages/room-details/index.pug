@@ -65,19 +65,25 @@ block body
                 | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
                 | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
                 | не жаловался из соседей.
-              +comment(asset_path + '/comment_avatar_2.webp', 'Патрисия Стеклышкова', 'Неделю назад', {name: 'comment-like-2', liked: false, like_count: 2})
+              +comment({
+                avatar_path: asset_path + '/comment_avatar_2.webp',
+                username: 'Патрисия Стеклышкова',
+                date: 'Неделю назад',
+                like_attrs: {name: 'comment-like-2', liked: false, like_count: 2}
+              })
                 | Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать,
                 | каждый день новое блюдо и десерт как комплимент
         .room-details__body__desc-row
-          +element-wrapper({ label: 'Правила', sub_label: '', inline: false, extra_spacing: true, large_label: true })
-            +bullet-list([ 'Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00 ', ])
-          +element-wrapper({ label: 'Отмена', sub_label: '', inline: false, extra_spacing: true, large_label: true })
+          +element-wrapper({ label: 'Правила', extra_spacing: true, large_label: true })
+            +bullet-list([
+              'Нельзя с питомцами',
+              'Без вечеринок и мероприятий',
+              'Время прибытия — после 13:00, а выезд до 12:00 '
+            ])
+          +element-wrapper({ label: 'Отмена', extra_spacing: true, large_label: true })
             | Бесплатная отмена в течение 48 ч. После
-            br
             | этого при отмене не позднее чем за 5 дн. до
-            br
             | прибытия вы получите полный возврат за
-            br
             | вычетом сбора за услуги
       .room-details__body__desc__right
         +book-a-room-card

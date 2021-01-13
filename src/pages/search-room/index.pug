@@ -127,15 +127,18 @@ block body
           },
         ], opened: false, need_to_be_applied: false })
 
-      +expandable-checkbox-list(
-        'Дополнительные удобства', [
+      +expandable-checkbox-list({
+        title: 'Дополнительные удобства',
+        checkboxes: [
           { label: 'Завтрак', name: 'breakfast', value: 'has-breakfast', checked: false, },
           { label: 'Письменный стол', name: 'desk', value: 'has-desk', checked: true, },
           { label: 'стул для кормления', name: 'feeding-chair', value: 'has-feeding-chair', checked: true, },
           { label: 'кроватка', name: 'crib', value: 'has-crib', checked: true, },
           { label: 'телевизор', name: 'tv', value: 'has-tv', checked: false, },
           { label: 'шампунь', name: 'shampoo', value: 'has-shampoo', checked: false, },
-        ], true)
+        ],
+        opened: true,
+      })
 
     main.search-room-body__main
       h1
