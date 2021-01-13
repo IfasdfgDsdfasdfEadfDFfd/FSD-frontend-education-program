@@ -10,24 +10,3 @@ import './components/dropdown-counter/dropdown-counter';
 import './pages/ui-kit/ui-kit';
 
 import './index.scss';
-
-import './images/room_888.webp';
-import './images/room_840.webp';
-import './images/room_980.webp';
-import './images/room_856.webp';
-import './images/room_740.webp';
-import './images/room_740.webp';
-import './images/room_982.webp';
-import './images/room_678.webp';
-import './images/room_450.webp';
-import './images/room_350.webp';
-import './images/room_666.webp';
-import './images/room_444.webp';
-import './images/room_352.webp';
-
-import './images/comment_avatar_1.webp';
-import './images/comment_avatar_2.webp';
-
-import './images/room_888_big.webp';
-import './images/room_888_details_1.webp';
-import './images/room_888_details_2.webp';
