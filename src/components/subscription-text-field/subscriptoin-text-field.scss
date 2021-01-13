@@ -1,11 +1,11 @@
-.subscription-text-field {
+.subscription-form {
   position: relative;
   display: flex;
   flex-flow: row nowrap;
   max-width: 266px;
 }
 
-.subscription-text-field__input {
+.subscription-form__input {
   min-width: 100%;
   padding: 12px 44px 8px 15px;
   border: 1px solid $dark-shade-25;
@@ -24,7 +24,7 @@
   }
 }
 
-.subscription-text-field__push-button {
+.subscription-form__push-button {
   margin-left: -42px;
   border: 0;
   background-color: transparent;
