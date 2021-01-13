@@ -1,9 +1,6 @@
 .text-field {
   @include input-element();
 
-  width: 100%;
-  padding: 12px 13px;
-
   &::placeholder {
     color: $dark-shade-25;
   }
