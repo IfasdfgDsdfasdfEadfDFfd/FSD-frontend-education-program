@@ -1,6 +1,6 @@
 include ../text-field/text-field.pug
 include ../button/button.pug
-include ../link-footer-button/link-footer-button.pug
+include ../link-button/link-button.pug
 include ../card/card.pug
 
 mixin login-card
@@ -8,9 +8,16 @@ mixin login-card
     +card()
       h1
         | Войти
-      .login-card__user-data
-        +text-field({type: 'email', placeholder: 'Email'})
-        +text-field({type: 'password', placeholder: 'Пароль'})
-      .login-card__buttons
-        +button({text: 'Войти', type: 'action'})
-        +link-footer-button('Нет аккаунта на Toxin?', '../registration/', 'создать')
+      form(method="post", href="#").login-card__form
+        .login-card__form__fields
+          +text-field({type: 'email', placeholder: 'Email'})
+          +text-field({type: 'password', placeholder: 'Пароль'})
+        +button({type: 'action'})
+          | Войти
+      .login-card__footer
+        +link-button({
+          desc: 'Нет аккаунта на Toxin?',
+          href: '../registration/',
+          text: 'создать',
+          button_props: {theme: 'bordered'}
+        })

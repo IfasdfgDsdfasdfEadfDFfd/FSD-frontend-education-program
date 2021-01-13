@@ -1,4 +1,4 @@
-mixin button({text, type, theme, disabled=false})
+mixin button({type, theme, disabled=false})
   -
     const typeModifiers = {
       action: 'button_type_action',
@@ -12,4 +12,5 @@ mixin button({text, type, theme, disabled=false})
       themeModifiers[theme],
     ];
 
-  button.button(class=classes, disabled=disabled)= text
+  button.button(class=classes, disabled=disabled)
+    block

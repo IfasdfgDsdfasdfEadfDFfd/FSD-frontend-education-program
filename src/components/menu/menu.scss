@@ -1,7 +1,8 @@
-.menu__list {
+.menu {
   display: flex;
   flex-flow: row nowrap;
   gap: 20px;
+  list-style: none;
 }
 
 .menu__item {

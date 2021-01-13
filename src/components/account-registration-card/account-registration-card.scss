@@ -6,8 +6,17 @@
   }
 }
 
-.account-registration-card__buttons {
+.account-registration-card__form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.account-registration-card__footer {
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;
+  min-height: 44px;
+  padding-top: 10px;
+  line-height: 44px;
 }
