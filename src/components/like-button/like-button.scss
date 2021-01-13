@@ -27,7 +27,6 @@ $like-border-width: 1px;
   position: absolute;
   top: 0;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   width: $like-width - $like-border-width * 2;
   height: $like-height - $like-border-width * 2;
@@ -58,11 +57,11 @@ $like-border-width: 1px;
 .like-button__label {
   position: absolute;
   top: 4px;
-  right: 12px;
+  right: 10px;
   color: $dark-shade-25;
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
-  line-height: 12px;
+  line-height: 14px;
 
   .like-button__element:checked + & {
     color: $purple-color;
