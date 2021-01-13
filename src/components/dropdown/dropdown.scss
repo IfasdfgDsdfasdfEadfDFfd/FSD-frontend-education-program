@@ -12,6 +12,7 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
+  padding-right: 10px;
   background-color: #fff;
   color: $dark-shade-75;
   appearance: none;
@@ -42,6 +43,7 @@
 }
 
 .dropdown__button__arrow {
+  color: $dark-shade-50;
   font-size: 24px;
   font-family: "Material-Icons";
   transition: all 0.2s ease;
