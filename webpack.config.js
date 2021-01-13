@@ -52,7 +52,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(SRC_DIR, 'index.pug'),
-      favicon: path.join(SRC_DIR, 'logo.svg'),
+      favicon: path.join(SRC_DIR, 'favicon.svg'),
       filename: 'index.html',
       templateParameters: {
         asset_path: process.env.ASSET_PATH,
