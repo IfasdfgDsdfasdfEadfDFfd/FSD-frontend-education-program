@@ -31,9 +31,8 @@
 }
 
 .element-wrapper__item_inline {
-  display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  gap: 20px;
 }
 
 .element-wrapper__label_extra-spacing {
