@@ -19,7 +19,7 @@
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   background-color: #fff;
-  background-image: url("./images/check_mark.svg");
+  background-image: url("./static/check_mark.svg");
   background-position: center;
   background-size: 0;
   background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 
 .checkbox__element:checked {
   border: 1px solid $purple-color;
-  background-image: url("./images/check_mark.svg");
+  background-image: url("./static/check_mark.svg");
   background-position: center;
   background-size: 12px;
   background-repeat: no-repeat;

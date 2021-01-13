@@ -5,10 +5,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const glob = require('glob');
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
+const STATIC_DIR = path.join(SRC_DIR, 'static');
 const BUILD_DIR = path.resolve(path.join(process.cwd(), 'build'));
 
 const IS_DEV_MODE = process.env.NODE_ENV === 'development';
@@ -60,6 +62,9 @@ module.exports = {
     }),
     ...getAllTemplates('components'),
     ...getAllTemplates('pages'),
+    new CopyWebpackPlugin({
+      patterns: [{ from: STATIC_DIR, to: 'static' }],
+    }),
     new MiniCssExtractPlugin({
       filename: IS_DEV_MODE ? '[name].css' : '[name].[fullhash].css',
       chunkFilename: IS_DEV_MODE ? '[id].css' : '[id].[fullhash].css',
