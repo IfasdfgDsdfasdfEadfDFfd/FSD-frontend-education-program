@@ -21,7 +21,7 @@ const getAllTemplates = folder => {
 
     return new HtmlWebpackPlugin({
       template: filepath,
-      favicon: path.join(SRC_DIR, 'logo.svg'),
+      favicon: path.join(SRC_DIR, 'favicon.svg'),
       filename: `${path.basename(dir)}/${name}.html`,
       templateParameters: {
         asset_path: process.env.ASSET_PATH,
