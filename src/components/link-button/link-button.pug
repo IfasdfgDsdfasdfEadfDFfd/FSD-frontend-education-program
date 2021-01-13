@@ -1,0 +1,7 @@
+include ../button/button.pug
+
+mixin link-button({text, desc='', href='#', button_props={}})
+  .link-button
+    | #{desc}
+    +button(button_props)
+      a.link-button__anchor(href=href)= text

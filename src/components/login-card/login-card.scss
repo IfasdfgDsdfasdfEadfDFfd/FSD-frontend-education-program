@@ -3,14 +3,23 @@
   background-color: #fff;
 }
 
-.login-card__user-data {
+.login-card__form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 20px;
+}
+
+.login-card__form__fields {
   display: flex;
   flex-flow: column nowrap;
   gap: 10px;
 }
 
-.login-card__buttons {
+.login-card__footer {
   display: flex;
   flex-flow: column nowrap;
   gap: 30px;
+  min-height: 44px;
+  padding-top: 10px;
+  line-height: 44px;
 }
