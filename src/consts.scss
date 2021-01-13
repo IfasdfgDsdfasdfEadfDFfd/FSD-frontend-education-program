@@ -14,3 +14,21 @@ $large-screen: 1400px;
 $middle-screen: 1280px;
 $small-screen: 740px;
 $tiny-screen: 380px;
+$common-element-height: 44px;
+
+@mixin input-element {
+  height: $common-element-height;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  background-color: #fff;
+  color: $dark-shade-25;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 18px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $dark-shade-50;
+    color: $dark-shade-75;
+  }
+}
