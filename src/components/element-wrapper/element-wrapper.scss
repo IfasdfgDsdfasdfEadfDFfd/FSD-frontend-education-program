@@ -1,4 +1,5 @@
 .element-wrapper {
+  width: 100%;
   border-radius: inherit;
 }
 
@@ -32,7 +33,7 @@
 .element-wrapper__item_inline {
   display: flex;
   flex-flow: row nowrap;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .element-wrapper__label_extra-spacing {

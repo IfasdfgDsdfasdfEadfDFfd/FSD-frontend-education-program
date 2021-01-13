@@ -19,7 +19,7 @@
 .bill__row__desc {
   display: flex;
   justify-content: space-between;
-  min-width: 240px;
+  width: 239px;
 }
 
 .bill__row__text {
@@ -53,5 +53,15 @@
     align-self: flex-end;
     width: 55%;
     border-bottom: 1px dotted $dark-shade-25;
+  }
+}
+
+@media (max-width: $tiny-screen) {
+  .bill__row {
+    font-size: 12px;
+  }
+
+  .bill__row__desc {
+    width: 210px;
   }
 }

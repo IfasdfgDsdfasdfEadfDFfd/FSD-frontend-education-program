@@ -6,7 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  > .search-room {
+  > .search-room-card {
     position: absolute;
     top: 70px;
     left: 140px;
@@ -15,16 +15,21 @@
 
 .landing__text {
   position: absolute;
-  right: 140px;
+  right: 10%;
   bottom: 18px;
 }
 
 @media (max-width: $middle-screen) {
   .landing {
-    > .search-room {
-      position: relative;
-      left: 0;
+    padding-top: 70px;
+
+    > .search-room-card {
+      position: static;
       margin: auto;
+
+      .card {
+        margin: auto;
+      }
     }
   }
 }

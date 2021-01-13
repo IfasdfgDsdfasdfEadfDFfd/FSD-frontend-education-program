@@ -12,7 +12,11 @@ mixin dropdown({text, buttonTheme, textTheme, splitted, opened})
     const buttonClass = [buttonThemeModifiers[buttonTheme]];
     const textClass = [textThemeModifiers[textTheme]];
 
-  .dropdown.js-dropdown(class=opened ? 'dropdown_opened': '')
+    const dropdownState = opened ? 'dropdown_opened': '';
+    const dropdownType = splitted ? 'dropdown_splitted': '';
+    const dropdownClasses = [dropdownState, dropdownType];
+
+  .dropdown.js-dropdown(class=dropdownClasses)
     +element-wrapper({inline: true})
       button.dropdown__button.js-dropdown__button(class=buttonClass)
         span.dropdown__button__text.js-dropdown__button__text(class=textClass)= text

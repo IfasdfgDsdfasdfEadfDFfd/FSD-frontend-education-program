@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-width: 150px;
   padding: 0;
   border: 0;
   border-radius: inherit;
@@ -54,6 +53,12 @@
   z-index: 1;
   display: none;
   width: 100%;
+}
+
+.dropdown_splitted {
+  .dropdown__button {
+    max-width: 150px;
+  }
 }
 
 .dropdown_opened .dropdown__body {
