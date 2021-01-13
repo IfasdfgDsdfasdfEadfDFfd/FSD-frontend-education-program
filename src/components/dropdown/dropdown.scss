@@ -12,11 +12,8 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   background-color: #fff;
   color: $dark-shade-75;
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
   appearance: none;
 }
 
@@ -66,10 +63,6 @@
 
 .dropdown_opened .dropdown__body {
   display: block;
-}
-
-.dropdown_opened .dropdown__button_bordered {
-  border-color: $dark-shade-50;
 }
 
 .dropdown_opened .dropdown__button__arrow {
