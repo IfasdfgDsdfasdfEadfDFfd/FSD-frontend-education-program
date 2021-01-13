@@ -6,22 +6,11 @@
 }
 
 .subscription-form__input {
+  @include input-element();
+
   min-width: 100%;
   padding: 12px 44px 8px 15px;
-  border: 1px solid $dark-shade-25;
-  border-radius: 4px;
-  background-color: #fff;
-  color: $dark-shade-25;
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
   line-height: 24px;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $dark-shade-50;
-    color: $dark-shade-75;
-    transition: all 0.2s ease-in;
-  }
 }
 
 .subscription-form__push-button {

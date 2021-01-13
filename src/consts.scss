@@ -25,10 +25,12 @@ $common-element-height: 44px;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
   line-height: 18px;
+  transition: all 0.2s ease-in;
 
   &:hover,
   &:focus {
     border: 1px solid $dark-shade-50;
     color: $dark-shade-75;
+    transition: all 0.2s ease-in;
   }
 }
