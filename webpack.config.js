@@ -21,7 +21,7 @@ const getAllTemplates = folder => {
 
     return new HtmlWebpackPlugin({
       template: filepath,
-      favicon: path.join(SRC_DIR, 'logo.svg'),
+      favicon: path.join(SRC_DIR, 'favicon.svg'),
       filename: `${path.basename(dir)}/${name}.html`,
       templateParameters: {
         asset_path: process.env.ASSET_PATH,
@@ -42,7 +42,7 @@ module.exports = {
     datepicker: 'air-datepicker',
   },
 
-  // don't foget about dots...
+  // don't forget about dots...
   resolve: {
     extensions: ['.ts', '.js', '.scss', '.pug', '.html', '.css'],
   },
@@ -52,7 +52,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(SRC_DIR, 'index.pug'),
-      favicon: path.join(SRC_DIR, 'logo.svg'),
+      favicon: path.join(SRC_DIR, 'favicon.svg'),
       filename: 'index.html',
       templateParameters: {
         asset_path: process.env.ASSET_PATH,

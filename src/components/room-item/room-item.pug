@@ -2,7 +2,7 @@ include ../rate-button/rate-button.pug
 
 mixin room-item(props)
   .room-item
-    img.root-item__img(src=props.bgi)
+    img.root-item__img(src=props.bgi, alt=props.alt, aria-label=props.alt)
     .image-slider
       .image-slider__filled
       .image-slider__empty

@@ -1,5 +1,11 @@
 extends ../common.pug
 
+block head
+  meta(
+    name="description"
+    content="UI KIT for toxin hotel booking website"
+  )
+
 block title
   | UI-KIT
 
@@ -16,7 +22,7 @@ block body
   include ../../components/range-slider/range-slider.pug
   include ../../components/button/button.pug
   include ../../components/pagination/pagination.pug
-  include ../../components/subscription-text-field/subscription-text-field.pug
+  include ../../components/subscription-form/subscription-form.pug
   include ../../components/counter/counter.pug
   include ../../components/dropdown-counter/dropdown-counter.pug
   include ../../components/date-dropdown/date-dropdown.pug
@@ -124,7 +130,7 @@ block body
       +element-wrapper({ label: 'filter date dropdown', })
         +filter-date-dropdown()
       +element-wrapper({ label: 'subscription text field', })
-        +subscription-text-field
+        +subscription-form
 
     .form-elements__container
       +element-wrapper({ label: 'checkbox buttons', extra_spacing: true, })
@@ -279,9 +285,9 @@ block body
               desc: 'Ширина коридоров в номере не менее 91 см.'
             },
             {
-              name: 'wide-corridor',
-              value: 'wide-corridor',
-              label: 'Широкий коридор',
+              name: 'assistant-for-disabled',
+              value: 'assistant-for-disabled',
+              label: 'Помощник для инвалидов',
               desc: 'На 1 этаже вас стретит специалист и проводит до номера'
             },
           ])
@@ -316,8 +322,8 @@ block body
     +login-card
     .cards__calendar
       +calendar
-    +room-item({ bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 })
-    +room-item({ bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65 })
+    +room-item({ bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145, alt: "" })
+    +room-item({ bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65, alt: "" })
 
   .toolbox.toolbox_gray.headers-footers
     +header(false)

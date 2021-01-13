@@ -1,5 +1,11 @@
 extends ../common.pug
 
+block head
+  meta(
+    name="description"
+    content="toxin hotel booking website room catalog, search hotel room with simple but powerfull filters"
+  )
+
 block title
   | Search Room
 
@@ -142,18 +148,18 @@ block body
       h1
         | Номера, которые мы для вас подобрали
       .search-room-body__catalog
-        - var props1 = { bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145 };
-        - var props2 = { bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65 };
-        - var props3 = { bgi: asset_path + "/room_980.webp", number: "980", luxury: true, cost: "8 500", stars: 3, review: 35 };
-        - var props4 = { bgi: asset_path + "/room_856.webp", number: "856", luxury: false, cost: "7 300", stars: 5, review: 19 };
-        - var props5 = { bgi: asset_path + "/room_740.webp", number: "740", luxury: false, cost: "6 000", stars: 4, review: 44 };
-        - var props6 = { bgi: asset_path + "/room_982.webp", number: "982", luxury: false, cost: "5 800", stars: 3, review: 56 };
-        - var props7 = { bgi: asset_path + "/room_678.webp", number: "678", luxury: false, cost: "5 500", stars: 5, review: 45 };
-        - var props8 = { bgi: asset_path + "/room_450.webp", number: "450", luxury: false, cost: "5 300", stars: 4, review: 39 };
-        - var props9 = { bgi: asset_path + "/room_350.webp", number: "350", luxury: false, cost: "5 000", stars: 3, review: 77 };
-        - var props10 = { bgi: asset_path + "/room_666.webp", number: "666", luxury: false, cost: "5 000", stars: 5, review: 25 };
-        - var props11 = { bgi: asset_path + "/room_444.webp", number: "444", luxury: false, cost: "5 000", stars: 3, review: 15 };
-        - var props12 = { bgi: asset_path + "/room_352.webp", number: "352", luxury: false, cost: "5 000", stars: 3, review: 55 };
+        - var props1 = { bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145, alt: "room #888 preview" };
+        - var props2 = { bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65, alt: "room #840 preview" };
+        - var props3 = { bgi: asset_path + "/room_980.webp", number: "980", luxury: true, cost: "8 500", stars: 3, review: 35, alt: "room #980 preview" };
+        - var props4 = { bgi: asset_path + "/room_856.webp", number: "856", luxury: false, cost: "7 300", stars: 5, review: 19, alt: "room #856 preview" };
+        - var props5 = { bgi: asset_path + "/room_740.webp", number: "740", luxury: false, cost: "6 000", stars: 4, review: 44, alt: "room #740 preview" };
+        - var props6 = { bgi: asset_path + "/room_982.webp", number: "982", luxury: false, cost: "5 800", stars: 3, review: 56, alt: "room #982 preview" };
+        - var props7 = { bgi: asset_path + "/room_678.webp", number: "678", luxury: false, cost: "5 500", stars: 5, review: 45, alt: "room #678 preview" };
+        - var props8 = { bgi: asset_path + "/room_450.webp", number: "450", luxury: false, cost: "5 300", stars: 4, review: 39, alt: "room #450 preview" };
+        - var props9 = { bgi: asset_path + "/room_350.webp", number: "350", luxury: false, cost: "5 000", stars: 3, review: 77, alt: "room #350 preview" };
+        - var props10 = { bgi: asset_path + "/room_666.webp", number: "666", luxury: false, cost: "5 000", stars: 5, review: 25, alt: "room #666 preview" };
+        - var props11 = { bgi: asset_path + "/room_444.webp", number: "444", luxury: false, cost: "5 000", stars: 3, review: 15, alt: "room #444 preview" };
+        - var props12 = { bgi: asset_path + "/room_352.webp", number: "352", luxury: false, cost: "5 000", stars: 3, review: 55, alt: "room #352 preview" };
         each props in [props1, props2, props3, props4, props5, props6, props7, props8, props9, props10, props11, props12]
           +room-item(props)
       +pagination('1 - 12 из 100+ вариантов аренды')
