@@ -1,4 +1,4 @@
-include ../subscription-text-field/subscription-text-field.pug
+include ../subscription-form/subscription-form.pug
 include ../social-buttons/social-buttons.pug
 
 mixin copyright
@@ -53,7 +53,7 @@ mixin footer-desktop
         pre
           | Получайте специальные
           | предложения и новости сервиса
-        +subscription-text-field
+        +subscription-form
     hr
     .footer-desktop__bottom.container
       +copyright
@@ -113,7 +113,7 @@ mixin footer
         pre
           | Получайте специальные
           | предложения и новости сервиса
-        +subscription-text-field
+        +subscription-form
     hr
     .footer__bottom.container
       +copyright

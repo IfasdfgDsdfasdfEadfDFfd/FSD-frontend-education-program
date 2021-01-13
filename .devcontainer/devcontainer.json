@@ -17,7 +17,9 @@
 		"esbenp.prettier-vscode",
 		"stylelint.vscode-stylelint",
 		"mhutchie.git-graph",
-		"editorconfig.editorconfig"
+		"editorconfig.editorconfig",
+		"streetsidesoftware.code-spell-checker-russian",
+		"streetsidesoftware.code-spell-checker"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
