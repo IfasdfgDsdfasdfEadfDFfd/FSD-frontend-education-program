@@ -59,26 +59,27 @@ block body
       })
         | Стоимость за сутки пребывания в номере
 
-      +element-wrapper({label: 'правила дома', extra_spacing: true})
-        +checkbox-list([
-          {
-            name: 'allow-smoking',
-            value: 'allow-smoking',
-            label: 'Можно курить'
-          },
-          {
-            name: 'allow-pets',
-            value: 'allow-pets',
-            label: 'Можно с питомцами',
-            checked: true,
-          },
-          {
-            name: 'allow-guests',
-            value: 'allow-guests',
-            label: 'Можно пригласить гостей (до 10 человек)',
-            checked: true,
-          }
-        ])
+      .search-room-body__home-rules
+        +element-wrapper({label: 'правила дома', extra_spacing: true})
+          +checkbox-list([
+            {
+              name: 'allow-smoking',
+              value: 'allow-smoking',
+              label: 'Можно курить'
+            },
+            {
+              name: 'allow-pets',
+              value: 'allow-pets',
+              label: 'Можно с питомцами',
+              checked: true,
+            },
+            {
+              name: 'allow-guests',
+              value: 'allow-guests',
+              label: 'Можно пригласить гостей (до 10 человек)',
+              checked: true,
+            }
+          ])
 
       +element-wrapper({label: 'доступность', extra_spacing: true})
         +checkbox-list([
