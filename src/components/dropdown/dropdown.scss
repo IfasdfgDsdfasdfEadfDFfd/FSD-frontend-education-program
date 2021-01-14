@@ -19,8 +19,8 @@
 }
 
 .dropdown__button_flat {
-  padding-bottom: 0;
-  padding-left: 0;
+  max-height: fit-content;
+  padding: 0 12px 0 0;
   border: 0;
 
   &:focus,
