@@ -28,14 +28,14 @@
 .checkbox__element:checked {
   border: 1px solid $purple-color;
   background-image: url("./static/check_mark.svg");
-  background-position: center;
-  background-size: 12px;
+  background-size: 60%;
   background-repeat: no-repeat;
   transition: border 0.4s ease-in, background-size 0.2s ease-in;
 }
 
 .checkbox__label {
   max-width: 205px;
+  color: $dark-shade-50;
   line-height: 20px;
 
   &::first-letter {
@@ -44,6 +44,7 @@
 }
 
 .checkbox__label_bold {
+  color: $dark-shade-75;
   font-weight: bold;
 }
 
