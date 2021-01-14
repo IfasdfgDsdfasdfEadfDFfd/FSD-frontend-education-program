@@ -1,11 +1,11 @@
 mixin range-slider({ label, name, opts })
-  .range-slider__container
+  .range-slider
     - var id = name + "-id";
     .range-slider__title
       h3
         label= label
       span(id="display-for-" + id)
-    .range-slider.js-range-slider(id=id)
+    .range-slider__wrapper.js-range-slider(id=id)
       input.range-slider__element.js-range-slider__element-left(
         max=opts.max,
         min=opts.min,

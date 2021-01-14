@@ -1,14 +1,14 @@
 $slider-thumb-radius: 16px;
-$slider-range-thickness: 6px;
+$slider-range-thickness: 4px;
 
-.range-slider {
+.range-slider__wrapper {
   position: relative;
-  margin: 20px 0 15px;
+  margin: 16px 0 10px;
   border: 1px solid $dark-shade-25;
   border-radius: 3px;
 }
 
-.range-slider__container {
+.range-slider {
   max-width: 266px;
   color: $dark-shade-50;
   font-size: 12px;
@@ -25,7 +25,7 @@ $slider-range-thickness: 6px;
   position: absolute;
   z-index: 2;
   width: 100%;
-  height: 6px;
+  height: $slider-range-thickness;
   opacity: 0;
   pointer-events: none;
 }
@@ -51,7 +51,7 @@ $slider-range-thickness: 6px;
 .slider {
   position: relative;
   width: 100%;
-  height: 6px;
+  height: $slider-range-thickness;
 }
 
 .slider__track {
