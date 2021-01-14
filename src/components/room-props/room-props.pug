@@ -1,0 +1,13 @@
+mixin room-props({ number, cost, luxury=false })
+  .room-props
+    .room-props__name
+      | №
+      .room-props__number
+        | #{number}
+      if luxury
+        .room-props__luxury
+          | люкс
+    .room-props__cost
+      .room-props__value
+        | #{cost}₽
+      | в сутки

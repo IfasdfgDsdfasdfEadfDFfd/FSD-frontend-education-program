@@ -25,26 +25,27 @@ block body
   +header(false, true)
   .search-room-body.container
     aside.search-room-body__aside
-      +element-wrapper({label: 'даты пребывания в отеле'})
-        +filter-date-dropdown('19 авг - 23 авг')
-      +element-wrapper({label: 'гости'})
-        +dropdown-counter({
-          id: 'guests-counter-1',
-          placeholder: 'Сколько гостей',
-          counters: [
-            {name: 'взрослые', value: 0},
-            {name: 'дети', value: 0},
-            {name: 'младенцы', value: 0}
-          ],
-          counting_way: 'sum',
-          declensions: {
-            'singular': 'гость',
-            'genitive': 'гостя',
-            'plural': 'гостей'
-          },
-          opened: false,
-          need_to_be_applied: true
-        })
+      +element-wrapper()
+        +element-wrapper({label: 'даты пребывания в отеле'})
+          +filter-date-dropdown('19 авг - 23 авг')
+        +element-wrapper({label: 'гости'})
+          +dropdown-counter({
+            id: 'guests-counter-1',
+            placeholder: 'Сколько гостей',
+            counters: [
+              {name: 'взрослые', value: 0},
+              {name: 'дети', value: 0},
+              {name: 'младенцы', value: 0}
+            ],
+            counting_way: 'sum',
+            declensions: {
+              'singular': 'гость',
+              'genitive': 'гостя',
+              'plural': 'гостей'
+            },
+            opened: false,
+            need_to_be_applied: true
+          })
       +range-slider({
         label: 'диапазон цены',
         name: 'cost-range-slider',

@@ -9,7 +9,7 @@ include ../card/card.pug
 mixin book-a-room-card
   .book-a-room-card
     +card()
-      +room-desc({number: '888', cost: '9 990', luxury: true})
+      +room-props({number: '888', cost: '9 990', luxury: true})
       +date-dropdown('прибытие', 'выезд')
       +element-wrapper({label: 'Гости'})
         +dropdown-counter({

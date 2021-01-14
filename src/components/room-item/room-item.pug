@@ -1,38 +1,21 @@
 include ../rate-button/rate-button.pug
+include ../room-props/room-props.pug
 
-mixin room-item(props)
+mixin room-item({bgi, number, luxury, cost, stars, review, alt})
   .room-item
-    img.root-item__img(src=props.bgi, alt=props.alt, aria-label=props.alt)
-    .image-slider
-      .image-slider__filled
-      .image-slider__empty
-      .image-slider__empty
-      .image-slider__empty
+    img.root-item__preview(src=bgi, alt=alt, aria-label=alt)
+    .room-item__image-slider
+      .room-item__image-slider_filled
+      .room-item__image-slider_empty
+      .room-item__image-slider_empty
+      .room-item__image-slider_empty
     .room-item__desc
-      +room-desc({
-        number: props.number,
-        cost: props.cost,
-        luxury: props.luxury,
-      })
+      .room-item__desc__main
+        +room-props({number, cost, luxury})
       hr
-      .room-item__desc-item
-        +rate-button('rating-room-' + props.number, props.stars)
-        - var text = "отзывов";
-        .room-item__review
-          strong
-            | #{props.review}
-          | #{text}
-
-mixin room-desc({ number, cost, luxury=false })
-  .room-item__desc-item
-    .room-item__name
-      | №
-      .room-item__number
-        | #{number}
-      if luxury
-        .room-item__luxury
-          | люкс
-    .room-item__cost
-      strong
-        | #{cost}₽
-      | в сутки
+      .room-item__desc__feedback
+        +rate-button('room-' + nubmer + '-rating', stars)
+        .room-item__reviews
+          .room-item__review-count
+            | #{review}
+          | Отзывов

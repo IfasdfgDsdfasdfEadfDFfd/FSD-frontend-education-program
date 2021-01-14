@@ -1,0 +1,40 @@
+.room-props {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.room-props__name {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  color: $dark-shade-100;
+  font-weight: bold;
+}
+
+.room-props__number {
+  margin-right: 8px;
+  margin-left: 4px;
+  font-size: 19px;
+}
+
+.room-props__luxury {
+  color: $purple-color;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.room-props__cost {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 4px;
+  align-items: baseline;
+  color: $dark-shade-50;
+  font-size: 12px;
+}
+
+.room-props__value {
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -8,56 +8,11 @@
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.root-item__img {
+.root-item__preview {
   border-radius: 4px 4px 0 0;
 }
 
-.room-item__desc {
-  padding: 20px;
-  color: $dark-shade-50;
-
-  > hr {
-    margin: 10px 0 12px;
-    border: 0;
-    border-top: 1px solid $dark-shade-10;
-  }
-}
-
-.room-item__name {
-  display: flex;
-  gap: 5px;
-  align-items: baseline;
-  color: $dark-shade-100;
-  font-weight: bold;
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-
-  .room-item__number {
-    font-size: 18px;
-  }
-
-  .room-item__luxury {
-    color: $purple-color;
-    font-size: 12px;
-    font-family: "Montserrat", sans-serif;
-    text-transform: uppercase;
-  }
-}
-
-.room-item__desc-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-
-  strong {
-    margin-right: 5px;
-    font-weight: bold;
-  }
-}
-
-.image-slider {
+.room-item__image-slider {
   position: absolute;
   top: 130px;
   right: 15px;
@@ -72,10 +27,35 @@
   }
 }
 
-.image-slider__filled {
+.room-item__image-slider_filled {
   background-color: #fff;
 }
 
-.image-slider__empty {
+.room-item__image-slider_empty {
   background-color: transparent;
+}
+
+.room-item__desc {
+  padding: 20px;
+}
+
+.room-item__desc__main {
+  margin-bottom: 10px;
+}
+
+.room-item__desc__feedback {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.room-item__reviews {
+  display: inline-flex;
+  gap: 3px;
+  color: $dark-shade-50;
+}
+
+.room-item__review-count {
+  font-weight: bold;
 }
