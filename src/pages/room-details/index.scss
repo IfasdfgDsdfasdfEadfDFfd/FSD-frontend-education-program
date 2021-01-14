@@ -166,7 +166,7 @@
   }
 }
 
-@media (max-width: $middle-screen) {
+@media (max-width: $big-screen) {
   .room-details__body__desc {
     flex-flow: column nowrap;
   }
@@ -176,7 +176,7 @@
   }
 }
 
-@media (max-width: $small-screen) {
+@media (max-width: $middle-screen) {
   .room-impressions {
     gap: 15px;
     margin: auto;

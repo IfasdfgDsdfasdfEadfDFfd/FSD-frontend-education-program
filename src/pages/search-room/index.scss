@@ -2,6 +2,7 @@
 
 .search-room-body {
   display: flex;
+  gap: 60px;
   justify-content: space-between;
   padding: 30px 140px 70px;
   background-color: #fff;
@@ -36,44 +37,40 @@
 }
 
 .search-room-body__catalog {
-  display: grid;
-  grid-template-rows: repeat(4, min-content);
-  grid-template-columns: repeat(3, min-content);
+  display: flex;
+  flex-flow: row wrap;
   gap: 20px 12px;
-  margin-top: 21px;
+  justify-content: center;
+  margin: 21px auto 0;
 }
 
-@media (max-width: $large-screen) {
-  .search-room-body__aside {
-    display: none;
-  }
-
+@media (max-width: $big-screen) {
   .search-room-body__main {
-    margin: auto;
-  }
-}
-
-@media (max-width: $middle-screen) {
-  .search-room-body {
-    margin: auto;
-    padding-right: 0;
-    padding-left: 0;
-  }
-
-  .search-room-body__main {
-    text-align: center;
+    // margin: auto;
+    // text-align: center;
   }
 
   .search-room-body__catalog {
-    grid-template-rows: repeat(6, min-content);
-    grid-template-columns: repeat(2, min-content);
   }
 }
 
-@media (max-width: $small-screen) {
-  .search-room-body__catalog {
-    grid-template-rows: repeat(12, min-content);
-    grid-template-columns: repeat(1, min-content);
-    align-self: center;
-  }
-}
+// @media (max-width: $big-screen) {
+//   .search-room-body {
+//     margin: auto;
+//     padding-right: 0;
+//     padding-left: 0;
+//   }
+
+//   .search-room-body__catalog {
+//     grid-template-rows: repeat(6, min-content);
+//     grid-template-columns: repeat(2, min-content);
+//   }
+// }
+
+// @media (max-width: $middle-screen) {
+//   .search-room-body__catalog {
+//     grid-template-rows: repeat(12, min-content);
+//     grid-template-columns: repeat(1, min-content);
+//     align-self: center;
+//   }
+// }
