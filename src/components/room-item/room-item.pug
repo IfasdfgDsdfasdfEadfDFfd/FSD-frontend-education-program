@@ -12,9 +12,8 @@ mixin room-item({bgi, number, luxury, cost, stars, review, alt})
     .room-item__desc
       .room-item__desc__main
         +room-props({number, cost, luxury})
-      hr
       .room-item__desc__feedback
-        +rate-button('room-' + nubmer + '-rating', stars)
+        +rate-button('room-' + number + '-rating', stars)
         .room-item__reviews
           .room-item__review-count
             | #{review}
