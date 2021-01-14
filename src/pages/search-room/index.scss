@@ -15,6 +15,7 @@
 .search-room-body__main {
   display: flex;
   flex-flow: column nowrap;
+  text-align: center;
 }
 
 .search-room-body__aside {
@@ -44,13 +45,15 @@
   margin: 21px auto 0;
 }
 
-@media (max-width: $big-screen) {
+@media (width: $large-screen) {
   .search-room-body__main {
-    // margin: auto;
-    // text-align: center;
+    text-align: start;
   }
+}
 
-  .search-room-body__catalog {
+@media (max-width: $middle-screen) {
+  .search-room-body__aside {
+    display: none;
   }
 }
 

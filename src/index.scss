@@ -55,10 +55,10 @@ body {
   padding-left: 140px;
 }
 
-@media (max-width: $large-screen) {
+@media (max-width: $big-screen) {
   .container {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 

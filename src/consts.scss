@@ -10,11 +10,11 @@ $dark-shade-10: change-color($dark-shade, $alpha: 0.1);
 $dark-shade-5: change-color($dark-shade, $alpha: 0.05);
 $primary-gradient: linear-gradient(180deg, $purple-color 0%, $blue-color 100%);
 $secondary-gradient: linear-gradient(180deg, $green-color 0%, #66d2ea 100%);
-$large-screen: 1400px;
+$large-screen: 1440px;
 $big-screen: 1280px;
-$middle-screen: 1024px;
-$small-screen: 680px;
-$tiny-screen: 360px;
+$middle-screen: 1120px;
+$small-screen: 800px;
+$tiny-screen: 480px;
 $common-element-height: 44px;
 
 @mixin input-element {

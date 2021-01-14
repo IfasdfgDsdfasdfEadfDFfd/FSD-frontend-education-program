@@ -19,11 +19,6 @@ $header-height: 70px;
   gap: 20px;
   justify-content: space-between;
   padding: 18px 0;
-
-  menu {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .header__buttons {
@@ -32,17 +27,6 @@ $header-height: 70px;
   flex-flow: row nowrap;
   gap: 20px;
   justify-content: flex-end;
-  min-width: 310px;
-}
-
-.header__buttons__link {
-  color: inherit;
-
-  &:hover,
-  &:focus {
-    color: inherit;
-    text-decoration: none;
-  }
 }
 
 .header_attached {
@@ -58,12 +42,13 @@ $header-height: 70px;
 }
 
 @media (max-width: $middle-screen) {
-  .header__buttons {
-    gap: 10px;
-    min-width: 0;
+  .header .menu {
+    display: none;
+  }
+}
 
-    > .header__buttons__link:last-child {
-      display: none;
-    }
+@media (max-width: $tiny-screen) {
+  .header__buttons .link-button:last-child {
+    display: none;
   }
 }
