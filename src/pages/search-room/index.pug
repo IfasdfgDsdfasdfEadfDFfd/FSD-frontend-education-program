@@ -98,43 +98,44 @@ block body
             }
           ])
 
-      +element-wrapper({label: 'удобства номера'})
-        +dropdown-counter({
-          id: 'room-properties-1',
-          placeholder: 'Параметры номера',
-          counters: [
-            {
-              name: 'спальни',
-              value: 0,
-            },
-            {
-              name: 'кровати',
-              value: 0
-            },
-            {
-              name: 'ванные комнаты',
-              value: 0
-            }
-          ],
-          counting_way: 'apart',
-          declensions: [
-            {
-              singular: 'спальня',
-              genitive: 'спальни',
-              plural: 'спален'
-            },
-            {
-              singular: 'кровать',
-              genitive: 'кровати',
-              plural: 'кроватей'
-            },
-            {
-              singular: 'ванная комната',
-              genitive: 'ванные комнаты',
-              plural: 'ванных комнат'
-            },
-          ], opened: false, need_to_be_applied: false
-        })
+      .search-room-body__facilities
+        +element-wrapper({label: 'удобства номера'})
+          +dropdown-counter({
+            id: 'room-properties-1',
+            placeholder: 'Параметры номера',
+            counters: [
+              {
+                name: 'спальни',
+                value: 0,
+              },
+              {
+                name: 'кровати',
+                value: 0
+              },
+              {
+                name: 'ванные комнаты',
+                value: 0
+              }
+            ],
+            counting_way: 'apart',
+            declensions: [
+              {
+                singular: 'спальня',
+                genitive: 'спальни',
+                plural: 'спален'
+              },
+              {
+                singular: 'кровать',
+                genitive: 'кровати',
+                plural: 'кроватей'
+              },
+              {
+                singular: 'ванная комната',
+                genitive: 'ванные комнаты',
+                plural: 'ванных комнат'
+              },
+            ], opened: false, need_to_be_applied: false
+          })
 
       +expandable-checkbox-list({
         title: 'Дополнительные удобства',
