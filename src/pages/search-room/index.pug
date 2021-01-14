@@ -81,21 +81,22 @@ block body
             }
           ])
 
-      +element-wrapper({label: 'доступность', extra_spacing: true})
-        +checkbox-list([
-          {
-            name: 'wide-corridor',
-            value: 'wide-corridor',
-            label: 'широкий коридор',
-            desc: 'Ширина коридоров в номере не менее 91 см.'
-          },
-          {
-            name: 'assistant-for-disabled',
-            value: 'assistant-for-disabled',
-            label: 'Помощник для инвалидов',
-            desc: 'На 1 этаже вас встретит специалист и проводит до номера'
-          }
-        ])
+      .search-room-body__accessibility
+        +element-wrapper({label: 'доступность', extra_spacing: true})
+          +checkbox-list([
+            {
+              name: 'wide-corridor',
+              value: 'wide-corridor',
+              label: 'широкий коридор',
+              desc: 'Ширина коридоров в номере не менее 91 см.'
+            },
+            {
+              name: 'assistant-for-disabled',
+              value: 'assistant-for-disabled',
+              label: 'Помощник для инвалидов',
+              desc: 'На 1 этаже вас встретит специалист и проводит до номера.'
+            }
+          ])
 
       +element-wrapper({label: 'удобства номера'})
         +dropdown-counter({
