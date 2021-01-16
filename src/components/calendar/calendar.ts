@@ -1,8 +1,8 @@
 const initCalendar = (
-  element: JQuery<HTMLElement>,
+  $element: JQuery<HTMLElement>,
   customProps: Record<string, any>,
 ) => {
-  const datepicker = element
+  const datepicker = $element
     .datepicker({
       language: 'ru',
       inline: true,
@@ -19,8 +19,9 @@ const initCalendar = (
     })
     .data('datepicker');
 
+  datepicker.selectDate([customProps.fromDate, customProps.toDate]);
+
   const $cancelButton = $('.js-calendar .js-action-button-cancel');
-  console.log($cancelButton);
   $cancelButton.css('visibility', 'visible');
   $cancelButton.on('click', () => {
     datepicker.clear();
