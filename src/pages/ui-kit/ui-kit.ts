@@ -1,3 +1,3 @@
 import { initCalendar } from '../../components/calendar/calendar';
 
-initCalendar($('.cards__calendar .js-calendar__container'), {});
+initCalendar($('.js-ui-kit-cards-calendar .js-calendar-container'), {});
