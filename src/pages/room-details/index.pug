@@ -41,9 +41,9 @@ block body
       .room-details__body__desc__left
         .room-details__body__desc-row
           +element-wrapper({ label: 'Сведения о номере', extra_spacing: true, large_label: true })
-            +top-feature('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
-            +top-feature('location_city', 'Удобство', 'Окно в каждой из спален')
-            +top-feature('whatshot', 'Уют', 'Номер оснащён камином')
+            +top-feature({icon: 'insert_emoticon', title: 'Комфорт', desc: 'Шумопоглощающие стены'})
+            +top-feature({icon: 'location_city', title: 'Удобство', desc: 'Окно в каждой из спален'})
+            +top-feature({icon: 'whatshot', title: 'Уют', desc: 'Номер оснащён камином'})
           +element-wrapper({ label: 'Впечатления от номера', extra_spacing: true, large_label: true })
             .room-impressions
               .statictic-ring
