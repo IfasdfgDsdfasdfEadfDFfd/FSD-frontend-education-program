@@ -18,7 +18,6 @@ $tiny-screen: 480px;
 $common-element-height: 44px;
 
 @mixin input-element {
-  width: 100%;
   max-height: $common-element-height;
   padding: 12px 15px;
   border: 1px solid $dark-shade-25;

@@ -140,3 +140,10 @@
     }
   }
 }
+
+@media (max-width: $tiny-screen) {
+  .calendar {
+    width: 100%;
+    padding: 10px;
+  }
+}

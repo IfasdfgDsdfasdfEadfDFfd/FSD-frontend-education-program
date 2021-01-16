@@ -28,12 +28,11 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
-  border-radius: inherit;
 }
 
 .element-wrapper__item_inline {
   flex-flow: row nowrap;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .element-wrapper__label_extra-spacing {
