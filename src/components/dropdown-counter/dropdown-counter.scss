@@ -6,7 +6,7 @@
   display: flex;
   flex-flow: column nowrap;
   gap: 20px;
-  width: 100%;
+  min-width: 266px;
   padding: 5px 7px 13px 15px;
   border: 1px solid $dark-shade-50;
   border-top: 0;
