@@ -8,7 +8,7 @@ mixin login-card
     +card()
       h1
         | Войти
-      form(method="post", href="#").login-card__form
+      form(method="post", action="#").login-card__form
         .login-card__form__fields
           +text-field({type: 'email', placeholder: 'Email'})
           +text-field({type: 'password', placeholder: 'Пароль'})
