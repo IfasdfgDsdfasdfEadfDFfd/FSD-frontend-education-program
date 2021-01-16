@@ -31,8 +31,9 @@ $common-element-height: 44px;
   transition: all 0.2s ease-in;
 
   &:hover,
-  &:focus {
-    border: 1px solid $dark-shade-50;
+  &:focus,
+  &:focus-within {
+    border-color: $dark-shade-50;
     color: $dark-shade-75;
     transition: all 0.2s ease-in;
   }
