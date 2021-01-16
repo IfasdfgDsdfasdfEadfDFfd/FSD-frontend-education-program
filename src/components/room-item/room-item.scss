@@ -8,7 +8,7 @@
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
 
-.root-item__preview {
+.room-item__preview {
   border-radius: 4px 4px 0 0;
 }
 
@@ -33,6 +33,55 @@
 
 .room-item__image-slider_empty {
   background-color: transparent;
+}
+
+.room-item__gradient {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 151px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.room-item__gradient_left {
+  left: 0;
+}
+
+.room-item__gradient_right {
+  right: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.room-item:focus,
+.room-item:hover {
+  .room-item__gradient {
+    visibility: visible;
+  }
+}
+
+.room-item__arrow {
+  color: #fff;
+  font-size: 24px;
+  font-family: "Material-Icons";
+  line-height: 24px;
+}
+
+.room-item__arrow_backward {
+  transform: rotate(90deg);
+}
+
+.room-item__arrow_forward {
+  transform: rotate(90deg);
 }
 
 .room-item__desc {
