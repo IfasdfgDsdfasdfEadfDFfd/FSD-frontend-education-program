@@ -19,12 +19,8 @@
 
 .bill__row__desc {
   display: flex;
+  gap: 8px;
   justify-content: space-between;
-  width: 239px;
-}
-
-.bill__row__text {
-  max-width: 215px;
 }
 
 .bill__row__info {
@@ -52,7 +48,7 @@
 
   .bill__row-result__dashed-line {
     align-self: flex-end;
-    width: 167px;
+    width: 50%;
     border-bottom: 1px dotted $dark-shade-25;
   }
 }
@@ -60,9 +56,5 @@
 @media (max-width: $tiny-screen) {
   .bill__row {
     font-size: 12px;
-  }
-
-  .bill__row__desc {
-    width: 210px;
   }
 }

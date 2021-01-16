@@ -124,6 +124,10 @@ a:active {
   .ad-text {
     display: none;
   }
+
+  .logo {
+    margin-left: -10px;
+  }
 }
 
 @media (max-width: $middle-screen) {
