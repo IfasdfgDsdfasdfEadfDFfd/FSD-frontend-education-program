@@ -1,8 +1,8 @@
 include ../counter/counter.pug
 include ../dropdown/dropdown.pug
-include ../form-action-buttons/form-action-buttons.pug
+include ../action-buttons/action-buttons.pug
 
-mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, opened, need_to_be_applied})
+mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, opened, with_action_buttons})
   .dropdown-counter.js-dropdown-counter(
     id=id
     data-placeholder=placeholder,
@@ -22,5 +22,5 @@ mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, op
                 initial_count: counter.value
               })
 
-        if need_to_be_applied
-          +form-action-buttons
+        if with_action_buttons
+          +action-buttons

@@ -66,8 +66,8 @@ dropdownElements.forEach(dropdown => {
     );
 
     dropdown
-      .querySelector('.js-form-action-buttons')
-      ?.classList.toggle('form-action-buttons_dirty', sumOfCounters !== 0);
+      .querySelector('.js-action-buttons')
+      ?.classList.toggle('action-buttons_dirty', sumOfCounters !== 0);
   });
 
   store.dispatch({ name: '@COLD_START' });

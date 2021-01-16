@@ -122,7 +122,7 @@ block body
             ],
             counting_way: 'sum',
             declensions: {singular: 'гость', genitive: 'гостя', plural: 'гостей'},
-            opened: false, need_to_be_applied: true,
+            opened: false, with_action_buttons: true,
           })
         +element-wrapper({ label: 'masked text field', })
           +masked-text-field('ui-kit-masked-text-field-id')
@@ -220,7 +220,7 @@ block body
             {singular: 'спальня', genitive: 'спальни', plural: 'спален'},
             {singular: 'кровать', genitive: 'кровати', plural: 'кроватей'},
             {singular: 'ванная комната', genitive: 'ванные комнаты', plural: 'ванных комнат'},
-          ], opened: false, need_to_be_applied: false
+          ], opened: false, with_action_buttons: false
         })
       +element-wrapper({ label: 'dropdown', sub_label: 'EXPANDED', })
         +dropdown-counter({ id: 'room-properties-2', placeholder: 'Параметры номера',
@@ -232,7 +232,7 @@ block body
             {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
             {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
             {'singular': 'ванная комната', 'genitive': 'ванные комнаты', 'plural': 'ванных комнат'},
-          ], opened: true, need_to_be_applied: false
+          ], opened: true, with_action_buttons: false
         })
 
     .form-elements__container
@@ -243,7 +243,7 @@ block body
             {name: 'дети', value: 0},
             {name: 'младенцы', value: 0}
           ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-          opened: true, need_to_be_applied: true
+          opened: true, with_action_buttons: true
         })
     .form-elements__container
       +element-wrapper({ label: 'dropdown', })
@@ -253,7 +253,7 @@ block body
             {name: 'дети', value: 1},
             {name: 'младенцы', value: 0}
           ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-          opened: true, need_to_be_applied: true
+          opened: true, with_action_buttons: true
         })
 
     .form-elements__container.form-elements__container_narrow

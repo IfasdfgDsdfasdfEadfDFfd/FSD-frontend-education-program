@@ -13,7 +13,7 @@ dropdowns.forEach(dropdown => {
       dropdown.classList.toggle(openClassName);
     }
 
-    if (target.classList.contains('form-action-buttons__apply-button')) {
+    if (target.classList.contains('action-buttons__apply-button')) {
       dropdown.classList.toggle(openClassName);
     }
   });

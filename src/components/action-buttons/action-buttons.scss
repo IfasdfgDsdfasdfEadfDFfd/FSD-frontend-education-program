@@ -1,9 +1,9 @@
-.form-action-buttons__body {
+.action-buttons__body {
   display: flex;
   justify-content: space-between;
 }
 
-.form-action-buttons__action-button {
+.action-buttons__action-button {
   border: 0;
   background-color: #fff;
   color: $purple-color;
@@ -14,10 +14,10 @@
   text-transform: uppercase;
 }
 
-.form-action-buttons__cancel-button {
+.action-buttons__cancel-button {
   visibility: hidden;
 }
 
-.form-action-buttons_dirty .form-action-buttons__cancel-button {
+.action-buttons_dirty .action-buttons__cancel-button {
   visibility: visible;
 }
