@@ -18,5 +18,7 @@ mixin header(isSigned=false, attached=true)
         +user('Юлий Цезарь')
       else
         .header__buttons
-          +link-button({button_props: {theme: 'bordered'}, href: '../login', text: 'войти'})
-          +link-button({href: '../registration', text: 'зарегистрироваться'})
+          +button({theme: 'bordered'})
+            | войти
+          +button({})
+            | зарегистрироваться
