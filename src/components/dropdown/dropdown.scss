@@ -54,8 +54,7 @@
 
 .dropdown__body {
   display: none;
-  width: 100%;
-  width: fit-content;
+  min-width: max-content;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
 }
 
@@ -83,7 +82,7 @@
 }
 
 .dropdown_opened .dropdown__body {
-  display: block;
+  display: flex;
 }
 
 .dropdown_opened .dropdown__button__arrow {
