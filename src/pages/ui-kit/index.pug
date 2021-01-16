@@ -160,13 +160,13 @@ block body
         .form-elements__toggle-group
           +toggle({
             name: 'special-offers-toggle_1',
-            value: 'recieve-special-offers',
+            value: 'receive-special-offers',
             checked: true,
           })
             | Получать спецпредложения
           +toggle({
             name: 'special-offers-toggle_2',
-            value: 'recieve-special-offers',
+            value: 'receive-special-offers',
           })
             | Получать спецпредложения
       +element-wrapper({ label: 'like button', extra_spacing: true, inline: true, })
@@ -215,7 +215,7 @@ block body
           counters: [
             {name: 'спальни', value: 2},
             {name: 'кровати', value: 2},
-            {name: 'вынные комнаты', value: 1}
+            {name: 'ванные комнаты', value: 1}
           ], counting_way: 'apart', declensions: [
             {singular: 'спальня', genitive: 'спальни', plural: 'спален'},
             {singular: 'кровать', genitive: 'кровати', plural: 'кроватей'},
@@ -227,7 +227,7 @@ block body
           counters: [
             {name: 'спальни', value: 2},
             {name: 'кровати', value: 2},
-            {name: 'вынные комнаты', value: 0}
+            {name: 'ванные комнаты', value: 0}
           ], counting_way: 'apart', declensions: [
             {'singular': 'спальня', 'genitive': 'спальни', 'plural': 'спален'},
             {'singular': 'кровать', 'genitive': 'кровати', 'plural': 'кроватей'},
@@ -295,7 +295,7 @@ block body
               name: 'assistant-for-disabled',
               value: 'assistant-for-disabled',
               label: 'Помощник для инвалидов',
-              desc: 'На 1 этаже вас стретит специалист и проводит до номера'
+              desc: 'На 1 этаже вас встретит специалист и проводит до номера'
             },
           ])
 
@@ -318,7 +318,7 @@ block body
         date: '5 дней назад',
         like_attrs: {name: 'comment-like', liked: true, like_count: '12'}
       })
-        | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясаяющий.
+        | Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.
         | И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто
         | не жаловался из соседей.
 
@@ -327,7 +327,7 @@ block body
     +account-registration-card
     +book-a-room-card
     +login-card
-    .cards__calendar
+    .cards__calendar.js-ui-kit-cards-calendar
       +calendar
     +room-item({ bgi: asset_path + "/room_888.webp", number: "888", luxury: true, cost: "9 990", stars: 5, review: 145, alt: "" })
     +room-item({ bgi: asset_path + "/room_840.webp", number: "840", luxury: false, cost: "9 900", stars: 4, review: 65, alt: "" })
