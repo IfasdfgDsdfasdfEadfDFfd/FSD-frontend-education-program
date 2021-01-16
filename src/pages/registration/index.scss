@@ -6,6 +6,12 @@
   margin-top: 70px;
   background-image: url("./static/bg_login-registration.webp");
   background-position: center;
-  background-size: cover;
+  background-position-x: center;
   background-repeat: no-repeat;
+}
+
+@media (min-width: $large-screen) {
+  .account-registration-page {
+    background-size: cover;
+  }
 }

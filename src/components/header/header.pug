@@ -3,9 +3,9 @@ include ../menu/menu.pug
 include ../user/user.pug
 include ../link-button/link-button.pug
 
-mixin header(isSigned=false, attached=false)
+mixin header(isSigned=false, attached=true)
   - var header_id = attached ? "header-id" : "";
-  header.header.container(id=header_id)
+  header.header.container(id=header_id, class=attached ? 'header_attached' : '')
     +logo
     .header__right
       +menu([

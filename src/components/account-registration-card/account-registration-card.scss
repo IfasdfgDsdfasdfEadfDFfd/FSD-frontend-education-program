@@ -16,8 +16,11 @@
 .account-registration-card__footer {
   display: flex;
   flex-flow: column nowrap;
-  gap: 30px;
   min-height: 44px;
   padding-top: 10px;
   line-height: 44px;
+
+  .button {
+    min-width: 95px;
+  }
 }

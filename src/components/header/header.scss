@@ -3,9 +3,6 @@
 $header-height: 70px;
 
 .header {
-  position: fixed;
-  top: 0;
-  z-index: 2;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -13,6 +10,13 @@ $header-height: 70px;
   height: $header-height;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+  transition: all 0.5s ease;
+}
+
+.header_attached {
+  position: fixed;
+  top: 0;
+  z-index: 2;
   transition: all 0.5s ease;
 }
 
