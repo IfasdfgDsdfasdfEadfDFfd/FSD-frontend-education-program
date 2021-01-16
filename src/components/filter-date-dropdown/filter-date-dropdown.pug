@@ -3,5 +3,5 @@ include ../calendar/calendar.pug
 
 mixin filter-date-dropdown
   .filter-date-dropdown.js-filter-date-dropdown
-    +dropdown({text: 'даты пребывания в номере', buttonTheme: 'bordered'})
+    +dropdown({text: 'даты пребывания в номере', buttonTheme: 'bordered', bodyTheme: 'withGap'})
       +calendar

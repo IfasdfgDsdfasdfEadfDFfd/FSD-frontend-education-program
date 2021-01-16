@@ -51,11 +51,17 @@
 }
 
 .dropdown__body {
-  position: absolute;
-  left: 0;
-  z-index: 1;
   display: none;
   width: 100%;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.dropdown__body_with-gap {
+  margin-top: 5px;
+}
+
+.dropdown__body_shadowless {
+  box-shadow: none;
 }
 
 .dropdown_splitted {

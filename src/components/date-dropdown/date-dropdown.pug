@@ -3,5 +3,5 @@ mixin date-dropdown(label_left, label_right)
 
   .date-dropdown.js-date-dropdown
     +element-wrapper({label: label_left})
-      +dropdown({text: placeholder, buttonTheme: 'bordered', splitted: true})
+      +dropdown({text: placeholder, buttonTheme: 'bordered', bodyTheme: 'withGap', splitted: true})
         +calendar
