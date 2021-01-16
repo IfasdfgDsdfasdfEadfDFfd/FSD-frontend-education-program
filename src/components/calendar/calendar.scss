@@ -66,6 +66,12 @@
 
     &.-current-.-in-range- {
       border-radius: 50%;
+      color: #fff;
+    }
+
+    &.-current-.-in-range-.-focus- {
+      border-radius: 50%;
+      color: #fff;
     }
 
     &.-other-month- {
@@ -78,6 +84,7 @@
     &.-in-range-.-other-month-.-focus- {
       border-radius: 0;
       background-color: #fff;
+      color: $dark-shade-50;
     }
 
     &.-range-from-,
