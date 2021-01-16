@@ -23,13 +23,15 @@ mixin dropdown({text, labels={}, buttonTheme, textTheme, bodyTheme, splitted, op
     const dropdownClasses = [dropdownState, dropdownType];
 
   .dropdown.js-dropdown(class=dropdownClasses)
-    +element-wrapper({inline: true})
-      button.dropdown__button.js-dropdown-button(class=buttonClass)
-        span.dropdown__button__text.js-dropdown-button__text(class=textClass)= text
-        span.dropdown__button__arrow= "expand_more"
-      if splitted
+    +element-wrapper({inline: splitted})
+      +element-wrapper({label: labels.left})
         button.dropdown__button.js-dropdown-button(class=buttonClass)
           span.dropdown__button__text.js-dropdown-button__text(class=textClass)= text
           span.dropdown__button__arrow= "expand_more"
+      if splitted
+        +element-wrapper({label: labels.right})
+          button.dropdown__button.js-dropdown-button(class=buttonClass)
+            span.dropdown__button__text.js-dropdown-button__text(class=textClass)= text
+            span.dropdown__button__arrow= "expand_more"
     .dropdown__body(class=bodyClass)
       block

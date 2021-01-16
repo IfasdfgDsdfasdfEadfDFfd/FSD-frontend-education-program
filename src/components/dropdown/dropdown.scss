@@ -92,4 +92,11 @@
   .dropdown__body {
     min-width: 100%;
   }
+
+  .dropdown_splitted {
+    .dropdown__button {
+      max-width: 100%;
+      font-size: 13px;
+    }
+  }
 }
