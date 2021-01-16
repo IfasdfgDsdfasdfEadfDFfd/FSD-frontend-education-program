@@ -3,6 +3,9 @@
 $header-height: 70px;
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -27,13 +30,6 @@ $header-height: 70px;
   flex-flow: row nowrap;
   gap: 20px;
   justify-content: flex-end;
-}
-
-.header_attached {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  transition: all 0.5s ease;
 }
 
 .header_hidden {

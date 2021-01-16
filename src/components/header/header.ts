@@ -19,7 +19,8 @@ window.addEventListener('scroll', () => {
       header?.classList.add(hidingClass);
     }
   } else {
-    header?.classList.remove(hidingClass);
+    if (header?.classList.contains(hidingClass))
+      header?.classList.remove(hidingClass);
   }
 
   lastScrollYPosition = window.scrollY;

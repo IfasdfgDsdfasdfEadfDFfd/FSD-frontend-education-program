@@ -86,6 +86,10 @@
 .dropdown_opened .dropdown__button__arrow {
   transition: all 0.2s ease;
   transform: rotate(180deg);
+
+  &:focus {
+    z-index: 1;
+  }
 }
 
 @media (max-width: $tiny-screen) {

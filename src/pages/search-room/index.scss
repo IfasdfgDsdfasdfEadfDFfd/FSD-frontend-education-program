@@ -4,6 +4,7 @@
   display: flex;
   gap: 60px;
   justify-content: space-between;
+  margin-top: 70px;
   padding: 30px 140px 70px;
   background-color: #fff;
 
@@ -56,24 +57,3 @@
     display: none;
   }
 }
-
-// @media (max-width: $big-screen) {
-//   .search-room-body {
-//     margin: auto;
-//     padding-right: 0;
-//     padding-left: 0;
-//   }
-
-//   .search-room-body__catalog {
-//     grid-template-rows: repeat(6, min-content);
-//     grid-template-columns: repeat(2, min-content);
-//   }
-// }
-
-// @media (max-width: $middle-screen) {
-//   .search-room-body__catalog {
-//     grid-template-rows: repeat(12, min-content);
-//     grid-template-columns: repeat(1, min-content);
-//     align-self: center;
-//   }
-// }
