@@ -48,7 +48,7 @@ $header-height: 70px;
 }
 
 @media (max-width: $tiny-screen) {
-  .header__buttons .link-button:last-child {
+  .header__buttons .button:last-child {
     display: none;
   }
 }
