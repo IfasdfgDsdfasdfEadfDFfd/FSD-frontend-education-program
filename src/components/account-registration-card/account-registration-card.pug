@@ -15,13 +15,7 @@ mixin account-registration-card
         +element-wrapper({})
           +text-field({type: 'text', placeholder: 'Имя'})
           +text-field({type: 'text', placeholder: 'Фамилия'})
-          +radio-buttons-group(
-            'registration-user-gender',
-            [
-              {value: 'Мужчина', checked: true},
-              {value: 'Женщина', checked: false}
-            ]
-          )
+          +radio-buttons-group('registration-user-gender', [{value: 'Мужчина', checked: true}, {value: 'Женщина', checked: false}])
         +element-wrapper({label: 'Дата рождения'})
           +masked-text-field('account-registration-masked-text-field-id')
         +element-wrapper({label: 'данные для входа в сервис'})
