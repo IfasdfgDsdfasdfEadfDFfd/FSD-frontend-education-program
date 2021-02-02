@@ -14,7 +14,7 @@ mixin dropdown-counter({id, placeholder, counters, counting_way, declensions, op
         ul.dropdown-counter__counters
           each counter, index in counters
             li.dropdown-counter__counter
-              - var _id = id + '-' + index;
+              - var _id = id + "-" + index;
               +counter({
                 id: _id,
                 index: index,

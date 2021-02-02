@@ -1,11 +1,11 @@
 mixin like-button({ name, liked=false, count='0' })
   .like-button
-    - var id = name + '-id';
+    - var id = name + "-id";
     input.like-button__element(
       checked=liked,
       id=id,
       name=name,
-      type="checkbox",
+      type='checkbox',
       value=name
     )
     label.like-button__label(for=id)= count
