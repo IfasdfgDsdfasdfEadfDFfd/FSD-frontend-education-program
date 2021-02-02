@@ -10,8 +10,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const glob = require('glob');
 
 const SRC_DIR = path.resolve(path.join(process.cwd(), 'src'));
-const STATIC_DIR = path.join(SRC_DIR, 'static');
 const BUILD_DIR = path.resolve(path.join(process.cwd(), 'build'));
+const STATIC_GLOB = './src/{pages,components}/**/*.{svg,webp}';
 
 const IS_DEV_MODE = process.env.NODE_ENV === 'development';
 
@@ -63,7 +63,12 @@ module.exports = {
     ...getAllTemplates('components'),
     ...getAllTemplates('pages'),
     new CopyWebpackPlugin({
-      patterns: [{ from: STATIC_DIR, to: 'static' }],
+      patterns: [
+        {
+          from: STATIC_GLOB,
+          to: 'static/[name].[ext]',
+        },
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: IS_DEV_MODE ? '[name].css' : '[name].[fullhash].css',
@@ -110,8 +115,6 @@ module.exports = {
   devServer: {
     contentBase: BUILD_DIR,
     compress: true,
-
-    open: true,
 
     host: 'localhost',
     port: 8080,
