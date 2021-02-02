@@ -19,8 +19,15 @@ mixin book-a-room-card
             {name: 'взрослые', value: 1},
             {name: 'дети', value: 1},
             {name: 'младенцы', value: 1}
-          ], counting_way: 'sum', declensions: {'singular': 'гость', 'genitive': 'гостя', 'plural': 'гостей'},
-          opened: false, with_action_buttons: true,
+          ],
+          counting_way: 'sum',
+          declensions: {
+            'singular': 'гость',
+            'genitive': 'гостя',
+            'plural': 'гостей'
+          },
+          opened: false,
+          with_action_buttons: true,
         })
       .bill
         .bill__row
