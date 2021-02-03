@@ -1,10 +1,6 @@
 include ../subscription-form/subscription-form.pug
 include ../social-buttons/social-buttons.pug
 
-mixin copyright
-  small.copyright
-    | Copyright &#169; 2020 Toxin отель. Все права защищены.
-
 mixin footer-desktop
   footer.footer
     hr.footer__break-line
@@ -122,3 +118,8 @@ mixin footer
     .footer__bottom.container
       +copyright
       +social-buttons
+
+mixin copyright
+  small.copyright
+    | Copyright &#169; 2020 Toxin отель. Все права защищены.
+
