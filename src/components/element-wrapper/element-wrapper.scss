@@ -34,14 +34,12 @@
 
 .element-wrapper__item_inline {
   flex-flow: row nowrap;
+
+  @media (max-width: $tiny-screen) {
+    min-width: 100%;
+  }
 }
 
 .element-wrapper__label_extra-spacing {
   margin-bottom: 10px;
-}
-
-@media (max-width: $tiny-screen) {
-  .element-wrapper__item_inline {
-    gap: 5px;
-  }
 }

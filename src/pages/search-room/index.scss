@@ -17,6 +17,10 @@
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
+
+  @media (width: $large-screen) {
+    text-align: start;
+  }
 }
 
 .search-room-body__aside {
@@ -24,6 +28,10 @@
   flex-flow: column nowrap;
   gap: 25px;
   max-width: 266px;
+
+  @media (max-width: $middle-screen) {
+    display: none;
+  }
 }
 
 .search-room-body__home-rules {
@@ -44,16 +52,4 @@
   gap: 20px 12px;
   justify-content: center;
   margin: 21px auto 0;
-}
-
-@media (width: $large-screen) {
-  .search-room-body__main {
-    text-align: start;
-  }
-}
-
-@media (max-width: $middle-screen) {
-  .search-room-body__aside {
-    display: none;
-  }
 }

@@ -53,6 +53,10 @@
   display: none;
   min-width: max-content;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+
+  @media (max-width: $tiny-screen) {
+    min-width: 100%;
+  }
 }
 
 .dropdown__body_shadowless {
@@ -62,6 +66,10 @@
 .dropdown_splitted {
   .dropdown__button {
     max-width: 150px;
+
+    @media (max-width: $tiny-screen) {
+      min-width: 100%;
+    }
   }
 }
 
@@ -107,18 +115,5 @@
 
   .dropdown__button_flat {
     z-index: 0;
-  }
-}
-
-@media (max-width: $tiny-screen) {
-  .dropdown__body {
-    min-width: 100%;
-  }
-
-  .dropdown_splitted {
-    .dropdown__button {
-      max-width: 100%;
-      font-size: 12px;
-    }
   }
 }

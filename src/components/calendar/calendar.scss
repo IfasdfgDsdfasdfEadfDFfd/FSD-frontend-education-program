@@ -5,6 +5,11 @@
   border-radius: 4px;
   background-color: #fff;
 
+  @media (max-width: $tiny-screen) {
+    width: 100%;
+    padding: 10px;
+  }
+
   .datepicker {
     width: 100%;
     border: 0;
@@ -145,12 +150,5 @@
       background-image: $primary-gradient;
       opacity: 0.25;
     }
-  }
-}
-
-@media (max-width: $tiny-screen) {
-  .calendar {
-    width: 100%;
-    padding: 10px;
   }
 }
