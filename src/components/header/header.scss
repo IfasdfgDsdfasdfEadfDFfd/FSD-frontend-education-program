@@ -42,7 +42,7 @@ $header-height: 70px;
   justify-content: flex-end;
 
   @media (max-width: $tiny-screen) {
-    .link-button:last-child {
+    .button:last-child {
       display: none;
     }
   }
