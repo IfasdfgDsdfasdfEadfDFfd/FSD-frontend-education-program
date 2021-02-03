@@ -3,6 +3,8 @@ const dropdowns = Array.from(document.getElementsByClassName('js-dropdown'));
 dropdowns.forEach(dropdown => {
   const openClassName = 'dropdown_opened';
 
+  dropdown.addEventListener('focusout', () => {});
+
   dropdown.addEventListener('click', event => {
     const target = event.target as HTMLElement;
 
