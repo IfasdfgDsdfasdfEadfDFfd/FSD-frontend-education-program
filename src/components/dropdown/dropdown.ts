@@ -3,20 +3,41 @@ const dropdowns = Array.from(document.getElementsByClassName('js-dropdown'));
 dropdowns.forEach(dropdown => {
   const openClassName = 'dropdown_opened';
 
-  dropdown.addEventListener('focusout', () => {});
+  const outsideClickHandler = (event: Event) => {
+    const isClickedOutside = !event.composedPath().includes(dropdown);
 
-  dropdown.addEventListener('click', event => {
+    if (isClickedOutside) {
+      dropdown.classList.remove(openClassName);
+      document.body.removeEventListener('click', outsideClickHandler);
+    }
+  };
+
+  const dropdownClickHandler = (event: Event) => {
     const target = event.target as HTMLElement;
 
-    if (
-      target.classList.contains('dropdown__button') ||
-      target.parentElement?.classList.contains('dropdown__button')
-    ) {
-      dropdown.classList.toggle(openClassName);
-    }
+    const isOpened = dropdown.classList.contains(openClassName);
+    const isButton = target.classList.contains('dropdown__button');
+    const isParentIsButton = target.parentElement?.classList.contains(
+      'dropdown__button',
+    );
+    const isApplyButton = target.classList.contains(
+      'action-buttons__apply-button',
+    );
 
-    if (target.classList.contains('action-buttons__apply-button')) {
-      dropdown.classList.toggle(openClassName);
+    if (isButton || isParentIsButton) {
+      if (isOpened) {
+        console.log('remove event listener');
+        dropdown.classList.remove(openClassName);
+        document.body.removeEventListener('click', outsideClickHandler);
+      } else {
+        dropdown.classList.add(openClassName);
+        console.log('add event listener');
+        document.body.addEventListener('click', outsideClickHandler);
+      }
+    } else if (isApplyButton) {
+      dropdown.classList.remove(openClassName);
     }
-  });
+  };
+
+  dropdown.addEventListener('click', dropdownClickHandler);
 });
