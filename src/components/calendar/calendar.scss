@@ -54,10 +54,19 @@
     font-size: 12px;
     font-family: "Montserrat";
 
+    &.-focus- {
+      border: 0;
+      border-radius: 50%;
+    }
+
     &.-current- {
       background-image: $secondary-gradient;
       color: #fff;
       font-weight: bold;
+    }
+
+    &.-other-month- {
+      color: $dark-shade-25;
     }
 
     &.-current-.-focus- {
@@ -67,24 +76,6 @@
     &.-current-.-in-range- {
       border-radius: 50%;
       color: #fff;
-    }
-
-    &.-current-.-in-range-.-focus- {
-      border-radius: 50%;
-      color: #fff;
-    }
-
-    &.-other-month- {
-      color: $dark-shade-25;
-    }
-
-    &.-in-range-,
-    &.-in-range-.-focus-,
-    &.-in-range-.-other-month-,
-    &.-in-range-.-other-month-.-focus- {
-      border-radius: 0;
-      background-color: #fff;
-      color: $dark-shade-50;
     }
 
     &.-range-from-,
@@ -100,14 +91,27 @@
       font-weight: bold;
     }
 
+    &.-selected-.-current- {
+      background: $primary-gradient;
+    }
+
+    &.-current-.-in-range-.-focus- {
+      border-radius: 50%;
+      color: #fff;
+    }
+
+    &.-in-range-,
+    &.-in-range-.-focus-,
+    &.-in-range-.-other-month-,
+    &.-in-range-.-other-month-.-focus- {
+      border-radius: 0;
+      background-color: #fff;
+      color: $dark-shade-50;
+    }
+
     &.-selected-.-other-month- {
       background-color: transparent;
       background-image: $primary-gradient;
-    }
-
-    &.-focus- {
-      border: 0;
-      border-radius: 50%;
     }
 
     &.-selected-.-focus- {
