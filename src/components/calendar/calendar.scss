@@ -1,6 +1,6 @@
 .calendar {
   width: 320px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   background-color: #fff;
@@ -15,6 +15,7 @@
   font-family: "Montserrat";
 
   .datepicker--nav {
+    margin-bottom: 26px;
     padding: 0;
     border-bottom: 0;
   }
@@ -22,7 +23,9 @@
   .datepicker--nav-title {
     color: $dark-shade-100;
     font-weight: bold;
+    font-weight: 700;
     font-size: 19px;
+    line-height: 24px;
     text-align: center;
   }
 
@@ -34,7 +37,11 @@
 
   .datepicker--content {
     margin-bottom: 20px;
-    padding: 1px;
+    padding: 0 4px;
+  }
+
+  .datepicker--days-names {
+    margin-bottom: 0;
   }
 
   .datepicker--day-name {
