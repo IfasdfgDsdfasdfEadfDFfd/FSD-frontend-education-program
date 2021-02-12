@@ -82,6 +82,10 @@
     transition: 0.2s;
   }
 
+  .dropdown__button_flat {
+    z-index: 0;
+  }
+
   .dropdown__button_with-gap {
     margin-bottom: 5px;
     border-radius: 4px;
@@ -100,6 +104,10 @@
     }
   }
 
+  .dropdown__body_shadowless {
+    position: static;
+  }
+
   .dropdown__button__arrow {
     transition: all 0.2s ease;
     transform: rotate(180deg);
@@ -107,13 +115,5 @@
     &:focus {
       z-index: 1;
     }
-  }
-
-  .dropdown__body_shadowless {
-    position: static;
-  }
-
-  .dropdown__button_flat {
-    z-index: 0;
   }
 }
