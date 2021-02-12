@@ -1,14 +1,14 @@
 mixin rate-button(name, count)
   .rate-button
     - for (let x = 1; x <= 5; x++)
-      - const value = x + " star" + ((x > 1) ? "s" : "");
+      - const value = x + ' star' + ((x > 1) ? 's' : '');
       - const id = name + '-' + x + '-id';
       input.rate-button__star(
         checked=x == count,
         id=id,
         name=name,
-        type='radio',
+        type="radio",
         value=value
       )
       label.rate-button__label(for=id)
-        | give this room has #{x} star#{x > 1 ? "s" : ""}
+        | give this room has #{x} star#{x > 1 ? 's' : ''}
