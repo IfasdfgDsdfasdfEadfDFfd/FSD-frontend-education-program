@@ -1,6 +1,6 @@
 .calendar {
   width: 320px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
   background-color: #fff;
@@ -20,6 +20,7 @@
   font-family: "Montserrat";
 
   .datepicker--nav {
+    margin-bottom: 26px;
     padding: 0;
     border-bottom: 0;
   }
@@ -27,7 +28,9 @@
   .datepicker--nav-title {
     color: $dark-shade-100;
     font-weight: bold;
+    font-weight: 700;
     font-size: 19px;
+    line-height: 24px;
     text-align: center;
   }
 
@@ -39,7 +42,11 @@
 
   .datepicker--content {
     margin-bottom: 20px;
-    padding: 1px;
+    padding: 0 4px;
+  }
+
+  .datepicker--days-names {
+    margin-bottom: 0;
   }
 
   .datepicker--day-name {
@@ -59,10 +66,19 @@
     font-size: 12px;
     font-family: "Montserrat";
 
+    &.-focus- {
+      border: 0;
+      border-radius: 50%;
+    }
+
     &.-current- {
       background-image: $secondary-gradient;
       color: #fff;
       font-weight: bold;
+    }
+
+    &.-other-month- {
+      color: $dark-shade-25;
     }
 
     &.-current-.-focus- {
@@ -74,13 +90,26 @@
       color: #fff;
     }
 
+    &.-range-from-,
+    &.-range-to- {
+      border: 0;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+
+    &.-selected- {
+      border-radius: 50%;
+      background-image: $primary-gradient;
+      font-weight: bold;
+    }
+
+    &.-selected-.-current- {
+      background: $primary-gradient;
+    }
+
     &.-current-.-in-range-.-focus- {
       border-radius: 50%;
       color: #fff;
-    }
-
-    &.-other-month- {
-      color: $dark-shade-25;
     }
 
     &.-in-range-,
@@ -92,26 +121,9 @@
       color: $dark-shade-50;
     }
 
-    &.-range-from-,
-    &.-range-to- {
-      border: 0;
-      background-color: transparent;
-    }
-
-    &.-selected- {
-      border-radius: 50%;
-      background-image: $primary-gradient;
-      font-weight: bold;
-    }
-
     &.-selected-.-other-month- {
       background-color: transparent;
       background-image: $primary-gradient;
-    }
-
-    &.-focus- {
-      border: 0;
-      border-radius: 50%;
     }
 
     &.-selected-.-focus- {
