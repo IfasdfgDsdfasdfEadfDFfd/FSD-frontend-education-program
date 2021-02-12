@@ -11,6 +11,12 @@ $header-height: 70px;
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
   transition: all 0.5s ease;
+
+  @media (max-width: $middle-screen) {
+    .menu {
+      display: none;
+    }
+  }
 }
 
 .header_attached {
@@ -34,21 +40,15 @@ $header-height: 70px;
   flex-flow: row nowrap;
   gap: 20px;
   justify-content: flex-end;
+
+  @media (max-width: $tiny-screen) {
+    .button:last-child {
+      display: none;
+    }
+  }
 }
 
 .header_hidden {
   top: -$header-height;
   transition: all 0.5s ease;
-}
-
-@media (max-width: $middle-screen) {
-  .header .menu {
-    display: none;
-  }
-}
-
-@media (max-width: $tiny-screen) {
-  .header__buttons .button:last-child {
-    display: none;
-  }
 }

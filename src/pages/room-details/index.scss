@@ -13,6 +13,10 @@
 .room-details__body__photos-big {
   width: 68%;
   height: auto;
+
+  @media (max-width: $large-screen) {
+    max-width: 100%;
+  }
 }
 
 .room-details__body__photos-lower-group {
@@ -33,18 +37,53 @@
   gap: 70px;
   align-self: center;
   padding: 70px 0;
+
+  @media (max-width: $middle-screen) {
+    flex-flow: column nowrap;
+    gap: 50px;
+    padding: 50px;
+  }
 }
 
 .room-details__body__desc__left {
   display: flex;
   flex-flow: column wrap;
   gap: 10px;
+
+  @media (max-width: $middle-screen) {
+    gap: 55px;
+  }
+}
+
+.room-details__body__desc__right {
+  @media (max-width: $middle-screen) {
+    align-self: center;
+  }
 }
 
 .room-details__body__desc-row {
   display: flex;
   flex-flow: row nowrap;
   gap: 7px;
+
+  @media (max-width: $middle-screen) {
+    gap: 35px;
+    align-items: center;
+    max-width: 750px;
+  }
+
+  @media (max-width: $small-screen) {
+    flex-flow: column nowrap;
+    margin: auto;
+
+    .element-wrapper {
+      align-items: center;
+    }
+
+    .element-wrapper__sub-label {
+      display: none;
+    }
+  }
 }
 
 .room-impressions {
@@ -53,6 +92,12 @@
   align-items: flex-end;
   padding-top: 5px;
   padding-left: 3px;
+
+  @media (max-width: $middle-screen) {
+    gap: 15px;
+    margin: auto;
+    padding: 0;
+  }
 }
 
 .statictic-ring {
@@ -125,7 +170,12 @@
   max-width: 260px;
   padding-left: 20px;
   list-style-type: none;
+
+  @media (max-width: $middle-screen) {
+    font-size: 12px;
+  }
 }
+
 .color-bullet-list__item::before {
   content: "";
   position: absolute;
@@ -158,61 +208,8 @@
   gap: 21px;
   margin-bottom: 25px;
   padding-top: 5px;
-}
 
-@media (max-width: $large-screen) {
-  .room-details__body__photos-big {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: $middle-screen) {
-  .room-details__body__desc {
-    flex-flow: column nowrap;
-    gap: 50px;
-    padding: 50px;
-  }
-
-  .room-details__body__desc__left {
-    gap: 55px;
-  }
-
-  .room-details__body__desc__right {
-    align-self: center;
-  }
-
-  .room-impressions {
-    gap: 15px;
-    margin: auto;
-    padding: 0;
-  }
-
-  .room-details__body__comment-section {
+  @media (max-width: $middle-screen) {
     margin-bottom: 0;
-  }
-
-  .color-bullet-list {
-    font-size: 12px;
-  }
-
-  .room-details__body__desc-row {
-    gap: 35px;
-    align-items: center;
-    max-width: 750px;
-  }
-}
-
-@media (max-width: $small-screen) {
-  .room-details__body__desc-row {
-    flex-flow: column nowrap;
-    margin: auto;
-
-    .element-wrapper {
-      align-items: center;
-    }
-  }
-
-  .element-wrapper__sub-label {
-    display: none;
   }
 }

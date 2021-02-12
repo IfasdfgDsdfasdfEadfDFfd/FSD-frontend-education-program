@@ -8,10 +8,8 @@
   background-position: center;
   background-position-x: center;
   background-repeat: no-repeat;
-}
 
-@media (min-width: $large-screen) {
-  .account-registration-page {
+  @media (min-width: $large-screen) {
     background-size: cover;
   }
 }
